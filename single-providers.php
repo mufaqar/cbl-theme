@@ -551,6 +551,100 @@
     </div>
 </section>
 
+
+<!-- home-security -->
+<section class="my-16">
+    <div class="container mx-auto px-4">
+        <div class="mb-10">
+            <h2 class="text-2xl font-bold">
+                <?php echo the_title(); ?>
+               Home Security Bundles
+            </h2>
+            <div class="w-fit hint mx-auto block md:hidden mt-5">Swipe Left to See All →</div>
+        </div>
+        <div>
+            <div class="w-full lg:max-w-[1200px] mx-auto h-auto">
+                <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
+                    <div class="md:w-full min-w-fit grid md:grid-cols-6 grid-cols-1 bg-[#215690]">
+                        <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4></div>
+                        </div>
+                        <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4></div>
+                        </div>
+                        <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Channels</h4></div>
+                        </div>
+                        <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4></div>
+                        </div>
+                        <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4></div>
+                        </div>
+                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Order Now</h4></div>
+                        </div>
+                    </div>
+                    <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll">
+                        <?php if( have_rows('home_security_bundles') ): ?>
+                            <?php while( have_rows('home_security_bundles') ): the_row(); 
+                                $package = get_sub_field('package');
+                                $Speeds = get_sub_field('Speeds');
+                                $speed_info = get_sub_field('speed_info');
+                                $price = get_sub_field('price');
+                                $price_info = get_sub_field('price_info');
+                                $channels = get_sub_field('channels');
+                                $channels_info = get_sub_field('channels_info');
+                                $voice = get_sub_field('voice');
+                                $voice_info = get_sub_field('voice_info');
+                                ?>
+                                <div class="w-full flex md:flex-row flex-col dtable">
+                                    <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                        <div><p class="text-center md:text-base text-xs"><?php echo $package ?></p></div>
+                                    </div>
+                                    <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                        <div>
+                                            <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
+                                            <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                        <div>
+                                            <p class="text-center md:text-base text-xs font-bold"><?php echo $channels ?></p>
+                                            <p class="text-center md:text-xs text-xs"><?php echo $channels_info ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                        <div>
+                                            <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
+                                            <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                        <div>
+                                            <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
+                                            <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                        <div>
+                                            <a class="md:text-base text-[9px] font-medium text-white bg-[#ef9831] hover:bg-[#215690] md:px-3 px-[5px] py-1.5 rounded-3xl block w-[90px] md:w-[140px] text-center mx-auto" href="tel:<?php echo $phone ?>">
+                                            <?php echo $phone ?>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div><p class="text-sm font-[Roboto] mt-10"></p></div>
+    </div>
+</section>
+
+
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10"><h2 class="text-2xl font-bold">Switch to <?php echo the_title(); ?> And Get Benefits You’ll Love</h2></div>
