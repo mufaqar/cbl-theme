@@ -595,8 +595,7 @@
                                 $price_info = get_sub_field('price_info');
                                 $channels = get_sub_field('channels');
                                 $channels_info = get_sub_field('channels_info');
-                                $voice = get_sub_field('voice');
-                                $voice_info = get_sub_field('voice_info');
+                              
                                 ?>
                                 <div class="w-full flex md:flex-row flex-col dtable">
                                     <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
@@ -614,12 +613,7 @@
                                             <p class="text-center md:text-xs text-xs"><?php echo $channels_info ?></p>
                                         </div>
                                     </div>
-                                    <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
-                                        <div>
-                                            <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
-                                            <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                         <div>
                                             <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
