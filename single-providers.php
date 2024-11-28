@@ -743,7 +743,7 @@
                                 </span>
                             </div>
                             <div class="faq-answer hidden mt-5">
-                                <p class="text-base font-medium"><?php echo $question ?></p>
+                                <p class="text-base font-medium"><?php echo $answer ?></p>
                             </div>
                         </div>
                     <?php
