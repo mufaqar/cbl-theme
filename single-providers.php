@@ -565,7 +565,7 @@
         <div>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto">
                 <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
-                    <div class="md:w-full min-w-fit grid md:grid-cols-6 grid-cols-1 bg-[#215690]">
+                    <div class="md:w-full min-w-fit grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div><h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4></div>
                         </div>
@@ -575,9 +575,7 @@
                         <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Channels</h4></div>
                         </div>
-                        <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4></div>
-                        </div>
+                       
                         <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div><h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4></div>
                         </div>
