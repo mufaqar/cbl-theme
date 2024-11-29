@@ -61,7 +61,8 @@ function cbl_theme_setup() {
 	register_nav_menus(
 		array(
 			'main' => esc_html__( 'Main', 'cbl_theme' ),
-			'footer' => esc_html__( 'Footer', 'cbl_theme' ),
+			'company' => esc_html__( 'Company', 'cbl_theme' ),
+            'footer' => esc_html__( 'Footer', 'cbl_theme' ),
 		)
 	);
 	add_theme_support(
