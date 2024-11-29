@@ -705,7 +705,7 @@
 </section>
 
 <?php if($disclambers){ ?>
-    <section class="container mx-auto px-4">
+    <section class="container mx-auto mt-6 px-4">
         <?php echo $disclambers ?>
     </section>
 <?php } ?>
