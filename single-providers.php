@@ -705,10 +705,8 @@
 </section>
 
 <?php if($disclambers){ ?>
-    <section>
-        <div class="grid md:grid-cols-2 grid-cols-1">
-            <?php echo $disclambers ?>
-        </div>
+    <section class="container mx-auto px-4">
+        <?php echo $disclambers ?>
     </section>
 <?php } ?>
 
