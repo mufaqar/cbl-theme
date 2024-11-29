@@ -300,7 +300,7 @@ html {
   background-size: contain;
 }
 .pbanner .overlay_wrapper{
-  background: linear-gradient(90deg, rgba(1,29,51,1) 66%, rgba(1,29,51,0.9809173669467787) 67%, rgba(1,29,51,0.9417016806722689) 70%, rgba(1,29,51,0.8576680672268908) 73%, rgba(1,29,51,0.8576680672268908) 64%, rgba(255,255,255,0) 100%)
+  background: linear-gradient(90deg, rgba(1,29,51,1) 66%, rgba(1,29,51,0.9809173669467787) 68%, rgba(1,29,51,0.9417016806722689) 70%, rgba(1,29,51,0.8576680672268908) 73%, rgba(1,29,51,0.8576680672268908) 64%, rgba(255,255,255,0) 100%)
 }
 .pbanner .overlay_wrapper h1{
   margin-top: 1rem;
