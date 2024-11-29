@@ -60,20 +60,16 @@
                         echo $phone;
                     }
                 ?>">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"
-                            ></path>
-                        </svg>
-                    </span>
-
-                    <?php 
-                        if($order_online){
-                            echo "Order Online";
-                        }else{
-                            echo $phone;
-                        }
-                    ?>
+                    <?php
+                        if(!$order_online){ ?>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"
+                                ></path>
+                            </svg>
+                        <?php } ?>
+                    
+                    <?php if($order_online){ echo "Order Online"; }else{ echo $phone; } ?>
                 </a>
             </div>
             <div class="md:w-1/2 w-full md:block hidden">
@@ -84,14 +80,16 @@
 
 <section class="bgmain px-4 py-5 shadow-sm border-y border-zinc-400/20 z-50">
     <div class="container mx-auto flex justify-center items-center md:text-4xl text-xl font-bold uppercase text-white">
-        <div class="grid items-center md:justify-end justify-center">Call Now to Order</div>
+        <div class="grid items-center md:justify-end justify-center"><?php if($order_online){ echo "Simply Click Here And "; }else{ echo "Call Now to Order"; } ?></div>
         <div class="items-center justify-start flex gap-3">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="ml-5 md:text-4xl text-2xl font-normal" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"
                 ></path>
             </svg>
-            <a href="tel:<?php echo $phone ?>"> <?php echo $phone ?></a>
+            <a href="tel:<?php echo $phone ?>">
+                <?php if($order_online){ echo "Order Online"; }else{ echo $phone; } ?> 
+            </a>
         </div>
     </div>
 </section>
