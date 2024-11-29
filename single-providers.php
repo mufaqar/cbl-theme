@@ -20,7 +20,8 @@
     $pros = get_field( "pros" );
     $cons = get_field( "cons" );
     $order_online = get_field( "order_online" );
- 
+    $disclambers = get_field( "disclambers" );
+
 
     
 
@@ -704,6 +705,15 @@
         </div>
     </div>
 </section>
+
+<?php if($disclambers){ ?>
+    <section>
+        <div class="grid md:grid-cols-2 grid-cols-1">
+            <?php $disclambers ?>
+        </div>
+    </section>
+<?php } ?>
+
 
 <section class="my-16">
     <div class="container mx-auto px-4">
