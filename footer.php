@@ -169,19 +169,17 @@ $providersData = [
 
         </div>
         <!-- Providers Section -->
-        <div class="col-span-2">
-            <h6 class="text-lg font-normal text-white mb-5">
+        <div class="col-span-2 text-white">
+            <h6 class="text-lg font-normal mb-5">
                 PROVIDERS
             </h6>
 
-            <?php wp_nav_menu( array( 'theme_location' => 'footer', 
+            <?php wp_nav_menu( array( 
+                'theme_location' => 'footer', 
                 'container'      => '',
                 'container_class'=> 'flex flex-col space-y-4',
-                'menu_class'     => 'space-y-4',
-                 ) ); ?>
-
-
-
+                'menu_class'     => 'grid grid-cols-3',
+            )); ?>
 
         </div>
         <!-- Company Section -->

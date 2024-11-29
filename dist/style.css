@@ -2253,6 +2253,14 @@ html {
   display: block;
 }
 
+#menu-footer .menu-item{
+  padding: 6px 0 !important;
+}
+
+#menu-footer .menu-item a:hover{
+  color: #1D569F;
+}
+
 .hover\:border-\[\#215690\]\/10:hover {
   border-color: rgb(33 86 144 / 0.1);
 }

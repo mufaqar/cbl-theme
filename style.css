@@ -369,3 +369,10 @@ html {
 .menu-item:hover .sub-menu{
   display: block;
 }
+
+#menu-footer .menu-item{
+  padding: 6px 0 !important;
+}
+#menu-footer .menu-item a:hover{
+  color: #1D569F;
+}

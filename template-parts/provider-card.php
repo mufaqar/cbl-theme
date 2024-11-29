@@ -7,7 +7,6 @@ $servicesInfo = get_field('services_info');
 $type = get_query_var('type');
 
 
-
 $isSpeed = $type === "tv";
 if($isSpeed){
     $speed =  $servicesInfo["tv_services"]["speed"];
@@ -21,21 +20,28 @@ if($isSpeed){
 
 $phone;
 $view_link;
+$deals
+
 if($type === "internet"){
     $phone =  $servicesInfo["internet_services"]["phone"];
     $view_link =  $servicesInfo["internet_services"]["view_more"];
+    $deals = $servicesInfo["internet_services"]["deals"];
 }
 if($type === "tv"){
     $phone =  $servicesInfo["tv_services"]["phone"];
     $view_link =  $servicesInfo["tv_services"]["view_more"];
+    $deals = $servicesInfo["tv_services"]["deals"];
 }
 if($type === "landline"){
     $phone =  $servicesInfo["landline_services"]["phone"];
     $view_link =  $servicesInfo["landline_services"]["view_more"];
+    $deals = $servicesInfo["landline_services"]["deals"];
 }
 if($type === "home-security"){
     $phone =  $servicesInfo["home_security_services"]["phone"];
     $view_link =  $servicesInfo["home_security_services"]["view_more"];
+    $deals = $servicesInfo["home_security_services"]["deals"];
+
 }
 
 ?>
@@ -45,7 +51,13 @@ if($type === "home-security"){
     <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex flex-col">
         <div class="md:w-full min-w-fit bg-[#215690] flex justify-between items-center">
             <h2 class="text-base font-bold text-center text-white p-5"><span> <?php echo $index ?> </span>- <?php the_title()?></h2>
-            <h2 class="text-base font-bold text-center text-white p-5"></h2>
+            <h2 class="text-base font-bold text-center text-white p-5">
+                <?php
+                    if($deals){
+                        echo $deals;
+                    }
+                ?>
+            </h2>
         </div>
         <div class="md:w-full w-full grid grid-cols-1 dtable md:grid-cols-5 flex-col">
             <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
