@@ -357,10 +357,14 @@ html {
   border: 1px solid #dedede;
   top: 2.6rem;
   padding: 8px 0;
+  min-width: 220px;
 }
 .sub-menu a{
   text-wrap: nowrap;
   text-transform: capitalize;
+}
+.sub-menu a:hover{
+  color: #1D569F;
 }
 .menu-item:hover .sub-menu{
   display: block;

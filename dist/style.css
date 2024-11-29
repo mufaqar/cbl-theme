@@ -783,6 +783,10 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.ml-1\.5 {
+  margin-left: 0.375rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -849,10 +853,6 @@ video {
 
 .mt-\[2px\] {
   margin-top: 2px;
-}
-
-.ml-1\.5 {
-  margin-left: 0.375rem;
 }
 
 .block {
@@ -2237,11 +2237,16 @@ html {
   border: 1px solid #dedede;
   top: 2.6rem;
   padding: 8px 0;
+  min-width: 220px;
 }
 
 .sub-menu a{
   text-wrap: nowrap;
   text-transform: capitalize;
+}
+
+.sub-menu a:hover{
+  color: #1D569F;
 }
 
 .menu-item:hover .sub-menu{
