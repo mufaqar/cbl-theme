@@ -6,7 +6,7 @@
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
-
+    $state = strtoupper($state);
 
     add_filter('wpseo_title', 'Generate_Title_For_City');
     add_filter('wpseo_metadesc', 'Generate_Description_For_City');
