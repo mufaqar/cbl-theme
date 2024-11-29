@@ -334,3 +334,34 @@ html {
 .the_content ul li{
   margin-top: 5px;
 }
+#menu{
+  height: 50px !important;
+}
+.main-menu{
+  position: relative;
+}
+
+.main-menu ul{
+  position: absolute !important;
+  top: auto !important;
+}
+.menu-item{
+  position: relative;
+}
+.sub-menu{
+  display: none;
+}
+.sub-menu{
+  position: absolute;
+  background: #fff !important;
+  border: 1px solid #dedede;
+  top: 2.6rem;
+  padding: 8px 0;
+}
+.sub-menu a{
+  text-wrap: nowrap;
+  text-transform: capitalize;
+}
+.menu-item:hover .sub-menu{
+  display: block;
+}
