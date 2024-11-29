@@ -20,7 +20,7 @@ if($isSpeed){
 
 $phone;
 $view_link;
-$deals
+$deals;
 
 if($type === "internet"){
     $phone =  $servicesInfo["internet_services"]["phone"];
