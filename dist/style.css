@@ -851,6 +851,10 @@ video {
   margin-top: 2px;
 }
 
+.ml-1\.5 {
+  margin-left: 0.375rem;
+}
+
 .block {
   display: block;
 }

@@ -80,7 +80,7 @@
 
 <section class="bgmain px-4 py-5 shadow-sm border-y border-zinc-400/20 z-50">
     <div class="container mx-auto flex justify-center items-center md:text-4xl text-xl font-bold uppercase text-white">
-        <div class="grid items-center md:justify-end justify-center"><?php if($order_online){ echo "Simply Click Here And "; }else{ echo "Call Now to Order"; } ?> </div>
+        <div class="grid items-center md:justify-end justify-center"><?php if($order_online){ echo "Simply Click And"; }else{ echo "Call Now to Order"; } ?> </div>
         <div class="items-center justify-start flex gap-3">
             <?php
                 if(!$order_online){ ?>
@@ -91,7 +91,7 @@
                 </svg>
             <?php } ?>
             <a href="tel:<?php echo $phone ?>" class="ml-1.5">
-                <?php if($order_online){ echo "Order Online"; }else{ echo $phone; } ?> 
+                <?php if($order_online){ echo " Order Online"; }else{ echo $phone; } ?> 
             </a>
         </div>
     </div>
