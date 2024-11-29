@@ -21,9 +21,6 @@
     $cons = get_field( "cons" );
     $order_online = get_field( "order_online" );
     $disclambers = get_field( "disclambers" );
-
-    print_r($disclambers);
-
     
 
 ?>
@@ -710,7 +707,7 @@
 <?php if($disclambers){ ?>
     <section>
         <div class="grid md:grid-cols-2 grid-cols-1">
-            <?php $disclambers ?>
+            <?php echo $disclambers ?>
         </div>
     </section>
 <?php } ?>
