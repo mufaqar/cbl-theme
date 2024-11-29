@@ -142,15 +142,6 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_slider_assets');
 	}
 
 
-
-
-function theme_register_nav_menu() {
-    register_nav_menu('primary', __('Primary Menu', 'theme-textdomain'));
-}
-
-add_action('after_setup_theme', 'theme_register_nav_menu');
-
-
 function my_theme_enqueue_styles() {
     wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/dist/style.css', array(), null);
 }

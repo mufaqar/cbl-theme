@@ -553,3 +553,22 @@ function render_provider_buttons($phone, $permalink) {
 }
 
 
+
+class Tailwind_Nav_Walker extends Walker_Nav_Menu {
+    public function start_lvl( &$output, $depth = 0, $args = null ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"ml-4 border-l pl-4 space-y-2\">\n";
+    }
+
+    public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $classes[] = 'menu-item';
+        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
+
+        $output .= '<li class="' . esc_attr($class_names) . '">';
+        $output .= '<a href="' . esc_url($item->url) . '" class="text-blue-600 hover:text-blue-800">';
+        $output .= esc_html($item->title);
+        $output .= '</a>';
+    }
+}
+

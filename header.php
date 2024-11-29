@@ -87,6 +87,13 @@
                     <span class="text-base font-normal">833-592-0098</span>
                 </a></li> -->
             </ul>
+            <?php wp_nav_menu( array(
+                'theme_location' => 'main-menu',
+                'container'      => 'nav',
+                'container_class'=> 'flex flex-col space-y-4',
+                'menu_class'     => 'space-y-4',
+                'walker'         => new Tailwind_Nav_Walker(),
+            ) ); ?>
         </div>
     </nav>
 </header>

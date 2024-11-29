@@ -177,7 +177,11 @@ $providersData = [
                 PROVIDERS
             </h6>
 
-            <?php wp_nav_menu( array( 'theme_location' => 'footer','fallback_cb'=> 'fallbackmenu1' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'footer', 
+                'container'      => '',
+                'container_class'=> 'flex flex-col space-y-4',
+                'menu_class'     => 'space-y-4',
+                 ) ); ?>
 
 
 
