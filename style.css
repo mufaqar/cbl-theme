@@ -376,3 +376,6 @@ html {
 #menu-footer .menu-item a:hover{
   color: #1D569F;
 }
+#menu-footer-company, #menu-footer-company li, #menu-footer-company li a{
+  color: #dedede  !important;
+}
