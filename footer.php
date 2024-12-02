@@ -183,7 +183,7 @@ $providersData = [
 
         </div>
         <!-- Company Section -->
-        <div class="col-span-2 text-white">
+        <div class=" text-white">
             <h6 class="text-lg font-normal text-white mb-5">
                 COMPANY
             </h6>
