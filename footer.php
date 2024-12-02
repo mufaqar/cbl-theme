@@ -188,8 +188,12 @@ $providersData = [
                 COMPANY
             </h6>
 
-
-            <?php wp_nav_menu( array( 'theme_location' => 'company','fallback_cb'=> 'fallbackmenu1' ) ); ?>
+            <?php wp_nav_menu( array( 
+                'theme_location' => 'company', 
+                'container'      => '',
+                'container_class'=> 'flex flex-col space-y-4 ',
+                'menu_class'     => 'grid grid-cols-1 !text-sm !text-white/75',
+            )); ?>
 
         </div>
     </div>
