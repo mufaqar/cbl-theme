@@ -177,8 +177,8 @@ $providersData = [
             <?php wp_nav_menu( array( 
                 'theme_location' => 'footer', 
                 'container'      => '',
-                'container_class'=> 'flex flex-col space-y-4 text-sm',
-                'menu_class'     => 'grid grid-cols-3',
+                'container_class'=> 'flex flex-col space-y-4 ',
+                'menu_class'     => 'grid grid-cols-3 !text-sm !text-white/75',
             )); ?>
 
         </div>
