@@ -379,3 +379,6 @@ html {
 #menu-footer-company, #menu-footer-company li, #menu-footer-company li a{
   color: rgba(255, 255, 255, 0.75) !important;
 }
+#menu-footer-company li a:hover, #menu-footer-providers li a{
+  color: #fff !important;
+}

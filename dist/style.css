@@ -2278,6 +2278,10 @@ html {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
+#menu-footer-company li a:hover, #menu-footer-providers li a{
+  color: #fff !important;
+}
+
 .hover\:border-\[\#215690\]\/10:hover {
   border-color: rgb(33 86 144 / 0.1);
 }
