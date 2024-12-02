@@ -2275,7 +2275,7 @@ html {
 }
 
 #menu-footer-company, #menu-footer-company li, #menu-footer-company li a{
-  color: #dedede  !important;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .hover\:border-\[\#215690\]\/10:hover {
