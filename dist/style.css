@@ -1616,6 +1616,11 @@ video {
   font-family: Roboto;
 }
 
+.\!text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1716,6 +1721,10 @@ video {
 .\!text-\[\#215690\] {
   --tw-text-opacity: 1 !important;
   color: rgb(33 86 144 / var(--tw-text-opacity)) !important;
+}
+
+.\!text-white\/75 {
+  color: rgb(255 255 255 / 0.75) !important;
 }
 
 .text-\[\#215690\] {
@@ -2263,6 +2272,10 @@ html {
 
 #menu-footer .menu-item a:hover{
   color: #1D569F;
+}
+
+#menu-footer-company, #menu-footer-company li, #menu-footer-company li a{
+  color: #dedede  !important;
 }
 
 .hover\:border-\[\#215690\]\/10:hover {
