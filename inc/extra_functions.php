@@ -541,9 +541,11 @@ function render_provider_buttons($phone, $permalink) {
     ob_start(); // Start output buffering
     ?>
     <div class="grid gap-3 items-center justify-center p-5">
+        <?php if (!empty($phone)) : ?>
         <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#215690] hover:bg-[#ef9831]" href="tel:<?php echo esc_attr($phone); ?>">
             <?php echo esc_html($phone); ?>
         </a>
+        <?php endif; ?>
         <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]" href="<?php echo esc_url($permalink); ?>">
             View Plans
         </a>
