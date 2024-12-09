@@ -59,8 +59,6 @@ function SiteMapByState() {
                 }
                 $xml_content .= '<url>' . PHP_EOL;
                 $xml_content .= '<loc>' . esc_url($url) . '</loc>' . PHP_EOL;
-                $xml_content .= '<lastmod>' . wp_date('c') . '</lastmod>' . PHP_EOL; // Using wp_date for current date in ISO 8601 format
-                $xml_content .= '<priority>0.8</priority>' . PHP_EOL; // Setting priority to 0.8
                 $xml_content .= '</url>' . PHP_EOL;
             }
         }
@@ -76,7 +74,7 @@ function SiteMapByZipCode() {
     set_time_limit(0);
     $services = ['internet', 'tv', 'home-security', 'landline'];
     $sitemap_folder = ABSPATH . 'sitemaps';
-    $posts_per_file = 10000;
+    $posts_per_file = 30000;
 
     if (!file_exists($sitemap_folder)) {
         mkdir($sitemap_folder, 0755, true);
@@ -121,9 +119,6 @@ function SiteMapByZipCode() {
 
                 $xml_content .= "<url>" . PHP_EOL;
                 $xml_content .= "<loc>" . esc_url($link) . "</loc>" . PHP_EOL;
-                $xml_content .= "<lastmod>" . wp_date('c') . "</lastmod>" . PHP_EOL;
-                $xml_content .= "<changefreq>monthly</changefreq>" . PHP_EOL;
-                $xml_content .= "<priority>0.8</priority>" . PHP_EOL;
                 $xml_content .= "</url>" . PHP_EOL;
             }
 
@@ -145,7 +140,7 @@ function SiteMapByCity() {
     set_time_limit(0);
     $services = ['internet','tv','landline','home-security'];
     $sitemap_folder = ABSPATH . 'sitemaps';
-    $posts_per_file = 10000;
+    $posts_per_file = 30000;
     $total_records = 0; // Initialize counter for total records
 
     if (!file_exists($sitemap_folder)) {
@@ -197,9 +192,6 @@ function SiteMapByCity() {
 
                     $xml_content .= "<url>" . PHP_EOL;
                     $xml_content .= "<loc>" . esc_url($link) . "</loc>" . PHP_EOL;
-                    // $xml_content .= "<lastmod>" . wp_date('c') . "</lastmod>" . PHP_EOL;
-                    $xml_content .= "<changefreq>monthly</changefreq>" . PHP_EOL;
-                    // $xml_content .= "<priority>0.8</priority>" . PHP_EOL;
                     $xml_content .= "</url>" . PHP_EOL;
 
                     $total_records++; // Increment the total records count

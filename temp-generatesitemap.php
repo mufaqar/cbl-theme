@@ -6,6 +6,6 @@
 
 <?php
 //SiteMapByZipCode();
-SiteMapByCity();
-//SiteMapByState();
+// SiteMapByCity();
+SiteMapByState();
 ?>
