@@ -7,7 +7,7 @@
 add_filter('wpseo_sitemap_index', function ($sitemap_index) {
     $base_url = 'https://dev.cblproject.cablemovers.net/sitemaps/';
     $types =  ['internet', 'tv', 'home-security', 'landline'];
-    $number_of_sitemaps = 6; // Generate 6 sitemaps for each type
+    $number_of_sitemaps = 2; // Generate 6 sitemaps for each type
     $prefixes = ['zipcode', 'cities']; // Define prefixes to loop through
 
     // Get the current date in the specified format
@@ -43,7 +43,7 @@ function SiteMapByState() {
     $xml_content = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
     $xml_content .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . PHP_EOL;
     // Types to iterate
-    $types = ["internet", "tv", "tv-internet", "landline"];    
+    $types = ['internet', 'tv', 'home-security', 'landline'];  
     foreach ($types as $type) {
      
         $terms = get_terms(array(
@@ -138,7 +138,7 @@ function SiteMapByZipCode() {
 
 function SiteMapByCity() {
     set_time_limit(0);
-    $services = ['internet','tv','landline','home-security'];
+    $services = ['internet', 'tv', 'home-security', 'landline'];
     $sitemap_folder = ABSPATH . 'sitemaps';
     $posts_per_file = 30000;
     $total_records = 0; // Initialize counter for total records
