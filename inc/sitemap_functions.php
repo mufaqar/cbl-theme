@@ -66,6 +66,8 @@ function SiteMapByState() {
     $xml_content .= '</urlset>' . PHP_EOL;
     fwrite($file, $xml_content);
     fclose($file);
+
+    echo "Sitemap Upate" ;
 }
 
 
