@@ -74,7 +74,7 @@ function SiteMapByZipCode() {
     set_time_limit(0);
     $services = ['internet', 'tv', 'home-security', 'landline'];
     $sitemap_folder = ABSPATH . 'sitemaps';
-    $posts_per_file = 10000;
+    $posts_per_file = 30000;
 
     if (!file_exists($sitemap_folder)) {
         mkdir($sitemap_folder, 0755, true);
@@ -140,7 +140,7 @@ function SiteMapByCity() {
     set_time_limit(0);
     $services = ['internet','tv','landline','home-security'];
     $sitemap_folder = ABSPATH . 'sitemaps';
-    $posts_per_file = 10000;
+    $posts_per_file = 30000;
     $total_records = 0; // Initialize counter for total records
 
     if (!file_exists($sitemap_folder)) {
