@@ -5,7 +5,7 @@
 
 
 <?php
-SiteMapByZipCode();
+//SiteMapByZipCode();
 SiteMapByCity();
 SiteMapByState();
 ?>
