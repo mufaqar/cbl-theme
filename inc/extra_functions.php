@@ -536,9 +536,7 @@ function FormatData($string) {
     return $formatted_string;
 }
 
-
 function render_provider_buttons($phone, $permalink) {
-    ob_start(); // Start output buffering
     ?>
     <div class="grid gap-3 items-center justify-center p-5">
         <?php if (!empty($phone)) : ?>
@@ -551,9 +549,7 @@ function render_provider_buttons($phone, $permalink) {
         </a>
     </div>
     <?php
-    return ob_get_clean(); // Return the buffered content
 }
-
 
 
 class Tailwind_Nav_Walker extends Walker_Nav_Menu {
