@@ -80,18 +80,18 @@ html {
 .submenu {
   display: none;
 }
-/* Show submenu when hovering over the parent li element */
+
 .menu-item:hover .submenu {
   display: block;
 }
-/* Additional styling to make submenu behave like a dropdown */
+
 .submenu {
   position: absolute;
   background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 50;
 }
-/* Optional: add transition for smooth appearance */
+
 .submenu {
   transition: opacity 0.3s ease;
   opacity: 0;
@@ -173,7 +173,7 @@ html {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -182,7 +182,7 @@ html {
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; 
 }
 
 .close {
@@ -220,19 +220,21 @@ html {
 
 /* Breadcrumb CSS */
 
-.bread_crumb_wrapper { background: #555;}
+.bread_crumb_wrapper {
+  background: #555;
+}
 
 .breadcrumb {
   display: flex;
   align-items: center;
   font-size: 0.9em;
   font-family: Arial, sans-serif;
-  color: #FFF;
+  color: #fff;
   padding: 10px 0;
 }
 
 .breadcrumb a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   padding: 0 8px;
   transition: color 0.3s ease;
@@ -240,7 +242,7 @@ html {
 
 .breadcrumb a::after {
   content: '»';
-  color: #FFF;
+  color: #fff;
   margin-left: 8px;
 }
 
@@ -250,7 +252,7 @@ html {
 }
 
 .breadcrumb span {
-  color: #FFF;
+  color: #fff;
   padding: 0 8px;
   font-weight: bold;
 }
@@ -294,64 +296,76 @@ html {
   }
 }
 
-.pbanner{
+.pbanner {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
 }
-.pbanner .overlay_wrapper{
-  background: linear-gradient(90deg, rgba(1,29,51,1) 66%, rgba(1,29,51,0.9809173669467787) 68%, rgba(1,29,51,0.9417016806722689) 70%, rgba(1,29,51,0.8576680672268908) 73%, rgba(1,29,51,0.8576680672268908) 64%, rgba(255,255,255,0) 100%)
+.pbanner .overlay_wrapper {
+  background: linear-gradient(
+    90deg,
+    rgba(1, 29, 51, 1) 66%,
+    rgba(1, 29, 51, 0.9809173669467787) 68%,
+    rgba(1, 29, 51, 0.9417016806722689) 70%,
+    rgba(1, 29, 51, 0.8576680672268908) 73%,
+    rgba(1, 29, 51, 0.8576680672268908) 64%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
-.pbanner .overlay_wrapper h1{
+.pbanner .overlay_wrapper h1 {
   margin-top: 1rem;
 }
 
-.pbanner .overlay_wrapper .plogo{
+.pbanner .overlay_wrapper .plogo {
   -webkit-filter: invert(1);
-   filter: invert(1);
-   mix-blend-mode: exclusion;
+  filter: invert(1);
+  mix-blend-mode: exclusion;
 }
 
-.__list{
+.__list {
   list-style-type: circle;
 }
 
-.the_content h4, .the_content h3, .the_content h2, .the_content h1{
+.the_content h4,
+.the_content h3,
+.the_content h2,
+.the_content h1 {
   font-weight: 600;
   font-size: 20px;
   margin: 10px 0;
 }
-.the_content h5, .the_content h6{
+.the_content h5,
+.the_content h6 {
   font-weight: 600;
   font-size: 18px;
   margin: 10px 0;
 }
-.the_content ul{
+.the_content ul {
   padding-left: 1.4rem;
   margin-top: 10px;
   list-style-type: circle;
 }
-.the_content ul li{
+.the_content ul li {
   margin-top: 5px;
 }
-#menu{
+#menu {
   height: 50px !important;
 }
-.main-menu{
+.main-menu {
   position: relative;
 }
 
-.main-menu ul{
+.main-menu ul {
   position: absolute !important;
   top: auto !important;
 }
-.menu-item{
+.menu-item {
   position: relative;
 }
-.sub-menu{
+.sub-menu {
   display: none;
 }
-.sub-menu{
+.sub-menu {
   position: absolute;
   background: #fff !important;
   border: 1px solid #dedede;
@@ -359,26 +373,29 @@ html {
   padding: 8px 0;
   min-width: 220px;
 }
-.sub-menu a{
+.sub-menu a {
   text-wrap: nowrap;
   text-transform: capitalize;
 }
-.sub-menu a:hover{
-  color: #1D569F;
+.sub-menu a:hover {
+  color: #1d569f;
 }
-.menu-item:hover .sub-menu{
+.menu-item:hover .sub-menu {
   display: block;
 }
 
-#menu-footer .menu-item{
+#menu-footer .menu-item {
   padding: 6px 0 !important;
 }
-#menu-footer .menu-item a:hover{
-  color: #1D569F;
+#menu-footer .menu-item a:hover {
+  color: #1d569f;
 }
-#menu-footer-company, #menu-footer-company li, #menu-footer-company li a{
+#menu-footer-company,
+#menu-footer-company li,
+#menu-footer-company li a {
   color: rgba(255, 255, 255, 0.75) !important;
 }
-#menu-footer-company li a:hover, #menu-footer-providers li a:hover{
+#menu-footer-company li a:hover,
+#menu-footer-providers li a:hover {
   color: #fff !important;
 }
