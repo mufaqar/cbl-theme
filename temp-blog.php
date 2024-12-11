@@ -70,8 +70,8 @@ get_header();
         // WordPress pagination function for custom query
         echo paginate_links( array(
             'total' => $custom_query->max_num_pages,
-            'prev_text' => __( '&larr; Previous', 'textdomain' ),
-            'next_text' => __( 'Next &rarr;', 'textdomain' ),
+            'prev_text' => __( '&larr; Previous', 'cbl_theme' ),
+            'next_text' => __( 'Next &rarr;', 'cbl_theme' ),
         ) );
         ?>
     </div>

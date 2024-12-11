@@ -101,23 +101,23 @@
     <div class="container mx-auto px-4">
         <div class="mb-10">
             <h2 class="text-2xl font-bold"><?php echo the_title(); ?> Internet Plans</h2>
-            <div class="w-fit hint mx-auto block md:hidden mt-5"><?php _e('Swipe Left to See All →', 'your-theme-textdomain'); ?></div>
+            <div class="w-fit hint mx-auto block md:hidden mt-5"><?php _e('Swipe Left to See All →', 'cbl_theme'); ?></div>
         </div>
         <div>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto">
                 <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-4 grid-cols-1 bg-[#215690]">
                         <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div><h4 class="md:text-base text-xs font-bold text-center text-white"><?php _e('Package', 'your-theme-textdomain'); ?></h4></div>
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white"><?php _e('Package', 'cbl_theme'); ?></h4></div>
                         </div>
                         <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2"><?php _e('Speed Up To', 'your-theme-textdomain'); ?></h4></div>
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2"><?php _e('Speed Up To', 'cbl_theme'); ?></h4></div>
                         </div>
                         <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div><h4 class="md:text-base text-xs font-bold text-center text-white"><?php _e('Price', 'your-theme-textdomain'); ?></h4></div>
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white"><?php _e('Price', 'cbl_theme'); ?></h4></div>
                         </div>
                         <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2"><?php _e('Order Now', 'your-theme-textdomain'); ?></h4></div>
+                            <div><h4 class="md:text-base text-xs font-bold text-center text-white mb-2"><?php _e('Order Now', 'cbl_theme'); ?></h4></div>
                         </div>
                     </div>
                     <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll">
