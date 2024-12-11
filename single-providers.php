@@ -169,6 +169,7 @@
 <?php endif; ?>
 
 <!-- TV Plans -->
+<?php if( have_rows('tv_plans') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -234,8 +235,10 @@
         <div><p class="text-sm font-[Roboto] mt-10"></p></div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- Internet and Phone Bundles -->
+<?php if( have_rows('internet_and_phone_bundles') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -314,8 +317,10 @@
         <div><p class="text-sm font-[Roboto] mt-10"></p></div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- Internet and Mobile Bundles -->
+<?php if( have_rows('internet_and_mobile_bundles') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -394,8 +399,10 @@
         <div><p class="text-sm font-[Roboto] mt-10"></p></div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- Internet And TV Bundles -->
+<?php if( have_rows('internet_and_tv_bundles') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -474,8 +481,10 @@
         <div><p class="text-sm font-[Roboto] mt-10"></p></div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- Internet, TV &amp; Phone Bundles -->
+<?php if( have_rows('internet_tv_phone_bundles') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -566,9 +575,11 @@
         <div><p class="text-sm font-[Roboto] mt-10"></p></div>
     </div>
 </section>
+<?php endif; ?>
 
 
 <!-- home-security -->
+<?php if( have_rows('home_security_bundles') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -631,6 +642,7 @@
         <div><p class="text-sm font-[Roboto] mt-10"></p></div>
     </div>
 </section>
+<?php endif; ?>
 
 
 <section class="my-16">
