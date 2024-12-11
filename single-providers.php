@@ -97,6 +97,7 @@
 </section>
 
 <!-- Internet Plans -->
+<?php if( have_rows('internet_plans') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -165,6 +166,7 @@
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- TV Plans -->
 <section class="my-16">
