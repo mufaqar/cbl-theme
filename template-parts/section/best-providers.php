@@ -183,50 +183,7 @@
 <?php endif; ?>
 
 <?php if ($type === 'internet'): ?>
-<section class="my-16">
-    <div class="container mx-auto px-4">
-        <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10">
-                Internet Facts for
-                <span class="text-[#ef9831]">
-                    <?php echo esc_html($city); ?>, <span class="uppercase"><?php echo esc_html($state); ?></span>
-                </span>
-            </h2>
-        </div>
-        <div class="grid md:grid-cols-4 grid-cols-1 gap-6">
-            <div class="fact-box text-center">
-                <div class="icon"><?php echo esc_html($total_provider); ?></div>
-                <i class="fas fa-tag"></i>
-                <h3 class="mt-4 text-lg font-bold">Available Internet Providers</h3>
-                <p class="mt-1 text-base"><?php echo esc_html($total_provider . ' total providers'); ?></p>
-            </div>
 
-
-            <div class="fact-box text-center">
-                <div class="icon"><?php echo $total_services_type ?></div>
-                <i class="fas fa-wrench"></i>
-                <h3 class="mt-4 text-lg font-bold">Available Technology Types</h3>
-                <p class="mt-1 text-base">
-                    <?php echo display_unique_service_types($provider_ids)?>
-                </p>
-            </div>
-
-            <div class="fact-box text-center">
-                <div class="icon">01</div>
-                <i class="fas fa-gauge"></i>
-                <h3 class="mt-4 text-lg font-bold">Max Download Speed</h3>
-                <p class="mt-1 text-base"><?php echo esc_html($fast_provider_details['speed'] . ' Mbps'); ?></p>
-            </div>
-
-            <div class="fact-box text-center">
-                <div class="icon">01</div>
-                <i class="fas fa-money-check"></i>
-                <h3 class="mt-4 text-lg font-bold">Cheapest Plan</h3>
-                <p class="mt-1 text-base"><?php echo esc_html('$ ' .$fast_provider_details['price']); ?></p>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
