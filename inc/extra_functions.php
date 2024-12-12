@@ -487,7 +487,7 @@ function Best_Provider_Details($provider_ids) {
     if (!empty($provider_ids)) {      
         $query_args = array(
             'post_type'      => 'providers',
-            'posts_per_page' => 1, 
+            'posts_per_page' => 2, 
             'post__in'       => $provider_ids, 
             'orderby'        => 'post__in',             
         );

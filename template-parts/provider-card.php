@@ -3,12 +3,8 @@ $index = get_query_var('provider_index');
 $phone = get_field( "pro_phone" );
 $logoArray = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 $logoUrl = esc_url( $logoArray[0]);
-$servicesInfo = get_field('services_info');
+
 $type = get_query_var('type');
-
-
-
-
 $servicesInfo = get_field('services_info');
 
 

@@ -1,7 +1,14 @@
     <?php  
 
-        $Best_Provider_Details = get_query_var('Best_Provider_Details'); 
-        $Best_Provider_Details =    $Best_Provider_Details[0];
+        $Best_Provider_Data = get_query_var('Best_Provider_Details'); 
+       
+        $Best_Provider_Details =    $Best_Provider_Data[0];
+        $Best_Provider_Details_Second =    $Best_Provider_Data[1];
+
+        
+      
+
+
 
         $Recommend_Data = [
                 [
@@ -44,12 +51,12 @@
                 Cable Movers hand picks <?php echo $Best_Provider_Details['title']; ?> as the best internet service
                 provider in <?php echo $city ?>. <?php echo $Best_Provider_Details['title']; ?> offers reliable high
                 speed internet service with robust download speed of up to  <?php echo $Best_Provider_Details['title']; ?> Mbps. Their
-                monthly plans begins at <?php echo $Best_Provider_Details['price']; ?> /mo making it an all-around popular choice for <?php echo $city ?>
+                monthly plans begins at <?php echo $Best_Provider_Details['price']; ?>/mo making it an all-around popular choice for <?php echo $city ?>
                 residents.
             </p>
             <p class="PClass">
-                Another pick for the area is {enter second listed provider name}, featuring a max download speed of up
-                to  <?php echo $Best_Provider_Details['title']; ?> Mbps. Starting at just <?php echo $Best_Provider_Details['price']; ?> /mo and is a remarkable choice for
+                Another pick for the area is <?php echo $Best_Provider_Details_Second['title']; ?>, featuring a max download speed of up
+                to  <?php echo $Best_Provider_Details['speed']; ?>Mbps. Starting at just <?php echo $Best_Provider_Details['price']; ?>/mo and is a remarkable choice for
                 streaming, gaming and working from home as well.
             </p>
         </div>
