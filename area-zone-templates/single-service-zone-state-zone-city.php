@@ -21,8 +21,10 @@
     $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
     $fast_provider_details = Fast_Provider_Details($provider_ids);
     $cheap_provider_details = Cheap_provider_details($provider_ids);
+    $Best_Provider_Details = Best_Provider_Details($provider_ids);
     set_query_var('fast_provider_details', $fast_provider_details);
     set_query_var('cheap_provider_details', $cheap_provider_details);
+    set_query_var('Best_Provider_Details', $Best_Provider_Details);
 
 
     $total_provider = count($provider_ids);

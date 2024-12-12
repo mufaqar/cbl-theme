@@ -1,5 +1,8 @@
     <?php  
 
+        $Best_Provider_Details = get_query_var('Best_Provider_Details'); 
+        $Best_Provider_Details =    $Best_Provider_Details[0];
+
         $Recommend_Data = [
                 [
                     'devices' => '1-2',
@@ -38,15 +41,15 @@
             <h2 class="text-2xl font-bold">Best <?php echo $type ?> Provider in <span
                     class="text-[#ef9831]"><?php echo $city ?> <?php echo $state ?></span></h2>
             <p class="PClass">
-                Cable Movers hand picks <?php echo $fast_provider_details['title']; ?> as the best internet service
-                provider in <?php echo $city ?>. <?php echo $fast_provider_details['title']; ?> offers reliable high
-                speed internet service with robust download speed of up to {enter max download speed} Mbps. Their
-                monthly plans begins at {enter price} /mo making it an all-around popular choice for <?php echo $city ?>
+                Cable Movers hand picks <?php echo $Best_Provider_Details['title']; ?> as the best internet service
+                provider in <?php echo $city ?>. <?php echo $Best_Provider_Details['title']; ?> offers reliable high
+                speed internet service with robust download speed of up to  <?php echo $Best_Provider_Details['title']; ?> Mbps. Their
+                monthly plans begins at <?php echo $Best_Provider_Details['price']; ?> /mo making it an all-around popular choice for <?php echo $city ?>
                 residents.
             </p>
             <p class="PClass">
                 Another pick for the area is {enter second listed provider name}, featuring a max download speed of up
-                to {enter max download speed} Mbps. Starting at just {enter price} /mo and is a remarkable choice for
+                to  <?php echo $Best_Provider_Details['title']; ?> Mbps. Starting at just <?php echo $Best_Provider_Details['price']; ?> /mo and is a remarkable choice for
                 streaming, gaming and working from home as well.
             </p>
         </div>

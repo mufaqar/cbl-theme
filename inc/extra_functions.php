@@ -481,6 +481,55 @@ function Fast_Provider_Details($provider_ids) {
     return $provider_details; // Return the array of provider details
 }
 
+function Best_Provider_Details($provider_ids) {
+    $provider_details = array(); // Initialize an empty array to hold each provider's details
+
+    if (!empty($provider_ids)) {      
+        $query_args = array(
+            'post_type'      => 'providers',
+            'posts_per_page' => 1, 
+            'post__in'       => $provider_ids, 
+            'orderby'        => 'post__in',             
+        );
+        
+        $query = new WP_Query($query_args);
+        
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $title = get_the_title(); 
+                $speed = get_post_meta(get_the_ID(), 'services_info_internet_services_speed', true); // Replace with actual meta key for speed
+                $price = get_post_meta(get_the_ID(), 'pro_price', true); // Replace with actual meta key for price
+                
+                // Append each provider's details as an associative array to the $provider_details array
+                $provider_details[] = array(
+                    'title' => $title,
+                    'speed' => $speed ? $speed . ' Mbps' : 'N/A',
+                    'price' => $price ? '$' . $price : 'N/A'
+                );
+            }
+            wp_reset_postdata(); 
+        } else {
+            // If no posts are found, return a default array with a single "No providers found" message
+            $provider_details[] = array(
+                'title' => 'No providers found.',
+                'speed' => 'N/A',
+                'price' => 'N/A'
+            );
+        }
+    } else {
+        // If provider IDs are empty, return a default array with a single "No providers match the criteria" message
+        $provider_details[] = array(
+            'title' => 'No providers match the criteria.',
+            'speed' => 'N/A',
+            'price' => 'N/A'
+        );
+    }
+
+    return $provider_details; // Return the array of provider details
+}
+
+
 function Cheap_provider_details($provider_ids) {
     $provider_details = array(); // Initialize an empty array to hold each provider's details
 
