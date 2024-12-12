@@ -138,7 +138,7 @@
                     <div
                         class="border-l border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <p class="text-center md:text-base text-xs"><a target="_blank" href="/providers/xfinity">
+                            <p class="text-center md:text-base text-xs"><a target="_blank" href="<?php the_permalink()?>">
                                     <?php the_title()?> </a></p>
                         </div>
                     </div>
