@@ -1,3 +1,5 @@
+<?php  $city = FormatData($city);
+    $state = strtoupper($state); ?>
 <!-- Summary Of Providers -->
 <section class="my-16">
     <div class="container mx-auto px-4">
@@ -80,16 +82,30 @@
                                         set_query_var('provider_index', $i);
                                         $servicesInfo = get_field('services_info');
                                         $type = get_query_var('type');
-                                        $isSpeed = $type === "tv";
-                                        if($isSpeed){
-                                            $speed =  $servicesInfo["tv_services"]["summary_speed"];
-                                            $feature =  $servicesInfo["tv_services"]["summary_features"];
-                                            $price =  $servicesInfo["tv_services"]["price"];
-                                        }else{
-                                            $speed =  $servicesInfo["internet_services"]["summary_speed"];
-                                            $feature =  $servicesInfo["internet_services"]["summary_features"];
-                                            $price =  $servicesInfo["internet_services"]["price"];
+                                        $servicesInfo = get_field('services_info');
+                                        if ($type == 'internet') {
+                                            $services = $servicesInfo["internet_services"];
+                                        } elseif ($type == 'tv') {
+                                            $services = $servicesInfo["tv_services"];
+                                        } elseif ($type == 'landline') {
+                                            $services = $servicesInfo["landline_services"];
+                                        } else {
+                                            $services = $servicesInfo["home_security_services"];
                                         }
+
+                                       // print_r($services);
+
+
+                                        $price =  $services['price'];
+                                        $summary_speed =  $services['summary_speed'];
+                                        $connection_type =  $services['connection_type'];
+                                        $summary_features =  $services['summary_features'];
+                                       
+                                        
+
+
+
+
                                     ?>
                         <div class="min-w-[120px] md:w-full grid md:grid-cols-7 dtable">
                             <div
@@ -102,19 +118,19 @@
                             <div
                                 class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
-                                    <p class="text-center md:text-base text-xs">Satellite</p>
+                                    <p class="text-center md:text-base text-xs"><?php echo $connection_type ?></p>
                                 </div>
                             </div>
                             <div
                                 class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $speed ?> Mbps</p>
+                                    <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> Mbps</p>
                                 </div>
                             </div>
                             <div
                                 class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center md:col-span-3">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $feature ?></p>
+                                    <p class="text-center md:text-base text-xs"><?php echo $summary_features ?></p>
                                 </div>
                             </div>
                             <div class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
