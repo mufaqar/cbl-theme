@@ -65,7 +65,14 @@ get_header();
                     'posts_per_page' => -1, // Number of posts to display
                     'order'          => 'DESC', // Order of the posts
                     'orderby'        => 'date', // Order by date
-                    'providers_types'        => 'tv-internet' // Order by date
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => 'providers_types', // Taxonomy name
+                            'field'    => 'slug', // Can also be 'term_id' or 'name'
+                            'terms'    => array('internet', 'tv'), // List of terms
+                            'operator' => 'IN', // Operator to match any of the terms
+                        ),
+                    ),
                 );
 
                 // Custom query to fetch posts
