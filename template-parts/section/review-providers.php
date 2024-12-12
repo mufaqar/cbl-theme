@@ -30,9 +30,9 @@
                 $provider_type = get_comment_meta( $comment->comment_ID, 'provider_type', true );
 
                 ?>
-                    <div class="border-t p-5 mb-2">
+                    <div class="border-b p-5 mb-2">
                         <div>
-                        <div>
+                        <div class="px-1">
                             <h6><?php echo $comment->comment_author ?></h6>
                         </div>
                             <div class="flex gap-1 items-center">
