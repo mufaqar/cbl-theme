@@ -37,7 +37,7 @@
 
             <?php elseif ($type === 'landline'): ?>
 
-            <p class="PClass"> Our recommendation for the cheap landline provider in Glendale, CA is <?php echo $cheap_providers[0]['title']; ?>. Starting at just {enter landline price} per month would give you unlimited nationwide
+            <p class="PClass"> Our recommendation for the cheap landline provider in Glendale, CA is <?php echo $cheap_providers[0]['title']; ?>. Starting at just <?php echo $cheap_providers[1]['price']; ?> per month would give you unlimited nationwide
                 calling, readable voicemail using transcription services as well as three-way calling when you need to
                 catch up with friends and family members.
             <p>
