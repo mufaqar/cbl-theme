@@ -1,5 +1,8 @@
 <!-- Types of  Technologies -->
-<?php $provider_ids = get_query_var('provider_ids', array()); ?>
+<?php
+   $city = FormatData($city);
+   $state = strtoupper($state);
+$provider_ids = get_query_var('provider_ids', array()); ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
