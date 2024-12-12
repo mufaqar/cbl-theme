@@ -124,7 +124,7 @@
                 depending on your equipment and services.</p>
 
             <h2 class="text-2xl font-bold mt-5">VIVINT </h2>
-            <p class="PClass">VIVINT is one of those home security providers in {insert city name, state abbreviation}
+            <p class="PClass">VIVINT is one of those home security providers in <?php echo $city ?> <?php echo $state ?>
                 that stand out due to their modern approaches. </p>
             <p>From AI-powered cameras to cutting-edge sensors and ultra-smart locks, the company has earned a
                 reputation for its innovative tools. Though the price point is a bit higher than ADT, the feature-rich
