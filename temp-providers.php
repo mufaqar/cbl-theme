@@ -63,7 +63,7 @@ get_header();
                 $args = array(
                     'post_type'      => 'providers', // Custom post type name
                     'posts_per_page' => -1, // Number of posts to display
-                    'order'          => 'DESC', // Order of the posts
+                    'order'          => 'ASC', // Order of the posts
                     'orderby'        => 'date', // Order by date
                     'tax_query'      => array(
                         array(
