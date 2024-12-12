@@ -64,7 +64,8 @@ get_header();
                     'post_type'      => 'providers', // Custom post type name
                     'posts_per_page' => -1, // Number of posts to display
                     'order'          => 'DESC', // Order of the posts
-                    'orderby'        => 'date' // Order by date
+                    'orderby'        => 'date', // Order by date
+                    'providers_types'        => 'tv-internet' // Order by date
                 );
 
                 // Custom query to fetch posts
