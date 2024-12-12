@@ -30,8 +30,11 @@
                 $provider_type = get_comment_meta( $comment->comment_ID, 'provider_type', true );
 
                 ?>
-                    <div class="border p-5 mb-2">
+                    <div class="border-t p-5 mb-2">
                         <div>
+                        <div>
+                            <h6><?php echo $comment->comment_author ?></h6>
+                        </div>
                             <div class="flex gap-1 items-center">
                                 <strong><?php echo esc_html($comment->post_title) ?></strong>
                                 <p class="capitalize text-sm px-2 bg-[#ef9831] text-white" style="padding: 0px 3px"><?php echo $provider_type ?></p>
@@ -48,9 +51,7 @@
                             </div>
                         </div>
                         <p class="mt-4"><?php echo esc_html($comment->comment_content) ?></p>
-                        <div>
-                            <h6><?php echo $comment->comment_author ?></h6>
-                        </div>
+                       
                     </div>
                 <?php
             }
