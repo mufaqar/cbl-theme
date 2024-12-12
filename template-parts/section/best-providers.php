@@ -1,30 +1,36 @@
-<?php   $Recommend_Data = [
-        [
-            'devices' => '1-2',
-            'best_use' => 'SD streaming on One device, Basic Browsing and web surfing, Emailing and downloading music',
-            'recommend' => 'Up to 25 Mbps',
-        ],
-        [
-            'devices' => '3-5',
-            'best_use' => 'HD Streaming on Multiple Devices, Download large files quickly, Lag Free Multi-Player gaming',
-            'recommend' => 'Up to 100 Mbps',
-        ],
-        [
-            'devices' => '6-10',
-            'best_use' => 'Ultra HD streaming on Multiple Devices, Lag Free Gaming on Multiple Console, Work from home and Video Conferencing',
-            'recommend' => 'Up to 500 Mbps',
-        ],
-        [
-            'devices' => '10-15',
-            'best_use' => '4K HD streaming on Multiple Devices, Downloading and Gaming Simultaneously',
-            'recommend' => 'Up to 1000 Mbps',
-        ],
-        [
-            'devices' => 'More Than 15',
-            'best_use' => 'All of the above plus 8K HD streaming on Multiple Devices. Best for Almost Anything',
-            'recommend' => 'Up to 1000+ Mbps',
-        ],
-    ]; ?>
+    <?php  
+
+        $Recommend_Data = [
+                [
+                    'devices' => '1-2',
+                    'best_use' => 'SD streaming on One device, Basic Browsing and web surfing, Emailing and downloading music',
+                    'recommend' => 'Up to 25 Mbps',
+                ],
+                [
+                    'devices' => '3-5',
+                    'best_use' => 'HD Streaming on Multiple Devices, Download large files quickly, Lag Free Multi-Player gaming',
+                    'recommend' => 'Up to 100 Mbps',
+                ],
+                [
+                    'devices' => '6-10',
+                    'best_use' => 'Ultra HD streaming on Multiple Devices, Lag Free Gaming on Multiple Console, Work from home and Video Conferencing',
+                    'recommend' => 'Up to 500 Mbps',
+                ],
+                [
+                    'devices' => '10-15',
+                    'best_use' => '4K HD streaming on Multiple Devices, Downloading and Gaming Simultaneously',
+                    'recommend' => 'Up to 1000 Mbps',
+                ],
+                [
+                    'devices' => 'More Than 15',
+                    'best_use' => 'All of the above plus 8K HD streaming on Multiple Devices. Best for Almost Anything',
+                    'recommend' => 'Up to 1000+ Mbps',
+                ],
+        ];
+        $city = FormatData($city);
+        $state = strtoupper($state);
+    
+    ?>
 <?php if ($type === 'internet'): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">

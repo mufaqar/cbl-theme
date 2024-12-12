@@ -1,5 +1,7 @@
 <?php 
     $cheap_providers = get_query_var('cheap_provider_details'); 
+    $city = FormatData($city);
+    $state = strtoupper($state);
 ?>
 
 <section class="my-8">
@@ -18,7 +20,7 @@
             <p class="PClass">
                 <?php echo $cheap_providers[1]['speed']; ?> is another cheap internet service option offering high speed internet
                 plans as low as <?php echo $cheap_providers[0]['price']; ?> per month to fit into any budget. To help you choose the right internet
-                provider for your home we have listed all providers available in {enter city name} and sorted them by
+                provider for your home we have listed all providers available in <?php echo $city ?> and sorted them by
                 price (low to high).
             </p>
             <?php elseif ($type === 'tv'): ?>

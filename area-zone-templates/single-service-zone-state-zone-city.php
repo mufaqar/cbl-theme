@@ -6,7 +6,7 @@
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
-    $state = strtoupper($state);
+    
 
     add_filter('wpseo_title', 'Generate_Title_For_City');
     add_filter('wpseo_metadesc', 'Generate_Description_For_City');
@@ -17,6 +17,7 @@
      
     $zip_codes_to_search = get_zipcodes_by_city($city);
     $city = FormatData($city);
+    $state = strtoupper($state);
     $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
     $fast_provider_details = Fast_Provider_Details($provider_ids);
     $cheap_provider_details = Cheap_provider_details($provider_ids);
