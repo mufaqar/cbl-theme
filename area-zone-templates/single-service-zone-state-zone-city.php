@@ -15,8 +15,8 @@
     get_header();
     
      
-    $zip_codes_to_search = get_zipcodes_by_city($qcity);
-    $city = FormatData($qcity);
+    $zip_codes_to_search = get_zipcodes_by_city($city);
+    $city = FormatData($city);
     $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
     $fast_provider_details = Fast_Provider_Details($provider_ids);
     $cheap_provider_details = Cheap_provider_details($provider_ids);
