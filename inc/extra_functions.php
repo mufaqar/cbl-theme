@@ -593,9 +593,11 @@ function render_provider_buttons($phone, $permalink) {
             <?php echo esc_html($phone); ?>
         </a>
         <?php endif; ?>
+        <?php if (!empty($permalink)) : ?>
         <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]" href="<?php echo esc_url($permalink); ?>">
             View Plans
         </a>
+        <?php endif; ?>
     </div>
     <?php
 }
