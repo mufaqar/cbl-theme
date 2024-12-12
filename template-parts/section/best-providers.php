@@ -62,16 +62,15 @@
             <h2 class="text-2xl font-bold">Best <?php echo $type ?> Service Providers in <span
                     class="text-[#ef9831]"><?php echo $city ?> <?php echo $state ?></span></h2>
             <p class="PClass">
-                CableMovers choose {insert top rated phone provider} as the best home phone provider in {insert city
-                name}. {insert provider name} offers home phone service with variety of features such as Caller ID, Call
+                CableMovers choose <?php echo $Best_Provider_Details['title']; ?> as the best home phone provider in <?php echo $city ?>.  <?php echo $Best_Provider_Details['title']; ?> offers home phone service with variety of features such as Caller ID, Call
                 blocking, Three way calling, call forwarding, instant tracing to 911 services along with unlimited
                 nationwide calling in the U.S, Canada, Puerto Rico Guam and U.S Virgin Island. High speed internet is
-                required for the home phone to work. Monthly price is {insert price} per month when bundled with high
+                required for the home phone to work. Monthly price is <?php echo $Best_Provider_Details['price']; ?> per month when bundled with high
                 speed internet.
             </p>
             <p class="PClass">
-                {Insert second provider name} is another best landline phone option in {insert city name, state name}.
-                It offers crystal clear voice quality for just {insert price} per month with features like unlimited
+            <?php echo $Best_Provider_Details['title']; ?> is another best landline phone option in <?php echo $city ?> <?php echo $state ?>.
+                It offers crystal clear voice quality for just <?php echo $Best_Provider_Details['price']; ?> per month with features like unlimited
                 nationwide calling, Caller ID on TV, Readable Voicemail. Upon signing up, you’ll have an option to get a
                 new local telephone number or request to keep your existing number. Additionally, it allows you to block
                 unwanted calls, forward select calls to another number when busy or forward all calls when you are away.
@@ -95,9 +94,9 @@
                 –even when you are not around.
             </p>
             <p class="PClass">
-                If you’re living in {insert city name}, you probably know that the city is no stranger to theft crimes.
+                If you’re living in <?php echo $city ?> , you probably know that the city is no stranger to theft crimes.
                 To protect their homes, owners invest in state-of-the-art home security systems that add extra layers of
-                safety around their abodes. Here are reputable home security service providers in {insert city name} you
+                safety around their abodes. Here are reputable home security service providers in <?php echo $city ?>  you
                 can trust.
             </p>
 
