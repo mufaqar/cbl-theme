@@ -3,6 +3,8 @@
     $city = get_query_var('city');
     $type = get_query_var('type');
     $state = get_query_var('state');
+    $city = FormatData($city);
+    $state = strtoupper($state);
 
     function fetch_comments_by_state($state, $type) {                
         $args = [
@@ -61,16 +63,9 @@
 
 
 
-<!-- Review Sections -->
-<section class="px-4 mt-16 container mx-auto">
-    <button id="openModalBtn"
-        class="border-[#EF9831] border-[2px] text-[#EF9831] p-3 px-5 rounded-lg hover:bg-[#EF9831] hover:text-white font-medium">
-        Leave a Review
-    </button>
-    <div class="grid gap-10"></div>
-</section>
 
-<section class="container mx-auto px-4 mb-10">
+
+<section class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-2 mt-5">
         Reviews for <?php echo $type ?> in <span class="text-[#ef9831]"> <span class="capitalize"><?php echo $city ?></span></span>
     </h2>
@@ -79,6 +74,14 @@
             fetch_comments_by_state($state, $type);
         ?>
     </div>
+</section>
+<!-- Review Sections -->
+<section class="px-4 my-16 container mx-auto">
+    <button id="openModalBtn"
+        class="border-[#EF9831] border-[2px] text-[#EF9831] p-3 px-5 rounded-lg hover:bg-[#EF9831] hover:text-white font-medium">
+        Leave a Review
+    </button>
+    <div class="grid gap-10"></div>
 </section>
 
 <?php get_template_part( 'template-parts/review', 'form' ); ?>
