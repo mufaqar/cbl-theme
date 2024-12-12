@@ -195,8 +195,9 @@
     <?php }else{
         set_query_var('providers_query', $query_fast);get_template_part( 'template-parts/section/fast', 'providers' );
         set_query_var('providers_query', $query_compair); get_template_part( 'template-parts/section/compair', 'providers' );
-        set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' );
         get_template_part( 'template-parts/section/text', 'providers' );
+        set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' );
+       
         set_query_var('provider_ids', $provider_ids);get_template_part( 'template-parts/section/types', 'technology' );
     }
 
