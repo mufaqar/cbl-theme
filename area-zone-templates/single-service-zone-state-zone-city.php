@@ -104,8 +104,8 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in <?php echo $state?>
-                <span class="text-[#ef9831]"><?php echo $city?> </span>
+            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in 
+                <span class="text-[#ef9831]"><?php echo $city?> </span>,<?php echo $state?>
             </h2>
         </div>
         <?php
