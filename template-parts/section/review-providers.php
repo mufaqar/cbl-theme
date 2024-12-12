@@ -25,34 +25,46 @@
         $comments = $comment_query->get_comments();
         if (!empty($comments)) {
             foreach ($comments as $comment) {
-                // $star = get_fields('star', );
                 $star = get_comment_meta( $comment->comment_ID, 'star', true );
                 $provider_type = get_comment_meta( $comment->comment_ID, 'provider_type', true );
+                $comment_date = get_comment_date('F j, Y', $comment->comment_ID); // Format: June 23, 2024
+                $content = esc_html($comment->comment_content);
+                $content_length = strlen($content);
+                $short_content = substr($content, 0, 460);
 
                 ?>
-                    <div class="border-b p-5 mb-2">
-                        <div>
-                        <div class="px-1">
+                <div class="border-b border-gray-700 py-5 pb-7 mb-2">
+                    <div>
+                        <div class="">
                             <h6><?php echo $comment->comment_author ?></h6>
                         </div>
-                            <div class="flex gap-1 items-center">
-                                <strong><?php echo esc_html($comment->post_title) ?></strong>
-                                <p class="capitalize text-sm px-2 bg-[#ef9831] text-white" style="padding: 0px 3px"><?php echo $provider_type ?></p>
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <?php
-                                for ($i = 1; $i <= $star; $i++) {
-                                   ?>
-                                    <svg width="20px" height="20px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
-                                   <?php
-                                }
-                                ?>
-                                <?php echo $star ?>/5
-                            </div>
+                        <div class="flex gap-1 text-sm py-4 capitalize items-center">
+                            <?php echo esc_html($comment->post_title) ?> - <?php echo $provider_type ?>
                         </div>
-                        <p class="mt-4"><?php echo esc_html($comment->comment_content) ?></p>
-                       
+                        <div class="flex items-center gap-1">
+                            <?php
+                            for ($i = 1; $i <= 5; $i++) {
+                                $fill_color = ($i <= $star) ? "#FFAC33" : "#969696"; // Set color based on the rating
+                                ?>
+                                <svg width="20px" height="20px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                                    <path fill="<?php echo $fill_color; ?>" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path>
+                                </svg>
+                                <?php
+                            }
+                            ?>
+                            <p><?php echo $comment_date ?> </p>
+                        </div>
                     </div>
+                    <p class="mt-4" id="comment-content-<?php echo $comment->comment_ID; ?>">
+                        <?php 
+                            if ($content_length > 100) {
+                                echo $short_content . '... <button class="show-more text-blue-600" data-full-content="' . esc_attr($content) . '" data-comment-id="' . $comment->comment_ID . '">More</button>';
+                            } else {
+                                echo $content;
+                            }
+                        ?>
+                    </p>
+                </div>
                 <?php
             }
         } else {
@@ -93,4 +105,16 @@ document.getElementById('openModalBtn').addEventListener('click', function() {
 document.getElementById('closeModalBtn').addEventListener('click', function() {
     document.getElementById('reviewModal').classList.add('hidden');
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.show-more');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const fullContent = this.getAttribute('data-full-content');
+                const commentId = this.getAttribute('data-comment-id');
+                const contentElement = document.getElementById('comment-content-' + commentId);
+                contentElement.innerHTML = fullContent;
+            });
+        });
+    });
 </script>
