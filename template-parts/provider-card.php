@@ -47,14 +47,14 @@ $features_items  = explode(',', $features);
                 <?php the_title()?></h2>
             <h2 class="text-base font-bold text-center text-white p-5"> <?php  if($deals){ echo $deals; }?></h2>
         </div>
-        <div class="md:w-full w-full grid grid-cols-1 dtable  <?php echo $type == 'home-security' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> flex-col ">
+        <div class="md:w-full w-full grid grid-cols-1 dtable  <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> flex-col ">
             <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
                 <a target="_blank" href="<?php the_permalink()?>">
                     <img alt="Feature Image" loading="lazy" width="140" height="50" decoding="async" data-nimg="1"
                         src="<?php echo $logoUrl ?>" style="color: transparent;" />
                 </a>
             </div>
-            <?php if ($type != 'home-security') : ?>
+            <?php if (!in_array($type, ['home-security', 'landline'])) : ?>
                 <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
                     <div class="text-center">
                         <p class="tch"><?php echo $type == 'tv' ? 'Channels' : 'Speed from'; ?></p>
