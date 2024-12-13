@@ -14,12 +14,12 @@ $state = strtoupper($state);
         <div class="mb-10">
             <h2 class="text-2xl font-bold">Compare <?php echo FormatData($type) ?> Providers in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
-                    <p class="PClass"> Still can’t decide? Use our side-by-side comparison chart to make an informed decision.</p>
+            <p class="PClass"> Still can’t decide? Use our side-by-side comparison chart to make an informed decision.
+            </p>
         </div>
         <div>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
-                <div
-                    class="w-full h-auto rounded-t-md rounded-b-md flex md:flex-row flex-row items-stretch">
+                <div class="w-full h-auto rounded-t-md rounded-b-md flex md:flex-row flex-row items-stretch">
                     <div class="md:w-96 min-w-[50px]  bg-[#215690]">
                         <div
                             class="border-r-0 md:border-b-0 bg-gray-200 border-b md:border-r grid justify-center md:p-5 p-3 md:h-auto !h-[80px] items-center">
@@ -27,12 +27,7 @@ $state = strtoupper($state);
                                 <h4 class="md:text-base text-xs text-center text-gray-200">.</h4>
                             </div>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[75px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
-                            </div>
-                        </div>
+
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
@@ -131,13 +126,16 @@ $state = strtoupper($state);
                             <div
                                 class="w-full bg-gray-200 md:border-r border-r-0 md:border-b-0 border-b border grid justify-center md:p-2 md:h-auto !h-[80px] items-center">
                                 <div>
-                                    <select id="provider_<?php echo $i ?>" name="provider_<?php echo $i ?>"  data-target="dtable_<?php echo $i ?>"   class="provider-select bg-transparent border border-gray-300  text-black text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[13px]">
+                                    <select id="provider_<?php echo $i ?>" name="provider_<?php echo $i ?>"
+                                        data-target="dtable_<?php echo $i ?>"
+                                        class="provider-select bg-transparent border border-gray-300  text-black text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[13px]">
                                         <option value="">Choose your provider</option>
                                         <?php
                                         if ($query->have_posts()) {
                                             while ($query->have_posts()) {
                                                 $query->the_post();
-                                                    ?><option value="<?php echo get_the_ID(); ?>"><?php echo the_title(); ?></option><?php
+                                                    ?><option value="<?php echo get_the_ID(); ?>">
+                                            <?php echo the_title(); ?></option><?php
                                                 }
                                             } else {
                                                 echo '<option>No providers found.</option>';
@@ -147,62 +145,59 @@ $state = strtoupper($state);
                                     </select>
                                 </div>
                             </div>
-                           
+
                             <div class="dtable_<?php echo $i ?>">
-                            <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center older_data">
-                                <div>
-                                    <p class="text-center md:text-base text-xs">Satellite</p>
+                                <div class="provider-item ">
+                                    <div>
+                                        <p class="provider-data">Satellite</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $speed ?> Mbps</p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data"><?php echo $speed ?> Mbps</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center md:col-span-3">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $connection_type ?></p>
+                                <div class="provider-item ">
+                                    <div>
+                                        <p class="provider-data"><?php echo $connection_type ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full grid md:border-r justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $data_caps ?></p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data"><?php echo $data_caps ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $contract ?></p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data"><?php echo $contract ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $setup_fee?></p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data"><?php echo $setup_fee?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $early_termination_fee ?></p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data"><?php echo $early_termination_fee ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $equipment_rental_fee ?></p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data"><?php echo $equipment_rental_fee ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs">$<?php echo $price ?></p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data">$<?php echo $price ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                                <div>
-                                    <p class="text-center md:text-base text-xs"><a href="<?php the_permalink()?>">View
-                                            Plans</a></p>
+                                <div class="provider-item">
+                                    <div>
+                                        <p class="provider-data"><a href="<?php the_permalink()?>">View
+                                                Plans</a></p>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                         <?php
