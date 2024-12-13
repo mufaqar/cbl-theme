@@ -33,21 +33,34 @@ get_header();
             <div class="text-white">
                 <h4 class="pb-4 text-2xl font-black">Leave a review.</h4>
                 <form id="submit-review-form" class="mt-4">
-                    <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
-                        <select id="provider" name="provider" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
-                            <option value="">Choose your provider</option>
-                            <?php
-                            if ($query->have_posts()) {
-                                while ($query->have_posts()) {
-                                    $query->the_post();
-                                        ?><option value="<?php echo get_the_ID(); ?>"><?php echo the_title(); ?></option><?php
+                    
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
+                            <select id="provider" name="provider" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
+                                <option value="">Choose your provider</option>
+                                <?php
+                                if ($query->have_posts()) {
+                                    while ($query->have_posts()) {
+                                        $query->the_post();
+                                            ?><option value="<?php echo get_the_ID(); ?>"><?php echo the_title(); ?></option><?php
+                                        }
+                                    } else {
+                                        echo '<option>No providers found.</option>';
                                     }
-                                } else {
-                                    echo '<option>No providers found.</option>';
-                                }
-                                wp_reset_postdata();
-                            ?>
-                        </select>
+                                    wp_reset_postdata();
+                                ?>
+                            </select>
+                        </div>
+
+                        <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
+                            <select id="service" name="service" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
+                                <option>Choose Service</option>
+                                <option value="internet">Internet</option>
+                                <option value="tv">TV</option>
+                                <option value="landline">Landline</option>
+                                <option value="home-security">Home Security</option>
+                            </select>
+                        </div>
                     </div>
                     
                     <div class="bg-white mt-4 flex justify-between items-center rounded-md p-[3px] px-4 overflow-hidden">
