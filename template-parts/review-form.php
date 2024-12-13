@@ -50,13 +50,18 @@
                 </div>
                 <div class="flex-1">
                     <label class="block mb-2 text-sm font-medium text-gray-900">Overall Rating</label>
-                    <select id="rating" name="rating" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <!-- <select id="rating" name="rating" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                    </select>
+                    </select> -->
+                    <div class="stars" id="stars">
+                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                            <span class="star" data-value="<?php echo $i; ?>">&#9733;</span>
+                        <?php endfor; ?>
+                    </div>
                 </div>
             </div>
 
@@ -110,8 +115,55 @@
 
 
 
+<style>
+    .stars {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .star {
+      font-size: 2rem;
+      color: gray;
+      transition: color 0.2s;
+    }
+    .star.hover,
+    .star.selected {
+      color: gold;
+    }
+  </style>
+
 
 <script>
+
+    const stars = document.querySelectorAll('.star');
+    let selectedRating = 0;
+    console.log("🚀 ~ selectedRating:", selectedRating)
+
+    stars.forEach((star, index) => {
+      star.addEventListener('mouseover', () => {
+        updateStars(index + 1, 'hover');
+      });
+
+      star.addEventListener('mouseout', () => {
+        updateStars(selectedRating, 'selected');
+      });
+
+      star.addEventListener('click', () => {
+        selectedRating = index + 1;
+        updateStars(selectedRating, 'selected');
+      });
+    });
+
+    function updateStars(rating, className) {
+      stars.forEach((star, index) => {
+        star.classList.remove('hover', 'selected');
+        if (index < rating) {
+          star.classList.add(className);
+        }
+      });
+    }
+
     jQuery(document).ready(function ($) {
     $('#submit-review-form').on('submit', function (e) {
         e.preventDefault();
