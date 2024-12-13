@@ -148,7 +148,7 @@ $state = strtoupper($state);
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs">Satellite</p>
                                 </div>
