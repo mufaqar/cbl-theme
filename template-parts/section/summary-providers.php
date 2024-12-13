@@ -5,7 +5,7 @@
     <div class="container mx-auto px-4">
         <div class="mb-10">
             <h2 class="text-2xl font-bold">Summary of <?php echo $type ?> Providers in <span
-                    class="text-[#ef9831]"><?php echo $city ?> </span></h2>
+                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
 
             <?php if ( $type === 'internet'): ?>
             <p class="PClass"> When it comes to finding Internet service provider, <?php echo $city ?>, <?php echo $state ?> is served by a robust selection of home phone service providers each with its own

@@ -1,5 +1,7 @@
 <?php 
     $fast_providers = get_query_var('fast_provider_details'); 
+    $city = FormatData($city);
+    $state = strtoupper($state);
 ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
@@ -7,7 +9,7 @@
             <?php 
                  if ($type === 'internet'): ?>
             <h2 class="text-2xl font-bold capitalize leading-10">Fastest <?php echo $type ?> Providers in <span
-                    class="text-[#ef9831]"><?php echo $city ?> </span></h2>
+                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
             <p class="PClass"> Whether you need high speed internet for streaming in 4K resolution
                 or playing online multiplayer games <?php echo $fast_providers[0]['title']; ?> provides fastest internet
                 connection in <?php echo $city ?> with download speed of up to <?php echo $fast_providers[0]['speed']; ?> for just <?php echo $fast_providers[0]['price']; ?> per month which is perfect for households with multiple users and heavy data consumption and can
