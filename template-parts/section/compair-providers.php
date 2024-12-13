@@ -129,7 +129,7 @@ $state = strtoupper($state);
                             ?>
                         <div class="min-w-[120px] md:w-full dtable">
                             <div
-                                class="w-full bg-gray-100 md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-2 md:h-auto !h-[80px] items-center">
+                                class="w-full bg-gray-200 md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-2 md:h-auto !h-[80px] items-center">
                                 <div>
                                     <select id="provider" name="provider" class="bg-transparent border border-gray-300  text-black text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[13px]">
                                         <option value="">Choose your provider</option>
