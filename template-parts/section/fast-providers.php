@@ -8,7 +8,7 @@
         <div class="mb-10">
             <?php 
                  if ($type === 'internet'): ?>
-            <h2 class="text-2xl font-bold capitalize leading-10">Fastest <?php echo $type ?> Providers in <span
+            <h2 class="text-2xl font-bold capitalize leading-10">Fastest <?php echo FormatData($type) ?> Providers in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
             <p class="PClass"> Whether you need high speed internet for streaming in 4K resolution
                 or playing online multiplayer games <?php echo $fast_providers[0]['title']; ?> provides fastest internet
@@ -20,7 +20,7 @@
             <p class="PClass">Take a look at the fastest internet providers in your area sorted by
                 speed (high to low). </p>
             <?php elseif ($type === 'tv'): ?>
-            <h2 class="text-2xl font-bold capitalize leading-10">Highest Rated <?php echo $type ?> Providers in <span
+            <h2 class="text-2xl font-bold capitalize leading-10">Highest Rated <?php echo FormatData($type) ?> Providers in <span
                     class="text-[#ef9831]"><?php echo $city ?> </span></h2>
             <p class="PClass">Below is our curated list of the cable TV providers we know that offer
                 quality service and reasonable pricing. Each one has exceptional customer service and online user

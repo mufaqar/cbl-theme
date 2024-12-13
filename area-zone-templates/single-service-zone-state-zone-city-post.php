@@ -98,10 +98,10 @@ $query_fast = new WP_Query($query_args_fast);
     <div class="container mx-auto px-4">
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
-                <?php echo $type ?> Providers in <br />
+                <?php echo FormatData($type) ?> Providers in <br />
                 ZIP Code <span class="text-[#ef9831]"><?php echo $zipcode ?></span>
             </h1>
-            <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best <?php echo $type ?>
+            <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best <?php echo FormatData($type) ?>
                 Providers in your area:</p>
             <?php get_template_part('template-parts/filter', 'form'); ?>
         </div>
@@ -113,7 +113,7 @@ $query_fast = new WP_Query($query_args_fast);
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in <span
+            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo FormatData($type) ?> Providers in <span
                     class="text-[#ef9831]"><?php echo $zipcode ?> </span></h2>
         </div>
         <?php
@@ -243,11 +243,11 @@ $query_fast = new WP_Query($query_args_fast);
             <div class="mb-10">
                 <?php 
                     if ($type === 'internet'): ?>
-                <h2 class="text-2xl font-bold capitalize leading-10">Fastest <?php echo $type ?> Providers in <span
+                <h2 class="text-2xl font-bold capitalize leading-10">Fastest <?php echo FormatData($type) ?> Providers in <span
                         class="text-[#ef9831]"><?php echo $zipcode ?>, <?php echo $state ?></span></h2>
 
                 <?php elseif ($type === 'tv'): ?>
-                <h2 class="text-2xl font-bold capitalize leading-10">Highest Rated <?php echo $type ?> Providers in <span
+                <h2 class="text-2xl font-bold capitalize leading-10">Highest Rated <?php echo FormatData($type) ?> Providers in <span
                         class="text-[#ef9831]"><?php echo $zipcode ?>, <?php echo $state ?> </span></h2>
                 <p class="PClass">Below is our curated list of the cable TV providers we know that offer
                     quality service and reasonable pricing. Each one has exceptional customer service and online user
@@ -425,7 +425,7 @@ $query_fast = new WP_Query($query_args_fast);
     <section class="my-16">
         <div class="container mx-auto px-4">
             <div class="mb-10">
-                <h2 class="text-2xl font-bold capitalize leading-10">What are the <?php echo $type ?> Fees in
+                <h2 class="text-2xl font-bold capitalize leading-10">What are the <?php echo FormatData($type) ?> Fees in
                     <span class="text-[#ef9831]"><?php echo $zipcode ?>, <?php echo $state ?> </span>
                 </h2>
             </div>
@@ -812,7 +812,7 @@ $query_fast = new WP_Query($query_args_fast);
                                     <div>
                                         <p class="text-center md:text-base text-xs">
                                             <?php if ($type === 'home-security'): ?><?php echo $feature ?><?php endif; ?>
-                                            <?php if ($type === 'landline'): ?><?php echo $type ?><?php endif; ?>
+                                            <?php if ($type === 'landline'): ?><?php echo FormatData($type) ?><?php endif; ?>
                                         </p>
                                     </div>
                                 </div>
