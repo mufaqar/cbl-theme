@@ -131,7 +131,7 @@ $state = strtoupper($state);
                             <div
                                 class="w-full bg-[#215690] md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-2 md:h-auto h-[120px] items-center">
                                 <div>
-                                    <select id="provider" name="provider" class="bg-transparent border border-gray-300  text-white text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
+                                    <select id="provider" name="provider" class="bg-transparent border border-gray-300  text-white text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[14px]">
                                         <option value="">Choose your provider</option>
                                         <?php
                                         if ($query->have_posts()) {
