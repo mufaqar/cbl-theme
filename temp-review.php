@@ -3,7 +3,7 @@
 
 $city = get_query_var('city');
 $type = get_query_var('type');
-$state = get_query_var('state');
+// $state = get_query_var('state');
 $i = 0;
 
 $query_reviews_args = array(
@@ -11,6 +11,14 @@ $query_reviews_args = array(
     'posts_per_page' => -1            
 );
 $query = new WP_Query($query_reviews_args);
+
+// State 
+$state = get_terms(array(
+    'taxonomy'   => $taxonomy_name,
+    'hide_empty' => false, // Set to true if you only want terms with associated posts
+));
+
+
 
 get_header();
 ?>
@@ -73,6 +81,13 @@ get_header();
                         <div class="bg-white rounded-md pr-1 overflow-hidden">
                             <select id="provider" name="provider" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
                                 <option value="">State</option>
+                                <?php
+                                    if (!is_wp_error($state) && !empty($state)) {
+                                        foreach ($state as $term) { ?>
+                                            <option value="<?php echo $term->name ?>"><?php echo $term->name ?></option>
+                                        <?php }
+                                    }
+                                ?>
                             </select>
                         </div>
                         <input type="text" id="zipcode" name="zipcode" class="block p-4 w-full text-sm text-gray-900 bg-white rounded-md border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Zipcode" />
