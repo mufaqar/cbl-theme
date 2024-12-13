@@ -17,10 +17,10 @@ $caption = wp_get_attachment_caption($thumbnail_id);
 ?>
 
 <main class="bg-[#215690]">
-	<header class="py-12">
+	<header class="py-20">
 		<div class="px-4 mx-auto w-full max-w-screen-xl text-center">
-			<span class="block mb-4 font-semibold text-white">Published <time class="font-normal text-gray-500 dark:text-gray-400" pubdate class="uppercase" datetime="2022-03-08" title="August 3rd, 2022"><?php echo get_the_date('F j, Y'); ?></time></span>
-			<h1 class="mx-auto mb-4 max-w-2xl text-2xl text-white font-extrabold leading-none sm:text-3xl lg:text-4xl"><?php the_title()?></h1>
+			<!-- <span class="block mb-4 font-semibold text-white">Published <time class="font-normal text-gray-500 dark:text-gray-400" pubdate class="uppercase" datetime="2022-03-08" title="August 3rd, 2022"><?php echo get_the_date('F j, Y'); ?></time></span> -->
+			<h1 class="mx-auto mb-4 max-w-2xl text-2xl text-white font-extrabold lg:leading-snug sm:text-3xl lg:text-5xl"><?php the_title()?></h1>
 			<p class="text-lg font-normal text-gray-500 dark:text-gray-400"><?php echo esc_html($meta_description) ?></p>
 		</div>
 	</header>
@@ -29,7 +29,7 @@ $caption = wp_get_attachment_caption($thumbnail_id);
 
 <div class="flex relative max-w-[900px] w-full z-20 justify-between px-4 mx-auto bg-white rounded mb-20">
     <article class="w-full max-w-none format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
-        <div class="flex mb-5 flex-col lg:flex-row justify-between lg:items-center py-6 border-t border-b border-gray-200 dark:border-gray-700 not-format">
+        <!-- <div class="flex mb-5 flex-col lg:flex-row justify-between lg:items-center py-6 border-t border-b border-gray-200 dark:border-gray-700 not-format">
             <span class="text-base mb-4 lg:mb-0 font-normal text-gray-500 dark:text-gray-400">
                 By <a href="#" rel="author" class="font-bold text-gray-900 no-underline hover:underline capitalize"><?php echo get_the_author(); ?></a> in <a href="<?php echo get_home_url(); ?>" class="font-normal text-gray-500 dark:text-gray-400 no-underline hover:underline">Cablemovers</a>
             </span>
@@ -66,9 +66,9 @@ $caption = wp_get_attachment_caption($thumbnail_id);
                     Copy link
                 </button>
             </aside>
-        </div>
+        </div> -->
 
-        <section>
+        <!-- <section>
             <?php
                 if (have_posts()) : 
                     while (have_posts()) : the_post();
@@ -76,7 +76,7 @@ $caption = wp_get_attachment_caption($thumbnail_id);
                     endwhile; 
                 endif;
             ?>
-        </section>
+        </section> -->
        
 
         <figure class="py-6">
