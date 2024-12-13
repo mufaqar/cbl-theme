@@ -11,7 +11,7 @@ $query = new WP_Query($query_reviews_args);
     <div class="container mx-auto px-4">
         <div class="mb-10">
             <h2 class="text-2xl font-bold">Compare <?php echo $type ?> Providers in <span
-                    class="text-[#ef9831]"><?php echo $city ?> </span></h2>
+                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
             <p>Still can’t decide? Use our side-by-side comparison chart to make an informed decision.</p>
         </div>
         <div>
