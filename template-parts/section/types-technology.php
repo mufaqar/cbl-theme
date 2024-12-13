@@ -7,7 +7,7 @@ $provider_ids = get_query_var('provider_ids', array()); ?>
     <div class="container mx-auto px-4">
         <div class="mb-10">
             <h2 class="text-2xl font-bold mb-2">
-                Types of <?php echo $type ?> Technologies Available in <span class="text-[#ef9831]"><?php echo $city?>,
+                Types of <?php echo FormatData($type) ?> Technologies Available in <span class="text-[#ef9831]"><?php echo $city?>,
                     <span class="uppercase"><?php echo $state?></span></span>
             </h2>
             <p class="text-base">

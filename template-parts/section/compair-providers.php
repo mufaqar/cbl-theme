@@ -12,7 +12,7 @@ $state = strtoupper($state);
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold">Compare <?php echo $type ?> Providers in <span
+            <h2 class="text-2xl font-bold">Compare <?php echo FormatData($type) ?> Providers in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
                     <p class="PClass"> Still can’t decide? Use our side-by-side comparison chart to make an informed decision.</p>
         </div>
