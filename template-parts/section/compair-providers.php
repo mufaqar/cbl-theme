@@ -4,6 +4,8 @@ $query_reviews_args = array(
     'posts_per_page' => -1            
 );
 $query = new WP_Query($query_reviews_args);
+$city = FormatData($city);
+$state = strtoupper($state);
 
 
 ?>
@@ -12,7 +14,7 @@ $query = new WP_Query($query_reviews_args);
         <div class="mb-10">
             <h2 class="text-2xl font-bold">Compare <?php echo $type ?> Providers in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
-            <p>Still can’t decide? Use our side-by-side comparison chart to make an informed decision.</p>
+                    <p class="PClass"> Still can’t decide? Use our side-by-side comparison chart to make an informed decision.</p>
         </div>
         <div>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
