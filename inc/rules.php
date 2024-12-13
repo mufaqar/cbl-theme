@@ -152,7 +152,7 @@ function cbl_breadcrumb() {
     $post_type = get_post_type();
 
     // Start breadcrumb container with appropriate class
-    echo '<div class="container mx-auto px-4 breadcrumb">';
+    echo '<div class="container mx-auto  breadcrumb">';
 
     // Home link
     echo '<a href="' . home_url() . '">Home</a>';
@@ -175,6 +175,11 @@ function cbl_breadcrumb() {
     } elseif ($post_type === 'providers') {
         // Breadcrumb for 'providers' post type
         echo ' <a href="' . home_url('/providers') . '"> Providers</a>';
+        echo ' <span> ' . get_the_title() . '</span>';
+    }
+    elseif ($post_type === 'post') {
+        // Breadcrumb for 'providers' post type
+        echo ' <a href="' . home_url('/resources') . '"> Resources</a>';
         echo ' <span> ' . get_the_title() . '</span>';
     } else {
         // Default breadcrumb structure for other post types

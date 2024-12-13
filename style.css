@@ -221,7 +221,7 @@ html {
 /* Breadcrumb CSS */
 
 .bread_crumb_wrapper {
-  background: #555;
+  background: #3d3d3d;
 }
 
 .breadcrumb {
@@ -230,7 +230,7 @@ html {
   font-size: 0.9em;
   font-family: Arial, sans-serif;
   color: #fff;
-  padding: 10px 0;
+  padding: 13px 0;
 }
 
 .breadcrumb a {

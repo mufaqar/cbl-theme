@@ -90,7 +90,7 @@
 </section>
 <!-- Review Sections -->
 <section class="px-4 my-16 container mx-auto">
-    <a href="<?php echo home_url('/review-your-provider'); ?>">
+    <a href="<?php echo home_url('/review-your-provider'); ?>"> 
     <button id="openModalBtn"
         class="border-[#EF9831] border-[2px] text-[#EF9831] p-3 px-5 rounded-lg hover:bg-[#EF9831] hover:text-white font-medium">
         Leave a Review
