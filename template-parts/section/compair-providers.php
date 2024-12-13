@@ -1,3 +1,12 @@
+<?php
+$query_reviews_args = array(
+    'post_type'      => 'providers',
+    'posts_per_page' => -1            
+);
+$query = new WP_Query($query_reviews_args);
+
+
+?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -113,10 +122,22 @@
                                     ?>
                         <div class="min-w-[120px] md:w-full dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 md:h-auto h-[120px] items-center">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><a target="_blank"
-                                            href="/providers/hughesnet"> <?php the_title()?> </a></p>
+                                    <select id="provider" name="provider" class="bg-transparent border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
+                                        <option value="">Choose your provider</option>
+                                        <?php
+                                        if ($query->have_posts()) {
+                                            while ($query->have_posts()) {
+                                                $query->the_post();
+                                                    ?><option value="<?php echo get_the_ID(); ?>"><?php echo the_title(); ?></option><?php
+                                                }
+                                            } else {
+                                                echo '<option>No providers found.</option>';
+                                            }
+                                            wp_reset_postdata();
+                                        ?>
+                                    </select>
                                 </div>
                             </div>
                             <div
