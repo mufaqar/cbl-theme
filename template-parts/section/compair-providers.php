@@ -131,7 +131,7 @@ $state = strtoupper($state);
                             <div
                                 class="w-full bg-gray-200 md:border-r border-r-0 md:border-b-0 border-b border grid justify-center md:p-2 md:h-auto !h-[80px] items-center">
                                 <div>
-                                    <select id="provider" name="provider" class="bg-transparent border border-gray-300  text-black text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[13px]">
+                                    <select id="provider_<?php echo $i ?>" name="provider_<?php echo $i ?>"  data-target="dtable_<?php echo $i ?>"   class="provider-select bg-transparent border border-gray-300  text-black text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[13px]">
                                         <option value="">Choose your provider</option>
                                         <?php
                                         if ($query->have_posts()) {
@@ -147,8 +147,10 @@ $state = strtoupper($state);
                                     </select>
                                 </div>
                             </div>
+                           
+                            <div class="dtable_<?php echo $i ?>">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center older_data">
                                 <div>
                                     <p class="text-center md:text-base text-xs">Satellite</p>
                                 </div>
@@ -200,6 +202,7 @@ $state = strtoupper($state);
                                     <p class="text-center md:text-base text-xs"><a href="<?php the_permalink()?>">View
                                             Plans</a></p>
                                 </div>
+                            </div>
                             </div>
                         </div>
                         <?php

@@ -8,12 +8,14 @@ function enqueue_google_fonts() {
         array(), // Dependencies (none for this case)
         null // Version (use null for Google Fonts to prevent caching issues)
     );
+   
 }
 add_action('wp_enqueue_scripts', 'enqueue_google_fonts');
 
 
 include_once('cpts.php');
 include_once('rules.php');
+include_once('ajax.php');
 //include_once('sitemap.php');
 
 function check_header() {
@@ -165,10 +167,13 @@ add_action('wp_ajax_search_providers', 'handle_search_providers_ajax');
 add_action('wp_ajax_nopriv_search_providers', 'handle_search_providers_ajax');
 
 
+
+
 function enqueue_custom_ajax_search_script() {
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/script.js', null, null, true);
     wp_enqueue_script('ajax-search', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true);
     wp_localize_script('ajax-search', 'ajaxurl', admin_url('admin-ajax.php'));
+   
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_ajax_search_script');
 

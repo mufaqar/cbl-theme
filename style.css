@@ -163,6 +163,17 @@ html {
   .PClass {
     @apply text-xl font-[Roboto] mt-5;
   }
+
+ 
+  .provider-item {
+    @apply w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto h-[80px] items-center;
+  }
+
+  .provider-data {
+    @apply text-center md:text-base text-xs;
+  }
+
+
 }
 
 .modal {

@@ -41,3 +41,34 @@ jQuery(document).ready(function ($) {
     });
 });
 
+
+jQuery(document).ready(function ($) {
+    $('.provider-select').on('change', function () {
+        const providerId = $(this).val();
+        const targetClass = $(this).data('target'); // Get the target class dynamically
+
+        if (providerId && targetClass) {
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'load_provider_data',
+                    provider_id: providerId,
+                },
+                beforeSend: function () {
+                    // Optional: Add a loader or disable elements
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $(`.${targetClass}`).html(response.data.html); // Update the specific target
+                    } else {
+                        alert(response.data.message || 'Error loading provider data.');
+                    }
+                },
+                error: function () {
+                    alert('An error occurred while processing your request.');
+                },
+            });
+        }
+    });
+});
