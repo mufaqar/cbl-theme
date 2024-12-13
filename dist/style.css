@@ -923,6 +923,14 @@ video {
   height: 100%;
 }
 
+.\!h-\[120px\] {
+  height: 120px !important;
+}
+
+.\!h-\[80px\] {
+  height: 80px !important;
+}
+
 .max-h-56 {
   max-height: 14rem;
 }
@@ -1459,6 +1467,10 @@ video {
   padding: 14px;
 }
 
+.p-\[13px\] {
+  padding: 13px;
+}
+
 .px-1\.5 {
   padding-left: 0.375rem;
   padding-right: 0.375rem;
@@ -1828,6 +1840,11 @@ video {
 
 .text-white\/75 {
   color: rgb(255 255 255 / 0.75);
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
 .no-underline {
