@@ -22,9 +22,9 @@ $state = strtoupper($state);
                     class="w-full h-auto rounded-t-md rounded-b-md flex md:flex-row flex-row items-stretch">
                     <div class="md:w-96 min-w-[50px]  bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 bg-gray-100 border-b grid justify-center md:p-5 p-3 md:h-auto !h-[80px] items-center">
+                            class="md:border-r border-r-0 md:border-b-0 bg-gray-200 border-b grid justify-center md:p-5 p-3 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="md:text-base text-xs text-center text-gray-100">.</h4>
+                                <h4 class="md:text-base text-xs text-center text-gray-200">.</h4>
                             </div>
                         </div>
                         <div
