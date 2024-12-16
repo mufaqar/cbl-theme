@@ -169,19 +169,6 @@
         <section>
             <div class="container mx-auto px-4">
                 <div class="mb-5">
-                    <h2 class="text-2xl font-bold capitalize leading-10">Summary of Landline Home Phone Service Providers in <span
-                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
-                    <div class="mt-1">
-                        <p>The next time you’re moving to the area or need to set up a dedicated landline service for your side hustle, rely on our list of the top landline home service providers in the area. We do the hard work for you so you can quickly get a landline and move on with your day.</p>
-                        <p class="mt-2">Whatever landline home service providers you choose, be sure to ask about bundled services. That is where our trained agents at CableMovers can help. Call us today, and we’ll compare all the available telephone service providers in your area, finding the best deal and assisting with the setup process. </p>
-                        <p class="mt-2">Your reliable home phone line is only one quick phone call away!</p>
-                    </div>
-                </div>
-            </div> 
-        </section>
-        <section>
-            <div class="container mx-auto px-4">
-                <div class="mb-5">
                     <h2 class="text-2xl font-bold capitalize leading-10">Get the Best Landline Phone Service in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
                     <div class="mt-1">
@@ -192,14 +179,15 @@
             </div> 
         </section>
 
-    <?php }else{
+    <?php }  ?> 
+    
+    <?php
         set_query_var('providers_query', $query_fast);get_template_part( 'template-parts/section/fast', 'providers' );
         set_query_var('providers_query', $query_compair); get_template_part( 'template-parts/section/compair', 'providers' );
         get_template_part( 'template-parts/section/text', 'providers' );
-        set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' );
-       
+        set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' );       
         set_query_var('provider_ids', $provider_ids);get_template_part( 'template-parts/section/types', 'technology' );
-    }
+    
 
 
 ?>

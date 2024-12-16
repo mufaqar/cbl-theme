@@ -717,7 +717,7 @@ $query_fast = new WP_Query($query_args_fast);
                         </div>
 
                         <!-- $type !== 'home-security' -->
-                        <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
+                        <?php if ($type !== 'home-security'): ?>
                             <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
@@ -735,7 +735,7 @@ $query_fast = new WP_Query($query_args_fast);
                         <?php endif; ?>
 
                         <!-- $type === 'home-security' -->
-                        <?php if ($type === 'home-security' || $type === 'landline'): ?>
+                        <?php if ($type === 'home-security'): ?>
                             <div class="md:border-r border-r-0 md:border-b-0 col-span-2 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <h4 class="md:text-base text-xs text-center text-white">
