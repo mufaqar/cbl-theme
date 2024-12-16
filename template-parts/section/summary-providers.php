@@ -40,13 +40,14 @@
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
                 <div
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
-                    <div class="md:w-full min-w-[50px] grid md:grid-cols-7 grid-cols-1 bg-[#215690]">
+                    <div class="md:w-full min-w-[50px] grid <?php echo  $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690]">
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
                             </div>
                         </div>
+                        <?php if ($type !== 'landline') : ?>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
@@ -59,8 +60,9 @@
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Max Download Speed</h4>
                             </div>
                         </div>
+                        <?php endif; ?>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto md:col-span-3 h-[120px] items-center">
+                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto <?php echo  $type == 'landline' ? 'md:md:col-span-1' : 'md:md:col-span-3'; ?>  h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Features</h4>
                             </div>
@@ -70,8 +72,16 @@
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Pricing starts from</h4>
                             </div>
                         </div>
+
+                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <h4 class="md:text-base text-xs text-center text-white mb-2">Order Now</h4>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll">
+                        
 
                         <?php
                                  $query = get_query_var('providers_query');
@@ -94,6 +104,8 @@
                                         }
 
                                        // print_r($services);
+                                       $phone =  $services['phone'];
+                                       $view_link =  $services['view_more'];
 
 
                                         $price =  $services['price'];
@@ -107,7 +119,9 @@
 
 
                                     ?>
-                        <div class="min-w-[120px] md:w-full grid md:grid-cols-7 dtable">
+                         
+                         <div class="min-w-[120px] md:w-full grid <?php echo  $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-9'; ?>  dtable">
+                      
                             <div
                                 class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
@@ -115,6 +129,7 @@
                                             href="/providers/hughesnet"> <?php the_title()?> </a></p>
                                 </div>
                             </div>
+                            <?php if ($type !== 'landline') : ?>
                             <div
                                 class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
@@ -127,8 +142,9 @@
                                     <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> Mbps</p>
                                 </div>
                             </div>
+                            <?php endif ; ?>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center md:col-span-3">
+                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center  <?php echo  $type == 'landline' ? 'md:col-span-1' : 'md:col-span-1'; ?>">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $summary_features ?></p>
                                 </div>
@@ -138,7 +154,11 @@
                                     <p class="text-center md:text-base text-xs">$<?php echo $price ?>/mo</p>
                                 </div>
                             </div>
-                        </div>
+                            <?php if ($type === 'landline') : ?>                          
+                            <?php echo render_provider_buttons($phone, $view_link); ?>
+                            <?php endif ?>
+                          
+                            </div>
                         <?php
                                     }
                                 } else {
@@ -148,6 +168,7 @@
                                 // Reset post data
                                 wp_reset_postdata();
                             ?>
+                               
                     </div>
                 </div>
             </div>
