@@ -174,7 +174,7 @@ html {
   }
 
   .tborder {
-    @apply tborder;
+    @apply md:border-r border-r-0 md:border-b-0 border-b;
   }
 
 

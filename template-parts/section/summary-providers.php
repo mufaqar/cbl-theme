@@ -8,9 +8,11 @@
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
 
             <?php if ( $type === 'internet'): ?>
-            <p class="PClass"> When it comes to finding Internet service provider, <?php echo $city ?>, <?php echo $state ?> is served by a robust selection of home phone service providers each with its own
+            <p class="PClass"> When it comes to finding Internet service provider, <?php echo $city ?>,
+                <?php echo $state ?> is served by a robust selection of home phone service providers each with its own
                 strengths. Whether you prioritize speed, affordability, or reliability, you can find internet providers
-                in <?php echo $city ?>, <?php echo $state ?> that suit your specific needs. Compare the available options,
+                in <?php echo $city ?>, <?php echo $state ?> that suit your specific needs. Compare the available
+                options,
                 consider your budget, and choose the one that fits your requirements for a seamless online experience.
             <p>
 
@@ -24,7 +26,9 @@
                 the available telephone service providers in your area, finding the best deal and assisting with the
                 setup process.</p>
             <?php elseif ($type === 'home-security'): ?>
-            <p class="PClass"> As household names in the industry, these home security service providers in <?php echo $city ?> provide a range of products that are affordable and effective in protecting your home. With
+            <p class="PClass"> As household names in the industry, these home security service providers in
+                <?php echo $city ?> provide a range of products that are affordable and effective in protecting your
+                home. With
                 flexible plans and low-cost monitoring subscriptions, your wallet won’t hurt too much. What’s more, you
                 can add more accessories to your security system over time.</p>
             <p class="PClass"> Remember that affordable doesn’t always mean low quality. Some of the companies we have
@@ -36,57 +40,52 @@
             <?php endif; ?>
 
         </div>
-     
-            <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
+
+        <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
+            <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                 <div
-                    class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
-                    <div class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690]">
-                        <div
-                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
-                            </div>
+                    class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690]">
+                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div>
+                            <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
                         </div>
-                        <?php if (!in_array($type, ['landline', 'home-security'])) : ?>  
-                        <div
-                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
-                            </div>
-                        </div>
-                        <div
-                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white mb-2">Max Download Speed</h4>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        <div
-                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center  md:col-span-3 col-span-1">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white mb-2">Features</h4>
-                            </div>
-                        </div>
-                        <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white mb-2">Price</h4>
-                            </div>
-                        </div>
-
-                        <?php if (in_array($type, ['landline', 'home-security'])) : ?>
-
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white mb-2">Order Now</h4>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        
                     </div>
-                    <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll">
-                        
+                    <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
+                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div>
+                            <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
+                        </div>
+                    </div>
+                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div>
+                            <h4 class="md:text-base text-xs text-center text-white mb-2">Max Download Speed</h4>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                    <div
+                        class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center  md:col-span-3 col-span-1">
+                        <div>
+                            <h4 class="md:text-base text-xs text-center text-white mb-2">Features</h4>
+                        </div>
+                    </div>
+                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div>
+                            <h4 class="md:text-base text-xs text-center text-white mb-2">Price</h4>
+                        </div>
+                    </div>
 
-                        <?php
+                    <?php if (in_array($type, ['landline', 'home-security'])) : ?>
+
+                    <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div>
+                            <h4 class="md:text-base text-xs text-center text-white mb-2">Order Now</h4>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+
+                </div>
+                <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll">
+                    <?php
                                  $query = get_query_var('providers_query');
                                 if ($query->have_posts()) {
                                     while ($query->have_posts()) {
@@ -122,47 +121,43 @@
 
 
                                     ?>
-                         
-                         <div class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1  dtable">
-                      
-                                <div
-                                    class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs"><a target="_blank"
-                                                href="/providers/hughesnet"> <?php the_title()?> </a></p>
-                                    </div>
-                                </div>
-                                <?php if (!in_array($type, ['landline', 'home-security'])) : ?>  
-                                <div
-                                    class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs"><?php echo $connection_type ?></p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> Mbps</p>
-                                    </div>
-                                </div>
-                                <?php endif ; ?>
-                                <div
-                                    class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center  md:col-span-3 col-span-1 ">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs"><?php echo $summary_features ?></p>
-                                    </div>
-                                </div>
-                                <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs">$<?php echo $price ?>/mo</p>
-                                    </div>
-                                </div>
-                                <?php if (in_array($type, ['landline', 'home-security'])) : ?>                     
-                                    <?php echo render_provider_buttons($phone, $view_link); ?>
-                                <?php endif ?>
-                          
+
+                    <div  class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1  dtable">
+                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <p class="text-center md:text-base text-xs"><a target="_blank"
+                                        href="<?php the_permalink()?>"> <?php the_title()?> </a></p>
                             </div>
-                          <?php
+                        </div>
+                        <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
+                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <p class="text-center md:text-base text-xs"><?php echo $connection_type ?></p>
+                            </div>
+                        </div>
+                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> Mbps</p>
+                            </div>
+                        </div>
+                        <?php endif ; ?>
+                        <div
+                            class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center  md:col-span-3 col-span-1 ">
+                            <div>
+                                <p class="text-center md:text-base text-xs"><?php echo $summary_features ?></p>
+                            </div>
+                        </div>
+                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <p class="text-center md:text-base text-xs">$<?php echo $price ?>/mo</p>
+                            </div>
+                        </div>
+                        <?php if (in_array($type, ['landline', 'home-security'])) : ?>
+                        <?php echo render_provider_buttons($phone, $view_link); ?>
+                        <?php endif ?>
+
+                    </div>
+                    <?php
                                     }
                                 } else {
                                     echo 'No providers found with the specified zip codes.';
@@ -171,10 +166,10 @@
                                 // Reset post data
                                 wp_reset_postdata();
                             ?>
-                               
-                    </div>
+
                 </div>
             </div>
         </div>
+    </div>
 
 </section>
