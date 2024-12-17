@@ -58,7 +58,7 @@
                     </div>
                     <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <h4 class="md:text-base text-xs text-center text-white mb-2">Max Download Speed</h4>
+                            <h4 class="md:text-base text-xs text-center text-white mb-2"><?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?></h4>
                         </div>
                     </div>
                     <?php endif; ?>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
-                                <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> Mbps</p>
+                                <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?><?php echo $type === 'internet' ? ' Mbps' : ''; ?></p>
                             </div>
                         </div>
                         <?php endif ; ?>

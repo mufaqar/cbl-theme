@@ -159,8 +159,7 @@ $query_fast = new WP_Query($query_args_fast);
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white mb-2">
-                        <?php if ($type === 'internet'): ?>Max Download Speed <?php else: ?> # of Channels
-                        <?php endif; ?>
+                    <?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?>
                     </h4>
                 </div>
             </div>
