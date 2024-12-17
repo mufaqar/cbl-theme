@@ -170,7 +170,7 @@ $query_fast = new WP_Query($query_args_fast);
 
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="md:text-base text-xs text-center text-white mb-2">Starting Price</h4>
+                    <h4 class="md:text-base text-xs text-center text-white mb-2"> Price</h4>
                 </div>
             </div>
         </div>
@@ -723,34 +723,32 @@ $query_fast = new WP_Query($query_args_fast);
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
                 <div
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
-                    <div class="md:w-full min-w-[50px] grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
+                    <div class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?>  grid-cols-1 bg-[#215690]">
                         <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
                             </div>
                         </div>
-
-                        <!-- $type !== 'home-security' -->
-                        <?php if ($type !== 'home-security'): ?>
-                        <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center ">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
                             </div>
                         </div>
-                        <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-white mb-2">
-                                    <?php if ($type === 'internet'): ?>Max Download Speed<?php endif; ?>
-                                    <?php if ($type === 'tv'): ?>Channels<?php endif; ?>
-                                </h4>
+                        
+                        <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
+                            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                <div>
+                                    <h4 class="md:text-base text-xs text-center text-white mb-2">
+                                        <?php if ($type === 'internet'): ?>Max Download Speed<?php endif; ?>
+                                        <?php if ($type === 'tv'): ?>Channels<?php endif; ?>
+                                    </h4>
+                                </div>
                             </div>
-                        </div>
                         <?php endif; ?>
 
-                        <!-- $type === 'home-security' -->
-                        <?php if ($type === 'home-security'): ?>
+                       <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 col-span-2 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="md:border-r border-r-0 md:border-b-0  border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white">
                                     <?php if ($type === 'home-security'): ?>Features<?php endif; ?>
@@ -763,7 +761,7 @@ $query_fast = new WP_Query($query_args_fast);
 
                         <div class="grid justify-center border-r md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
-                                <h4 class="md:text-base text-xs text-center text-white mb-2">Starting Price</h4>
+                                <h4 class="md:text-base text-xs text-center text-white mb-2">Price</h4>
                             </div>
                         </div>
                         <div
@@ -784,19 +782,30 @@ $query_fast = new WP_Query($query_args_fast);
                                         set_query_var('provider_index', $i);
                                         $servicesInfo = get_field('services_info');
                                         $type = get_query_var('type');
-                                        $isSpeed = $type === "tv";
-                                        $phone = get_field( "pro_phone" );
-                                        if($isSpeed){
-                                            $speed =  $servicesInfo["tv_services"]["summary_speed"];
-                                            $feature =  $servicesInfo["tv_services"]["summary_features"];
-                                            $price =  $servicesInfo["tv_services"]["price"];
-                                        }else{
-                                            $speed =  $servicesInfo["internet_services"]["summary_speed"];
-                                            $feature =  $servicesInfo["internet_services"]["summary_features"];
-                                            $price =  $servicesInfo["internet_services"]["price"];
+                                        $servicesInfo = get_field('services_info');
+                                        if ($type == 'internet') {
+                                            $services = $servicesInfo["internet_services"];
+                                        } elseif ($type == 'tv') {
+                                            $services = $servicesInfo["tv_services"];
+                                        } elseif ($type == 'landline') {
+                                            $services = $servicesInfo["landline_services"];
+                                        } else {
+                                            $services = $servicesInfo["home_security_services"];
                                         }
+
+                                       // print_r($services);
+                                       $phone =  $services['phone'];
+                                       $view_link =  $services['view_more'];
+
+
+                                        $price =  $services['price'];
+                                        $summary_speed =  $services['summary_speed'];
+                                        $connection_type =  $services['connection_type'];
+                                        $summary_features =  $services['summary_features'];
+                                       
+                                        
                                     ?>
-                        <div class="min-w-[120px] md:w-full grid md:grid-cols-5 dtable">
+                        <div class="min-w-[120px] md:w-full grid  <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-5' : 'md:grid-cols-5'; ?>  grid-cols-1 dtable">
                             <div class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><a target="_blank"
@@ -804,11 +813,11 @@ $query_fast = new WP_Query($query_args_fast);
                                 </div>
                             </div>
 
-                            <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
+                            <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                             <div
                                 class="w-full md:border-r border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
-                                    <p class="text-center md:text-base text-xs">Satellite</p>
+                                <p class="text-center md:text-base text-xs"><?php echo $connection_type ?></p>
                                 </div>
                             </div>
                             <div
@@ -823,7 +832,7 @@ $query_fast = new WP_Query($query_args_fast);
 
                             <?php if ($type === 'home-security' || $type === 'landline'): ?>
                             <div
-                                class="w-full md:border-r col-span-2 border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="w-full md:border-r  border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs">
                                         <?php if ($type === 'home-security'): ?><?php echo $feature ?><?php endif; ?>
