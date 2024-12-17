@@ -805,7 +805,7 @@ $query_fast = new WP_Query($query_args_fast);
                                        
                                         
                                     ?>
-                        <div class="min-w-[120px] md:w-full grid  <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-5' : 'md:grid-cols-5'; ?>  grid-cols-1 dtable">
+                        <div class="min-w-[120px] md:w-full grid  <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?>  grid-cols-1 dtable">
                             <div class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><a target="_blank"
