@@ -50,7 +50,7 @@
                 specific factors. These are the details we find new customers and recently moved families want the most.
                 That may include:
             </p>
-            <ul class="text-base">
+            <ul  class="PClass">
                 <li>Type of Service: Whether the cable TV provider works from satellite, traditional coax cable, or a
                     digital service attached to your internet or mobile device. </li>
                 <li>Length of Contract: Most cable TV providers working with internet or mobile streaming require a
