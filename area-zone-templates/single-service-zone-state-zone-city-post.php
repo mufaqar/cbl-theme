@@ -151,14 +151,14 @@ $query_fast = new WP_Query($query_args_fast);
             class="md:w-full min-w-fit grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> bg-[#215690]">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
 
             <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title mb-2">
+                    <h4 class="tabbox_title mb-2">
                     <?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?>
                     </h4>
                 </div>
@@ -167,7 +167,7 @@ $query_fast = new WP_Query($query_args_fast);
 
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title mb-2">Starting Price</h4>
+                    <h4 class="tabbox_title mb-2">Starting Price</h4>
                 </div>
             </div>
         </div>
@@ -200,7 +200,7 @@ $query_fast = new WP_Query($query_args_fast);
                 <div
                     class="md:w-full w-full grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?>">
                     <div
-                        class="border-l tbox">
+                        class="border-l tabbox">
                         <div>
                             <p class="text-center md:text-base text-xs"><a target="_blank" href="/providers/xfinity">
                                     <?php the_title()?> </a></p>
@@ -208,7 +208,7 @@ $query_fast = new WP_Query($query_args_fast);
                     </div>
 
                     <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
-                    <div class="tbox">
+                    <div class="tabbox">
                         <div>
                             <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?>
                                 <?php if ($type === 'internet'): ?><sup>Mbps</sup><?php endif; ?>
@@ -217,7 +217,7 @@ $query_fast = new WP_Query($query_args_fast);
                     </div>
                     <?php endif; ?>
 
-                    <div class="tbox">
+                    <div class="tabbox">
                         <div>
                             <p class="text-center md:text-base text-xs">$<?php echo $price ?> </p>
                         </div>
@@ -259,26 +259,26 @@ $query_fast = new WP_Query($query_args_fast);
             <?php endif; ?>
         </div>
         <div class="md:w-full min-w-fit grid grid-cols-4 bg-[#215690] md:grid-cols-4">
-            <div class="tbox">
+            <div class="tabbox">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Connection </h4>
+                    <h4 class="tabbox_title">Connection </h4>
                 </div>
             </div>
 
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title"><?php if ($type === 'internet'): ?> Max
+                    <h4 class="tabbox_title"><?php if ($type === 'internet'): ?> Max
                         Download Speed <?php else: ?> # of Channels <?php endif; ?></h4>
                 </div>
             </div>
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Upload Speed</h4>
+                    <h4 class="tabbox_title">Upload Speed</h4>
                 </div>
             </div>
         </div>
@@ -310,13 +310,13 @@ $query_fast = new WP_Query($query_args_fast);
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full w-full grid grid-cols-4 md:grid-cols-4">
                         <div
-                            class="border-l tbox">
+                            class="border-l tabbox">
                             <div>
                                 <p class="text-center md:text-base text-xs"><a target="_blank"
                                         href="<?php the_permalink()?>"><?php the_title()?></a></p>
                             </div>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             <?php echo $connection_type ?> </div>
 
                         <div class="border-r border-b flex justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
@@ -354,19 +354,19 @@ $query_fast = new WP_Query($query_args_fast);
             class="md:w-full min-w-fit grid  bg-[#215690] <?php if ($type !== 'home-security'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?>">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             <?php if ($type !== 'home-security'): ?>
             <div class="grid justify-center border-r md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Connection </h4>
+                    <h4 class="tabbox_title">Connection </h4>
                 </div>
             </div>
             <?php endif; ?>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Best For:</h4>
+                    <h4 class="tabbox_title">Best For:</h4>
                 </div>
             </div>
         </div>
@@ -399,15 +399,15 @@ $query_fast = new WP_Query($query_args_fast);
                     <div
                         class="md:w-full w-full grid <?php if ($type !== 'home-security'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?>">
                         <div
-                            class="border-l tbox">
+                            class="border-l tabbox">
                             <div>
                                 <p class="text-center md:text-base text-xs"><a target="_blank"
                                         href="/providers/earthlink"><?php the_title()?></a></p>
                             </div>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             <?php echo $connection_type ?> </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             Best For</div>
 
                     </div>
@@ -439,22 +439,22 @@ $query_fast = new WP_Query($query_args_fast);
         <div class="md:w-full min-w-fit grid grid-cols-4 bg-[#215690] md:grid-cols-4">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Equipment Rental Fee</h4>
+                    <h4 class="tabbox_title">Equipment Rental Fee</h4>
                 </div>
             </div>
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Setup Fee</h4>
+                    <h4 class="tabbox_title">Setup Fee</h4>
                 </div>
             </div>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Early Termination Fee</h4>
+                    <h4 class="tabbox_title">Early Termination Fee</h4>
                 </div>
             </div>
         </div>
@@ -488,19 +488,19 @@ $query_fast = new WP_Query($query_args_fast);
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full w-full grid grid-cols-4 md:grid-cols-4">
                         <div
-                            class="border-l tbox">
+                            class="border-l tabbox">
                             <div>
                                 <p class="text-center md:text-base text-xs"><a target="_blank"
                                         href="/providers/earthlink"><?php the_title()?></a></p>
                             </div>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $equipment_rental_fee ?>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $setup_fee ?>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $early_termination_fee ?>
                         </div>
                     </div>
@@ -531,27 +531,27 @@ $query_fast = new WP_Query($query_args_fast);
         <div class="md:w-full min-w-fit grid grid-cols-5 bg-[#215690] md:grid-cols-5">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Setup Fee</h4>
+                    <h4 class="tabbox_title">Setup Fee</h4>
                 </div>
             </div>
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Equipment Rental Fee</h4>
+                    <h4 class="tabbox_title">Equipment Rental Fee</h4>
                 </div>
             </div>
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Early Termination Fee</h4>
+                    <h4 class="tabbox_title">Early Termination Fee</h4>
                 </div>
             </div>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Broadcast Fee</h4>
+                    <h4 class="tabbox_title">Broadcast Fee</h4>
                 </div>
             </div>
         </div>
@@ -586,22 +586,22 @@ $query_fast = new WP_Query($query_args_fast);
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full w-full grid grid-cols-5 md:grid-cols-5">
                         <div
-                            class="border-l tbox">
+                            class="border-l tabbox">
                             <div>
                                 <p class="text-center md:text-base text-xs"><a target="_blank"
                                         href="/providers/earthlink"><?php the_title()?></a></p>
                             </div>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $setup_fee ?>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $equipment_rental_fee ?>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $early_termination_fee ?>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $broadcast_tv_fee ?>
                         </div>
                     </div>
@@ -635,17 +635,17 @@ $query_fast = new WP_Query($query_args_fast);
         <div class="md:w-full min-w-fit grid grid-cols-3 bg-[#215690] md:grid-cols-3">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Setup Fee</h4>
+                    <h4 class="tabbox_title">Setup Fee</h4>
                 </div>
             </div>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Early Termination Fee</h4>
+                    <h4 class="tabbox_title">Early Termination Fee</h4>
                 </div>
             </div>
         </div>
@@ -679,16 +679,16 @@ $query_fast = new WP_Query($query_args_fast);
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full w-full grid grid-cols-3 md:grid-cols-3">
                         <div
-                            class="border-l tbox">
+                            class="border-l tabbox">
                             <div>
                                 <p class="text-center md:text-base text-xs"><a target="_blank"
                                         href="/providers/earthlink"><?php the_title()?></a></p>
                             </div>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $setup_fee ?>
                         </div>
-                        <div class="tbox">
+                        <div class="tabbox">
                             $<?php echo $early_termination_fee ?>
                         </div>
                     </div>
@@ -726,14 +726,14 @@ $query_fast = new WP_Query($query_args_fast);
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
 
-                            <h4 class="tbox_title">Provider</h4>
+                            <h4 class="tabbox_title">Provider</h4>
 
                         </div>
 
 
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center ">
-                            <h4 class="tbox_title">
+                            <h4 class="tabbox_title">
                                 <?php echo $type === 'home-security' || $type === 'landline' ? 'Features' : 'Connection'; ?>
                             </h4>
                         </div>
@@ -742,7 +742,7 @@ $query_fast = new WP_Query($query_args_fast);
                         <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <h4 class="tbox_title mb-2">
+                            <h4 class="tabbox_title mb-2">
                                 <?php echo $type === 'internet' ? 'Max Download Speed' : 'Channels'; ?>
                             </h4>
                         </div>
@@ -754,13 +754,13 @@ $query_fast = new WP_Query($query_args_fast);
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
-                                <h4 class="tbox_title mb-2"> Price</h4>
+                                <h4 class="tabbox_title mb-2"> Price</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
-                                <h4 class="tbox_title mb-2">Contact</h4>
+                                <h4 class="tabbox_title mb-2">Contact</h4>
                             </div>
                         </div>
                     </div>

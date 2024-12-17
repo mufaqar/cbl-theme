@@ -638,7 +638,6 @@ video {
 
 @media (min-width: 768px) {
   .provider-item {
-    height: auto;
     border-right-width: 1px;
     padding: 1.25rem;
   }
@@ -669,7 +668,7 @@ video {
   }
 }
 
-.tbox {
+.tabbox {
   display: grid;
   height: 120px;
   align-items: center;
@@ -679,13 +678,13 @@ video {
 }
 
 @media (min-width: 768px) {
-  .tbox {
+  .tabbox {
     height: auto;
     padding: 1.25rem;
   }
 }
 
-.tbox_title {
+.tabbox_title {
   text-align: center;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -694,7 +693,7 @@ video {
 }
 
 @media (min-width: 768px) {
-  .tbox_title {
+  .tabbox_title {
     font-size: 1rem;
     line-height: 1.5rem;
   }

@@ -165,7 +165,7 @@ html {
   }
 
   .provider-item {
-    @apply w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto h-[80px] items-center;
+    @apply w-full grid md:border-r border-b justify-center md:p-5 p-2 h-[80px] items-center;
   }
 
   .provider-data {
@@ -176,10 +176,10 @@ html {
     @apply md:border-r border-r-0 md:border-b-0 border-b;
   }
 
-  .tbox {
+  .tabbox {
     @apply border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center;
   }
-  .tbox_title {
+  .tabbox_title {
     @apply md:text-base text-xs text-center text-white;
   }
 }

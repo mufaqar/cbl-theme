@@ -94,18 +94,18 @@
         <div class="md:w-full min-w-fit grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>  bg-[#215690]">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title mb-2">Cheap Package</h4>
+                    <h4 class="tabbox_title mb-2">Cheap Package</h4>
                 </div>
             </div>
             <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
             <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title mb-2">
+                    <h4 class="tabbox_title mb-2">
                         <?php if ($type === 'internet'): ?> Download Speed <?php else: ?> # of Channels <?php endif; ?>
                     </h4>
                 </div>
@@ -114,19 +114,19 @@
             <?php if ($type !== 'home-security') : ?>
             <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title mb-2">Contract</h4>
+                    <h4 class="tabbox_title mb-2">Contract</h4>
                 </div>
             </div>
             <?php endif ?>
             <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title mb-2">Price</h4>
+                    <h4 class="tabbox_title mb-2">Price</h4>
                 </div>
             </div>
             <?php if ($type === 'home-security') : ?>
             <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title mb-2">Order Now</h4>
+                    <h4 class="tabbox_title mb-2">Order Now</h4>
                 </div>
             </div>
             <?php  endif ?>

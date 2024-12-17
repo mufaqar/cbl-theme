@@ -67,7 +67,7 @@ get_header();
                             name="comment"
                             tabindex="0"
                             aria-label="leave a Comments"
-                            role="textbox"
+                            role="textabbox"
                             class="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"
                         ></textarea>
                     </div>

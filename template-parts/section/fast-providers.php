@@ -75,30 +75,30 @@
         <div class="md:w-full min-w-fit grid grid-cols-5 bg-[#215690] md:grid-cols-5">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Provider</h4>
+                    <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Connection </h4>
+                    <h4 class="tabbox_title">Connection </h4>
                 </div>
             </div>
             <?php if ($type === 'internet'): ?>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Fast Package</h4>
+                    <h4 class="tabbox_title">Fast Package</h4>
                 </div>
             </div>
             <?php endif; ?>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title"><?php if ($type === 'internet'): ?> Download
+                    <h4 class="tabbox_title"><?php if ($type === 'internet'): ?> Download
                         Speed <?php else: ?> # of Channels <?php endif; ?></h4>
                 </div>
             </div>
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
-                    <h4 class="tbox_title">Price</h4>
+                    <h4 class="tabbox_title">Price</h4>
                 </div>
             </div>
         </div>
