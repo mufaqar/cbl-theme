@@ -48,14 +48,14 @@ $features_items  = explode(',', $features);
             <h2 class="text-base font-bold text-center text-white p-5"> <?php  if($deals){ echo $deals; }?></h2>
         </div>
         <div class="md:w-full w-full grid grid-cols-1 dtable  <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> flex-col ">
-            <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
+            <div class="tborder grid items-center justify-center p-5">
                 <a target="_blank" href="<?php the_permalink()?>">
                     <img alt="Feature Image" loading="lazy" width="140" height="50" decoding="async" data-nimg="1"
                         src="<?php echo $logoUrl ?>" style="color: transparent;" />
                 </a>
             </div>
             <?php if (!in_array($type, ['home-security', 'landline'])) : ?>
-                <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
+                <div class="tborder grid items-center justify-center p-5">
                     <div class="text-center">
                         <p class="tch"><?php echo $type == 'tv' ? 'Channels' : 'Speed from'; ?></p>
                         <span class="tcd">
@@ -65,7 +65,7 @@ $features_items  = explode(',', $features);
                 </div>
             <?php endif; ?>
 
-            <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5 px-3">
+            <div class="tborder grid items-center justify-center p-5 px-3">
                 <?php                  
                    echo '<ul class="grid items-center justify-center">';                   
                    foreach ($features_items as $feature_item) {
@@ -79,7 +79,7 @@ $features_items  = explode(',', $features);
                    echo '</ul>';
                 ?>
             </div>
-            <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
+            <div class="tborder grid items-center justify-center p-5">
                 <div>
                     <p class="tch">Pricing starts from</p>
                     <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl">

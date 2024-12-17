@@ -57,7 +57,7 @@ get_header();
                     <h2 class="text-base font-bold text-center text-white p-5"></h2>
                 </div>
                 <div class="md:w-full w-full grid grid-cols-1 dtable md:grid-cols-5 flex flex-col">
-                    <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
+                    <div class="tborder grid items-center justify-center p-5">
                         <a target="_blank" href="/providers/xfinity">
                             <img
                                 alt="Feature Image"
@@ -71,13 +71,13 @@ get_header();
                             />
                         </a>
                     </div>
-                    <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
+                    <div class="tborder grid items-center justify-center p-5">
                         <div class="text-center">
                             <p class="tch">Speeds from</p>
                             <p class="tcd">75-1200 Mbps</p>
                         </div>
                     </div>
-                    <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5 px-3">
+                    <div class="tborder grid items-center justify-center p-5 px-3">
                         <ul class="grid items-center justify-center">
                             <li class="flex gap-2 items-center">
                                 <svg class="min-w-[1rem] h-4 text-[#ef9831] font-extrabold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@ get_header();
                             </li>
                         </ul>
                     </div>
-                    <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
+                    <div class="tborder grid items-center justify-center p-5">
                         <div>
                             <p class="tch">Pricing starts from</p>
                             <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl"> $19.99 </span> /mo.</p>

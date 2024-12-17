@@ -29,55 +29,55 @@ $state = strtoupper($state);
                         </div>
 
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Max Download Speed</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Data Caps</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Contract Term</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Setup Fee</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Early Termination Fee</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Equipment Rental Fee</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Monthly Price</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white mb-2">Order Now</h4>
                             </div>
@@ -124,7 +124,7 @@ $state = strtoupper($state);
                             ?>
                         <div class="min-w-[120px] md:w-full dtable">
                             <div
-                                class="w-full bg-gray-200 md:border-r border-r-0 md:border-b-0 border-b border grid justify-center md:p-2 md:h-auto !h-[80px] items-center">
+                                class="w-full bg-gray-200 tborder border grid justify-center md:p-2 md:h-auto !h-[80px] items-center">
                                 <div>
                                     <select id="provider_<?php echo $i ?>" name="provider_<?php echo $i ?>"
                                         data-target="dtable_<?php echo $i ?>"

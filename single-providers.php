@@ -120,21 +120,21 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-4 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">
                                     <?php _e('Package', 'cbl_theme'); ?></h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">
                                     <?php _e('Speed Up To', 'cbl_theme'); ?></h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">
                                     <?php _e('Price', 'cbl_theme'); ?></h4>
@@ -161,20 +161,20 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $speed_info; ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
@@ -209,19 +209,19 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-4 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Channels</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
                             </div>
@@ -243,20 +243,20 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
                                     <p class="text-center md:text-xs text-xs">*<?php echo $price_info ?></p>
@@ -296,25 +296,25 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
                             </div>
@@ -338,27 +338,27 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
@@ -398,25 +398,25 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
                             </div>
@@ -440,27 +440,27 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
@@ -500,25 +500,25 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
                             </div>
@@ -542,27 +542,27 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $channels ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $channels_info ?></p>
@@ -603,31 +603,31 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-6 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Channels</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
                             </div>
@@ -653,34 +653,34 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $channels ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $channels_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
@@ -722,13 +722,13 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-3 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
                             </div>
@@ -753,13 +753,13 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
                                     <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>

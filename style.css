@@ -173,6 +173,10 @@ html {
     @apply text-center md:text-base text-xs;
   }
 
+  .tborder {
+    @apply tborder;
+  }
+
 
 }
 

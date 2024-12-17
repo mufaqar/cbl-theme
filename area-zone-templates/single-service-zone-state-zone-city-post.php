@@ -710,7 +710,7 @@ $query_fast = new WP_Query($query_args_fast);
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-[50px] grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
                             </div>
@@ -718,13 +718,13 @@ $query_fast = new WP_Query($query_args_fast);
 
                         <!-- $type !== 'home-security' -->
                         <?php if ($type !== 'home-security'): ?>
-                            <div class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
                                 </div>
                             </div>
                             <div
-                                class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <h4 class="md:text-base text-xs text-center text-white mb-2">
                                         <?php if ($type === 'internet'): ?>Max Download Speed<?php endif; ?>
@@ -784,7 +784,7 @@ $query_fast = new WP_Query($query_args_fast);
                                     ?>
                         <div class="min-w-[120px] md:w-full grid md:grid-cols-5 dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="w-full tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs"><a target="_blank" href="/providers/hughesnet"> <?php the_title()?> </a> </p>
                                 </div>
