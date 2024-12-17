@@ -132,67 +132,21 @@
 
 
 
-<?php get_template_part( 'template-parts/section/best', 'providers' ); ?>
-<?php set_query_var('providers_query', $query_cheep);get_template_part( 'template-parts/section/cheap', 'providers' ); ?>
+<?php   get_template_part( 'template-parts/section/best', 'providers' ); 
+        set_query_var('providers_query', $query_cheep);get_template_part( 'template-parts/section/cheap', 'providers' );
 
-<?php
-    if($type === "landline"){ ?>
-        <section>
-            <div class="container mx-auto px-4">
-                <div class="mb-5">
-                    <h2 class="text-2xl font-bold capitalize leading-10">How We Measure Home Phone Providers in <span
-                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
-                    <div class="mt-1">
-                        <p>Offering a cheap home phone line isn’t enough to convince our professional team at CableMovers of a provider’s quality. We look at a number of amenities and services to ensure you are only getting the best landline phone service. That may include any combination of: </p>
-                        <ul class="__list pl-5 mt-2">
-                            <li>
-                                <strong>Internet Requirements: </strong> Do the landline home phone service providers in <?php echo $city ?>, <?php echo $state ?>, require you to have internet access to install or use the lines being offered? 
-                            </li>
-                            <li> <strong>Hidden Fees & Taxes:</strong> Does signing up for the landline home service providers mean paying hidden fees that increase over time or are there any local taxes not worked into the monthly price advertised? </li>
-                            <li>
-                                <strong>Audio Quality:</strong> Are you getting pristine audio for your landline service so you can easily hear people on the other end of the line, regardless of where they are in the world? 
-                            </li>
-                            <li>
-                                <strong>Transparent Pricing & Contracts:</strong> Do the telephone service providers require extended contracts? What about pricing? Is the total price you pay broken down into what you’re receiving in a clear and transparent way? 
-                            </li>
-                            <li>
-                                <strong>Real Customer Support:</strong> If you have an issue with your home phone line, will you speak with a human representative for the service provider instead of a robot or audio prompts? 
-                            </li>
-                        </ul>
-                        <p class="mt-2">The last factor we consider when getting a landline is the company's amenities. Items like call forwarding, voicemail, caller ID, blocking spam calls, setting “do not disturb,” and similar features can make all the difference for your unique landline needs. </p>
-                        <p class="mt-2">Once we clearly understand these items, we rank the top home phone service providers in <?php echo $city ?>, <?php echo $state ?> for you to select at your leisure.
-                        </p>
-                    </div>
-                </div>
-            </div> 
-        </section>
-        <section>
-            <div class="container mx-auto px-4">
-                <div class="mb-5">
-                    <h2 class="text-2xl font-bold capitalize leading-10">Get the Best Landline Phone Service in <span
-                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
-                    <div class="mt-1">
-                        <p>Stop wasting time pouring through hours of overly hyped online marketing and get the trusted comparison our professional agents provide. At CableMovers, we save you time and money by uncovering the home phone service providers in <?php echo $city ?>, <?php echo $state ?> perfect for your unique personal and business needs. </p>
-                        <p class="mt-2">Call our agents today, and let’s find the perfect landline solution whether you’ve just moved to the area or need a 24/7 connection to friends, family, and emergency services. Together, we can find an affordable and amenity-rich telephone service provider you can count on. </p>
-                    </div>
-                </div>
-            </div> 
-        </section>
+        if ($type === 'internet') :
+            set_query_var('providers_query', $query_fast);
+            get_template_part('template-parts/section/fast', 'providers');
+        endif;
 
-    <?php }  ?> 
-    
-    <?php
-        set_query_var('providers_query', $query_fast);get_template_part( 'template-parts/section/fast', 'providers' );
         set_query_var('providers_query', $query_compair); get_template_part( 'template-parts/section/compair', 'providers' );
         get_template_part( 'template-parts/section/text', 'providers' );
         set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' );       
         set_query_var('provider_ids', $provider_ids);get_template_part( 'template-parts/section/types', 'technology' );
-    
-
-
+        set_query_var('review_query', $query_reviews); get_template_part( 'template-parts/section/review', 'providers' );
+        
 ?>
-
-<?php set_query_var('review_query', $query_reviews); get_template_part( 'template-parts/section/review', 'providers' ); ?>
 
 
 

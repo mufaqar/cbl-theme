@@ -216,6 +216,8 @@
                     
                     // Reset post data
                     wp_reset_postdata();
+
+                
                 ?>
         </div>
     </div>
