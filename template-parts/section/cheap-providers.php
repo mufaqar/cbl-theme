@@ -2,47 +2,65 @@
     $cheap_providers = get_query_var('cheap_provider_details'); 
     $city = FormatData($city);
     $state = strtoupper($state);
+
+
 ?>
 
 <section class="my-8">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10">Cheap <?php echo FormatData($type) ?> Providers in <span
-                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
+            <h2 class="text-2xl font-bold capitalize leading-10">Cheap <?php echo FormatData($type) ?> Providers in
+                <span class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span>
+            </h2>
             <?php 
                if ($type === 'internet'): ?>
             <p class="PClass">
-                Affordability is essential when choosing your internet service provider. Cable Movers picks <?php echo $cheap_providers[0]['title']; ?> as the cheapest internet option in <?php echo $city ?>. 
-                <?php echo $cheap_providers[0]['title']; ?> offers inexpensive and budget friendly internet plans without
-                sacrificing performance. Their monthly plans begins at <?php echo $cheap_providers[0]['price']; ?> per month making them a great
+                Affordability is essential when choosing your internet service provider. Cable Movers picks
+                <?php echo $cheap_providers[0]['title']; ?> as the cheapest internet option in <?php echo $city ?>.
+                <?php echo $cheap_providers[0]['title']; ?> offers inexpensive and budget friendly internet plans
+                without
+                sacrificing performance. Their monthly plans begins at <?php echo $cheap_providers[0]['price']; ?> per
+                month making them a great
                 choice for individuals and families looking to save on their internet bills.
             </p>
             <p class="PClass">
-                <?php echo $cheap_providers[1]['speed']; ?> is another cheap internet service option offering high speed internet
-                plans as low as <?php echo $cheap_providers[0]['price']; ?> per month to fit into any budget. To help you choose the right internet
+                <?php echo $cheap_providers[1]['speed']; ?> is another cheap internet service option offering high speed
+                internet
+                plans as low as <?php echo $cheap_providers[0]['price']; ?> per month to fit into any budget. To help
+                you choose the right internet
                 provider for your home we have listed all providers available in <?php echo $city ?> and sorted them by
                 price (low to high).
             </p>
             <?php elseif ($type === 'tv'): ?>
             <p class="PClass"> Affordability is essential when choosing your internet service provider. Cable Movers
-                picks <?php echo $cheap_providers[0]['title']; ?> as the cheapest internet option in <?php echo $city; ?>. <?php echo $cheap_providers[0]['title']; ?> offers inexpensive and budget friendly internet
-                plans without sacrificing performance. Their monthly plans begins at <?php echo $cheap_providers[0]['price']; ?> per month making them
+                picks <?php echo $cheap_providers[0]['title']; ?> as the cheapest internet option in
+                <?php echo $city; ?>. <?php echo $cheap_providers[0]['title']; ?> offers inexpensive and budget friendly
+                internet
+                plans without sacrificing performance. Their monthly plans begins at
+                <?php echo $cheap_providers[0]['price']; ?> per month making them
                 a great choice for individuals and families looking to save on their internet bills.
             <p>
-            <p class="PClass"> <?php echo $cheap_providers[1]['speed']; ?> is another cheap internet service option offering high
-                speed internet plans as low as <?php echo $cheap_providers[1]['price']; ?> per month to fit into any budget. To help you choose the
+            <p class="PClass"> <?php echo $cheap_providers[1]['speed']; ?> is another cheap internet service option
+                offering high
+                speed internet plans as low as <?php echo $cheap_providers[1]['price']; ?> per month to fit into any
+                budget. To help you choose the
                 right internet provider for your home we have listed all providers available in <?php echo $city ?> and
                 sorted them by price (low to high).</p>
 
 
             <?php elseif ($type === 'landline'): ?>
 
-            <p class="PClass"> Our recommendation for the cheap landline provider in Glendale, CA is <?php echo $cheap_providers[0]['title']; ?>. Starting at just <?php echo $cheap_providers[1]['price']; ?> per month would give you unlimited nationwide
+            <p class="PClass"> Our recommendation for the cheap landline provider in Glendale, CA is
+                <?php echo $cheap_providers[0]['title']; ?>. Starting at just
+                <?php echo $cheap_providers[1]['price']; ?> per month would give you unlimited nationwide
                 calling, readable voicemail using transcription services as well as three-way calling when you need to
                 catch up with friends and family members.
             <p>
-            <p class="PClass"> <?php echo $cheap_providers[1]['title']; ?> is another pick for cheap landline provider in <?php echo $city; ?>. Its landline service revolves around unlimited local calls for just <?php echo $cheap_providers[0]['price']; ?> per month
-                without any hidden fees or surcharges. <?php echo $cheap_providers[1]['title']; ?> offers month to month service and doesn’t lock
+            <p class="PClass"> <?php echo $cheap_providers[1]['title']; ?> is another pick for cheap landline provider
+                in <?php echo $city; ?>. Its landline service revolves around unlimited local calls for just
+                <?php echo $cheap_providers[0]['price']; ?> per month
+                without any hidden fees or surcharges. <?php echo $cheap_providers[1]['title']; ?> offers month to month
+                service and doesn’t lock
                 its customer in contracts and in most cases; landline phone has to be bundled with high speed internet.
                 International calling packages are available as an ad-on.</p>
             <p class="PClass">While we rank the different landline providers in Glendale, CA, by their amenities and
@@ -63,7 +81,8 @@
                 pricing, these companies also offer flexible payment plans and low-cost equipment options. This allows
                 you to start low and then gradually increase your security system’s components such as security cameras,
                 smart locks, etc. without breaking the bank.</p>
-            <p class="PClass">Here’s a list of the cheapest home security systems in <?php echo $city; ?>, ranked from the
+            <p class="PClass">Here’s a list of the cheapest home security systems in <?php echo $city; ?>, ranked from
+                the
                 lowest to highest price. </p>
 
             <?php endif ?>
@@ -72,34 +91,45 @@
 
 
         </div>
-        <div class="md:w-full min-w-fit grid grid-cols-5 bg-[#215690]">
+        <div class="md:w-full min-w-fit grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>  bg-[#215690]">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
                 </div>
             </div>
-            <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white mb-2">Cheap Package</h4>
                 </div>
             </div>
-            <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
+            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white mb-2">
                         <?php if ($type === 'internet'): ?> Download Speed <?php else: ?> # of Channels <?php endif; ?>
                     </h4>
                 </div>
             </div>
-            <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <?php endif ?>
+            <?php if ($type !== 'home-security') : ?>
+            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white mb-2">Contract</h4>
                 </div>
             </div>
-            <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <?php endif ?>
+            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white mb-2">Price</h4>
                 </div>
             </div>
+            <?php if ($type === 'home-security') : ?>
+            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                <div>
+                    <h4 class="md:text-base text-xs text-center text-white mb-2">Order Now</h4>
+                </div>
+            </div>
+            <?php  endif ?>
         </div>
         <div class="grid">
             <?php
@@ -134,11 +164,12 @@
                             
                         ?>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto bg-[#fafafa]">
-                <div class="md:w-full w-full grid grid-cols-5">
+                <div class="md:w-full w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?> ">
                     <div
                         class="border-l border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <p class="text-center md:text-base text-xs"><a target="_blank" href="<?php the_permalink()?>">
+                            <p class="text-center md:text-base text-xs"><a target="_blank"
+                                    href="<?php the_permalink()?>">
                                     <?php the_title()?> </a></p>
                         </div>
                     </div>
@@ -148,21 +179,33 @@
                             <p class="text-center md:text-base text-xs"><?php echo $cheap_package ?> </p>
                         </div>
                     </div>
+                    <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                     <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
                             <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> </p>
                         </div>
                     </div>
+                    <?php endif ?>
+                    <?php if ($type !== 'home-security') : ?>
                     <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
                             <p class="text-center md:text-base text-xs"><?php echo $contract ?> </p>
                         </div>
                     </div>
+                    <?php  endif ?>
                     <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
                             <p class="text-center md:text-base text-xs">$<?php echo $price ?> </p>
                         </div>
                     </div>
+                    <?php if ($type === 'home-security') : ?>
+                    <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]"
+                            href="<?php the_permalink()?>">
+                            View Plans
+                        </a>
+                    </div>
+                    <?php endif ?>
                 </div>
             </div>
             <?php
