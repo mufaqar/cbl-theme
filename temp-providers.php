@@ -30,8 +30,7 @@ get_header();
                 $args = array(
                     'post_type'      => 'providers', // Custom post type name
                     'posts_per_page' => 4, // Number of posts to display
-                    'order'          => 'DESC', // Order of the posts
-                    'orderby'        => 'date' // Order by date
+                    'post__in'       => array(42504, 42453, 42460, 42501), 
                 );
 
                 // Custom query to fetch posts
