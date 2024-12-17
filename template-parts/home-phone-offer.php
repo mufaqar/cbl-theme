@@ -58,19 +58,8 @@
                                 </a>
                             </div>
                             
-                            <div class="  border-b grid items-center justify-center p-5 px-3">
-                                <?php                  
-                                echo '<ul class="grid items-center justify-center">';                   
-                                foreach ($features_items as $feature_item) {
-                                    echo '<li class="flex gap-2 items-center">';
-                                    echo '<svg class="min-w-[1rem] h-4 text-[#ef9831] font-extrabold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
-                                            </svg>';
-                                    echo '<span class="text-sm">' . trim($feature_item) . '</span>';
-                                    echo '</li>';
-                                }
-                                echo '</ul>';
-                                ?>
+                            <div class="border-b grid items-center justify-center p-5 px-3">
+                                <?php  display_features_list($features_items);   ?>
                             </div>
                             <div class="  border-b grid items-center justify-center p-5">
                                 <div>
