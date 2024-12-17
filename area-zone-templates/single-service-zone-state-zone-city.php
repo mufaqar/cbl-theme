@@ -142,8 +142,10 @@
 
         set_query_var('providers_query', $query_compair); get_template_part( 'template-parts/section/compair', 'providers' );
         get_template_part( 'template-parts/section/text', 'providers' );
-        set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' );       
-        set_query_var('provider_ids', $provider_ids);get_template_part( 'template-parts/section/types', 'technology' );
+        set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' ); 
+        if ($type !== 'home-security') :      
+          set_query_var('provider_ids', $provider_ids);get_template_part( 'template-parts/section/types', 'technology' );
+         endif;
         set_query_var('review_query', $query_reviews); get_template_part( 'template-parts/section/review', 'providers' );
         
 ?>
