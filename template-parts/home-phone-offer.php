@@ -67,10 +67,7 @@
                                     <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl"> $<?php echo $price; ?> </span> /mo.</p>
                                 </div>
                             </div>
-                            <div class="grid gap-3 items-center justify-center p-5">
-                                <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#215690] hover:bg-[#ef9831]" href="tel:<?php echo $phone ?>"><?php echo $phone ?></a>
-                                <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]" href="<?php echo the_permalink() ?>">View Plans</a>
-                            </div>
+                            <?php echo render_provider_buttons($phone, $view_link); ?>
                         </div>
                     </div>
                 </div>

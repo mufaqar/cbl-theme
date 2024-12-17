@@ -836,13 +836,7 @@ $query_fast = new WP_Query($query_args_fast);
                                     <p class="text-center md:text-base text-xs">$<?php echo $price ?>/mo</p>
                                 </div>
                             </div>
-                            <div
-                                class="w-full md:border-r border-r md:border-b border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                <div>
-                                    <a href="tel:<?php echo $phone ?>"
-                                        class="text-center md:text-base text-xs"><?php echo $phone ?></a>
-                                </div>
-                            </div>
+                            <?php echo render_provider_buttons($phone, $view_link); ?>
                         </div>
                         <?php
                                     }
