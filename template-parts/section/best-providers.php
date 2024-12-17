@@ -221,17 +221,17 @@
         <div class="shadow-xl border">
             <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x bg-[#215690]">
                 <div class="md:p-5 p-2">
-                    <h3 class="md:text-base text-xs text-center text-white mb-2">
+                    <h3 class="tbox_title mb-2">
                         Number of Devices
                     </h3>
                 </div>
                 <div class="flex items-center justify-center md:p-5 p-2">
-                    <h3 class="md:text-base text-xs text-center text-white mb-2">
+                    <h3 class="tbox_title mb-2">
                         Best Used For
                     </h3>
                 </div>
                 <div class="flex items-center justify-center md:p-5 p-2">
-                    <h3 class="md:text-base text-xs text-center text-white mb-2">
+                    <h3 class="tbox_title mb-2">
                         Recommended Internet Speed
                     </h3>
                 </div>

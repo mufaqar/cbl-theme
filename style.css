@@ -164,7 +164,6 @@ html {
     @apply text-xl font-[Roboto] mt-5;
   }
 
- 
   .provider-item {
     @apply w-full grid md:border-r border-b justify-center md:p-5 p-2 md:h-auto h-[80px] items-center;
   }
@@ -177,7 +176,12 @@ html {
     @apply md:border-r border-r-0 md:border-b-0 border-b;
   }
 
-
+  .tbox {
+    @apply border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center;
+  }
+  .tbox_title {
+    @apply md:text-base text-xs text-center text-white;
+  }
 }
 
 .modal {
@@ -197,7 +201,7 @@ html {
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
 }
 
 .close {

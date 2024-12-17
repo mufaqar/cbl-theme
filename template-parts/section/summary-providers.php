@@ -47,30 +47,30 @@
                     class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690]">
                     <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
+                            <h4 class="tbox_title">Provider</h4>
                         </div>
                     </div>
                     <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                     <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
+                            <h4 class="tbox_title">Connection Type</h4>
                         </div>
                     </div>
                     <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <h4 class="md:text-base text-xs text-center text-white mb-2"><?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?></h4>
+                            <h4 class="tbox_title mb-2"><?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?></h4>
                         </div>
                     </div>
                     <?php endif; ?>
                     <div
                         class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center  md:col-span-3 col-span-1">
                         <div>
-                            <h4 class="md:text-base text-xs text-center text-white mb-2">Features</h4>
+                            <h4 class="tbox_title mb-2">Features</h4>
                         </div>
                     </div>
                     <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <h4 class="md:text-base text-xs text-center text-white mb-2">Price</h4>
+                            <h4 class="tbox_title mb-2">Price</h4>
                         </div>
                     </div>
 
@@ -78,7 +78,7 @@
 
                     <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
-                            <h4 class="md:text-base text-xs text-center text-white mb-2">Order Now</h4>
+                            <h4 class="tbox_title mb-2">Order Now</h4>
                         </div>
                     </div>
                     <?php endif; ?>
