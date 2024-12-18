@@ -33,7 +33,7 @@ get_header();
         </div>
         <div class="text-white">
             <h4 class="pb-4 text-2xl font-black">Leave a review.</h4>
-            <form id="submit-review-form" class="mt-4">
+            <form id="submit-review-form" class="mt-4" onsubmit="return validateRecaptcha();">
 
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
@@ -228,3 +228,15 @@ jQuery(document).ready(function($) {
     });
 });
 </script>
+
+<script>
+        // Client-side validation for reCAPTCHA
+        function validateRecaptcha() {
+            const recaptchaResponse = document.querySelector('.g-recaptcha-response').value;
+            if (!recaptchaResponse) {
+                alert("Please complete the reCAPTCHA.");
+                return false; // Prevent form submission
+            }
+            return true;
+        }
+    </script>
