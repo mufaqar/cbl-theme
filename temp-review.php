@@ -92,7 +92,7 @@ get_header();
                     <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <input type="text" id="city" name="city" value="<?php echo esc_attr($city); ?>" class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-4" placeholder="City" />
                         <div class="bg-white rounded-md pr-1 overflow-hidden">
-                            <select id="state" name="state" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
+                            <select id="state" name="state" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4" required>
                                 <option value="">State</option>
                                 <?php
                                     if (!is_wp_error($state) && !empty($state)) {
