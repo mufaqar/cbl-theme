@@ -22,7 +22,8 @@ $state = get_terms(array(
 
 get_header();
 ?>
-
+<!-- Include the Google reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <main class="bg-[#1B559E] py-16">
     <div class="max-w-[1110px] w-full gap-5 md:gap-10 mx-auto px-4 grid grid-cols-1 md:grid-cols-2">
         <div class="text-white">
@@ -125,6 +126,8 @@ get_header();
                 </div>
 
                 <input type="hidden" id="rating" name="rating">
+                  <!-- Add reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="6LcFlZ8qAAAAANtGg14Tvog-7w-TU5NxRQvqNURL"></div>
 
                 <button type="submit"
                     class="py-4 px-5 mt-4 w-full font-medium text-center bg-[#EF9831] text-white rounded-md bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Submit
