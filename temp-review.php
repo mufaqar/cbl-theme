@@ -14,7 +14,7 @@ $query = new WP_Query($query_reviews_args);
 
 // State 
 $state = get_terms(array(
-    'taxonomy'   => $taxonomy_name,
+    'taxonomy'   => 'zone_state',
     'hide_empty' => false, // Set to true if you only want terms with associated posts
 ));
 
