@@ -901,9 +901,9 @@
 </section>
 
 <?php if($disclambers){ ?>
-<section class="container mx-auto mt-6 px-4">
-    <div class="mb-10">
-        <h2 class="text-2xl font-bold"> <?php echo the_title(); ?>Disclambers</h2>
+<section class="container mx-auto mt-6 px-4 mb-10">
+    <div class="">
+        <h2 class="text-2xl font-bold py-4"> <?php echo the_title(); ?> Disclambers</h2>
     </div>
     <?php echo $disclambers ?>
 </section>
