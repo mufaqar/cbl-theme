@@ -15,12 +15,6 @@
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'
     );
 }
-
-function custom_favicon() {
-    echo '<link rel="icon" href="' . get_stylesheet_directory_uri() . '/images/favicon.ico" type="image/x-icon">';
-}
-add_action('wp_head', 'custom_favicon');
-
 add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
 include_once('inc/extra_functions.php');
 include_once('inc/sitemap_functions.php');

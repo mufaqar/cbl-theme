@@ -859,11 +859,7 @@
     </div>
 </section>
 
-<?php if($disclambers){ ?>
-<section class="container mx-auto mt-6 px-4">
-    <?php echo $disclambers ?>
-</section>
-<?php } ?>
+
 
 
 <section class="my-16">
@@ -903,6 +899,15 @@
         </div>
     </div>
 </section>
+
+<?php if($disclambers){ ?>
+<section class="container mx-auto mt-6 px-4">
+    <div class="mb-10">
+        <h2 class="text-2xl font-bold"> <?php echo the_title(); ?>Disclambers</h2>
+    </div>
+    <?php echo $disclambers ?>
+</section>
+<?php } ?>
 
 
 <script>
