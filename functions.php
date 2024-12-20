@@ -306,7 +306,7 @@ function handle_review_submission() {
         
         // Validate CAPTCHA
         $captcha_response = sanitize_text_field($form_data['captcha_response']);
-        $captcha_secret = 'YOUR_SECRET_KEY'; // Replace with your CAPTCHA secret key
+        $captcha_secret = '6LcFlZ8qAAAAAI-0qbWTYJRk7vctVWIDFsV-1t93'; // Replace with your CAPTCHA secret key
         $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
             'body' => [
                 'secret' => $captcha_secret,
