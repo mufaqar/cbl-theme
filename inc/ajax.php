@@ -66,3 +66,39 @@ function load_provider_data() {
 }
 add_action('wp_ajax_load_provider_data', 'load_provider_data');
 add_action('wp_ajax_nopriv_load_provider_data', 'load_provider_data');
+
+
+
+
+add_action('wp_ajax_get_provider_services', 'get_provider_services');
+add_action('wp_ajax_nopriv_get_provider_services', 'get_provider_services');
+
+function get_provider_services() {
+    // Validate provider ID from POST request
+    $provider_id = isset($_POST['provider_id']) ? intval($_POST['provider_id']) : 0;
+
+    if ($provider_id) {
+        // Fetch associated taxonomy terms for the given provider
+        $terms = wp_get_post_terms($provider_id, 'providers_service_types');
+
+        if (!is_wp_error($terms) && !empty($terms)) {
+            // Generate HTML for the dropdown options
+            $html = '<option value="">Choose Service</option>';
+            foreach ($terms as $term) {
+                $html .= sprintf(
+                    '<option value="%s">%s</option>',
+                    esc_attr($term->slug),
+                    esc_html($term->name)
+                );
+            }
+            wp_send_json_success(['html' => $html]); // Send response with the HTML
+        } else {
+            wp_send_json_error(['message' => 'No services found for the selected provider.']);
+        }
+    } else {
+        wp_send_json_error(['message' => 'Invalid provider ID.']);
+    }
+
+    wp_die(); // Always terminate after handling an AJAX request
+}
+

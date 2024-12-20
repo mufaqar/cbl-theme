@@ -37,35 +37,36 @@ get_header();
 
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
-                        <select id="provider" name="provider"
-                            class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
+                        <select id="rew_provider" name="rew_provider"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4"
+                            required>
                             <option value="">Choose your provider</option>
                             <?php
-                                if ($query->have_posts()) {
-                                    while ($query->have_posts()) {
-                                        $query->the_post();
-                                            ?><option value="<?php echo get_the_ID(); ?>"><?php echo the_title(); ?>
-                            </option><?php
+                                        if ($query->have_posts()) {
+                                            while ($query->have_posts()) {
+                                                $query->the_post();
+                                                ?><option value="<?php echo get_the_ID(); ?>">
+                                <?php echo the_title(); ?></option><?php
+                                            }
+                                        } else {
+                                            echo '<option>No providers found.</option>';
                                         }
-                                    } else {
-                                        echo '<option>No providers found.</option>';
-                                    }
-                                    wp_reset_postdata();
-                                ?>
+                                        wp_reset_postdata();
+                                    ?>
                         </select>
                     </div>
 
+
                     <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
-                        <select id="service" name="service"
-                            class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4">
-                            <option>Choose Service</option>
-                            <option value="internet">Internet</option>
-                            <option value="tv">TV</option>
-                            <option value="landline">Landline</option>
-                            <option value="home-security">Home Security</option>
+                        <select id="load_service" name="load_service"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4"
+                            required>
+                            <option value="">Choose Service</option>
                         </select>
                     </div>
                 </div>
+
+
 
                 <div class="bg-white mt-4 flex justify-between items-center rounded-md p-[3px] px-4 overflow-hidden">
                     <p class="text-black text-sm">Your Overall Rating *</p>
@@ -126,7 +127,7 @@ get_header();
                 </div>
 
                 <input type="hidden" id="rating" name="rating">
-                  <!-- Add reCAPTCHA widget -->
+                <!-- Add reCAPTCHA widget -->
                 <div class="g-recaptcha" data-sitekey="6LcFlZ8qAAAAANtGg14Tvog-7w-TU5NxRQvqNURL"></div>
 
                 <button type="submit"
@@ -141,6 +142,44 @@ get_header();
 
 
 <?php get_footer();  ?>
+
+<script>
+jQuery(document).ready(function ($) {
+    $('#rew_provider').on('change', function () {
+        const providerId = this.value; // Get selected provider ID
+        const $serviceDropdown = $('#load_service'); // Get the service dropdown element
+
+        if (providerId) {
+            $.ajax({
+                url: ajaxurl, // WordPress AJAX URL
+                type: 'POST',
+                data: {
+                    action: 'get_provider_services',
+                    provider_id: providerId,
+                },
+                beforeSend: function () {
+                    $serviceDropdown.html('<option>Loading...</option>'); // Show loading state
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $serviceDropdown.html(response.data.html); // Populate the dropdown
+                    } else {
+                        alert(response.data.message || 'Error loading services.');
+                        $serviceDropdown.html('<option>Error loading services</option>');
+                    }
+                },
+                error: function () {
+                    alert('An error occurred while processing your request.');
+                    $serviceDropdown.html('<option>Error loading services</option>');
+                },
+            });
+        }
+    });
+});
+
+
+</script>
+
 
 
 
@@ -216,7 +255,7 @@ jQuery(document).ready(function($) {
                 if (response.success) {
                     alert('Review submitted successfully!');
                     $('#submit-review-form')[0]
-                .reset(); // Reset form after successful submission
+                        .reset(); // Reset form after successful submission
                 } else {
                     alert('Error: ' + response.data);
                 }
@@ -230,13 +269,13 @@ jQuery(document).ready(function($) {
 </script>
 
 <script>
-        // Client-side validation for reCAPTCHA
-        function validateRecaptcha() {
-            const recaptchaResponse = document.querySelector('.g-recaptcha-response').value;
-            if (!recaptchaResponse) {
-                alert("Please complete the reCAPTCHA.");
-                return false; // Prevent form submission
-            }
-            return true;
-        }
-    </script>
+// Client-side validation for reCAPTCHA
+function validateRecaptcha() {
+    const recaptchaResponse = document.querySelector('.g-recaptcha-response').value;
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        return false; // Prevent form submission
+    }
+    return true;
+}
+</script>
