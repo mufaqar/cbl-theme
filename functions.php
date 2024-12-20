@@ -300,10 +300,31 @@ function get_states_and_cities_data($request) {
 
 function handle_review_submission() {
     parse_str($_POST['formData'], $form_data); // Parse serialized form data
-    
+
     // Validate required fields
-    if (isset($form_data['provider']) && isset($form_data['firstName']) && isset($form_data['lastName']) && isset($form_data['comment'])) {
+    if (isset($form_data['provider']) && isset($form_data['firstName']) && isset($form_data['lastName']) && isset($form_data['comment']) && isset($form_data['captcha_response'])) {
         
+        // Validate CAPTCHA
+        $captcha_response = sanitize_text_field($form_data['captcha_response']);
+        $captcha_secret = 'YOUR_SECRET_KEY'; // Replace with your CAPTCHA secret key
+        $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
+            'body' => [
+                'secret' => $captcha_secret,
+                'response' => $captcha_response,
+            ],
+        ]);
+
+        if (is_wp_error($captcha_verify_response)) {
+            wp_send_json_error('CAPTCHA verification failed.');
+            return;
+        }
+
+        $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
+        if (!$captcha_result['success']) {
+            wp_send_json_error('CAPTCHA validation failed. Please try again.');
+            return;
+        }
+
         // Sanitize data
         $provider = sanitize_text_field($form_data['provider']);
         $first_name = sanitize_text_field($form_data['firstName']);
@@ -346,9 +367,10 @@ function handle_review_submission() {
             wp_send_json_error('There was an error submitting the review.');
         }
     } else {
-        wp_send_json_error('Missing required fields.');
+        wp_send_json_error('Missing required fields or CAPTCHA response.');
     }
 }
+
 
 // Add AJAX actions for logged-in and non-logged-in users
 add_action('wp_ajax_submit_review', 'handle_review_submission');
