@@ -128,7 +128,7 @@ get_header();
 
                 <input type="hidden" id="rating" name="rating">
                 <!-- Add reCAPTCHA widget -->
-                <div class="g-recaptcha" data-sitekey="6LcFlZ8qAAAAANtGg14Tvog-7w-TU5NxRQvqNURL"></div>
+                <div class="g-recaptcha mt-5" data-sitekey="6LcFlZ8qAAAAANtGg14Tvog-7w-TU5NxRQvqNURL"></div>
 
                 <button type="submit"
                     class="py-4 px-5 mt-4 w-full font-medium text-center bg-[#EF9831] text-white rounded-md bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Submit
