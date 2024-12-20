@@ -23,7 +23,7 @@ $state = get_terms(array(
 get_header();
 ?>
 <!-- Include the Google reCAPTCHA script -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 <main class="bg-[#1B559E] py-16">
     <div class="max-w-[1110px] w-full gap-5 md:gap-10 mx-auto px-4 grid grid-cols-1 md:grid-cols-2">
         <div class="text-white">
@@ -37,7 +37,7 @@ get_header();
 
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
-                        <select id="rew_provider" name="rew_provider"
+                        <select id="provider" name="provider"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4"
                             required>
                             <option value="">Choose your provider</option>
@@ -83,10 +83,10 @@ get_header();
                 </div>
 
                 <div class="mt-4 flex sm:flex-row flex-col gap-4">
-                    <input type="text" id="fname" name="firstName"
+                    <input type="text" id="fname" name="fname"
                         class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-4"
                         placeholder="First Name *" required />
-                    <input type="text" id="lname" name="lastName"
+                    <input type="text" id="lname" name="lname"
                         class="block p-4 w-full text-sm text-gray-900 bg-white rounded-md border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                         placeholder="Last Name *" required />
                 </div>
@@ -128,7 +128,7 @@ get_header();
 
                 <input type="hidden" id="rating" name="rating">
                 <!-- Add reCAPTCHA widget -->
-                <div class="g-recaptcha mt-5" data-sitekey="6LcFlZ8qAAAAANtGg14Tvog-7w-TU5NxRQvqNURL"></div>
+                <!-- <div class="g-recaptcha mt-5" data-sitekey="6LcFlZ8qAAAAANtGg14Tvog-7w-TU5NxRQvqNURL"></div> -->
 
                 <button type="submit"
                     class="py-4 px-5 mt-4 w-full font-medium text-center bg-[#EF9831] text-white rounded-md bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Submit
@@ -145,7 +145,7 @@ get_header();
 
 <script>
 jQuery(document).ready(function($) {
-    $('#rew_provider').on('change', function() {
+    $('#provider').on('change', function() {
         const providerId = this.value; // Get selected provider ID
         const $serviceDropdown = $('#load_service'); // Get the service dropdown element
 
@@ -239,7 +239,6 @@ jQuery(document).ready(function($) {
     $('#submit-review-form').on('submit', function(e) {
         e.preventDefault();
         ratingField.value = selectedRating;
-
         // Gather form data
         var formData = $(this).serialize();
         // AJAX request
@@ -253,8 +252,7 @@ jQuery(document).ready(function($) {
             success: function(response) {
                 if (response.success) {
                     alert('Review submitted successfully!');
-                    $('#submit-review-form')[0]
-                        .reset(); // Reset form after successful submission
+                  //  $('#submit-review-form')[0].reset(); // Reset form after successful submission
                 } else {
                     alert('Error: ' + response.data);
                 }
