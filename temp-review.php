@@ -33,7 +33,7 @@ get_header();
         </div>
         <div class="text-white">
             <h4 class="pb-4 text-2xl font-black">Leave a review.</h4>
-            <form id="submit-review-form" class="mt-4" onsubmit="return validateRecaptcha();">
+            <form id="submit-review-form" class="mt-4">
 
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div class="flex-1 bg-white rounded-md pr-2 overflow-hidden">
@@ -144,8 +144,8 @@ get_header();
 <?php get_footer();  ?>
 
 <script>
-jQuery(document).ready(function ($) {
-    $('#rew_provider').on('change', function () {
+jQuery(document).ready(function($) {
+    $('#rew_provider').on('change', function() {
         const providerId = this.value; // Get selected provider ID
         const $serviceDropdown = $('#load_service'); // Get the service dropdown element
 
@@ -157,10 +157,11 @@ jQuery(document).ready(function ($) {
                     action: 'get_provider_services',
                     provider_id: providerId,
                 },
-                beforeSend: function () {
-                    $serviceDropdown.html('<option>Loading...</option>'); // Show loading state
+                beforeSend: function() {
+                    $serviceDropdown.html(
+                    '<option>Loading...</option>'); // Show loading state
                 },
-                success: function (response) {
+                success: function(response) {
                     if (response.success) {
                         $serviceDropdown.html(response.data.html); // Populate the dropdown
                     } else {
@@ -168,7 +169,7 @@ jQuery(document).ready(function ($) {
                         $serviceDropdown.html('<option>Error loading services</option>');
                     }
                 },
-                error: function () {
+                error: function() {
                     alert('An error occurred while processing your request.');
                     $serviceDropdown.html('<option>Error loading services</option>');
                 },
@@ -176,8 +177,6 @@ jQuery(document).ready(function ($) {
         }
     });
 });
-
-
 </script>
 
 
@@ -266,16 +265,4 @@ jQuery(document).ready(function($) {
         });
     });
 });
-</script>
-
-<script>
-// Client-side validation for reCAPTCHA
-function validateRecaptcha() {
-    const recaptchaResponse = document.querySelector('.g-recaptcha-response').value;
-    if (!recaptchaResponse) {
-        alert("Please complete the reCAPTCHA.");
-        return false; // Prevent form submission
-    }
-    return true;
-}
 </script>
