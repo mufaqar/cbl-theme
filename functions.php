@@ -319,11 +319,11 @@ function handle_review_submission() {
             return;
         }
 
-        $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
-        if (!$captcha_result['success']) {
-            wp_send_json_error('CAPTCHA validation failed. Please try again.');
-            return;
-        }
+        // $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
+        // if (!$captcha_result['success']) {
+        //     wp_send_json_error('CAPTCHA validation failed. Please try again.');
+        //     return;
+        // }
 
         // Sanitize data
         $provider = sanitize_text_field($form_data['provider']);
