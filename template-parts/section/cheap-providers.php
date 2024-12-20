@@ -91,47 +91,48 @@
 
 
         </div>
-        <div class="md:w-full min-w-fit grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>  bg-[#215690]">
-            <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+        <div
+            class="md:w-full min-w-fit grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>  bg-[#215690] ">
+            <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
-            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <div class="tborder tborder">
                 <div>
-                    <h4 class="tabbox_title mb-2">Cheap Package</h4>
+                    <h4 class="tabbox_title">Cheap Package</h4>
                 </div>
             </div>
             <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
-            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <div class="tborder tborder">
                 <div>
-                    <h4 class="tabbox_title mb-2">
+                    <h4 class="tabbox_title">
                         <?php if ($type === 'internet'): ?> Download Speed <?php else: ?> # of Channels <?php endif; ?>
                     </h4>
                 </div>
             </div>
             <?php endif ?>
             <?php if ($type !== 'home-security') : ?>
-            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <div class="tborder tborder">
                 <div>
-                    <h4 class="tabbox_title mb-2">Contract</h4>
+                    <h4 class="tabbox_title">Contract</h4>
                 </div>
             </div>
             <?php endif ?>
-            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <div class="tborder tborder">
                 <div>
-                    <h4 class="tabbox_title mb-2">Price</h4>
+                    <h4 class="tabbox_title">Price</h4>
                 </div>
             </div>
             <?php if ($type === 'home-security') : ?>
-            <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <div class="tborder tborder">
                 <div>
-                    <h4 class="tabbox_title mb-2">Order Now</h4>
+                    <h4 class="tabbox_title">Order Now</h4>
                 </div>
             </div>
             <?php  endif ?>
         </div>
-        <div class="grid">
+        <div class="grid shadow-xl">
             <?php
                   $query_cheep = get_query_var('providers_query');
                     if ($query_cheep->have_posts()) {
@@ -163,43 +164,42 @@
                             
                             
                         ?>
-            <div class="w-full lg:max-w-[1200px] mx-auto h-auto bg-[#fafafa]">
-                <div class="md:w-full w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?> ">
-                    <div
-                        class="border-l border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+            <div class="w-full lg:max-w-[1200px] mx-auto h-auto dtable ">
+                <div
+                    class="md:w-full w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>   ">
+                    <div class="tborder">
                         <div>
-                            <p class="text-center md:text-base text-xs"><a target="_blank"
-                                    href="<?php the_permalink()?>">
+                            <p class="tb_heading"><a target="_blank" href="<?php the_permalink()?>">
                                     <?php the_title()?> </a></p>
                         </div>
                     </div>
 
-                    <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder">
                         <div>
-                            <p class="text-center md:text-base text-xs"><?php echo $cheap_package ?> </p>
+                            <p class="tb_heading"><?php echo $cheap_package ?> </p>
                         </div>
                     </div>
                     <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
-                    <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder">
                         <div>
-                            <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> </p>
+                            <p class="tb_title"><?php echo $summary_speed ?> </p>
                         </div>
                     </div>
                     <?php endif ?>
                     <?php if ($type !== 'home-security') : ?>
-                    <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder">
                         <div>
-                            <p class="text-center md:text-base text-xs"><?php echo $contract ?> </p>
+                            <p class="tb_heading"><?php echo $contract ?> </p>
                         </div>
                     </div>
                     <?php  endif ?>
-                    <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder">
                         <div>
-                            <p class="text-center md:text-base text-xs">$<?php echo $price ?> </p>
+                            <p class="tb_heading">$<?php echo $price ?> </p>
                         </div>
                     </div>
                     <?php if ($type === 'home-security') : ?>
-                    <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder">
                         <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]"
                             href="<?php the_permalink()?>">
                             View Plans

@@ -37,49 +37,49 @@ $state = strtoupper($state);
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Max Download Speed</h4>
+                                <h4 class="tabbox_title">Max Download Speed</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Data Caps</h4>
+                                <h4 class="tabbox_title">Data Caps</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Contract Term</h4>
+                                <h4 class="tabbox_title">Contract Term</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Setup Fee</h4>
+                                <h4 class="tabbox_title">Setup Fee</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Early Termination Fee</h4>
+                                <h4 class="tabbox_title">Early Termination Fee</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Equipment Rental Fee</h4>
+                                <h4 class="tabbox_title">Equipment Rental Fee</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Monthly Price</h4>
+                                <h4 class="tabbox_title">Monthly Price</h4>
                             </div>
                         </div>
                         <div
                             class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
                             <div>
-                                <h4 class="tabbox_title mb-2">Order Now</h4>
+                                <h4 class="tabbox_title">Order Now</h4>
                             </div>
                         </div>
 

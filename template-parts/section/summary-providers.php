@@ -45,40 +45,40 @@
             <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                 <div
                     class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690]">
-                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder tborder">
                         <div>
                             <h4 class="tabbox_title">Provider</h4>
                         </div>
                     </div>
                     <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
-                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder tborder">
                         <div>
                             <h4 class="tabbox_title">Connection Type</h4>
                         </div>
                     </div>
-                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder tborder">
                         <div>
-                            <h4 class="tabbox_title mb-2"><?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?></h4>
+                            <h4 class="tabbox_title"><?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?></h4>
                         </div>
                     </div>
                     <?php endif; ?>
                     <div
-                        class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center  md:col-span-3 col-span-1">
+                        class="tborder tborder  md:col-span-3 col-span-1">
                         <div>
-                            <h4 class="tabbox_title mb-2">Features</h4>
+                            <h4 class="tabbox_title">Features</h4>
                         </div>
                     </div>
-                    <div class="tborder grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder tborder">
                         <div>
-                            <h4 class="tabbox_title mb-2">Price</h4>
+                            <h4 class="tabbox_title">Price</h4>
                         </div>
                     </div>
 
                     <?php if (in_array($type, ['landline', 'home-security'])) : ?>
 
-                    <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                    <div class="tborder">
                         <div>
-                            <h4 class="tabbox_title mb-2">Order Now</h4>
+                            <h4 class="tabbox_title">Order Now</h4>
                         </div>
                     </div>
                     <?php endif; ?>
@@ -123,33 +123,33 @@
                                     ?>
 
                     <div  class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1  dtable">
-                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <p class="text-center md:text-base text-xs"><a target="_blank"
+                                <p class="tb_heading"><a target="_blank"
                                         href="<?php the_permalink()?>"> <?php the_title()?> </a></p>
                             </div>
                         </div>
                         <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
-                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <p class="text-center md:text-base text-xs"><?php echo $connection_type ?></p>
+                                <p class="tb_heading"><?php echo $connection_type ?></p>
                             </div>
                         </div>
-                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?><?php echo $type === 'internet' ? ' Mbps' : ''; ?></p>
+                                <p class="tb_heading"><?php echo $summary_speed ?><?php echo $type === 'internet' ? ' Mbps' : ''; ?></p>
                             </div>
                         </div>
                         <?php endif ; ?>
                         <div
-                            class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center  md:col-span-3 col-span-1 ">
+                            class="tborder  md:col-span-3 col-span-1 ">
                             <div>
-                                <p class="text-center md:text-base text-xs"><?php echo $summary_features ?></p>
+                                <p class="tb_heading"><?php echo $summary_features ?></p>
                             </div>
                         </div>
-                        <div class="w-full tborder  md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <p class="text-center md:text-base text-xs">$<?php echo $price ?>/mo</p>
+                                <p class="tb_heading">$<?php echo $price ?>/mo</p>
                             </div>
                         </div>
                         <?php if (in_array($type, ['landline', 'home-security'])) : ?>

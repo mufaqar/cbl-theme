@@ -144,10 +144,9 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_slider_assets');
 
 function my_theme_enqueue_styles() {
     wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/dist/style.css', array(), null);
+    wp_enqueue_style('custom_css', get_template_directory_uri() . '/custom.css', array(), null);
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
-
-
 
 
 

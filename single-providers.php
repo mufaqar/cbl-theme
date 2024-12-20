@@ -120,29 +120,29 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-4 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">
+                                <h4 class="tabbox_title">
                                     <?php _e('Package', 'cbl_theme'); ?></h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">
+                                <h4 class="tabbox_title">
                                     <?php _e('Speed Up To', 'cbl_theme'); ?></h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">
+                                <h4 class="tabbox_title">
                                     <?php _e('Price', 'cbl_theme'); ?></h4>
                             </div>
                         </div>
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">
+                                <h4 class="tabbox_title">
                                     <?php _e('Order Now', 'cbl_theme'); ?></h4>
                             </div>
                         </div>
@@ -161,26 +161,26 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
+                                    <p class="tb_heading"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $speed_info; ?></p>
+                                    <p class="tb_title"><?php echo $Speeds ?></p>
+                                    <p class="tb_info"><?php echo $speed_info; ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
+                                    <p class="tb_title"><?php echo $price ?></p>
+                                    <p class="tb_info"><?php echo $price_info ?></p>
                                 </div>
                             </div>
-                            <div class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div class="tborder">
                                 <div> <?php  echo order_online($phone, $order_online);?> </div>
                             </div>
                         </div>
@@ -209,30 +209,30 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-4 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
+                                <h4 class="tabbox_title">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Channels</h4>
+                                <h4 class="tabbox_title">Channels</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
+                                <h4 class="tabbox_title">Price</h4>
                             </div>
                         </div>
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Order Now</h4>
+                                <h4 class="tabbox_title">Order Now</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll">
+                    <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll tbody">
                         <?php if( have_rows('tv_plans') ): ?>
                         <?php while( have_rows('tv_plans') ): the_row(); 
                                 $package = get_sub_field('package');
@@ -243,27 +243,27 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
+                                    <p class="tb_heading"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
+                                    <p class="tb_title"><?php echo $Speeds ?></p>
+                                    <p class="tb_info"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
-                                    <p class="text-center md:text-xs text-xs">*<?php echo $price_info ?></p>
+                                    <p class="tb_title"><?php echo $price ?></p>
+                                    <p class="tb_info">*<?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div> <?php  echo order_online($phone, $order_online);?> </div>
                             </div>
                         </div>
@@ -296,32 +296,32 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
+                                <h4 class="tabbox_title">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
+                                <h4 class="tabbox_title">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
+                                <h4 class="tabbox_title">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
+                                <h4 class="tabbox_title">Price</h4>
                             </div>
                         </div>
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Order Now</h4>
+                                <h4 class="tabbox_title">Order Now</h4>
                             </div>
                         </div>
                     </div>
@@ -338,34 +338,34 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
+                                    <p class="tb_heading"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
+                                    <p class="tb_title"><?php echo $Speeds ?></p>
+                                    <p class="tb_info"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
+                                    <p class="tb_title"><?php echo $price ?></p>
+                                    <p class="tb_info"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
+                                    <p class="tb_title"><?php echo $voice ?></p>
+                                    <p class="tb_info"><?php echo $voice_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div> <?php  echo order_online($phone, $order_online);?> </div>
                             </div>
                         </div>
@@ -398,32 +398,32 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
+                                <h4 class="tabbox_title">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
+                                <h4 class="tabbox_title">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
+                                <h4 class="tabbox_title">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
+                                <h4 class="tabbox_title">Price</h4>
                             </div>
                         </div>
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Order Now</h4>
+                                <h4 class="tabbox_title">Order Now</h4>
                             </div>
                         </div>
                     </div>
@@ -440,34 +440,34 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
+                                    <p class="tb_heading"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
+                                    <p class="tb_title"><?php echo $Speeds ?></p>
+                                    <p class="tb_info"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
+                                    <p class="tb_title"><?php echo $price ?></p>
+                                    <p class="tb_info"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
+                                    <p class="tb_title"><?php echo $voice ?></p>
+                                    <p class="tb_info"><?php echo $voice_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div> <?php  echo order_online($phone, $order_online);?> </div>
                             </div>
                         </div>
@@ -500,32 +500,32 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-5 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
+                                <h4 class="tabbox_title">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
+                                <h4 class="tabbox_title">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
+                                <h4 class="tabbox_title">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
+                                <h4 class="tabbox_title">Price</h4>
                             </div>
                         </div>
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Order Now</h4>
+                                <h4 class="tabbox_title">Order Now</h4>
                             </div>
                         </div>
                     </div>
@@ -542,34 +542,34 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
+                                    <p class="tb_heading"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
+                                    <p class="tb_title"><?php echo $Speeds ?></p>
+                                    <p class="tb_info"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
+                                    <p class="tb_title"><?php echo $price ?></p>
+                                    <p class="tb_info"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $channels ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $channels_info ?></p>
+                                    <p class="tb_title"><?php echo $channels ?></p>
+                                    <p class="tb_info"><?php echo $channels_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div> <?php  echo order_online($phone, $order_online);?> </div>
                             </div>
                         </div>
@@ -603,38 +603,38 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-6 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
+                                <h4 class="tabbox_title">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Speed Up To</h4>
+                                <h4 class="tabbox_title">Speed Up To</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Channels</h4>
+                                <h4 class="tabbox_title">Channels</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Voice</h4>
+                                <h4 class="tabbox_title">Voice</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
+                                <h4 class="tabbox_title">Price</h4>
                             </div>
                         </div>
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Order Now</h4>
+                                <h4 class="tabbox_title">Order Now</h4>
                             </div>
                         </div>
                     </div>
@@ -653,41 +653,41 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
+                                    <p class="tb_heading"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $Speeds ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $speed_info ?></p>
+                                    <p class="tb_title"><?php echo $Speeds ?></p>
+                                    <p class="tb_info"><?php echo $speed_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $channels ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $channels_info ?></p>
+                                    <p class="tb_title"><?php echo $channels ?></p>
+                                    <p class="tb_info"><?php echo $channels_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $voice ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $voice_info ?></p>
+                                    <p class="tb_title"><?php echo $voice ?></p>
+                                    <p class="tb_info"><?php echo $voice_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
+                                    <p class="tb_title"><?php echo $price ?></p>
+                                    <p class="tb_info"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div> <?php  echo order_online($phone, $order_online);?> </div>
                             </div>
                         </div>
@@ -722,20 +722,20 @@
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div class="md:w-full min-w-fit grid md:grid-cols-3 grid-cols-1 bg-[#215690]">
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Package</h4>
+                                <h4 class="tabbox_title">Package</h4>
                             </div>
                         </div>
                         <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white">Price</h4>
+                                <h4 class="tabbox_title">Price</h4>
                             </div>
                         </div>
-                        <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div class="tborder">
                             <div>
-                                <h4 class="md:text-base text-xs font-bold text-center text-white mb-2">Order Now</h4>
+                                <h4 class="tabbox_title">Order Now</h4>
                             </div>
                         </div>
                     </div>
@@ -753,20 +753,20 @@
                                 ?>
                         <div class="w-full flex md:flex-row flex-col dtable">
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><?php echo $package ?></p>
+                                    <p class="tb_heading"><?php echo $package ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div>
-                                    <p class="text-center md:text-base text-xs font-bold"><?php echo $price ?></p>
-                                    <p class="text-center md:text-xs text-xs"><?php echo $price_info ?></p>
+                                    <p class="tb_title"><?php echo $price ?></p>
+                                    <p class="tb_info"><?php echo $price_info ?></p>
                                 </div>
                             </div>
                             <div
-                                class="w-full grid justify-center md:p-5 p-2 md:h-auto h-[120px] overflow-hidden items-center">
+                                class="tborder">
                                 <div> <?php  echo order_online($phone, $order_online);?> </div>
                             </div>
                         </div>
