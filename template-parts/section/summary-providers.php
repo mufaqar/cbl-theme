@@ -44,7 +44,7 @@
         <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
             <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                 <div
-                    class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690]">
+                    class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690] htable">
                     <div class="tborder tborder">
                         <div>
                             <h4 class="tabbox_title">Provider</h4>

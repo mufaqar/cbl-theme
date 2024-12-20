@@ -20,67 +20,39 @@ $state = strtoupper($state);
         <div>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
                 <div class="w-full h-auto rounded-t-md rounded-b-md flex md:flex-row flex-row items-stretch">
-                    <div class="md:w-96 min-w-[50px]  bg-[#215690]">
+                    <div class="md:w-96 min-w-[50px]  bg-[#215690] htable">
                         <div
                             class="border-r-0 md:border-b-0 bg-gray-200 border-b md:border-r grid justify-center md:p-5 p-3 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="md:text-base text-xs text-center text-gray-200">.</h4>
-                            </div>
+                            <h4 class="md:text-base text-xs text-center text-gray-200">.</h4>
+
                         </div>
 
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Connection Type</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4> Connection Type</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Max Download Speed</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Max Download Speed</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Data Caps</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Data Caps</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Contract Term</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Contract Term</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Setup Fee</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Setup Fee</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Early Termination Fee</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Early Termination Fee</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Equipment Rental Fee</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Equipment Rental Fee</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Monthly Price</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Monthly Price</h4>
                         </div>
-                        <div
-                            class="md:border-r border-r-0 md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center">
-                            <div>
-                                <h4 class="tabbox_title">Order Now</h4>
-                            </div>
+                        <div class="ctborder">
+                            <h4>Order Now</h4>
                         </div>
 
                     </div>
@@ -124,7 +96,7 @@ $state = strtoupper($state);
                             ?>
                         <div class="min-w-[120px] md:w-full dtable">
                             <div
-                                class="w-full bg-gray-200 md:border-r border-r-0 md:border-b-0 border-b border grid justify-center md:p-2 md:h-auto !h-[80px] items-center">
+                                class="w-full bg-gray-200 md:border-r border-r-0 md:border-b-0 border-b border grid justify-center md:p-2 md:h-auto !h-[80px] items-center ">
                                 <div>
                                     <select id="provider_<?php echo $i ?>" name="provider_<?php echo $i ?>"
                                         data-target="dtable_<?php echo $i ?>"
@@ -147,56 +119,44 @@ $state = strtoupper($state);
                             </div>
 
                             <div class="dtable_<?php echo $i ?>">
-                                <div class="provider-item ">
-                                    <div>
-                                        <p class="provider-data">Satellite</p>
-                                    </div>
+                                <div class="provider-item">
+                                    <p>Satellite</p>
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data"><?php echo $speed ?> Mbps</p>
-                                    </div>
+                                    <p><?php echo $speed ?> Mbps</p>
                                 </div>
                                 <div class="provider-item ">
-                                    <div>
-                                        <p class="provider-data"><?php echo $connection_type ?></p>
-                                    </div>
+                                    <p><?php echo $connection_type ?></p>
+
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data"><?php echo $data_caps ?></p>
-                                    </div>
+                                    <p><?php echo $data_caps ?></p>
+
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data"><?php echo $contract ?></p>
-                                    </div>
+                                    <p><?php echo $contract ?></p>
+
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data"><?php echo $setup_fee?></p>
-                                    </div>
+                                    <p><?php echo $setup_fee?></p>
+
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data"><?php echo $early_termination_fee ?></p>
-                                    </div>
+                                    <p><?php echo $early_termination_fee ?></p>
+
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data"><?php echo $equipment_rental_fee ?></p>
-                                    </div>
+                                    <p><?php echo $equipment_rental_fee ?></p>
+
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data">$<?php echo $price ?></p>
-                                    </div>
+                                    <p>$<?php echo $price ?></p>
+
                                 </div>
                                 <div class="provider-item">
-                                    <div>
-                                        <p class="provider-data"><a href="<?php the_permalink()?>">View
-                                                Plans</a></p>
-                                    </div>
+                                    <p><a href="<?php the_permalink()?>">View
+                                            Plans</a></p>
+
                                 </div>
                             </div>
                         </div>

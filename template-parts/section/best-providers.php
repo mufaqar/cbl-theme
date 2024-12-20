@@ -219,7 +219,7 @@
             </p>
         </div>
         <div class="shadow-xl border">
-            <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x bg-[#215690]">
+            <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x bg-[#215690] htable">
                 <div class="md:p-5 p-2">
                     <h3 class="tabbox_title">
                         Number of Devices

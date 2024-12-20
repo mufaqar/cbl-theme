@@ -34,8 +34,7 @@ html {
   .provider-item {
     @apply w-full grid md:border-r border-b justify-center md:p-5 p-2 h-[80px] items-center;
   }
-
-  .provider-data {
+  .provider-item p {
     @apply text-center md:text-base text-xs;
   }
 
@@ -53,10 +52,17 @@ html {
     @apply text-center md:text-base text-xs font-bold;
   }
   .tb_heading {
-    @apply text-center md:text-base text-xs ;
+    @apply text-center md:text-base text-xs;
   }
   .tb_info {
     @apply text-center md:text-xs text-xs;
   }
-  
+
+  .ctborder {
+    @apply md:border-r border-r-0  border-b grid justify-center md:p-5 p-2 md:h-auto !h-[80px] items-center;
+  }
+
+  .ctborder h4 {
+    @apply md:text-base text-xs text-center text-white;
+  }
 }

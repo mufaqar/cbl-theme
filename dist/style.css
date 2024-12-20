@@ -4,7 +4,7 @@ Theme URI: https://cablemovers.net
 Author: Mufaqar
 Author URI: https://mufaqar.com
 Description: cablemovers cusom theme for store
-Version: 1.0.0
+Version: 1.2.3
 License: GNU General Public License 
 Text Domain: cbl_theme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -643,14 +643,14 @@ video {
   }
 }
 
-.provider-data {
+.provider-item p {
   text-align: center;
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
 @media (min-width: 768px) {
-  .provider-data {
+  .provider-item p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -672,22 +672,6 @@ video {
     height: auto;
     border-right-width: 1px;
     border-bottom-width: 0px;
-    padding: 1.25rem;
-  }
-}
-
-.tabbox {
-  display: grid;
-  height: 120px;
-  align-items: center;
-  justify-content: center;
-  border-right-width: 1px;
-  padding: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .tabbox {
-    height: auto;
     padding: 1.25rem;
   }
 }
@@ -744,6 +728,39 @@ video {
   .tb_info {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+.ctborder {
+  display: grid;
+  height: 80px !important;
+  align-items: center;
+  justify-content: center;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .ctborder {
+    height: auto;
+    border-right-width: 1px;
+    padding: 1.25rem;
+  }
+}
+
+.ctborder h4 {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .ctborder h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1485,11 +1502,6 @@ video {
   background-color: rgb(239 152 49 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#fafafa\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
-}
-
 .bg-black\/20 {
   background-color: rgb(0 0 0 / 0.2);
 }
@@ -1525,6 +1537,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-75 {

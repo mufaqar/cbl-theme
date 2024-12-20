@@ -92,7 +92,7 @@
 
         </div>
         <div
-            class="md:w-full min-w-fit grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>  bg-[#215690] ">
+            class="md:w-full min-w-fit grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>  bg-[#215690] htable ">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>

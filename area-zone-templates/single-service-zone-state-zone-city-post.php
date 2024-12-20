@@ -148,7 +148,7 @@ $query_fast = new WP_Query($query_args_fast);
             </h2>
         </div>
         <div
-            class="md:w-full min-w-fit grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> bg-[#215690]">
+            class="md:w-full min-w-fit grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> bg-[#215690] htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
@@ -257,7 +257,7 @@ $query_fast = new WP_Query($query_args_fast);
             <?php else: ?>
             <?php endif; ?>
         </div>
-        <div class="md:w-full min-w-fit grid grid-cols-4 bg-[#215690] md:grid-cols-4">
+        <div class="md:w-full min-w-fit grid grid-cols-4 bg-[#215690] md:grid-cols-4 htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
@@ -349,7 +349,7 @@ $query_fast = new WP_Query($query_args_fast);
             </h2>
         </div>
         <div
-            class="md:w-full min-w-fit grid  bg-[#215690] <?php if ($type !== 'home-security'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?>">
+            class="md:w-full min-w-fit grid  bg-[#215690] <?php if ($type !== 'home-security'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
@@ -441,7 +441,7 @@ $query_fast = new WP_Query($query_args_fast);
                 <span class="text-[#ef9831]"><?php echo $zipcode ?>, <?php echo $state ?> </span>
             </h2>
         </div>
-        <div class="md:w-full min-w-fit grid grid-cols-4 bg-[#215690] md:grid-cols-4">
+        <div class="md:w-full min-w-fit grid grid-cols-4 bg-[#215690] md:grid-cols-4 htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
@@ -532,7 +532,7 @@ $query_fast = new WP_Query($query_args_fast);
                 <span class="text-[#ef9831]"><?php echo $zipcode ?>, <?php echo $state ?> </span>
             </h2>
         </div>
-        <div class="md:w-full min-w-fit grid grid-cols-5 bg-[#215690] md:grid-cols-5">
+        <div class="md:w-full min-w-fit grid grid-cols-5 bg-[#215690] md:grid-cols-5 htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
@@ -635,7 +635,7 @@ $query_fast = new WP_Query($query_args_fast);
                 <span class="text-[#ef9831]"><?php echo $zipcode ?>, <?php echo $state ?> </span>
             </h2>
         </div>
-        <div class="md:w-full min-w-fit grid grid-cols-3 bg-[#215690] md:grid-cols-3">
+        <div class="md:w-full min-w-fit grid grid-cols-3 bg-[#215690] md:grid-cols-3 htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
@@ -724,7 +724,7 @@ $query_fast = new WP_Query($query_args_fast);
                 <div
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div
-                        class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> grid-cols-1 bg-[#215690]">
+                        class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> grid-cols-1 bg-[#215690] htable">
                         <div class="tborder">
 
                             <h4 class="tabbox_title">Provider</h4>
