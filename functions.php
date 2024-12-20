@@ -366,8 +366,9 @@ function handle_review_submission() {
         } else {
             wp_send_json_error('There was an error submitting the review.');
         }
-    } else {
-        wp_send_json_error('Missing required fields or CAPTCHA response.');
+    } 
+    else {
+      //  wp_send_json_error('Missing required fields or CAPTCHA response.');
     }
 }
 
