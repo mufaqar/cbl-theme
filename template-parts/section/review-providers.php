@@ -73,7 +73,6 @@
     } else {
         echo 'No comments found for the specified state.';
     }
-
     // Display pagination
     $total_pages = $comment_query->max_num_pages;
     if ($total_pages > 1) {
