@@ -59,7 +59,7 @@ $features_items  = explode(',', $features);
                     <div class="text-center">
                         <p class="tch"><?php echo $type == 'tv' ? 'Channels' : 'Speed from'; ?></p>
                         <span class="tcd">
-                            <?php echo $type == 'tv' ? $channels : $speed . ' Mbps'; ?>
+                            <?php echo $type == 'tv' ? $channels."+" : $speed . ' Mbps'; ?>
                         </span>
                     </div>
                 </div>
