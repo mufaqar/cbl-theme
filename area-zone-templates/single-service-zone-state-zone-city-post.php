@@ -391,6 +391,7 @@ $query_fast = new WP_Query($query_args_fast);
                         $summary_speed =  $services['summary_speed'];
                         $connection_type =  $services['connection_type'];
                         $fast_package =  $services['fast_package'];
+                        $best_for =  $services['best_for'];
                         ?>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto ">
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
@@ -406,12 +407,12 @@ $query_fast = new WP_Query($query_args_fast);
                         <?php if ($type !== 'home-security'): ?>
                         <div class="tborder">
                             <div>
-                                <h4 class="tabbox_title">Connection </h4>
+                                <h4 class="tabbox_title">  <?php echo $connection_type ?> </h4>
                             </div>
                         </div>
                         <?php endif ?>
                         <div class="tborder">
-                            Best For
+                                <?php echo $best_for ?>
                         </div>
 
 
