@@ -299,7 +299,7 @@ $query_fast = new WP_Query($query_args_fast);
                                     $services = $servicesInfo["home_security_services"];
                                 }
 
-                            var_dump($internet_services);
+                           // var_dump($internet_services);
                             $price =  $services['price'];
                             $summary_speed =  $services['summary_speed'];
                             $connection_type =  $services['connection_type'];
@@ -318,8 +318,8 @@ $query_fast = new WP_Query($query_args_fast);
                             <?php echo $connection_type ?> </div>
 
                         <div class="tborder">
-                            <?php echo $summary_speed ?> 
-                            echo $type === 'internet' ? "This is an Internet plan." : ($type === 'tv' ? "This is a TV plan." : "This is a different type of plan.");
+                          
+                           <?php echo $type === 'internet' ? $summary_speed."Mbps" : ($type === 'tv' ? $summary_speed : ""); ?>
 
                         
                         </div>

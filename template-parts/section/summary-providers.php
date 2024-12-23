@@ -42,7 +42,8 @@
         </div>
 
         <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
-            <div class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
+            <div
+                class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                 <div
                     class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1 bg-[#215690] htable">
                     <div class="tborder tborder">
@@ -58,12 +59,12 @@
                     </div>
                     <div class="tborder tborder">
                         <div>
-                            <h4 class="tabbox_title"><?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?></h4>
+                            <h4 class="tabbox_title">
+                                <?php echo $type === 'internet' ? 'Max Download Speed' : '# of Channels'; ?></h4>
                         </div>
                     </div>
                     <?php endif; ?>
-                    <div
-                        class="tborder tborder  md:col-span-3 col-span-1">
+                    <div class="tborder tborder  md:col-span-3 col-span-1">
                         <div>
                             <h4 class="tabbox_title">Features</h4>
                         </div>
@@ -106,27 +107,21 @@
                                         }
 
                                        // print_r($services);
-                                       $phone =  $services['phone'];
-                                       $view_link =  $services['view_more'];
-
-
+                                        $phone =  $services['phone'];
+                                        $view_link =  $services['view_more'];
                                         $price =  $services['price'];
                                         $summary_speed =  $services['summary_speed'];
                                         $connection_type =  $services['connection_type'];
                                         $summary_features =  $services['summary_features'];
-                                       
-                                        
-
-
-
 
                                     ?>
 
-                    <div  class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1  dtable">
+                    <div
+                        class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1  dtable">
                         <div class="tborder">
                             <div>
-                                <p class="tb_heading"><a target="_blank"
-                                        href="<?php the_permalink()?>"> <?php the_title()?> </a></p>
+                                <p class="tb_heading"><a target="_blank" href="<?php the_permalink()?>">
+                                        <?php the_title()?> </a></p>
                             </div>
                         </div>
                         <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
@@ -137,12 +132,12 @@
                         </div>
                         <div class="tborder">
                             <div>
-                                <p class="tb_heading"><?php echo $summary_speed ?><?php echo $type === 'internet' ? ' Mbps' : ''; ?></p>
+                                <p class="tb_heading">
+                                    <?php echo $summary_speed ?><?php echo $type === 'internet' ? ' Mbps' : ''; ?></p>
                             </div>
                         </div>
                         <?php endif ; ?>
-                        <div
-                            class="tborder  md:col-span-3 col-span-1 ">
+                        <div class="tborder  md:col-span-3 col-span-1 ">
                             <div>
                                 <p class="tb_heading"><?php echo $summary_features ?></p>
                             </div>
