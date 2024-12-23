@@ -316,13 +316,11 @@ $query_fast = new WP_Query($query_args_fast);
                             </div>
                         </div>
                         <div class="tborder">
-                            <?php echo $connection_type ?> </div>
-
+                            <?php echo $connection_type ?> 
+                        </div>
                         <div class="tborder">
-
-                            <?php echo $type === 'internet' ? $summary_speed."Mbps" : ($type === 'tv' ? $summary_speed : ""); ?>
-
-
+                        
+                            <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
                         </div>
 
                     </div>
