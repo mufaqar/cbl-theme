@@ -831,7 +831,7 @@ $query_fast = new WP_Query($query_args_fast);
                                     <p class="tb_title">$<?php echo $price ?>/mo</p>
                                 </div>
                             </div>
-                            <?php echo render_provider_buttons($phone, $view_link); ?>
+                            <?php echo render_provider_buttons("", $view_link); ?>
                         </div>
                         <?php
                                     }
