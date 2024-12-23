@@ -407,12 +407,12 @@ $query_fast = new WP_Query($query_args_fast);
                         <?php if ($type !== 'home-security'): ?>
                         <div class="tborder">
                             <div>
-                                <h4 class="tabbox_title">  <?php echo $connection_type ?> </h4>
+                                <h4 class="tabbox_title"> <?php echo $connection_type ?> </h4>
                             </div>
                         </div>
                         <?php endif ?>
                         <div class="tborder">
-                                <?php echo $best_for ?>
+                            <?php echo $best_for ?>
                         </div>
 
 
