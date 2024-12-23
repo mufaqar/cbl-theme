@@ -160,6 +160,7 @@
                         $summary_speed =  $services['summary_speed'];
                         $connection_type =  $services['connection_type'];
                         $cheap_package =  $services['cheap_package'];
+                        $cheap_speed =  $services['cheap_speed'];
                         $contract =  $services['contract'];
                             
                             
@@ -182,7 +183,7 @@
                     <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                     <div class="tborder">
                         <div>
-                            <p class="tb_title"><?php echo $summary_speed ?> </p>
+                            <p class="tb_title"><?php echo $cheap_speed ?> </p>
                         </div>
                     </div>
                     <?php endif ?>

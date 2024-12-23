@@ -71,7 +71,8 @@
         <div class="mb-10">
             <?php  if ($type === 'internet'): ?>
             <h2 class="text-2xl font-bold capitalize leading-10">Fastest <?php echo FormatData($type) ?> Providers in
-                <span class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
+                <span class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span>
+            </h2>
             <p class="PClass"> Whether you need high speed internet for streaming in 4K resolution
                 or playing online multiplayer games <?php echo $fast_providers[0]['title']; ?> provides fastest internet
                 connection in <?php echo $city ?> with download speed of up to
