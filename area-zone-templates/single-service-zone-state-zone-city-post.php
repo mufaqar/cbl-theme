@@ -191,6 +191,7 @@ $query_fast = new WP_Query($query_args_fast);
                         }
                 
                     $price =  $services['price'];
+                    $channels =  $services['channels']."+";
                     $summary_speed =  $services['summary_speed'];
                     $connection_type =  $services['connection_type'];
                     $cheap_package =  $services['cheap_package'];
@@ -209,8 +210,8 @@ $query_fast = new WP_Query($query_args_fast);
                     <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
                     <div class="tborder">
                         <div>
-                            <p class="tb_title"><?php echo $summary_speed ?>
-                                <?php if ($type === 'internet'): ?><sup>Mbps</sup><?php endif; ?>
+                            <p class="tb_title">
+                                    <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
                             </p>
                         </div>
                     </div>
@@ -318,12 +319,12 @@ $query_fast = new WP_Query($query_args_fast);
                             <?php echo $connection_type ?> </div>
 
                         <div class="tborder">
-                          
-                           <?php echo $type === 'internet' ? $summary_speed."Mbps" : ($type === 'tv' ? $summary_speed : ""); ?>
 
-                        
+                            <?php echo $type === 'internet' ? $summary_speed."Mbps" : ($type === 'tv' ? $summary_speed : ""); ?>
+
+
                         </div>
-                      
+
                     </div>
                 </div>
             </div>
@@ -751,9 +752,6 @@ $query_fast = new WP_Query($query_args_fast);
                         </div>
                         <?php endif ?>
 
-
-
-
                         <div class="tborder">
                             <div>
                                 <h4 class="tabbox_title"> Price</h4>
@@ -815,13 +813,11 @@ $query_fast = new WP_Query($query_args_fast);
                                     <?php echo $type !== 'home-security'  ? $connection_type : display_features_list($features_items); ?>
                                 </div>
                             </div>
-
                             <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
-                            <div class=" tborder">
+                            <div class="tborder">
                                 <div>
                                     <p class="tb_title">
-
-                                        <?php echo $type === 'tv' ? $channels : $summary_speed; ?>
+                                        <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
                                     </p>
                                 </div>
                             </div>
