@@ -788,8 +788,7 @@ $query_fast = new WP_Query($query_args_fast);
                                    //  print_r($services);
                                        $phone =  $services['phone'];
                                        $view_link =  $services['view_more'];
-
-
+                                       
                                         $price =  $services['price'];
                                         $channels =  $services['channels'];
                                         $summary_speed =  $services['summary_speed'];
@@ -811,7 +810,7 @@ $query_fast = new WP_Query($query_args_fast);
                                 <div class="tb_heading">
                                     <?php                                  
                                     echo $type !== 'home-security'  ? display_features_list($features_items) :$connection_type; ?>
-                                  
+
                                 </div>
                             </div>
                             <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
