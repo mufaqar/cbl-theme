@@ -302,9 +302,11 @@ $query_fast = new WP_Query($query_args_fast);
                                     $services = $servicesInfo["home_security_services"];
                                 }
 
-                           // var_dump($internet_services);
+                          //  var_dump($services);
                             $price =  $services['price'];
+                            $speed =  $services['speed'];
                             $summary_speed =  $services['summary_speed'];
+                            $channels =  $services['channels'];
                             $connection_type =  $services['connection_type'];
                             $fast_package =  $services['fast_package'];
                             ?>
@@ -320,9 +322,11 @@ $query_fast = new WP_Query($query_args_fast);
                         <div class="tborder">
                             <?php echo $connection_type ?> 
                         </div>
-                        <div class="tborder">
-                        
+                        <div class="tborder">                        
                             <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
+                        </div>
+                        <div class="tborder">                        
+                            <?php echo $type === 'tv' ? $speed : $speed."Mbps"; ?>
                         </div>
 
                     </div>

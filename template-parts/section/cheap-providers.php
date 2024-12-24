@@ -184,15 +184,11 @@
                     <?php endif ?>
                     <?php if ($type !== 'home-security') : ?>
                     <div class="tborder">
-                       
-                            <p class="tb_heading"><?php echo $contract ?> </p>
-                      
+                        <p class="tb_heading"><?php echo $contract ?> </p>
                     </div>
                     <?php  endif ?>
                     <div class="tborder">
-                     
-                            <p class="tb_heading">$<?php echo $price ?> </p>
-                   
+                        <p class="tb_heading">$<?php echo $price ?> </p>
                     </div>
                     <?php if ($type === 'home-security') : ?>
                     <div class="tborder">
