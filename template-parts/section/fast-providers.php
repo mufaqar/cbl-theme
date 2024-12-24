@@ -144,7 +144,7 @@
                                 $services = $servicesInfo["home_security_services"];
                             }
 
-                        //  var_dump($internet_services);
+                         var_dump($internet_services);
                         $price =  $services['price'];
                         $summary_speed =  $services['summary_speed'];
                         $connection_type =  $services['connection_type'];
@@ -156,7 +156,7 @@
                         <div class="tborder">
                             <div>
                                 <p class="tb_title"><a target="_blank"
-                                        href="/providers/earthlink"><?php the_title()?></a></p>
+                                        href=""><?php the_title()?></a></p>
                             </div>
                         </div>
                         <div class="tborder">
@@ -165,7 +165,10 @@
                             <?php echo $fast_package ?></div> <?php endif; ?>
 
                         <div class="tborder">
-                            <?php echo $summary_speed ?></div>
+                       
+                            <?php echo $type === 'internet' ? $summary_speed."Mbps" : '# of Channels'; ?>
+                        
+                        </div>
                         <div class="tborder">
                             $<?php echo $price ?></div>
                     </div>

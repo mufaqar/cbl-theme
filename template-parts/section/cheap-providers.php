@@ -158,8 +158,9 @@
                         //    print "</pre>";
                         $price =  $services['price'];
                         $summary_speed =  $services['summary_speed'];
+                        $channels =  $services['channels'];
                         $connection_type =  $services['connection_type'];
-                        $cheap_package =  $services['cheap_package'];
+                        $cheap_packaging =  $services['cheap_packaging'];
                         $cheap_speed =  $services['cheap_speed'];
                         $contract =  $services['contract'];
                             
@@ -169,35 +170,37 @@
                 <div
                     class="md:w-full w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>   ">
                     <div class="tborder">
-                        <div>
-                            <p class="tb_heading"><a target="_blank" href="<?php the_permalink()?>">
-                                    <?php the_title()?> </a></p>
-                        </div>
+
+                        <p class="tb_heading"><a target="_blank" href="<?php the_permalink()?>">
+                                <?php the_title()?> </a></p>
+
                     </div>
 
                     <div class="tborder">
-                        <div>
-                            <p class="tb_heading"><?php echo $cheap_package ?> </p>
-                        </div>
+
+                        <p class="tb_heading"><?php echo $cheap_packaging ?> </p>
+
                     </div>
                     <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                     <div class="tborder">
-                        <div>
-                            <p class="tb_title"><?php echo $cheap_speed ?>Mbps</p>
-                        </div>
+
+                        <p class="tb_title">
+                            <?php echo $type === 'tv' ? $channels."+" : $cheap_speed."Mbps"; ?>
+                        </p>
+
                     </div>
                     <?php endif ?>
                     <?php if ($type !== 'home-security') : ?>
                     <div class="tborder">
-                        <div>
+                       
                             <p class="tb_heading"><?php echo $contract ?> </p>
-                        </div>
+                      
                     </div>
                     <?php  endif ?>
                     <div class="tborder">
-                        <div>
+                     
                             <p class="tb_heading">$<?php echo $price ?> </p>
-                        </div>
+                   
                     </div>
                     <?php if ($type === 'home-security') : ?>
                     <div class="tborder">
