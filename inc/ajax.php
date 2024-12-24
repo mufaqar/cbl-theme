@@ -7,7 +7,6 @@ function load_provider_data() {
     if (!isset($_POST['provider_id']) || empty($_POST['provider_id'])) {
         wp_send_json_error(['message' => 'Invalid provider selected.']);
     }
-
     $provider_id = intval($_POST['provider_id']);
     $services_info = get_field('services_info', $provider_id);
 
@@ -30,7 +29,7 @@ function load_provider_data() {
     $html = '
         <div class="provider-details">
             <div class="provider-item">
-                <p class="provider-label">Satellite</p>
+                <p class="provider-label">' . esc_html($connection_type) . '</p>
             </div>
             <div class="provider-item">
                 <p class="provider-data">' . esc_html($speed) . ' Mbps</p>

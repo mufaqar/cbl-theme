@@ -20,39 +20,63 @@ $state = strtoupper($state);
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto mb-6">
                 <div class="w-full h-auto rounded-t-md rounded-b-md flex md:flex-row flex-row items-stretch">
                     <div class="md:w-96 min-w-[50px]  bg-[#215690] htable">
-                        <div
-                            class="border-r-0 md:border-b-0 bg-gray-200 border-b md:border-r grid justify-center md:p-5 p-3 md:h-auto !h-[80px] items-center">
-                            <h4 class="md:text-base text-xs text-center text-gray-200">.</h4>
 
-                        </div>
 
-                        <div class="ctborder">
-                            <h4> Connection Type</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Max Download Speed</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Data Caps</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Contract Term</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Setup Fee</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Early Termination Fee</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Equipment Rental Fee</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Monthly Price</h4>
-                        </div>
-                        <div class="ctborder">
-                            <h4>Order Now</h4>
-                        </div>
+                        <?php
+                          // echo $type;
+
+                            // Fields definition for each category
+                            $fields = [];
+
+                            if ($type === 'internet') {
+                                $fields = [
+                                    'Select Provider',
+                                    'Connection Type',
+                                    'Max Download Speed',
+                                    'Data Caps',
+                                    'Contract Term',
+                                    'Setup Fee',
+                                    'Early Termination Fee',
+                                    'Equipment Rental Fee',
+                                    'Monthly Price',
+                                    'Order Now',
+                                ];
+                            } elseif ($type === 'tv') {
+                                $fields = [
+                                    'Select Provider',
+                                    'Connection Type',
+                                    'Channels',
+                                    'Free Premium Channels',
+                                    'Contract',
+                                    'Setup Fee',
+                                    'Early Termination Fee',
+                                    'Broadcast TV Fee',
+                                    'Monthly Price',
+                                    'Order Now',
+                                ];
+                            } else {
+                                // Default or other category fields
+                                $fields = [
+                                    'Select Provider',
+                                    'Installation Type',
+                                    'Home Automation',
+                                    'Mobile App',
+                                    'Contract Term',
+                                    'Setup Fee',
+                                    'Early Termination Fee',
+                                    'Type of Monitoring',
+                                    'Monthly Price',
+                                    'Order Now',
+                                ];
+                            }
+
+                           
+                            foreach ($fields as $field) {
+                                echo " <div class='ctborder'><h4>$field</h4></div>";
+                            }
+                           
+                            ?>
+
 
                     </div>
                     <div class="flex  flex-row w-full md:overflow-hidden overflow-x-scroll">
@@ -118,13 +142,13 @@ $state = strtoupper($state);
 
                             <div class="dtable_<?php echo $i ?>">
                                 <div class="provider-item">
-                                    <p>Satellite</p>
+                                    <p></p>
                                 </div>
                                 <div class="provider-item">
-                                    <p><?php echo $speed ?> Mbps</p>
+                                    <p></p>
                                 </div>
                                 <div class="provider-item ">
-                                    <p><?php echo $connection_type ?></p>
+                                    <p></p>
 
                                 </div>
                                 <div class="provider-item">
@@ -145,25 +169,13 @@ $state = strtoupper($state);
                                 </div>
                                 <div class="provider-item">
                                     <p><?php echo $equipment_rental_fee ?></p>
-
                                 </div>
                                 <div class="provider-item">
                                     <p>$<?php echo $price ?></p>
-
-                                </div>
-                                <div class="provider-item">
-                                    <p><a href="<?php the_permalink()?>">View
-                                            Plans</a></p>
-
-                                </div>
+                                </div>                                
                             </div>
                         </div>
-                        <?php
-                                   # code...
-                           }
-                                
-                             
-                            ?>
+                        <?php  } ?>
                     </div>
                 </div>
             </div>
