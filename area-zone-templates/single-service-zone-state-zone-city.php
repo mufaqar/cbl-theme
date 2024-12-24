@@ -30,12 +30,6 @@
     $total_provider = count($provider_ids);
     $total_services_type = count_service_types($provider_ids); 
 
-    $query_reviews_args = array(
-        'post_type'      => 'providers',
-        'posts_per_page' => -1            
-    );
-    $query_reviews = new WP_Query($query_reviews_args);
-
     if (!empty($provider_ids)) {    
             $query_args = array(
                     'post_type'      => 'providers',
@@ -66,14 +60,6 @@
                     'order'          => 'DESC',             
                 );
                 $query_fast = new WP_Query($query_args_fast);
-
-                $query_args_compair = array(
-                    'post_type'      => 'providers',
-                    'posts_per_page' => 2,
-                    'post__in'       => $provider_ids, 
-                    'order'          => 'DESC',             
-                );
-                $query_compair = new WP_Query($query_args_compair);
         
             } else {
             echo 'No providers match the criteria.';
@@ -140,7 +126,7 @@
             set_query_var('providers_query', $query_fast);
             get_template_part('template-parts/section/fast', 'providers');
         endif;
-        set_query_var('providers_query', $query_compair); get_template_part( 'template-parts/section/compair', 'providers' );
+        set_query_var('providers_query', $query_fast); get_template_part( 'template-parts/section/compair', 'providers' );
         get_template_part( 'template-parts/section/text', 'providers' );
         set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' ); 
         if ($type !== 'home-security') :      

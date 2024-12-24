@@ -1,4 +1,6 @@
 <?php
+
+
  function fetch_comments_by_state($state, $type) {
     // Get the current page number for pagination (default is 1)
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
