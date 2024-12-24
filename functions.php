@@ -129,7 +129,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_slider_assets');
 					'home_security_services_setup_fee' =>  get_post_meta($provider->ID, 'services_info_home_security_services_setup_fee', true),
 					'home_security_services_early_termination_fee' =>  get_post_meta($provider->ID, 'services_info_home_security_services_early_termination_fee', true),
 					'home_security_services_type_of_monitoring' =>  get_post_meta($provider->ID, 'services_info_home_security_services_type_of_monitoring', true),
-					'home_security_services_cheap_packaging' =>  get_post_meta($provider->ID, 'services_info_home_security_services_cheap_packaging', true),
+					'home_security_services_cheap_package' =>  get_post_meta($provider->ID, 'services_info_home_security_services_cheap_package', true),
 					 
 				
 				);
