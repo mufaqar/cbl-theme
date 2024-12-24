@@ -813,14 +813,14 @@ $query_fast = new WP_Query($query_args_fast);
                                 </div>
                             </div>
                             <div class=" tborder  ">
-                                <div class="tb_title">
+                                <div class="tb_heading">
                                     <?php echo $type !== 'home-security'  ? $connection_type : display_features_list($features_items); ?>
                                 </div>
                             </div>
                             <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                             <div class="tborder">
                                 <div>
-                                    <p class="tb_title">
+                                    <p class="tb_heading">
                                         <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
                                     </p>
                                 </div>
@@ -828,7 +828,7 @@ $query_fast = new WP_Query($query_args_fast);
                             <?php endif ?>
                             <div class="tborder">
                                 <div>
-                                    <p class="tb_title">$<?php echo $price ?>/mo</p>
+                                    <p class="tb_heading">$<?php echo $price ?>/mo</p>
                                 </div>
                             </div>
                             <div class="tborder">
