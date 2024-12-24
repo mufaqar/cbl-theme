@@ -153,7 +153,7 @@
                             }
                             
 
-                        var_dump($services);
+                        //var_dump($services);
                         $price =  $services['price'];
                         $summary_speed =  $services['summary_speed'];
                         $channels =  $services['channels'];
