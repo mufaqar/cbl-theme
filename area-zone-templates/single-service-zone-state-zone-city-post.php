@@ -207,13 +207,13 @@ $query_fast = new WP_Query($query_args_fast);
                                     <?php the_title()?> </a></p>
                         </div>
                     </div>
-                    
+
 
                     <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
                     <div class="tborder">
                         <div>
                             <p class="tb_title">
-                                    <?php echo $type === 'tv' ? $channels : $cheap_speed."Mbps"; ?>
+                                <?php echo $type === 'tv' ? $channels : $cheap_speed."Mbps"; ?>
                             </p>
                         </div>
                     </div>
@@ -320,12 +320,12 @@ $query_fast = new WP_Query($query_args_fast);
                             </div>
                         </div>
                         <div class="tborder">
-                            <?php echo $connection_type ?> 
+                            <?php echo $connection_type ?>
                         </div>
-                        <div class="tborder">                        
+                        <div class="tborder">
                             <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
                         </div>
-                        <div class="tborder">                        
+                        <div class="tborder">
                             <?php echo $type === 'tv' ? $speed : $speed."Mbps"; ?>
                         </div>
 
@@ -735,19 +735,13 @@ $query_fast = new WP_Query($query_args_fast);
                     <div
                         class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> grid-cols-1 bg-[#215690] htable">
                         <div class="tborder">
-
                             <h4 class="tabbox_title">Provider</h4>
-
                         </div>
-
-
                         <div class="tborder ">
                             <h4 class="tabbox_title">
                                 <?php echo $type === 'home-security' || $type === 'landline' ? 'Features' : 'Connection'; ?>
                             </h4>
                         </div>
-
-
                         <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                         <div class="tborder">
                             <h4 class="tabbox_title">
@@ -791,7 +785,7 @@ $query_fast = new WP_Query($query_args_fast);
                                             $services = $servicesInfo["home_security_services"];
                                         }
 
-                                      // print_r($services);
+                                   //  print_r($services);
                                        $phone =  $services['phone'];
                                        $view_link =  $services['view_more'];
 
@@ -803,6 +797,7 @@ $query_fast = new WP_Query($query_args_fast);
                                         $summary_features =  $services['features'];
                                         $features = $services['features'];
                                         $features_items  = explode(',', $features); 
+                                       
                                     ?>
                         <div
                             class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> dtable ">
@@ -814,7 +809,9 @@ $query_fast = new WP_Query($query_args_fast);
                             </div>
                             <div class=" tborder  ">
                                 <div class="tb_heading">
-                                    <?php echo $type !== 'home-security'  ? $connection_type : display_features_list($features_items); ?>
+                                    <?php                                  
+                                    echo $type !== 'home-security'  ? display_features_list($features_items) :$connection_type; ?>
+                                  
                                 </div>
                             </div>
                             <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
@@ -832,7 +829,7 @@ $query_fast = new WP_Query($query_args_fast);
                                 </div>
                             </div>
                             <div class="tborder">
-                            <?php echo render_provider_buttons("", $view_link); ?>
+                                <?php echo render_provider_buttons("", $view_link); ?>
                             </div>
                         </div>
                         <?php
