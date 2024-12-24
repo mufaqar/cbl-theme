@@ -195,6 +195,7 @@ $query_fast = new WP_Query($query_args_fast);
                     $summary_speed =  $services['summary_speed'];
                     $connection_type =  $services['connection_type'];
                     $cheap_package =  $services['cheap_package'];
+                    $cheap_speed =  $services['cheap_speed'];
                     $contract =  $services['contract'];
             ?>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto dtable">
@@ -206,12 +207,13 @@ $query_fast = new WP_Query($query_args_fast);
                                     <?php the_title()?> </a></p>
                         </div>
                     </div>
+                    
 
                     <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
                     <div class="tborder">
                         <div>
                             <p class="tb_title">
-                                    <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
+                                    <?php echo $type === 'tv' ? $channels : $cheap_speed."Mbps"; ?>
                             </p>
                         </div>
                     </div>
@@ -388,7 +390,7 @@ $query_fast = new WP_Query($query_args_fast);
                                 $services = $servicesInfo["home_security_services"];
                             }
 
-                        //  var_dump($services);
+                        //var_dump($services);
                         $price =  $services['price'];
                         $summary_speed =  $services['summary_speed'];
                         $connection_type =  $services['connection_type'];
@@ -409,7 +411,7 @@ $query_fast = new WP_Query($query_args_fast);
                         <?php if ($type !== 'home-security'): ?>
                         <div class="tborder">
                             <div>
-                                <h4 class="tabbox_title"> <?php echo $connection_type ?> </h4>
+                                <h4 class="tb_heading"> <?php echo $connection_type ?> </h4>
                             </div>
                         </div>
                         <?php endif ?>
@@ -755,7 +757,7 @@ $query_fast = new WP_Query($query_args_fast);
                                 <h4 class="tabbox_title"> Price</h4>
                             </div>
                         </div>
-                        <div class="md:border-r border-r md:border-b-0 border-b tborder">
+                        <div class="tborder">
                             <div>
                                 <h4 class="tabbox_title">Contact</h4>
                             </div>
@@ -825,7 +827,9 @@ $query_fast = new WP_Query($query_args_fast);
                                     <p class="tb_title">$<?php echo $price ?>/mo</p>
                                 </div>
                             </div>
+                            <div class="tborder">
                             <?php echo render_provider_buttons("", $view_link); ?>
+                            </div>
                         </div>
                         <?php
                                     }

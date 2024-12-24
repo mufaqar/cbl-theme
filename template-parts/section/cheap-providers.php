@@ -183,7 +183,7 @@
                     <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                     <div class="tborder">
                         <div>
-                            <p class="tb_title"><?php echo $cheap_speed ?> </p>
+                            <p class="tb_title"><?php echo $cheap_speed ?>Mbps</p>
                         </div>
                     </div>
                     <?php endif ?>
