@@ -117,7 +117,7 @@ get_header();
                     </div>
                     <input type="text" id="zipcode" name="zipcode"
                         class="block p-4 w-full text-sm text-gray-900 bg-white rounded-md border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Zipcode" />
+                        placeholder="Zipcode" required />
                 </div>
 
                 <div class="mt-4">
