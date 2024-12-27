@@ -40,7 +40,7 @@ get_header();
                         <select id="provider" name="provider"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4"
                             required>
-                            <option value="">Choose your provider</option>
+                            <option value="">Choose your provider *</option>
                             <?php
                                         if ($query->have_posts()) {
                                             while ($query->have_posts()) {
@@ -61,7 +61,7 @@ get_header();
                         <select id="load_service" name="load_service"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4"
                             required>
-                            <option value="">Choose Service</option>
+                            <option value="">Choose Service *</option>
                         </select>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ get_header();
                         <select id="state" name="state"
                             class="bg-gray-50 border border-gray-300  text-gray-900 text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-4"
                             required>
-                            <option value="">State</option>
+                            <option value="">State *</option>
                             <?php
                                     if (!is_wp_error($state) && !empty($state)) {
                                         foreach ($state as $term) { ?>
