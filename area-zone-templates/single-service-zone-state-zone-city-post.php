@@ -309,6 +309,8 @@ $query_fast = new WP_Query($query_args_fast);
                             $channels =  $services['channels'];
                             $connection_type =  $services['connection_type'];
                             $fast_package =  $services['fast_package'];
+                            $upload_speed =  $services['upload_speed'];
+
                             ?>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto dtable">
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
@@ -326,7 +328,7 @@ $query_fast = new WP_Query($query_args_fast);
                             <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
                         </div>
                         <div class="tborder">
-                            <?php echo $type === 'tv' ? $speed : $speed."Mbps"; ?>
+                            <?php echo $type === 'tv' ? $speed : $upload_speed."Mbps"; ?>
                         </div>
 
                     </div>
