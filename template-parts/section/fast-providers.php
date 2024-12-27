@@ -144,8 +144,8 @@
                                 $services = $servicesInfo["home_security_services"];
                             }
 
-                        // var_dump($internet_services);
-                        $price =  $services['price'];
+                      // var_dump($services);
+                        $price =  $services['fast_price'];
                         $summary_speed =  $services['summary_speed'];
                         $connection_type =  $services['connection_type'];
                         $fast_package =  $services['fast_package'];

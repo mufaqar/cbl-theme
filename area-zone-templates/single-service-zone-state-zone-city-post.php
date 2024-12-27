@@ -302,8 +302,8 @@ $query_fast = new WP_Query($query_args_fast);
                                     $services = $servicesInfo["home_security_services"];
                                 }
 
-                          //  var_dump($services);
-                            $price =  $services['price'];
+                          // var_dump($services);
+                            $price =  $services['fast_price'];
                             $speed =  $services['speed'];
                             $summary_speed =  $services['summary_speed'];
                             $channels =  $services['channels'];
