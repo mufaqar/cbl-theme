@@ -117,13 +117,13 @@ get_header();
                     </div>
                     <input type="text" id="zipcode" name="zipcode"
                         class="block p-4 w-full text-sm text-gray-900 bg-white rounded-md border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Zipcode" required />
+                        placeholder="Zipcode *" required />
                 </div>
 
                 <div class="mt-4">
                     <textarea id="comment" name="comment"
                         class="block p-3 h-[100px] w-full text-sm text-gray-900 bg-gray-50 rounded-md shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Leave a comment..." required></textarea>
+                        placeholder="Leave a comment... *" required></textarea>
                 </div>
 
                 <input type="hidden" id="rating" name="rating">
