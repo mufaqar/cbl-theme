@@ -166,7 +166,7 @@
 
                         <div class="tborder">
                        
-                            <?php echo $type === 'internet' ? $summary_speed."Mbps" : '# of Channels'; ?>
+                            <?php echo $type === 'internet' ? $summary_speed." Mbps" : '# of Channels'; ?>
                         
                         </div>
                         <div class="tborder">

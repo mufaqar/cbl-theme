@@ -213,7 +213,7 @@ $query_fast = new WP_Query($query_args_fast);
                     <div class="tborder">
                         <div>
                             <p class="tb_title">
-                                <?php echo $type === 'tv' ? $channels : $cheap_speed."Mbps"; ?>
+                                <?php echo $type === 'tv' ? $channels : $cheap_speed." Mbps"; ?>
                             </p>
                         </div>
                     </div>
@@ -325,10 +325,10 @@ $query_fast = new WP_Query($query_args_fast);
                             <?php echo $connection_type ?>
                         </div>
                         <div class="tborder">
-                            <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
+                            <?php echo $type === 'tv' ? $channels : $summary_speed." Mbps"; ?>
                         </div>
                         <div class="tborder">
-                            <?php echo $type === 'tv' ? $speed : $upload_speed."Mbps"; ?>
+                            <?php echo $type === 'tv' ? $speed : $upload_speed." Mbps"; ?>
                         </div>
 
                     </div>
@@ -819,7 +819,7 @@ $query_fast = new WP_Query($query_args_fast);
                             <div class="tborder">
                                 <div>
                                     <p class="tb_heading">
-                                        <?php echo $type === 'tv' ? $channels : $summary_speed."Mbps"; ?>
+                                        <?php echo $type === 'tv' ? $channels : $summary_speed." Mbps"; ?>
                                     </p>
                                 </div>
                             </div>
