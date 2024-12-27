@@ -78,7 +78,7 @@ function get_provider_services() {
 
     if ($provider_id) {
         // Fetch associated taxonomy terms for the given provider
-        $terms = wp_get_post_terms($provider_id, 'providers_service_types');
+        $terms = wp_get_post_terms($provider_id, 'providers_types');
 
         if (!is_wp_error($terms) && !empty($terms)) {
             // Generate HTML for the dropdown options
