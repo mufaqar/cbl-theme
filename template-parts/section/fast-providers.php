@@ -125,7 +125,6 @@
             </div>
         </div>
         <div class="grid shadow-xl">
-
             <?php
                     $query_fast = get_query_var('providers_query');
                     if ($query_fast->have_posts()) {

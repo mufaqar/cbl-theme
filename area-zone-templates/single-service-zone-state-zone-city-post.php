@@ -318,7 +318,7 @@ $query_fast = new WP_Query($query_args_fast);
                         <div class="tborder">
                             <div>
                                 <p class="tb_title"><a target="_blank"
-                                        href="<?php the_permalink()?>"><?php the_title()?></a></p>
+                                    href="<?php the_permalink()?>"><?php the_title()?></a></p>
                             </div>
                         </div>
                         <div class="tborder">
