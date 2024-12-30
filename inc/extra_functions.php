@@ -653,4 +653,3 @@ function display_features_list($features_items) {
     echo '</ul>';
 }
 
-

@@ -81,101 +81,152 @@ $state = strtoupper($state);
                     </div>
                     <div class="flex  flex-row w-full md:overflow-hidden overflow-x-scroll">
 
-                        <?php
-                           $providers = [ ['id' => 1  ], ['id' => 2 ] ];
-                           foreach ($providers as  $provider) {
 
-                           $i = $provider['id'];
-                          
-                                    // $servicesInfo = get_field('services_info');
-                                    // $type = get_query_var('type');
-                                    // $isSpeed = $type === "tv";
-                                    // if($isSpeed){
-                                    //     $speed =  $servicesInfo["tv_services"]["summary_speed"];
-                                    //     $feature =  $servicesInfo["tv_services"]["summary_features"];
-                                    //     $price =  $servicesInfo["tv_services"]["price"];
-                                    // }else{
-                                    //     $speed =  $servicesInfo["internet_services"]["summary_speed"];
-                                    //     $feature =  $servicesInfo["internet_services"]["summary_features"];
-                                    //     $price =  $servicesInfo["internet_services"]["price"];
-                                    // }
+                        <div class="min-w-[120px] md:w-full dtable">
 
-                                    // $internet_services =  $servicesInfo["internet_services"];
-                                    // $home_security_services =  $servicesInfo["home_security_services"];
-                                    // $landline_services =  $servicesInfo["landline_services"];
-                                    // $tv_services =  $servicesInfo["tv_services"];
-                                    // $internet_tv_bundles =  $servicesInfo["internet_tv_bundles"];
-            
-                                //  var_dump($internet_services);
-                                // $price =  $internet_services['price'];
-                                // $setup_fee =  $internet_services['setup_fee'];
-                                // $connection_type =  $internet_services['connection_type'];
-                                // $early_termination_fee =  $internet_services['early_termination_fee'];
-                                // $equipment_rental_fee =  $internet_services['equipment_rental_fee'];
-                                // $contract =  $internet_services['contract'];
-                                // $data_caps =  $internet_services['data_caps'];
+                            <div class="flex flex-row">
+
+
+                                <?php
+                          $providers = [ ['id' => 1  ], ['id' => 2 ] ];
+                          foreach ($providers as  $provider) {
+
+                          $i = $provider['id'];
 
                             ?>
-                        <div class="min-w-[120px] md:w-full dtable">
-                            <div
-                                class="w-full bg-gray-200 md:border-r border-r-0 md:border-b-0 border-b border grid justify-center md:p-2 md:h-auto !h-[80px] items-center ">
-                                <div>
+                                <div class="provider-item md:w-1/2 w-full">
                                     <select id="provider_<?php echo $i ?>" name="provider_<?php echo $i ?>"
                                         data-target="dtable_<?php echo $i ?>"
                                         class="provider-select bg-transparent border border-gray-300  text-black text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[13px]">
-                                        <option value="">Choose your provider</option>
                                         <?php
-                                        if ($query_compair->have_posts()) {
-                                            while ($query_compair->have_posts()) {
-                                                $query_compair->the_post();
-                                                    ?><option value="<?php echo get_the_ID(); ?>">
+                                            if ($query_compair->have_posts()) {
+                                                $option_index = 0;
+                                                while ($query_compair->have_posts()) {
+                                                    $query_compair->the_post();
+                                                    $option_index++;
+                                                        ?><option value="<?php echo get_the_ID(); ?>"
+                                            <?php if ($i == 2 && $option_index == 2) { echo "selected"; } ?>>
                                             <?php echo the_title(); ?></option><?php
+                                                    }
+                                                } else {
+                                                    echo '<option>No providers found.</option>';
                                                 }
-                                            } else {
-                                                echo '<option>No providers found.</option>';
-                                            }
                                             wp_reset_postdata();
-                                        ?>
+                                            ?>
                                     </select>
                                 </div>
+                                <?php  } ?>
+
                             </div>
 
-                            <div class="dtable_<?php echo $i ?>">
-                                <div class="provider-item">
-                                    <p></p>
-                                </div>
-                                <div class="provider-item">
-                                    <p></p>
-                                </div>
-                                <div class="provider-item ">
-                                    <p></p>
+                            <div class="flex flex-row">
 
-                                </div>
-                                <div class="provider-item">
-                                    <p><?php echo $data_caps ?></p>
+                                <?php  
+                                    $args = array(
+                                        'post_type'      => 'providers', // Replace with your post type slug
+                                        'posts_per_page' => 2, // Get all providers
+                                        'orderby'        => 'ID', // Order by ID
+                                        'order'          => 'ASC', // Ascending order
+                                    );
 
-                                </div>
-                                <div class="provider-item">
-                                    <p><?php echo $contract ?></p>
+                                    // The Query
+                                    $j = 0;
+                                    $query_providers = new WP_Query($args);
+                                    if ($query_providers->have_posts()) :
+                                        while ($query_providers->have_posts()) :
+                                            $query_providers->the_post();
+                                            $j++;
 
-                                </div>
-                                <div class="provider-item">
-                                    <p><?php echo $setup_fee?></p>
+                                            // Get ACF field data
+                                            $servicesInfo = get_field('services_info');
+                                            $type = get_query_var('type');
 
-                                </div>
-                                <div class="provider-item">
-                                    <p><?php echo $early_termination_fee ?></p>
+                                            // Initialize an empty array
+                                            $data = [];
 
+                                            // Handle service types dynamically
+                                            if ($type == 'internet') {
+                                                $services = $servicesInfo["internet_services"];
+                                              //  var_dump($services);
+                                                $data = [
+                                                    'connection_type' => $services['connection_type'] ?? 'N/A',
+                                                    'summary_speed' => $services['summary_speed'] ?? 'N/A',
+                                                    'data_caps' => $services['data_caps'] ?? 'N/A',
+                                                    'contract' => $services['contract'] ?? 'N/A',
+                                                    'setup_fee' => "$".$services['setup_fee'] ?? 'N/A',
+                                                    'early_termination_fee' =>"$".$services['early_termination_fee'] ?? 'N/A',
+                                                    'equipment_rental_fee' => "$".$services['equipment_rental_fee'] ?? 'N/A',
+                                                    'price' => "$ ".$services['price'] ?? 'N/A'
+                                                ];
+                                            } elseif ($type == 'tv') {
+                                                $services = $servicesInfo["tv_services"];
+                                                $data = [
+                                                    'connection_type' => $services['connection_type'] ?? 'N/A',
+                                                    'channels' => $services['channels'] ?? 'N/A',
+                                                    'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
+                                                    'contract' => $services['contract'] ?? 'N/A',
+                                                    'setup_fee' => $services['setup_fee'] ?? 'N/A',
+                                                    'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
+                                                    'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
+                                                    'price' => $services['price'] ?? 'N/A',
+                                                ];
+                                            } elseif ($type == 'landline') {
+                                                $services = $servicesInfo["landline_services"];
+                                                $data = [
+                                                    'connection_type' => $services['connection_type'] ?? 'N/A',
+                                                    'channels' => $services['channels'] ?? 'N/A',
+                                                    'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
+                                                    'contract' => $services['contract'] ?? 'N/A',
+                                                    'setup_fee' => $services['setup_fee'] ?? 'N/A',
+                                                    'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
+                                                    'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
+                                                    'price' => $services['price'] ?? 'N/A',
+                                                ];
+                                            } else {
+                                                $services = $servicesInfo["home_security_services"];
+                                                $data = [
+                                                    'connection_type' => $services['connection_type'] ?? 'N/A',
+                                                    'channels' => $services['channels'] ?? 'N/A',
+                                                    'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
+                                                    'contract' => $services['contract'] ?? 'N/A',
+                                                    'setup_fee' => $services['setup_fee'] ?? 'N/A',
+                                                    'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
+                                                    'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
+                                                    'price' => $services['price'] ?? 'N/A',
+                                                ];
+                                            }
+
+                                            $view_link = $services['view_more'] ?? '#';
+                                    ?>
+
+                                <div class="dtable_<?php echo $j ?> md:w-1/2 w-full">
+                                    <?php foreach ($data as $key => $value) : ?>
+                                    <div class="provider-item">
+                                        <p><?php echo esc_html($value); ?></p>
+                                    </div>
+                                    <?php endforeach; ?>
+
+                                    <div class="provider-item">
+                                        <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]"
+                                            href="<?php echo $view_link; ?>">
+                                            View Plans
+                                        </a>
+
+                                    </div>
                                 </div>
-                                <div class="provider-item">
-                                    <p><?php echo $equipment_rental_fee ?></p>
-                                </div>
-                                <div class="provider-item">
-                                    <p>$<?php echo $price ?></p>
-                                </div>                                
+
+                                <?php
+                                    endwhile;
+                                else :
+                                    echo '<p>No providers found.</p>';
+                                endif;
+
+                                // Reset Post Data
+                                wp_reset_postdata();
+                                ?>
+
                             </div>
                         </div>
-                        <?php  } ?>
                     </div>
                 </div>
             </div>

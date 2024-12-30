@@ -2,64 +2,90 @@
 
 
 
-
 function load_provider_data() {
     if (!isset($_POST['provider_id']) || empty($_POST['provider_id'])) {
         wp_send_json_error(['message' => 'Invalid provider selected.']);
     }
+
     $provider_id = intval($_POST['provider_id']);
     $services_info = get_field('services_info', $provider_id);
+    $type = get_query_var('type');
 
-    if (!$services_info) {
-        wp_send_json_error(['message' => 'No services data found for the selected provider.']);
+    if (empty($services_info)) {
+        wp_send_json_error(['message' => 'No services information available for this provider.']);
     }
 
-    // Extract relevant details
-    $speed = $services_info['internet_services']['summary_speed'] ?? 'N/A';
-    $connection_type = $services_info['internet_services']['connection_type'] ?? 'N/A';
-    $data_caps = $services_info['internet_services']['data_caps'] ?? 'N/A';
-    $contract = $services_info['internet_services']['contract'] ?? 'N/A';
-    $setup_fee = $services_info['internet_services']['setup_fee'] ?? 'N/A';
-    $early_termination_fee = $services_info['internet_services']['early_termination_fee'] ?? 'N/A';
-    $equipment_rental_fee = $services_info['internet_services']['equipment_rental_fee'] ?? 'N/A';
-    $price = $services_info['internet_services']['price'] ?? 'N/A';
-    $plan_url = get_permalink($provider_id);
+    // Initialize an empty array
+    $data = [];
+    $view_link = '#';
 
-    // Generate HTML with classes
-    $html = '
-        <div class="provider-details">
-            <div class="provider-item">
-                <p class="provider-label">' . esc_html($connection_type) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">' . esc_html($speed) . ' Mbps</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">' . esc_html($connection_type) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">' . esc_html($data_caps) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">' . esc_html($contract) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">' . esc_html($setup_fee) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">' . esc_html($early_termination_fee) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">' . esc_html($equipment_rental_fee) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-data">$' . esc_html($price) . '</p>
-            </div>
-            <div class="provider-item">
-                <p class="provider-action"><a href="' . esc_url($plan_url) . '">View Plans</a></p>
-            </div>
-        </div>
-    ';
+    // Handle service types dynamically
+    if ($type == 'internet') {
+        $services = $services_info["internet_services"];
+        $data = [
+            'Connection Type' => $services['connection_type'] ?? 'N/A',
+            'Max Speed' => $services['summary_speed'] ?? 'N/A',
+            'Data Caps' => $services['data_caps'] ?? 'N/A',
+            'Contract Term' => $services['contract'] ?? 'N/A',
+            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
+            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
+            'Equipment Rental Fee' => "$" . ($services['equipment_rental_fee'] ?? 'N/A'),
+            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+        ];
+        $view_link = $services['view_more'] ?? '#';
+    } elseif ($type == 'tv') {
+        $services = $services_info["tv_services"];
+        $data = [
+            'Connection Type' => $services['connection_type'] ?? 'N/A',
+            'Channels' => $services['channels'] ?? 'N/A',
+            'Free Premium Channels' => $services['free_premium_channels'] ?? 'N/A',
+            'Contract Term' => $services['contract'] ?? 'N/A',
+            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
+            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
+            'Broadcast TV Fee' => "$" . ($services['broadcast_tv_fee'] ?? 'N/A'),
+            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+        ];
+        $view_link = $services['view_more'] ?? '#';
+    } elseif ($type == 'landline') {
+        $services = $services_info["landline_services"];
+        $data = [
+            'Connection Type' => $services['connection_type'] ?? 'N/A',
+            'Channels' => $services['channels'] ?? 'N/A',
+            'Free Premium Channels' => $services['free_premium_channels'] ?? 'N/A',
+            'Contract Term' => $services['contract'] ?? 'N/A',
+            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
+            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
+            'Broadcast TV Fee' => "$" . ($services['broadcast_tv_fee'] ?? 'N/A'),
+            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+        ];
+        $view_link = $services['view_more'] ?? '#';
+    } else {
+        $services = $services_info["home_security_services"];
+        $data = [
+            'Connection Type' => $services['connection_type'] ?? 'N/A',
+            'Channels' => $services['channels'] ?? 'N/A',
+            'Free Premium Channels' => $services['free_premium_channels'] ?? 'N/A',
+            'Contract Term' => $services['contract'] ?? 'N/A',
+            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
+            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
+            'Broadcast TV Fee' => "$" . ($services['broadcast_tv_fee'] ?? 'N/A'),
+            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+        ];
+        $view_link = $services['view_more'] ?? '#';
+    }
+
+    // Generate HTML dynamically
+    $html = '<div class="provider-details">';
+    foreach ($data as $label => $value) {
+        $html .= '<div class="provider-item">';
+
+        $html .= '<p class="provider-data">' . esc_html($value) . '</p>';
+        $html .= '</div>';
+    }
+    $html .= '<div class="provider-item">';
+    $html .= '<a href="' . esc_url($view_link) . '" class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]">View Plans</a>';
+    $html .= '</div>';
+    $html .= '</div>';
 
     wp_send_json_success(['html' => $html]);
 }
@@ -182,5 +208,3 @@ function handle_review_submission() {
 // Add AJAX actions for logged-in and non-logged-in users
 add_action('wp_ajax_submit_review', 'handle_review_submission');
 add_action('wp_ajax_nopriv_submit_review', 'handle_review_submission');
-
-
