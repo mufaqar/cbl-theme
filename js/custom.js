@@ -45,7 +45,9 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
     $('.provider-select').on('change', function () {
         const providerId = $(this).val();
-        const targetClass = $(this).data('target'); // Get the target class dynamically
+        const targetClass = $(this).data('target'); 
+        var type = jQuery(this).data('type'); 
+       
 
         if (providerId && targetClass) {
             $.ajax({
@@ -54,6 +56,7 @@ jQuery(document).ready(function ($) {
                 data: {
                     action: 'load_provider_data',
                     provider_id: providerId,
+                    type: type 
                 },
                 beforeSend: function () {
                     // Optional: Add a loader or disable elements

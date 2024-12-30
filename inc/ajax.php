@@ -8,9 +8,9 @@ function load_provider_data() {
     }
 
     $provider_id = intval($_POST['provider_id']);
+    $type = $_POST['type'];
     $services_info = get_field('services_info', $provider_id);
-    $type = get_query_var('type');
-
+    
     if (empty($services_info)) {
         wp_send_json_error(['message' => 'No services information available for this provider.']);
     }
@@ -23,53 +23,53 @@ function load_provider_data() {
     if ($type == 'internet') {
         $services = $services_info["internet_services"];
         $data = [
-            'Connection Type' => $services['connection_type'] ?? 'N/A',
-            'Max Speed' => $services['summary_speed'] ?? 'N/A',
-            'Data Caps' => $services['data_caps'] ?? 'N/A',
-            'Contract Term' => $services['contract'] ?? 'N/A',
-            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
-            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
-            'Equipment Rental Fee' => "$" . ($services['equipment_rental_fee'] ?? 'N/A'),
-            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+           'connection_type' => $services['connection_type'] ?? 'N/A',
+            'summary_speed' => $services['summary_speed'] ?? 'N/A',
+            'data_caps' => $services['data_caps'] ?? 'N/A',
+            'contract' => $services['contract'] ?? 'N/A',
+            'setup_fee' => "$".$services['setup_fee'] ?? 'N/A',
+            'early_termination_fee' =>"$".$services['early_termination_fee'] ?? 'N/A',
+            'equipment_rental_fee' => "$".$services['equipment_rental_fee'] ?? 'N/A',
+            'price' => "$ ".$services['price'] ?? 'N/A'
         ];
         $view_link = $services['view_more'] ?? '#';
     } elseif ($type == 'tv') {
         $services = $services_info["tv_services"];
         $data = [
-            'Connection Type' => $services['connection_type'] ?? 'N/A',
-            'Channels' => $services['channels'] ?? 'N/A',
-            'Free Premium Channels' => $services['free_premium_channels'] ?? 'N/A',
-            'Contract Term' => $services['contract'] ?? 'N/A',
-            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
-            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
-            'Broadcast TV Fee' => "$" . ($services['broadcast_tv_fee'] ?? 'N/A'),
-            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+            'connection_type' => $services['connection_type'] ?? 'N/A',
+            'channels' => $services['channels'] ?? 'N/A',
+            'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
+            'contract' => $services['contract'] ?? 'N/A',
+            'setup_fee' => $services['setup_fee'] ?? 'N/A',
+            'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
+            'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
+            'price' => $services['price'] ?? 'N/A',
         ];
         $view_link = $services['view_more'] ?? '#';
     } elseif ($type == 'landline') {
         $services = $services_info["landline_services"];
         $data = [
-            'Connection Type' => $services['connection_type'] ?? 'N/A',
-            'Channels' => $services['channels'] ?? 'N/A',
-            'Free Premium Channels' => $services['free_premium_channels'] ?? 'N/A',
-            'Contract Term' => $services['contract'] ?? 'N/A',
-            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
-            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
-            'Broadcast TV Fee' => "$" . ($services['broadcast_tv_fee'] ?? 'N/A'),
-            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+            'connection_type' => $services['connection_type'] ?? 'N/A',
+            'channels' => $services['channels'] ?? 'N/A',
+            'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
+            'contract' => $services['contract'] ?? 'N/A',
+            'setup_fee' => $services['setup_fee'] ?? 'N/A',
+            'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
+            'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
+            'price' => $services['price'] ?? 'N/A',
         ];
         $view_link = $services['view_more'] ?? '#';
     } else {
         $services = $services_info["home_security_services"];
         $data = [
-            'Connection Type' => $services['connection_type'] ?? 'N/A',
-            'Channels' => $services['channels'] ?? 'N/A',
-            'Free Premium Channels' => $services['free_premium_channels'] ?? 'N/A',
-            'Contract Term' => $services['contract'] ?? 'N/A',
-            'Setup Fee' => "$" . ($services['setup_fee'] ?? 'N/A'),
-            'Early Termination Fee' => "$" . ($services['early_termination_fee'] ?? 'N/A'),
-            'Broadcast TV Fee' => "$" . ($services['broadcast_tv_fee'] ?? 'N/A'),
-            'Monthly Price' => "$" . ($services['price'] ?? 'N/A'),
+            'connection_type' => $services['connection_type'] ?? 'N/A',
+            'channels' => $services['channels'] ?? 'N/A',
+            'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
+            'contract' => $services['contract'] ?? 'N/A',
+            'setup_fee' => $services['setup_fee'] ?? 'N/A',
+            'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
+            'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
+            'price' => $services['price'] ?? 'N/A',
         ];
         $view_link = $services['view_more'] ?? '#';
     }
@@ -78,7 +78,6 @@ function load_provider_data() {
     $html = '<div class="provider-details">';
     foreach ($data as $label => $value) {
         $html .= '<div class="provider-item">';
-
         $html .= '<p class="provider-data">' . esc_html($value) . '</p>';
         $html .= '</div>';
     }

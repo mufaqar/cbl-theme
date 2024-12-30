@@ -96,6 +96,7 @@ $state = strtoupper($state);
                             ?>
                                 <div class="provider-item md:w-1/2 w-full">
                                     <select id="provider_<?php echo $i ?>" name="provider_<?php echo $i ?>"
+                                        data-type="<?php echo $type; ?>"
                                         data-target="dtable_<?php echo $i ?>"
                                         class="provider-select bg-transparent border border-gray-300  text-black text-sm  outline-none border-none focus:!ring-blue-500 focus:!border-blue-500 block w-full p-[13px]">
                                         <?php
@@ -104,7 +105,7 @@ $state = strtoupper($state);
                                                 while ($query_compair->have_posts()) {
                                                     $query_compair->the_post();
                                                     $option_index++;
-                                                        ?><option value="<?php echo get_the_ID(); ?>"
+                                                        ?><option value="<?php echo get_the_ID(); ?>" 
                                             <?php if ($i == 2 && $option_index == 2) { echo "selected"; } ?>>
                                             <?php echo the_title(); ?></option><?php
                                                     }
