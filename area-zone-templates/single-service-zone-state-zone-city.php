@@ -39,6 +39,14 @@
                 );
                 $query = new WP_Query($query_args);
 
+                $query_compairs = array(
+                    'post_type'      => 'providers',
+                    'posts_per_page' => 2,
+                    'post__in'       => $provider_ids, 
+                    'orderby'        => 'post__in',             
+                );
+                $query_compair = new WP_Query($query_compairs);
+
                 $query_args_cheep = array(
                     'post_type'      => 'providers',
                     'posts_per_page' => -1,
@@ -126,7 +134,9 @@
             set_query_var('providers_query', $query_fast);
             get_template_part('template-parts/section/fast', 'providers');
         endif;
-        set_query_var('providers_query', $query_fast); get_template_part( 'template-parts/section/compair', 'providers' );
+        
+        set_query_var('query_compair', $query_compair);
+        set_query_var('providers_query', $query); get_template_part( 'template-parts/section/compair', 'providers' );
         get_template_part( 'template-parts/section/text', 'providers' );
         set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' ); 
         if ($type !== 'home-security') :      

@@ -1,5 +1,14 @@
 <?php
 $query_compair = get_query_var('providers_query'); 
+$compairs = get_query_var('query_compair'); 
+
+
+
+
+
+
+
+//var_dump ($query_compair);
 
 
 
@@ -8,6 +17,7 @@ $state = strtoupper($state);
 
 
 ?>
+
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -121,21 +131,15 @@ $state = strtoupper($state);
                             </div>
 
                             <div class="flex flex-row">
-
                                 <?php  
-                                    $args = array(
-                                        'post_type'      => 'providers', // Replace with your post type slug
-                                        'posts_per_page' => 2, // Get all providers
-                                        'orderby'        => 'ID', // Order by ID
-                                        'order'          => 'ASC', // Ascending order
-                                    );
 
+                                 
                                     // The Query
                                     $j = 0;
-                                    $query_providers = new WP_Query($args);
-                                    if ($query_providers->have_posts()) :
-                                        while ($query_providers->have_posts()) :
-                                            $query_providers->the_post();
+                                  
+                                    if ($compairs->have_posts()) :
+                                        while ($compairs->have_posts()) :
+                                            $compairs->the_post();
                                             $j++;
 
                                             // Get ACF field data
