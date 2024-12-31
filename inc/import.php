@@ -10,7 +10,7 @@ foreach ($post_ids as $post_id) {
     add_post_meta($post_id, 'internet_services', $internet_services_value, true);
 }
 
-echo "data imported";
+echo "data imported 43188";
 
 
 // function generateRandomString($length) {
