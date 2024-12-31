@@ -6,43 +6,43 @@ $internet_services_value = ['22408','22427','22432','22435','22436','22437','224
 $post_ids = [43188]; 
 
 
-foreach ($post_ids as $post_id) {
-    add_post_meta($post_id, 'internet_services', $internet_services_value, true);
+// foreach ($post_ids as $post_id) {
+//     add_post_meta($post_id, 'internet_services', $internet_services_value, true);
+// }
+
+// echo "data imported 43188";
+
+
+function generateRandomString($length) {
+    $characters = 'abcdefghijklmnopqrstuvwxyz';
+    $randomString = '';
+    $max = strlen($characters) - 1;
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $max)];
+    }
+    return $randomString;
 }
+$args = array(
+    'post_type' => 'providers', // Adjust the post type as needed
+    'posts_per_page' => -1, // Retrieve all posts
+);
 
-echo "data imported 43188";
+$query = new WP_Query($args);
 
+if ($query->have_posts()) {
+    while ($query->have_posts()) {
+        $query->the_post();
+        $post_id = get_the_ID();
+        $values = get_post_meta( $post_id, 'internet_services', true);
+              $length = 5;
+            $modifiedValues = array();
+            foreach ($values as $value) {
+                $randomKey = generateRandomString($length);
+                $modifiedValues[$randomKey] = $value;
+            }
+            update_post_meta($post_id, 'internet_services', $modifiedValues);
+    }
 
-// function generateRandomString($length) {
-//     $characters = 'abcdefghijklmnopqrstuvwxyz';
-//     $randomString = '';
-//     $max = strlen($characters) - 1;
-//     for ($i = 0; $i < $length; $i++) {
-//         $randomString .= $characters[rand(0, $max)];
-//     }
-//     return $randomString;
-// }
-// $args = array(
-//     'post_type' => 'providers', // Adjust the post type as needed
-//     'posts_per_page' => -1, // Retrieve all posts
-// );
-
-// $query = new WP_Query($args);
-
-// if ($query->have_posts()) {
-//     while ($query->have_posts()) {
-//         $query->the_post();
-//         $post_id = get_the_ID();
-//         $values = get_post_meta( $post_id, 'internet_services', true);
-//               $length = 5;
-//             $modifiedValues = array();
-//             foreach ($values as $value) {
-//                 $randomKey = generateRandomString($length);
-//                 $modifiedValues[$randomKey] = $value;
-//             }
-//             update_post_meta($post_id, 'internet_services', $modifiedValues);
-//     }
-
-//     wp_reset_postdata();
-// }
+    wp_reset_postdata();
+}
 
