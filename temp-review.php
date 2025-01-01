@@ -98,7 +98,7 @@ get_header();
                 </div>
 
                 <div class="bg-white mt-4 rounded-md p-4 px-4 overflow-hidden">
-                    <input type="email" placeholder="Enter your email address. *"
+                    <input type="email" placeholder="Enter your email address. *" id="email" name="email"
                         class="w-full outline-none border-none text-black text-sm" />
                 </div>
 
