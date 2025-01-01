@@ -39,6 +39,24 @@ function custom_dynamic_rewrite_rules() {
 }
 add_action('init', 'custom_dynamic_rewrite_rules');
 
+
+add_action('template_redirect', function () {
+    // Get the current URL path
+    $current_url = $_SERVER['REQUEST_URI'];
+
+    // Check if the URL contains 'zip-' 
+    if (preg_match('/zip-\d+/', $current_url)) {
+        // Trigger a 404 error
+        global $wp_query;
+        $wp_query->set_404();
+        status_header(404);
+        // Optionally load the 404 template
+        include(get_query_template('404'));
+        exit;
+    }
+});
+
+
 // Step 2: Register custom query variables to ensure WordPress recognizes them
 function add_custom_query_vars($vars) {
     $vars[] = 'service';
@@ -345,3 +363,24 @@ function custom_blog_post_permalink($permalink, $post) {
     return $permalink;
 }
 add_filter('post_link', 'custom_blog_post_permalink', 10, 2);
+
+add_action('template_redirect', function () {
+    if (is_singular('post')) {
+        global $post;
+
+        // Define the correct URL structure
+        $correct_url = home_url('/resources/' . $post->post_name . '/');
+
+        // Get the current URL path
+        $current_url_path = untrailingslashit(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+        // Get the correct URL path
+        $correct_url_path = untrailingslashit(parse_url($correct_url, PHP_URL_PATH));
+
+        // Redirect only if the paths do not match
+        if ($current_url_path !== $correct_url_path) {
+            wp_redirect($correct_url, 301); // Permanent redirect
+            exit;
+        }
+    }
+});
