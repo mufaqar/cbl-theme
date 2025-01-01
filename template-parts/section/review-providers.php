@@ -20,7 +20,7 @@
             ],
         ],
         'paged' => $paged, // Pagination argument
-        'number' => 5, // Number of comments per page (adjust as needed)
+        'number' => 10, // Number of comments per page (adjust as needed)
     ];
 
     $comment_query = new WP_Comment_Query($args);
