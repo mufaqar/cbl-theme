@@ -173,15 +173,16 @@ function handle_review_submission() {
         
         $user_city_state = $ucity . ", " . $ustate;
 
-        // Insert comment data
+        // Prepare comment data
         $comment_data = array(
             'comment_post_ID' => $provider, // Provider as the post ID
-            'comment_author' => $first_name . ' ' . $last_name,
+            'comment_author' => $author_name,
+            'comment_author_email' => $author_email,
+            'comment_author_IP' => $author_ip,
             'comment_content' => $comment_content,
-            'comment_type' => 'review',
-            'comment_approved' => 0, // Automatically approve the comment
+            'comment_type' => 'review', // Optional comment type
+            'comment_approved' => 1, // Automatically approve the comment
         );
-
         $comment_id = wp_insert_comment($comment_data);
 
         if ($comment_id) {
