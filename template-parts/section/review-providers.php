@@ -62,11 +62,12 @@
                 </div>
                 <p class="mt-4" id="comment-content-<?php echo $comment->comment_ID; ?>">
                     <?php 
-                        if ($content_length > 100) {
-                            echo $short_content . '... <button class="show-more text-blue-600" data-full-content="' . esc_attr($content) . '" data-comment-id="' . $comment->comment_ID . '">More</button>';
-                        } else {
-                            echo $content;
-                        }
+                     echo $content;
+                        // if ($content_length > 100) {
+                        //     echo $short_content . '... <button class="show-more text-blue-600" data-full-content="' . esc_attr($content) . '" data-comment-id="' . $comment->comment_ID . '">More</button>';
+                        // } else {
+                           
+                        // }
                     ?>
                 </p>
             </div>
