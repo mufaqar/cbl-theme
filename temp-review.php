@@ -23,7 +23,7 @@ $state = get_terms(array(
 get_header();
 ?>
 <!-- Include the Google reCAPTCHA script -->
-<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <main class="bg-[#1B559E] py-16">
     <div class="max-w-[1110px] w-full gap-5 md:gap-10 mx-auto px-4 grid grid-cols-1 md:grid-cols-2">
         <div class="text-white">
