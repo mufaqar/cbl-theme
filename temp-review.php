@@ -22,6 +22,26 @@ $state = get_terms(array(
 
 get_header();
 ?>
+
+<style>
+.stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 2rem;
+    color: gray;
+    transition: color 0.2s;
+}
+
+.star.hover,
+.star.selected {
+    color: #F3992E;
+}
+</style>
 <!-- Include the Google reCAPTCHA script -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <main class="bg-[#1B559E] py-16">
@@ -146,12 +166,11 @@ get_header();
 <script>
 jQuery(document).ready(function($) {
     $('#provider').on('change', function() {
-        const providerId = this.value; // Get selected provider ID
-        const $serviceDropdown = $('#load_service'); // Get the service dropdown element
-
+        const providerId = this.value;
+        const $serviceDropdown = $('#load_service');
         if (providerId) {
             $.ajax({
-                url: ajaxurl, // WordPress AJAX URL
+                url: ajaxurl,
                 type: 'POST',
                 data: {
                     action: 'get_provider_services',
@@ -159,11 +178,11 @@ jQuery(document).ready(function($) {
                 },
                 beforeSend: function() {
                     $serviceDropdown.html(
-                    '<option>Loading...</option>'); // Show loading state
+                        '<option>Loading...</option>');
                 },
                 success: function(response) {
                     if (response.success) {
-                        $serviceDropdown.html(response.data.html); // Populate the dropdown
+                        $serviceDropdown.html(response.data.html);
                     } else {
                         alert(response.data.message || 'Error loading services.');
                         $serviceDropdown.html('<option>Error loading services</option>');
@@ -177,35 +196,7 @@ jQuery(document).ready(function($) {
         }
     });
 });
-</script>
 
-
-
-
-
-
-<style>
-.stars {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.star {
-    font-size: 2rem;
-    color: gray;
-    transition: color 0.2s;
-}
-
-.star.hover,
-.star.selected {
-    color: #F3992E;
-}
-</style>
-
-
-<script>
 const stars = document.querySelectorAll('.star');
 const ratingField = document.getElementById('rating');
 
@@ -241,18 +232,19 @@ jQuery(document).ready(function($) {
         ratingField.value = selectedRating;
         // Gather form data
         var formData = $(this).serialize();
+        console.log(formData);
         // AJAX request
         $.ajax({
-            url: ajaxurl, // AJAX URL provided by WordPress
+            url: ajaxurl, 
             type: 'POST',
             data: {
-                action: 'submit_review', // Custom action name
-                formData: formData // Serialized form data
+                action: 'submit_review', 
+                formData: formData 
             },
             success: function(response) {
                 if (response.success) {
                     alert('Review submitted successfully!');
-                  //  $('#submit-review-form')[0].reset(); // Reset form after successful submission
+                    //  $('#submit-review-form')[0].reset(); // Reset form after successful submission
                 } else {
                     alert('Error: ' + response.data);
                 }

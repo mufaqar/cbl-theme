@@ -130,33 +130,34 @@ function get_provider_services() {
 
 
 function handle_review_submission() {
-    parse_str($_POST['formData'], $form_data); // Parse serialized form data
+    parse_str($_POST['formData'], $form_data); 
+
+    print_r($form_data);
 
     // Validate required fields
     if (isset($form_data['provider'], $form_data['fname'], $form_data['lname'], $form_data['comment'])) {
 
         
         
-        // Validate CAPTCHA
-        // $captcha_response = sanitize_text_field($form_data['g-recaptcha-response']);
-        // $captcha_secret = '6LcFlZ8qAAAAAI-0qbWTYJRk7vctVWIDFsV-1t93'; // Replace with your reCAPTCHA secret key
-        // $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
-        //     'body' => [
-        //         'secret' => $captcha_secret,
-        //         'response' => $captcha_response,
-        //     ],
-        // ]);
+        $captcha_response = sanitize_text_field($form_data['g-recaptcha-response']);
+        $captcha_secret = '6LcFlZ8qAAAAAI-0qbWTYJRk7vctVWIDFsV-1t93'; // Replace with your reCAPTCHA secret key
+        $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
+            'body' => [
+                'secret' => $captcha_secret,
+                'response' => $captcha_response,
+            ],
+        ]);
 
-        // if (is_wp_error($captcha_verify_response)) {
-        //     wp_send_json_error('CAPTCHA verification failed.');
-        //     return;
-        // }
+        if (is_wp_error($captcha_verify_response)) {
+            wp_send_json_error('CAPTCHA verification failed.');
+            return;
+        }
 
-        // $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
-        // if (!$captcha_result['success']) {
-        //     wp_send_json_error('CAPTCHA validation failed. Please try again.');
-        //     return;
-        // }
+        $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
+        if (!$captcha_result['success']) {
+            wp_send_json_error('CAPTCHA validation failed. Please try again.');
+            return;
+        }
 
         // Sanitize data
         $provider = sanitize_text_field($form_data['provider']);
