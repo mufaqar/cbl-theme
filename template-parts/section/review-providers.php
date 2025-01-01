@@ -19,13 +19,15 @@
                 'compare' => '=',            // Comparison operator
             ],
         ],
-        'paged' => $paged, // Pagination argument
-        'number' => 10, // Number of comments per page (adjust as needed)
+        'paged' => $paged, 
+        'status' => 'approve',
+        'number' => 10, 
     ];
 
     $comment_query = new WP_Comment_Query($args);
     $comments = $comment_query->get_comments();
 
+    
     if (!empty($comments)) {
         foreach ($comments as $comment) {
             $star = get_comment_meta($comment->comment_ID, 'star', true);
