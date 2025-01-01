@@ -163,6 +163,7 @@ function handle_review_submission() {
         $provider = sanitize_text_field($form_data['provider']);
         $first_name = sanitize_text_field($form_data['fname']);
         $last_name = sanitize_text_field($form_data['lname']);
+        $author_email = sanitize_text_field($form_data['email']);        
         $address = sanitize_text_field($form_data['street']);
         $city = sanitize_text_field($form_data['city']);
         $state = sanitize_text_field($form_data['state']);
@@ -170,10 +171,8 @@ function handle_review_submission() {
         $comment_content = sanitize_textarea_field($form_data['comment']);
         $service = sanitize_textarea_field($form_data['load_service']);
         $rating = sanitize_textarea_field($form_data['rating']);
-        $ucity = sanitize_textarea_field($form_data['city']);
-        $ustate = sanitize_textarea_field($form_data['city']);
         
-        $user_city_state = $ucity . ", " . $ustate;
+        $author_name = $first_name . ' ' . $last_name;
 
         // Prepare comment data
         $comment_data = array(
@@ -189,13 +188,12 @@ function handle_review_submission() {
 
         if ($comment_id) {
             // Add custom meta fields
-            add_comment_meta($comment_id, 'commnt_street_address', $street);
+            add_comment_meta($comment_id, 'address', $address);
             add_comment_meta($comment_id, 'city', $city);
             add_comment_meta($comment_id, 'state', $state);
             add_comment_meta($comment_id, 'zipcode', $zipcode);
             add_comment_meta($comment_id, 'provider_type', $service);
             add_comment_meta($comment_id, 'star', $rating);
-            add_comment_meta($comment_id, 'comment_city', $user_city_state);
 
             wp_send_json_success('Review submitted successfully!');
         } 
