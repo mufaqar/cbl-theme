@@ -137,39 +137,41 @@ function handle_review_submission() {
 
         
         
-        $captcha_response = sanitize_text_field($form_data['g-recaptcha-response']);
-        $captcha_secret = '6LcFlZ8qAAAAAI-0qbWTYJRk7vctVWIDFsV-1t93'; // Replace with your reCAPTCHA secret key
-        $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
-            'body' => [
-                'secret' => $captcha_secret,
-                'response' => $captcha_response,
-            ],
-        ]);
+        // $captcha_response = sanitize_text_field($form_data['g-recaptcha-response']);
+        // $captcha_secret = '6LcFlZ8qAAAAAI-0qbWTYJRk7vctVWIDFsV-1t93'; // Replace with your reCAPTCHA secret key
+        // $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
+        //     'body' => [
+        //         'secret' => $captcha_secret,
+        //         'response' => $captcha_response,
+        //     ],
+        // ]);
 
-        if (is_wp_error($captcha_verify_response)) {
-            wp_send_json_error('CAPTCHA verification failed.');
-            return;
-        }
+        // if (is_wp_error($captcha_verify_response)) {
+        //     wp_send_json_error('CAPTCHA verification failed.');
+        //     return;
+        // }
 
-        $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
-        if (!$captcha_result['success']) {
-            wp_send_json_error('CAPTCHA validation failed. Please try again.');
-            return;
-        }
+        // $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
+        // if (!$captcha_result['success']) {
+        //     wp_send_json_error('CAPTCHA validation failed. Please try again.');
+        //     return;
+        // }
+
+      //  print_r($form_data);
 
         // Sanitize data
         $provider = sanitize_text_field($form_data['provider']);
-        $first_name = sanitize_text_field($form_data['firstName']);
-        $last_name = sanitize_text_field($form_data['lastName']);
-        $street = sanitize_text_field($form_data['street']);
+        $first_name = sanitize_text_field($form_data['fname']);
+        $last_name = sanitize_text_field($form_data['lname']);
+        $address = sanitize_text_field($form_data['street']);
         $city = sanitize_text_field($form_data['city']);
         $state = sanitize_text_field($form_data['state']);
         $zipcode = sanitize_text_field($form_data['zipcode']);
         $comment_content = sanitize_textarea_field($form_data['comment']);
-        $service = sanitize_textarea_field($form_data['service']);
+        $service = sanitize_textarea_field($form_data['load_service']);
         $rating = sanitize_textarea_field($form_data['rating']);
-        $ucity = sanitize_textarea_field($form_data['ucity']);
-        $ustate = sanitize_textarea_field($form_data['ustate']);
+        $ucity = sanitize_textarea_field($form_data['city']);
+        $ustate = sanitize_textarea_field($form_data['city']);
         
         $user_city_state = $ucity . ", " . $ustate;
 
