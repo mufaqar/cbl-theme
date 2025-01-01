@@ -137,25 +137,25 @@ function handle_review_submission() {
 
         
         
-        // $captcha_response = sanitize_text_field($form_data['g-recaptcha-response']);
-        // $captcha_secret = '6LcFlZ8qAAAAAI-0qbWTYJRk7vctVWIDFsV-1t93'; // Replace with your reCAPTCHA secret key
-        // $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
-        //     'body' => [
-        //         'secret' => $captcha_secret,
-        //         'response' => $captcha_response,
-        //     ],
-        // ]);
+        $captcha_response = sanitize_text_field($form_data['g-recaptcha-response']);
+        $captcha_secret = '6LcFlZ8qAAAAAI-0qbWTYJRk7vctVWIDFsV-1t93'; // Replace with your reCAPTCHA secret key
+        $captcha_verify_response = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', [
+            'body' => [
+                'secret' => $captcha_secret,
+                'response' => $captcha_response,
+            ],
+        ]);
 
-        // if (is_wp_error($captcha_verify_response)) {
-        //     wp_send_json_error('CAPTCHA verification failed.');
-        //     return;
-        // }
+        if (is_wp_error($captcha_verify_response)) {
+            wp_send_json_error('CAPTCHA verification failed.');
+            return;
+        }
 
-        // $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
-        // if (!$captcha_result['success']) {
-        //     wp_send_json_error('CAPTCHA validation failed. Please try again.');
-        //     return;
-        // }
+        $captcha_result = json_decode(wp_remote_retrieve_body($captcha_verify_response), true);
+        if (!$captcha_result['success']) {
+            wp_send_json_error('CAPTCHA validation failed. Please try again.');
+            return;
+        }
 
       //  print_r($form_data);
 
@@ -171,9 +171,6 @@ function handle_review_submission() {
         $comment_content = sanitize_textarea_field($form_data['comment']);
         $service = sanitize_textarea_field($form_data['load_service']);
         $rating = sanitize_textarea_field($form_data['rating']);
-
-        var_dump($author_email);
-        
         $author_name = $first_name . ' ' . $last_name;
 
         // Prepare comment data
@@ -181,7 +178,7 @@ function handle_review_submission() {
             'comment_post_ID' => $provider, // Provider as the post ID
             'comment_author' => $author_name,
             'comment_author_email' => $author_email,
-            'comment_author_IP' => $author_ip,
+            'comment_author_IP' => "",
             'comment_content' => $comment_content,
             'comment_type' => 'review', // Optional comment type
             'comment_approved' => 1, // Automatically approve the comment
@@ -196,7 +193,6 @@ function handle_review_submission() {
             add_comment_meta($comment_id, 'zipcode', $zipcode);
             add_comment_meta($comment_id, 'provider_type', $service);
             add_comment_meta($comment_id, 'star', $rating);
-
             wp_send_json_success('Review submitted successfully!');
         } 
     }
