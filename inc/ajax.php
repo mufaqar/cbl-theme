@@ -132,8 +132,6 @@ function get_provider_services() {
 function handle_review_submission() {
     parse_str($_POST['formData'], $form_data); 
 
-    print_r($form_data);
-
     // Validate required fields
     if (isset($form_data['provider'], $form_data['fname'], $form_data['lname'], $form_data['comment'])) {
 
@@ -197,9 +195,7 @@ function handle_review_submission() {
             add_comment_meta($comment_id, 'comment_city', $user_city_state);
 
             wp_send_json_success('Review submitted successfully!');
-        } else {
-            wp_send_json_error('There was an error submitting the review.');
-        }
+        } 
     }
 }
 
