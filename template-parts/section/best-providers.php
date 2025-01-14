@@ -44,6 +44,23 @@
 <?php if ($type === 'internet'): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
+    <div class="mb-10">
+            <h2 class="text-2xl font-bold capitalize leading-10">
+                How Much Speed Do I Need For My Home?
+            </h2>
+            <p class="PClass">
+                How much internet speed is needed for my household? You may ask
+                this question to yourself whenever shopping for an Internet
+                service provider but there is no simple or direct answer. It
+                depends on several different factors such as number of connected
+                devices to the internet, how they are being used, someone using it
+                for online gaming, video conferencing, streaming on Netflix or
+                even working from home. Some households may need more speed than
+                the rest because of their use cases. That’s why Cable Movers has
+                designed a chart to help you choose the right internet speed for
+                your home for seamless online experience.
+            </p>
+        </div>
         <div class="">
             <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> Provider in <span
                     class="text-[#ef9831]"><?php echo $city ?> <?php echo $state ?></span></h2>
@@ -201,23 +218,7 @@
 
 <section class="my-16">
     <div class="container mx-auto px-4">
-        <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10">
-                How Much Speed Do I Need For My Home?
-            </h2>
-            <p class="PClass">
-                How much internet speed is needed for my household? You may ask
-                this question to yourself whenever shopping for an Internet
-                service provider but there is no simple or direct answer. It
-                depends on several different factors such as number of connected
-                devices to the internet, how they are being used, someone using it
-                for online gaming, video conferencing, streaming on Netflix or
-                even working from home. Some households may need more speed than
-                the rest because of their use cases. That’s why Cable Movers has
-                designed a chart to help you choose the right internet speed for
-                your home for seamless online experience.
-            </p>
-        </div>
+        
         <div class="shadow-xl border">
             <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x bg-[#215690] htable">
                 <div class="md:p-5 p-2">
