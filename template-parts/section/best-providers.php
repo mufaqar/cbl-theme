@@ -41,6 +41,87 @@
         $state = strtoupper($state);
     
     ?>
+
+
+<?php if ($type === 'internet'): ?>
+
+<section class="my-16">
+    <div class="container mx-auto px-4">
+        <div class="mb-10">
+            <h2 class="text-2xl font-bold capitalize leading-10">
+                How Much Speed Do I Need For My Home?
+            </h2>
+            <p class="PClass">
+                How much internet speed is needed for my household? You may ask
+                this question to yourself whenever shopping for an Internet
+                service provider but there is no simple or direct answer. It
+                depends on several different factors such as number of connected
+                devices to the internet, how they are being used, someone using it
+                for online gaming, video conferencing, streaming on Netflix or
+                even working from home. Some households may need more speed than
+                the rest because of their use cases. That’s why Cable Movers has
+                designed a chart to help you choose the right internet speed for
+                your home for seamless online experience.
+            </p>
+        </div>
+        <div class="shadow-xl border">
+            <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x bg-[#215690] htable">
+                <div class="md:p-5 p-2">
+                    <h3 class="tabbox_title">
+                        Number of Devices
+                    </h3>
+                </div>
+                <div class="flex items-center justify-center md:p-5 p-2">
+                    <h3 class="tabbox_title">
+                        Best Used For
+                    </h3>
+                </div>
+                <div class="flex items-center justify-center md:p-5 p-2">
+                    <h3 class="tabbox_title">
+                        Recommended Internet Speed
+                    </h3>
+                </div>
+            </div>
+            <?php if (!empty($Recommend_Data)) : ?>
+            <?php foreach ($Recommend_Data as $idx => $item) : ?>
+            <?php $bestUse = explode(', ', $item['best_use']); ?>
+            <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x dtable">
+                <div class="flex items-center justify-center md:p-5 p-2">
+                    <p class="tb_title">
+                        <?php echo esc_html($item['devices']); ?>
+                    </p>
+                </div>
+                <div class="md:p-5 p-2">
+                    <div class="md:text-base text-xs">
+                        <ul class="grid items-center">
+                            <?php foreach ($bestUse as $featureIdx => $feature) : ?>
+                            <li class="flex gap-2" key="<?php echo esc_attr($featureIdx); ?>">
+                                <svg class="min-w-[1rem] h-4 mt-[2px] text-[#ef9831] font-extrabold" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">
+                                    <?php echo esc_html($feature); ?>
+                                </span>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:p-5 p-2">
+                    <p class="tb_title">
+                        <?php echo esc_html($item['recommend']); ?>
+                    </p>
+                </div>
+            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+
 <?php if ($type === 'internet'): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
@@ -197,84 +278,6 @@
 </section>
 <?php endif; ?>
 
-<?php if ($type === 'internet'): ?>
-
-<section class="my-16">
-    <div class="container mx-auto px-4">
-        <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10">
-                How Much Speed Do I Need For My Home?
-            </h2>
-            <p class="PClass">
-                How much internet speed is needed for my household? You may ask
-                this question to yourself whenever shopping for an Internet
-                service provider but there is no simple or direct answer. It
-                depends on several different factors such as number of connected
-                devices to the internet, how they are being used, someone using it
-                for online gaming, video conferencing, streaming on Netflix or
-                even working from home. Some households may need more speed than
-                the rest because of their use cases. That’s why Cable Movers has
-                designed a chart to help you choose the right internet speed for
-                your home for seamless online experience.
-            </p>
-        </div>
-        <div class="shadow-xl border">
-            <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x bg-[#215690] htable">
-                <div class="md:p-5 p-2">
-                    <h3 class="tabbox_title">
-                        Number of Devices
-                    </h3>
-                </div>
-                <div class="flex items-center justify-center md:p-5 p-2">
-                    <h3 class="tabbox_title">
-                        Best Used For
-                    </h3>
-                </div>
-                <div class="flex items-center justify-center md:p-5 p-2">
-                    <h3 class="tabbox_title">
-                        Recommended Internet Speed
-                    </h3>
-                </div>
-            </div>
-            <?php if (!empty($Recommend_Data)) : ?>
-            <?php foreach ($Recommend_Data as $idx => $item) : ?>
-            <?php $bestUse = explode(', ', $item['best_use']); ?>
-            <div class="grid md:grid-cols-3 grid-cols-3 gap-0 divide-x dtable">
-                <div class="flex items-center justify-center md:p-5 p-2">
-                    <p class="tb_title">
-                        <?php echo esc_html($item['devices']); ?>
-                    </p>
-                </div>
-                <div class="md:p-5 p-2">
-                    <div class="md:text-base text-xs">
-                        <ul class="grid items-center">
-                            <?php foreach ($bestUse as $featureIdx => $feature) : ?>
-                            <li class="flex gap-2" key="<?php echo esc_attr($featureIdx); ?>">
-                                <svg class="min-w-[1rem] h-4 mt-[2px] text-[#ef9831] font-extrabold" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-sm">
-                                    <?php echo esc_html($feature); ?>
-                                </span>
-                            </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center md:p-5 p-2">
-                    <p class="tb_title">
-                        <?php echo esc_html($item['recommend']); ?>
-                    </p>
-                </div>
-            </div>
-            <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-    </div>
-</section>
-<?php endif; ?>
 
 <?php if ($type === 'tv'): ?>
 <section class="my-16">
