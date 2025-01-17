@@ -35,13 +35,15 @@ $args = array(
     ),
 );
 
+
+
 $query_args_cheep = array(
     'post_type'      => 'providers',
     'posts_per_page' => -1,
     'post__in'       => $provider_ids, 
     'orderby'        => 'post__in', 
     'orderby'        => 'meta_value_num', // Order by meta value as a number
-    'meta_key'       => 'pro_price',      // The meta key to sort by
+    'meta_key'       => 'services_info_'.$type.'_services_price',      // The meta key to sort by
     'order'          => 'ASC',  
     'meta_query' => array(
         array(
@@ -59,6 +61,8 @@ $query_args_cheep = array(
     ),           
 );
 $query_cheep = new WP_Query($query_args_cheep);
+
+
 
 
 $query_args_fast = array(
@@ -212,16 +216,16 @@ $query_fast = new WP_Query($query_args_fast);
                     <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
                     <div class="tborder">
                         <div>
-                            <p class="tb_title">
+                        
                                 <?php echo $type === 'tv' ? $channels : $cheap_speed." Mbps"; ?>
-                            </p>
+                           
                         </div>
                     </div>
                     <?php endif; ?>
 
                     <div class="tborder">
                         <div>
-                            <p class="tb_title">$<?php echo $price ?> </p>
+                           $<?php echo $price ?> 
                         </div>
                     </div>
                 </div>

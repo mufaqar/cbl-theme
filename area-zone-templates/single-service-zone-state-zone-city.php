@@ -53,7 +53,7 @@
                     'post__in'       => $provider_ids, 
                     'orderby'        => 'post__in', 
                     'orderby'        => 'meta_value_num', // Order by meta value as a number
-                    'meta_key'       => 'pro_price',      // The meta key to sort by
+                 'meta_key'       => 'services_info_'.$type.'_services_price',      // The meta key to sort by
                     'order'          => 'ASC',             
                 );
                 $query_cheep = new WP_Query($query_args_cheep);
@@ -64,7 +64,7 @@
                     'post__in'       => $provider_ids, 
                     'orderby'        => 'post__in', 
                     'orderby'        => 'meta_value_num', // Order by meta value as a number
-                    'meta_key'       => 'services_info_internet_services_summary_speed',      // The meta key to sort by
+                    'meta_key'       => 'services_info_'.$type.'_services_summary_speed',  
                     'order'          => 'DESC',             
                 );
                 $query_fast = new WP_Query($query_args_fast);

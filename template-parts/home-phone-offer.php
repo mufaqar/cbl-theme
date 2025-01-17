@@ -7,7 +7,7 @@
                     'posts_per_page' => 4, // Number of posts to display
                     'order'          => 'DESC', // Order of the posts
                     'providers_types'  => 'landline' ,
-                     'meta_key'       => 'pro_price',
+                     'meta_key'       => 'services_info_landline_services_price', 
                     'orderby'        => 'meta_value_num'
                 );
 
