@@ -733,7 +733,7 @@ $query_fast = new WP_Query($query_args_fast);
                         </div>
                         <div class="tborder ">
                             <h4 class="tabbox_title">
-                                <?php echo $type === 'home-security'  ? 'Connection' : 'Features'; ?>
+                                <?php echo $type === 'home-security'  ? 'Features' : 'Connection'; ?>
                             </h4>
                         </div>
                         <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
@@ -805,9 +805,11 @@ $query_fast = new WP_Query($query_args_fast);
                                    
                                 <?php
                                 if ($type != 'home-security' ) {
-                                    display_features_list($features_items);
-                                } else {
                                     echo $connection_type;
+                                  
+                                } else {
+                                   
+                                    display_features_list($features_items);
                                 }
                                 ?>
 
