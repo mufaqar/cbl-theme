@@ -24,7 +24,7 @@ function load_provider_data() {
         $services = $services_info["internet_services"];
         $data = [
            'connection_type' => $services['connection_type'] ?? 'N/A',
-            'summary_speed' => $services['summary_speed'] ?? 'N/A',
+            'summary_speed' => $services['summary_speed']." Mbps" ?? 'N/A',
             'data_caps' => $services['data_caps'] ?? 'N/A',
             'contract' => $services['contract'] ?? 'N/A',
             'setup_fee' => "$".$services['setup_fee'] ?? 'N/A',
