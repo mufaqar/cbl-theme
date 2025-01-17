@@ -181,7 +181,7 @@ function handle_review_submission() {
             'comment_author_IP' => "",
             'comment_content' => $comment_content,
             'comment_type' => 'review', // Optional comment type
-            'comment_approved' => 1, // Automatically approve the comment
+            'comment_approved' => 0, // Automatically approve the comment
         );
         $comment_id = wp_insert_comment($comment_data);
 
