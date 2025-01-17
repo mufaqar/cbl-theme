@@ -85,7 +85,7 @@ $query_args_fast = array(
     'post__in'       => $provider_ids, 
     'orderby'        => 'post__in', 
     'orderby'        => 'meta_value_num', // Order by meta value as a number
-    'meta_key'       => 'services_info_internet_services_summary_speed',      // The meta key to sort by
+    'meta_key'       => 'services_info_'.$meta_type.'_services_summary_speed',      // The meta key to sort by
     'order'          => 'DESC',   
     'meta_query' => array(
         array(
