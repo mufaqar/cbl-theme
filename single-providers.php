@@ -784,6 +784,7 @@
 <?php endif; ?>
 
 
+<?php if( have_rows('features_block') ): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
@@ -821,6 +822,9 @@
         </div>
     </div>
 </section>
+<?php endif; ?>
+
+<?php if( have_rows('block') ): ?>
 
 <section class="mt-16">
     <div class="container mx-auto px-4">
@@ -843,6 +847,8 @@
         </div>
     </div>
 </section>
+
+<?php endif; ?>
 
 <section class="mt-8">
     <div class="container mx-auto px-4">
