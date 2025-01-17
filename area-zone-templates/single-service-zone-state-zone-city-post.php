@@ -363,14 +363,14 @@ $query_fast = new WP_Query($query_args_fast);
             </h2>
         </div>
         <div
-            class="md:w-full min-w-fit grid  bg-[#215690] grid-cols-3 htable">
+            class="md:w-full min-w-fit grid  bg-[#215690] grid-cols-4 htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
             
-            <div class="tborder col-span-2">
+            <div class="tborder col-span-3">
                 <div>
                     <h4 class="tabbox_title">Best For</h4>
                 </div>
@@ -404,7 +404,7 @@ $query_fast = new WP_Query($query_args_fast);
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto ">
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
                     <div
-                        class="md:w-full w-full grid grid-cols-3 dtable">
+                        class="md:w-full w-full grid grid-cols-4 dtable">
                         <div class="tborder">
                             <div>
                                 <p class="tb_heading"><a target="_blank"
@@ -413,7 +413,7 @@ $query_fast = new WP_Query($query_args_fast);
                         </div>
 
                   
-                        <div class="tborder col-span-2">
+                        <div class="tborder col-span-3">
                             <?php echo $best_for ?>
                         </div>
 
