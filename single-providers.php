@@ -33,11 +33,16 @@
     
 
 ?>
+
+
+
+
+
 <section class="relative pbanner" style="background-image: url('<?php echo $features_banner ?>')">
     <div class="overlay_wrapper">
         <div class="container mx-auto px-4 flex md:flex-row flex-col gap-7 items-center">
             <div class="md:w-1/2 w-full py-10 text-white">
-                <a href="/providers/att">
+                <a href="">
                     <img alt="Feature Image" loading="lazy" width="140" height="50" class="plogo" decoding="async"
                         data-nimg="1" src="<?php echo $logoUrl ?>"
                         style="color: transparent; filter: invert(1); mix-blend-mode: exclusion;" />
@@ -48,7 +53,16 @@
                 <div class="features text-white mb-5 single_content">
                     <?php echo $features ?>
                 </div>
-                <h5 class="text-xl font-bold text-white">Price Starting At</h5>
+                <h5 class="text-xl font-bold text-white"><?php
+if (is_singular('providers')) {
+  
+    if (has_term('home-security', 'providers_types')) {
+        echo "Monitoring";
+    } else {
+        echo "Pricing";
+    }
+}
+?> Starting At</h5>
                 <h2 class="md:text-4xl text-3xl font-extrabold text-white my-4 flex items-start">
                     <span class="md:text-3xl text-base">$</span><?php echo $price ?>
                     <span class="grid">
