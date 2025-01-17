@@ -503,9 +503,6 @@ function Best_Provider_Details($provider_ids) {
             while ($query->have_posts()) {
                 $query->the_post();
                 $title = get_the_title(); 
-
-
-
                 $speed = get_post_meta(get_the_ID(), 'services_info_internet_services_summary_speed', true); // Replace with actual meta key for speed
                 $price = get_post_meta(get_the_ID(), 'pro_price', true); // Replace with actual meta key for price
                 

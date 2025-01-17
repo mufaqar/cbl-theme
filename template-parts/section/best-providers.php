@@ -131,7 +131,7 @@
             <p class="PClass">
                 Cable Movers hand picks <?php echo $Best_Provider_Details['title']; ?> as the best internet service
                 provider in <?php echo $city ?>. <?php echo $Best_Provider_Details['title']; ?> offers reliable high
-                speed internet service with robust download speed of up to  <?php echo $Best_Provider_Details['title']; ?> Mbps. Their
+                speed internet service with robust download speed of up to  <?php echo $Best_Provider_Details['speed']; ?>Mbps. Their
                 monthly plans begins at <?php echo $Best_Provider_Details['price']; ?>/mo making it an all-around popular choice for <?php echo $city ?>
                 residents.
             </p>

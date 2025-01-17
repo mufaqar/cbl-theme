@@ -24,7 +24,7 @@
                 choice for individuals and families looking to save on their internet bills.
             </p>
             <p class="PClass">
-                <?php echo $cheap_providers[1]['speed']; ?> is another cheap internet service option offering high speed
+                <?php echo $cheap_providers[1]['title']; ?> is another cheap internet service option offering high speed
                 internet
                 plans as low as <?php echo $cheap_providers[0]['price']; ?> per month to fit into any budget. To help
                 you choose the right internet
@@ -32,21 +32,10 @@
                 price (low to high).
             </p>
             <?php elseif ($type === 'tv'): ?>
-            <p class="PClass"> Affordability is essential when choosing your internet service provider. Cable Movers
-                picks <?php echo $cheap_providers[0]['title']; ?> as the cheapest internet option in
-                <?php echo $city; ?>. <?php echo $cheap_providers[0]['title']; ?> offers inexpensive and budget friendly
-                internet
-                plans without sacrificing performance. Their monthly plans begins at
-                <?php echo $cheap_providers[0]['price']; ?> per month making them
-                a great choice for individuals and families looking to save on their internet bills.
+            <p class="PClass">
+                CableMovers has compiled a list of cheap TV service providers in  <?php echo $city; ?>,  <?php echo $state; ?> and choose <?php echo $cheap_providers[0]['price']; ?>  as the best cheap cable TV provider. <?php echo $cheap_providers[0]['title']; ?> TV package cost  <?php echo $cheap_providers[0]['price']; ?> per month and provides over  <?php echo $cheap_providers[0]['price']; ?> channels. Most of these channels are HD (High Definition) and include channels like CNN, USA, Hallmark, HGTV, Food Network, TNT, Bravo, ESPN, 
             <p>
-            <p class="PClass"> <?php echo $cheap_providers[1]['speed']; ?> is another cheap internet service option
-                offering high
-                speed internet plans as low as <?php echo $cheap_providers[1]['price']; ?> per month to fit into any
-                budget. To help you choose the
-                right internet provider for your home we have listed all providers available in <?php echo $city ?> and
-                sorted them by price (low to high).</p>
-
+           
 
             <?php elseif ($type === 'landline'): ?>
 
