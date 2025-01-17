@@ -727,7 +727,11 @@ $query_fast = new WP_Query($query_args_fast);
                 <div
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div
-                        class="md:w-full min-w-[50px] grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> grid-cols-1 bg-[#215690] htable">
+                        class="md:w-full min-w-[50px] grid <?php 
+echo $type == 'internet' ? 'md:grid-cols-6' : 
+    ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5');
+?>
+ grid-cols-1 bg-[#215690] htable">
                         <div class="tborder">
                             <h4 class="tabbox_title">Provider</h4>
                         </div>
@@ -739,7 +743,7 @@ $query_fast = new WP_Query($query_args_fast);
                         <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                         <div class="tborder">
                             <h4 class="tabbox_title">
-                                <?php echo $type === 'internet' ? 'Max Download Speed' : 'Channels'; ?>
+                                <?php echo $type === 'internet' ? 'Download Speed' : 'Channels'; ?>
                             </h4>
                         </div>
                         <?php endif ?>
@@ -802,7 +806,11 @@ $query_fast = new WP_Query($query_args_fast);
                                        
                                     ?>
                         <div
-                            class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'; ?> dtable ">
+                            class="min-w-[120px] md:w-full grid <?php 
+echo $type == 'internet' ? 'md:grid-cols-6' : 
+    ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5');
+?>
+ dtable ">
                             <div class="tborder">
                                 <div>
                                     <p class="tb_heading"><a target="_blank" href="<?php the_permalink()?>">
