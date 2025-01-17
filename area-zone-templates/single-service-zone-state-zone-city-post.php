@@ -845,7 +845,7 @@ echo $type == 'internet' ? 'md:grid-cols-6' :
                             <?php if (in_array($type, ['internet'])) : ?>
                         <div class="tborder">
                            
-                                <?php echo $upload_speed ?>
+                                <?php echo $upload_speed." Mbps"; ?>
                            
                         </div>
                         <?php endif ?>
