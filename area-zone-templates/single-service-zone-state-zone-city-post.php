@@ -284,7 +284,7 @@ $query_fast = new WP_Query($query_args_fast);
             </div>
             <div class="tborder">
                 <div>
-                    <h4 class="tabbox_title">Upload Speed</h4>
+                    <h4 class="tabbox_title">Price</h4>
                 </div>
             </div>
         </div>
@@ -313,7 +313,7 @@ $query_fast = new WP_Query($query_args_fast);
                             $channels =  $services['channels'];
                             $connection_type =  $services['connection_type'];
                             $fast_package =  $services['fast_package'];
-                            $upload_speed =  $services['upload_speed'];
+                            $fast_price =  $services['fast_price'];
 
                             ?>
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto dtable">
@@ -332,7 +332,7 @@ $query_fast = new WP_Query($query_args_fast);
                             <?php echo $type === 'tv' ? $channels : $summary_speed." Mbps"; ?>
                         </div>
                         <div class="tborder">
-                            <?php echo $type === 'tv' ? $speed : $upload_speed." Mbps"; ?>
+                            <?php echo $fast_price; ?>
                         </div>
 
                     </div>
