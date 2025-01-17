@@ -856,7 +856,28 @@ $query_fast = new WP_Query($query_args_fast);
                 // Define an array of FAQs
                 $total_providers_count = $query_fast->found_posts;
                 $first_provider = $query_fast->posts[0];
-                $first_provider_title = get_the_title($first_provider->ID);
+                $servicesInfo = get_field('services_info', $first_provider->ID);
+
+                if ($servicesInfo) {
+                    // Determine the services based on the type
+                    if ($type == 'internet') {
+                        $services = $servicesInfo["internet_services"];
+                    } elseif ($type == 'tv') {
+                        $services = $servicesInfo["tv_services"];
+                    } elseif ($type == 'landline') {
+                        $services = $servicesInfo["landline_services"];
+                    } else {
+                        $services = $servicesInfo["home_security_services"];
+                    }
+               
+                
+                    $first_provider_title = get_the_title($first_provider->ID);
+                    $price = $services['price'];
+                    $channels = $services['channels'] . "+";
+                    $summary_speed = $services['summary_speed'];
+                    
+
+                }
                 
                 $faqs;
                 $internet_faqs = [
@@ -866,11 +887,11 @@ $query_fast = new WP_Query($query_args_fast);
                     ],
                     [
                         "question" => "2. Who is the fastest Internet service provider in  $zipcode?",
-                        "answer" => "$first_provider_title is the fastest internet service provider in {$zipcode} and offers max download speeds up to {summery_speed}Mbps in select areas."
+                        "answer" => "$first_provider_title is the fastest internet service provider in {$zipcode} and offers max download speeds up to {$summary_speed}Mbps in select areas."
                     ],
                     [
                         "question" => "3. Who is the cheapest Internet service provider in $zipcode?",
-                        "answer" => "$first_provider_title is the cheapest internet service provider in {$zipcode} with price starting from {price}"
+                        "answer" => "$first_provider_title is the cheapest internet service provider in {$zipcode} with price starting from {$price}"
                     ],
                     [
                         "question" => "4. What is the typical internet speed options offered in $zipcode?",
@@ -900,7 +921,7 @@ $query_fast = new WP_Query($query_args_fast);
                     ],
                     [
                         "question" => "5.	Who is the cheapest TV service provider in $zipcode",
-                        "answer" => "{$first_provider_title} is the cheapest TV service provider in {$zipcode} with price starting from {Price}"
+                        "answer" => "{$first_provider_title} is the cheapest TV service provider in {$zipcode} with price starting from {$price}"
                     ],
                 ];
                 $landline_faqs = [
@@ -918,7 +939,7 @@ $query_fast = new WP_Query($query_args_fast);
                     ],
                     [
                         "question" => "4.	Who is the cheapest Internet service provider in $zipcode",
-                        "answer" => "{$total_providers_count} is the cheapest landline home phone service provider in Zip Code {$zipcode} with price starting from {Price}."
+                        "answer" => "{$total_providers_count} is the cheapest landline home phone service provider in Zip Code {$zipcode} with price starting from $price."
                     ],
                     [
                         "question" => "5.	How do I check the availability of Landline Phone service providers in $zipcode",
@@ -932,7 +953,7 @@ $query_fast = new WP_Query($query_args_fast);
                     ],
                     [
                         "question" => "2.	What are the most affordable security systems in $zipcode, $state?",
-                        "answer" => "(insert lowest provider name) topped our list as the most affordable home security system in (insert zip code) with price starting from (insert lowest provider price) per month."
+                        "answer" => "(insert lowest provider name) topped our list as the most affordable home security system in $zipcode with price starting from (insert lowest provider price) per month."
                     ],
                     [
                         "question" => "3.	What are the most affordable security systems in $zipcode, $state?",
