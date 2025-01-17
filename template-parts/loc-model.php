@@ -1,5 +1,5 @@
 
-<div id="locationModal2" class="modal" style="display: none;">
+<div id="locationModal" class="modal" style="display: none;">
     <div class="modal-content">
         <span id="closeModal2" class="close">&times;</span>
         <section class="min-h-[55vh] flex items-center">
@@ -19,7 +19,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const modal = document.getElementById("locationModal2");
+        const modal = document.getElementById("locationModal");
         const btn = document.getElementById("changeLocationBtn2");
         const span = document.getElementById("closeModal2");
         // When the user clicks the button, open the modal
