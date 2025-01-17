@@ -167,19 +167,19 @@ $state = strtoupper($state);
                                                 $services = $servicesInfo["tv_services"];
                                                 $data = [
                                                     'connection_type' => $services['connection_type'] ?? 'N/A',
-                                                    'channels' => $services['channels'] ?? 'N/A',
+                                                    'channels' => $services['channels']."+" ?? 'N/A',
                                                     'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
                                                     'contract' => $services['contract'] ?? 'N/A',
-                                                    'setup_fee' => $services['setup_fee'] ?? 'N/A',
-                                                    'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
-                                                    'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
-                                                    'price' => $services['price'] ?? 'N/A',
+                                                    'setup_fee' => "$".$services['setup_fee'] ?? 'N/A',
+                                                    'early_termination_fee' => "$".$services['early_termination_fee'] ?? 'N/A',
+                                                    'broadcast_tv_fee' => "$".$services['broadcast_tv_fee'] ?? 'N/A',
+                                                    'price' => "$".$services['price'] ?? 'N/A',
                                                 ];
                                             } elseif ($type == 'landline') {
                                                 $services = $servicesInfo["landline_services"];
                                                 $data = [
                                                     'connection_type' => $services['connection_type'] ?? 'N/A',
-                                                    'channels' => $services['channels'] ?? 'N/A',
+                                                    'channels' => $services['channels']."+" ?? 'N/A',
                                                     'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
                                                     'contract' => $services['contract'] ?? 'N/A',
                                                     'setup_fee' => $services['setup_fee'] ?? 'N/A',
@@ -191,13 +191,13 @@ $state = strtoupper($state);
                                                 $services = $servicesInfo["home_security_services"];
                                                 $data = [
                                                     'connection_type' => $services['connection_type'] ?? 'N/A',
-                                                    'channels' => $services['channels'] ?? 'N/A',
-                                                    'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
+                                                    'channels' => $services['channels']."+" ?? 'N/A',
+                                                    'free_premium_channels' => $services['free_premium_channels']."+" ?? 'N/A',
                                                     'contract' => $services['contract'] ?? 'N/A',
-                                                    'setup_fee' => $services['setup_fee'] ?? 'N/A',
-                                                    'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
-                                                    'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
-                                                    'price' => $services['price'] ?? 'N/A',
+                                                    'setup_fee' => "$".$services['setup_fee'] ?? 'N/A',
+                                                    'early_termination_fee' => "$".$services['early_termination_fee'] ?? 'N/A',
+                                                    'broadcast_tv_fee' => "$".$services['broadcast_tv_fee'] ?? 'N/A',
+                                                    'price' => "$".$services['price'] ?? 'N/A',
                                                 ];
                                             }
 
