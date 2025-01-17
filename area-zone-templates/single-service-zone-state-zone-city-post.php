@@ -365,14 +365,8 @@ $query_fast = new WP_Query($query_args_fast);
                     <h4 class="tabbox_title">Provider</h4>
                 </div>
             </div>
-            <?php if ($type !== 'home-security'): ?>
-            <div class="tborder">
-                <div>
-                    <h4 class="tabbox_title">Connection </h4>
-                </div>
-            </div>
-            <?php endif; ?>
-            <div class="tborder">
+            
+            <div class="tborder col-span-2">
                 <div>
                     <h4 class="tabbox_title">Best For</h4>
                 </div>
@@ -414,14 +408,8 @@ $query_fast = new WP_Query($query_args_fast);
                             </div>
                         </div>
 
-                        <?php if ($type !== 'home-security'): ?>
-                        <div class="tborder">
-                            <div>
-                                <h4 class="tb_heading"> <?php echo $connection_type ?> </h4>
-                            </div>
-                        </div>
-                        <?php endif ?>
-                        <div class="tborder">
+                  
+                        <div class="tborder col-span-2">
                             <?php echo $best_for ?>
                         </div>
 
@@ -741,7 +729,7 @@ $query_fast = new WP_Query($query_args_fast);
                         </div>
                         <div class="tborder ">
                             <h4 class="tabbox_title">
-                                <?php echo $type === 'home-security' || $type === 'landline' ? 'Features' : 'Connection'; ?>
+                                <?php echo $type === 'home-security'  ? 'Connection' : 'Features'; ?>
                             </h4>
                         </div>
                         <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
@@ -787,7 +775,7 @@ $query_fast = new WP_Query($query_args_fast);
                                             $services = $servicesInfo["home_security_services"];
                                         }
 
-                                   //  print_r($services);
+                                  // print_r($services);
                                        $phone =  $services['phone'];
                                        $view_link =  $services['view_more'];
                                        
@@ -795,8 +783,8 @@ $query_fast = new WP_Query($query_args_fast);
                                         $channels =  $services['channels'];
                                         $summary_speed =  $services['summary_speed'];
                                         $connection_type =  $services['connection_type'];
-                                        $summary_features =  $services['features'];
-                                        $features = $services['features'];
+                                        $summary_features =  $services['summary_features'];
+                                        $features = $services['summary_features'];
                                         $features_items  = explode(',', $features); 
                                        
                                     ?>
@@ -810,8 +798,15 @@ $query_fast = new WP_Query($query_args_fast);
                             </div>
                             <div class=" tborder  ">
                                 <div class="tb_heading">
-                                    <?php                                  
-                                    echo $type !== 'home-security'  ? display_features_list($features_items) :$connection_type; ?>
+                                   
+                                <?php
+                                if ($type != 'home-security' ) {
+                                    display_features_list($features_items);
+                                } else {
+                                    echo $connection_type;
+                                }
+                                ?>
+
 
                                 </div>
                             </div>
@@ -883,13 +878,13 @@ $query_fast = new WP_Query($query_args_fast);
                     ],
                     [
                         "question" => "5. How do I check the availability of Internet service providers in $zipcode?",
-                        "answer" => "To check Internet service providers availability, Enter your zip code to find the best internet options available to you."
+                        "answer" => "To check Internet service providers availability, <button id='changeLocationBtn2' >Enter your zip code</button> to find the best internet options available to you."
                     ]
                 ];
                 $tv_faqs = [
                     [
                         "question" => "1. How do I check the availability of TV service providers in $zipcode",
-                        "answer" => "To check TV service providers availability, Enter your zip code to find the best TV options available to you."
+                        "answer" => "To check TV service providers availability, <button id='changeLocationBtn2' >Enter your zip code</button> to find the best TV options available to you."
                     ],
                     [
                         "question" => "2. How do I setup TV service in my new home in $zipcode",
@@ -927,7 +922,7 @@ $query_fast = new WP_Query($query_args_fast);
                     ],
                     [
                         "question" => "5.	How do I check the availability of Landline Phone service providers in $zipcode",
-                        "answer" => "To check Landline Phone service providers availability, Enter your zip code to find the best Landline options available to you."
+                        "answer" => "To check Landline Phone service providers availability, <button id='changeLocationBtn2' >Enter your zip code</button> to find the best Landline options available to you."
                     ],
                 ];
                 $home_security_faqs = [
@@ -953,7 +948,7 @@ $query_fast = new WP_Query($query_args_fast);
                     ],
                     [
                         "question" => "6.	What Home Security Providers are Available in $zipcode, $state?",
-                        "answer" => "Availability varies for Home Security systems. To check availability, enter your zip code (zip code has a popup link to the zip search bar) to find the best security companies available to you."
+                        "answer" => "Availability varies for Home Security systems. To check availability, <button id='changeLocationBtn2' >Enter your zip code</button> to find the best security companies available to you."
                     ] 
                 ];
  
@@ -995,6 +990,9 @@ $query_fast = new WP_Query($query_args_fast);
         </div>
     </div>
 </section>
+
+
+<?php get_template_part('template-parts/loc','model'); ?>
 
 
 <script>
