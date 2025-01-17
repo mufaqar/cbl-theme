@@ -650,3 +650,28 @@ function display_features_list($features_items) {
     echo '</ul>';
 }
 
+
+
+
+add_filter('manage_edit-comments_columns', function($columns) {   
+    $new_columns = [];
+    $position = 2; 
+    $counter = 1;
+    foreach ($columns as $key => $value) {   
+        $new_columns[$key] = $value;      
+        if ($counter === $position) {
+            $new_columns['state'] = __('State', 'text-domain');
+        }
+        $counter++;
+    }
+    return $new_columns;
+});
+
+add_action('manage_comments_custom_column', function($column, $comment_ID) {
+    if ($column === 'state') {      
+        $meta_key = 'state'; 
+        $meta_value = get_comment_meta($comment_ID, $meta_key, true);
+        echo $meta_value ? esc_html($meta_value) : __('No meta value', 'text-domain');
+    }
+}, 10, 2);
+
