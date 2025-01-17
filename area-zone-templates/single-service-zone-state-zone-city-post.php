@@ -332,7 +332,7 @@ $query_fast = new WP_Query($query_args_fast);
                             <?php echo $type === 'tv' ? $channels : $summary_speed." Mbps"; ?>
                         </div>
                         <div class="tborder">
-                            <?php echo $fast_price; ?>
+                            <?php echo "$".$fast_price; ?>
                         </div>
 
                     </div>
