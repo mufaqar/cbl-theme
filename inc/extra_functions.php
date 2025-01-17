@@ -618,6 +618,21 @@ function render_provider_buttons($phone, $permalink) {
     <?php
 }
 
+function render_provider_phone($permalink) {
+    if (empty($permalink)) {
+        return; 
+    }
+    ?>  
+        <?php if (!empty($permalink)) : ?>
+            <a class="text-base text-white font-[Roboto] uppercase px-5 py-2.5 bg-[#ef9831] hover:bg-[#215690]" 
+               href="<?php echo esc_url($permalink); ?>">
+                View Plans
+            </a>
+        <?php endif; ?>
+   
+    <?php
+}
+
 
 class Tailwind_Nav_Walker extends Walker_Nav_Menu {
     public function start_lvl( &$output, $depth = 0, $args = null ) {
