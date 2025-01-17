@@ -37,13 +37,25 @@ $args = array(
 
 
 
+
+if ($type == "home-security")
+{
+
+    $meta_type = "home_security";
+}
+else {
+    $meta_type = $type;
+}
+
+
+
 $query_args_cheep = array(
     'post_type'      => 'providers',
     'posts_per_page' => -1,
     'post__in'       => $provider_ids, 
     'orderby'        => 'post__in', 
     'orderby'        => 'meta_value_num', // Order by meta value as a number
-    'meta_key'       => 'services_info_'.$type.'_services_price',      // The meta key to sort by
+    'meta_key'       => 'services_info_'.$meta_type.'_services_price',      // The meta key to sort by
     'order'          => 'ASC',  
     'meta_query' => array(
         array(
@@ -61,6 +73,8 @@ $query_args_cheep = array(
     ),           
 );
 $query_cheep = new WP_Query($query_args_cheep);
+
+
 
 
 
@@ -182,7 +196,7 @@ $query_fast = new WP_Query($query_args_fast);
                         $query_cheep->the_post();
                         $i++;
                         set_query_var('provider_index', $i);
-                        $price = get_field( "pro_price" );
+                   
                         $servicesInfo = get_field('services_info');
                         if ($type == 'internet') {
                             $services = $servicesInfo["internet_services"];
@@ -193,6 +207,8 @@ $query_fast = new WP_Query($query_args_fast);
                         } else {
                             $services = $servicesInfo["home_security_services"];
                         }
+
+                        
                 
                     $price =  $services['price'];
                     $channels =  $services['channels']."+";
@@ -728,10 +744,10 @@ $query_fast = new WP_Query($query_args_fast);
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div
                         class="md:w-full min-w-[50px] grid <?php 
-echo $type == 'internet' ? 'md:grid-cols-6' : 
-    ($type == 'home-security' ? 'md:grid-cols-3' : 
-    ($type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'));
-?> grid-cols-1 bg-[#215690] htable">
+                            echo $type == 'internet' ? 'md:grid-cols-6' : 
+                                ($type == 'home-security' ? 'md:grid-cols-3' : 
+                                ($type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5'));
+                            ?> grid-cols-1 bg-[#215690] htable">
                         <div class="tborder">
                             <h4 class="tabbox_title">Provider</h4>
                         </div>
