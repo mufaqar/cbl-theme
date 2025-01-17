@@ -157,7 +157,7 @@
                 <div
                     class="md:w-full w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'grid-cols-4' : 'grid-cols-5'; ?>   ">
                     <div class="tborder">
-                        <p class="tb_heading">
+                        <p class="tb_title">
                             <a target="_blank" href="<?php the_permalink()?>"> <?php the_title()?> </a>
                         </p>
                     </div>

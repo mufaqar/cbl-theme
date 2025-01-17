@@ -407,7 +407,7 @@ $query_fast = new WP_Query($query_args_fast);
                         class="md:w-full w-full grid grid-cols-4 dtable">
                         <div class="tborder">
                             <div>
-                                <p class="tb_heading"><a target="_blank"
+                                <p class="tb_title"><a target="_blank"
                                         href="<?php the_permalink()?>"><?php the_title()?></a></p>
                             </div>
                         </div>
@@ -497,7 +497,7 @@ $query_fast = new WP_Query($query_args_fast);
                     <div class="md:w-full w-full grid grid-cols-4 md:grid-cols-4">
                         <div class="tborder">
                             <div>
-                                <p class="tb_heading"><a target="_blank"
+                                <p class="tb_title"><a target="_blank"
                                         href="<?php the_permalink()?>"><?php the_title()?></a></p>
                             </div>
                         </div>
@@ -594,7 +594,7 @@ $query_fast = new WP_Query($query_args_fast);
                     <div class="md:w-full w-full grid grid-cols-5 md:grid-cols-5">
                         <div class="tborder">
                             <div>
-                                <p class="tb_heading"><a target="_blank"
+                                <p class="tb_title"><a target="_blank"
                                         href="<?php the_permalink()?>"><?php the_title()?></a></p>
                             </div>
                         </div>
@@ -686,7 +686,7 @@ $query_fast = new WP_Query($query_args_fast);
                     <div class="md:w-full w-full grid grid-cols-3 md:grid-cols-3">
                         <div class="tborder">
                             <div>
-                                <p class="tb_heading"><a target="_blank"
+                                <p class="tb_title"><a target="_blank"
                                         href="<?php the_permalink()?>"><?php the_title()?></a></p>
                             </div>
                         </div>
@@ -812,7 +812,7 @@ echo $type == 'internet' ? 'md:grid-cols-6' :
  dtable ">
                             <div class="tborder">
                                 <div>
-                                    <p class="tb_heading"><a target="_blank" href="<?php the_permalink()?>">
+                                    <p class="tb_title"><a target="_blank" href="<?php the_permalink()?>">
                                             <?php the_title()?> </a> </p>
                                 </div>
                             </div>
