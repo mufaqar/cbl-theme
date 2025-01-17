@@ -744,6 +744,14 @@ $query_fast = new WP_Query($query_args_fast);
                         </div>
                         <?php endif ?>
 
+                        <?php if (in_array($type, ['internet'])) : ?>
+                        <div class="tborder">
+                            <h4 class="tabbox_title">
+                                <?php echo $type === 'internet' ? 'Upload Speed' : 'Upload Speed'; ?>
+                            </h4>
+                        </div>
+                        <?php endif ?>
+
                         <div class="tborder">
                             <div>
                                 <h4 class="tabbox_title"> Price</h4>
@@ -787,6 +795,7 @@ $query_fast = new WP_Query($query_args_fast);
                                         $channels =  $services['channels'];
                                         $summary_speed =  $services['summary_speed'];
                                         $connection_type =  $services['connection_type'];
+                                        $upload_speed =  $services['upload_speed'];
                                         $summary_features =  $services['summary_features'];
                                         $features = $services['summary_features'];
                                         $features_items  = explode(',', $features); 
@@ -825,6 +834,14 @@ $query_fast = new WP_Query($query_args_fast);
                                 </div>
                             </div>
                             <?php endif ?>
+
+                            <?php if (in_array($type, ['internet'])) : ?>
+                        <div class="tborder">
+                            <h4 class="tabbox_title">
+                                <?php echo $upload_speed ?>
+                            </h4>
+                        </div>
+                        <?php endif ?>
                             <div class="tborder">
                                 <div>
                                     <p class="tb_heading">$<?php echo $price ?>/mo</p>
