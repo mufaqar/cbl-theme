@@ -359,7 +359,7 @@ $query_fast = new WP_Query($query_args_fast);
             </h2>
         </div>
         <div
-            class="md:w-full min-w-fit grid  bg-[#215690] <?php if ($type !== 'home-security'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> htable">
+            class="md:w-full min-w-fit grid  bg-[#215690] grid-cols-3 htable">
             <div class="tborder">
                 <div>
                     <h4 class="tabbox_title">Provider</h4>
@@ -400,7 +400,7 @@ $query_fast = new WP_Query($query_args_fast);
             <div class="w-full lg:max-w-[1200px] mx-auto h-auto ">
                 <div class="w-full h-auto flex md:flex-col flex-row items-stretch">
                     <div
-                        class="md:w-full w-full grid <?php if ($type !== 'home-security'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> dtable">
+                        class="md:w-full w-full grid grid-cols-3 dtable">
                         <div class="tborder">
                             <div>
                                 <p class="tb_heading"><a target="_blank"
