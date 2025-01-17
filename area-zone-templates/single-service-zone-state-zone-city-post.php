@@ -806,10 +806,10 @@ $query_fast = new WP_Query($query_args_fast);
                                     ?>
                         <div
                             class="min-w-[120px] md:w-full grid <?php 
-echo $type == 'internet' ? 'md:grid-cols-6' : 
-    ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5');
-?>
- dtable ">
+                                echo $type == 'internet' ? 'md:grid-cols-6' : 
+                                    ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5');
+                                ?>
+                                    dtable ">
                             <div class="tborder">
                                 <div>
                                     <p class="tb_title"><a target="_blank" href="<?php the_permalink()?>">

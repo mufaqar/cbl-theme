@@ -61,7 +61,7 @@
                             <div class="border-b grid items-center justify-center p-5 px-3">
                                 <?php  display_features_list($features_items);   ?>
                             </div>
-                            <div class="  border-b grid items-center justify-center p-5">
+                            <div class="border-b grid items-center justify-center p-5">
                                 <div>
                                     <p class="tch">Pricing starts from</p>
                                     <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl"> $<?php echo $price; ?> </span> /mo.</p>

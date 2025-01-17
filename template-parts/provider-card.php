@@ -28,6 +28,7 @@ $phone =  $services['phone'];
 $view_link =  $services['view_more'];
 $deals =  $services['deals'];
 $features = $services['features'];
+$pacakge_info = $services['pacakge_info'];
 $features_items  = explode(',', $features); 
 
 
@@ -73,6 +74,10 @@ $features_items  = explode(',', $features);
                     <p class="tch">Pricing starts from</p>
                     <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl">
                             $<?php echo $price; ?> </span> /mo.</p>
+                            <?php if (in_array($type, ['landline'])) : ?>
+                            <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl">
+                            <?php echo $pacakge_info; ?> </span></p>
+                            <?php endif; ?>
                 </div>
             </div>
             <?php echo render_provider_buttons($phone, $view_link); ?>
