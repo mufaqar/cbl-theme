@@ -65,4 +65,8 @@ html {
   .ctborder h4 {
     @apply md:text-base text-xs text-center text-white;
   }
+
+  ul.PClass {
+    @apply list-disc list-inside;
+  }
 }
