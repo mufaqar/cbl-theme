@@ -850,24 +850,27 @@
 
 <?php endif; ?>
 
-<?php if (empty($pros)) { ?>
-
+<?php if (!empty($pros) || !empty($cons)) { ?>
 <section class="mt-8">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 grid-cols-1">
+            <?php if (!empty($pros)) { ?>
             <div class="bg-gray-200 p-8 pros">
                 <h2 class="text-2xl font-bold mb-4">Pros</h2>
-                <?php echo $pros ?>
+                <?php echo esc_html($pros); ?>
             </div>
+            <?php } ?>
+            <?php if (!empty($cons)) { ?>
             <div class="bg-gray-100 p-8 cons">
                 <h2 class="text-2xl font-bold mb-4">Cons</h2>
-                <?php echo $cons ?>
+                <?php echo esc_html($cons); ?>
             </div>
+            <?php } ?>
         </div>
     </div>
 </section>
-
 <?php } ?>
+
 
 
 <?php if( have_rows('faq’s') ): ?>
