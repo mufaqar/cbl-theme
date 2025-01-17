@@ -728,10 +728,9 @@ $query_fast = new WP_Query($query_args_fast);
                     class="w-full h-auto shadow-xl border rounded-t-md rounded-b-md flex md:flex-col flex-row items-stretch">
                     <div
                         class="md:w-full min-w-[50px] grid <?php 
-echo $type == 'internet' ? 'md:grid-cols-6' : 
-    ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5');
-?>
- grid-cols-1 bg-[#215690] htable">
+                        echo $type == 'internet' ? 'md:grid-cols-7' : 
+                            ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-7');
+                        ?> grid-cols-1 bg-[#215690] htable">
                         <div class="tborder">
                             <h4 class="tabbox_title">Provider</h4>
                         </div>
@@ -807,8 +806,8 @@ echo $type == 'internet' ? 'md:grid-cols-6' :
                                     ?>
                         <div
                             class="min-w-[120px] md:w-full grid <?php 
-echo $type == 'internet' ? 'md:grid-cols-6' : 
-    ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-5');
+echo $type == 'internet' ? 'md:grid-cols-7' : 
+    ($type == 'home-security' || $type == 'landline' ? 'md:grid-cols-4' : 'md:grid-cols-6');
 ?>
  dtable ">
                             <div class="tborder">
@@ -855,7 +854,7 @@ echo $type == 'internet' ? 'md:grid-cols-6' :
                                     <p class="tb_heading">$<?php echo $price ?>/mo</p>
                                 </div>
                             </div>
-                            <div class="tborder">
+                            <div class="tborder col-span-2">
                                 <?php echo render_provider_buttons("", $view_link); ?>
                             </div>
                         </div>
