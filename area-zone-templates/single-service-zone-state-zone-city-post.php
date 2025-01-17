@@ -795,7 +795,7 @@ $query_fast = new WP_Query($query_args_fast);
                                        $view_link =  $services['view_more'];
                                        
                                         $price =  $services['price'];
-                                        $channels =  $services['channels'];
+                                        $channels =  $services['channels']."+";
                                         $summary_speed =  $services['summary_speed'];
                                         $connection_type =  $services['connection_type'];
                                         $upload_speed =  $services['upload_speed'];
