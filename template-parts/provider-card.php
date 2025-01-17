@@ -71,7 +71,7 @@ $features_items  = explode(',', $features);
             </div>
             <div class="md:border-r border-r-0 md:border-b-0 border-b grid items-center justify-center p-5">
                 <div>
-                    <p class="tch">Pricing starts from</p>
+                    <p class="tch"> <?php echo $type == 'home-security'  ? 'Monitoring' : 'Pricing'; ?> starts from  </p>
                     <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl">
                             $<?php echo $price; ?> </span> /mo.</p>
                             <?php if (in_array($type, ['landline'])) : ?>
