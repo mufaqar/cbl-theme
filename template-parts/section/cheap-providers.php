@@ -166,9 +166,9 @@
                     </div>
                     <?php if (!in_array($type, ['landline', 'home-security'])) : ?>
                     <div class="tborder">
-                        <p class="tb_title">
+                       
                             <?php echo $type === 'tv' ? $channels."+" : $cheap_speed." Mbps"; ?>
-                        </p>
+                     
                     </div>
                     <?php endif ?>
                     <?php if ($type !== 'home-security') : ?>

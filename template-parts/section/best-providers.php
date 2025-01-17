@@ -110,9 +110,9 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-center md:p-5 p-2">
-                    <p class="tb_title">
+                    
                         <?php echo esc_html($item['recommend']); ?>
-                    </p>
+                  
                 </div>
             </div>
             <?php endforeach; ?>
