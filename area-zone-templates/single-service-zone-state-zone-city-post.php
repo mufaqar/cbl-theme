@@ -790,7 +790,7 @@ $query_fast = new WP_Query($query_args_fast);
                                             $services = $servicesInfo["home_security_services"];
                                         }
 
-                                  // print_r($services);
+                                     //  print_r($services);
                                        $phone =  $services['phone'];
                                        $view_link =  $services['view_more'];
                                        
@@ -844,9 +844,9 @@ echo $type == 'internet' ? 'md:grid-cols-6' :
 
                             <?php if (in_array($type, ['internet'])) : ?>
                         <div class="tborder">
-                            <h4 class="tabbox_title">
-                                <?php echo $upload_speed."Mbps" ?>
-                            </h4>
+                           
+                                <?php echo $upload_speed ?>
+                           
                         </div>
                         <?php endif ?>
                             <div class="tborder">
