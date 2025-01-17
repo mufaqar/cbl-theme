@@ -850,6 +850,8 @@
 
 <?php endif; ?>
 
+<?php if (empty($pros)) { ?>
+
 <section class="mt-8">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 grid-cols-1">
@@ -865,8 +867,10 @@
     </div>
 </section>
 
+<?php } ?>
 
 
+<?php if( have_rows('faq’s') ): ?>
 
 <section class="my-16">
     <div class="container mx-auto px-4">
@@ -905,7 +909,7 @@
         </div>
     </div>
 </section>
-
+<?php endif; ?>
 <?php if($disclambers){ ?>
 <section class="container mx-auto mt-6 px-4 mb-10">
     <div class="">
