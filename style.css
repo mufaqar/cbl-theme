@@ -69,4 +69,8 @@ html {
   ul.PClass {
     @apply list-disc list-inside;
   }
+
+  .block_heading {
+    @apply text-2xl font-bold;
+  }
 }

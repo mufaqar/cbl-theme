@@ -769,6 +769,12 @@ ul.PClass {
   list-style-type: disc;
 }
 
+.block_heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
