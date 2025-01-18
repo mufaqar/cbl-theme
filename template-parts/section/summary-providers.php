@@ -11,7 +11,7 @@
 
             <?php if ( $type === 'internet'): ?>
             <p class="PClass"> When it comes to finding Internet service provider, <?php echo $city ?>,
-                <?php echo $state ?> is served by a robust selection of home phone service providers each with its own
+                <?php echo $state ?> is served by a robust selection of internet providers each with its own
                 strengths. Whether you prioritize speed, affordability, or reliability, you can find internet providers
                 in <?php echo $city ?>, <?php echo $state ?> that suit your specific needs. Compare the available
                 options,
