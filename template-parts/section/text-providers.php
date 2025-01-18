@@ -65,37 +65,22 @@
                 provider’s quality. We look at a number of amenities and services to ensure you are only getting the
                 best landline phone service. That may include any combination of:
             </p>
-            <ul>
-                <li>• Internet Requirements: Do the landline home phone service providers in Glendale, CA, require you
+            <ul class="PClass">
+                <li>Internet Requirements: Do the landline home phone service providers in Glendale, CA, require you
                     to have internet access to install or use the lines being offered? </li>
-                <li>• Hidden Fees & Taxes: Does signing up for the landline home service providers mean paying hidden
+                <li>Hidden Fees & Taxes: Does signing up for the landline home service providers mean paying hidden
                     fees that increase over time or are there any local taxes not worked into the monthly price
                     advertised? </li>
-                <li>• Audio Quality: Are you getting pristine audio for your landline service so you can easily hear
+                <li>Audio Quality: Are you getting pristine audio for your landline service so you can easily hear
                     people on the other end of the line, regardless of where they are in the world? </li>
-                <li>• Transparent Pricing & Contracts: Do the telephone service providers require extended contracts?
+                <li>Transparent Pricing & Contracts: Do the telephone service providers require extended contracts?
                     What about pricing? Is the total price you pay broken down into what you’re receiving in a clear and
                     transparent way? </li>
-                <li>• Real Customer Support: If you have an issue with your home phone line, will you speak with a human
+                <li>Real Customer Support: If you have an issue with your home phone line, will you speak with a human
                     representative for the service provider instead of a robot or audio prompts? </li>
             </ul>
         </div>
 
-        <div class="mb-10">
-            <h2 class="text-2xl font-bold mb-2">
-                Get the Best Landline Phone Service in <span class="text-[#ef9831]"><?php echo $city?>, <span
-                        class="uppercase"><?php echo $state?></span></span>
-            </h2>
-            <p class="PClass">
-                Stop wasting time pouring through hours of overly hyped online marketing and get the trusted comparison
-                our professional agents provide. At CableMovers, we save you time and money by uncovering the home phone
-                service providers in Glendale, CA perfect for your unique personal and business needs.
-            </p>
-            <p class="PClass">
-                Call our agents today, and let’s find the perfect landline solution whether you’ve just moved to the
-                area or need a 24/7 connection to friends, family, and emergency services. Together, we can find an
-                affordable and amenity-rich telephone service provider you can count on. </p>
-        </div>
     </div>
 </section>
 <?php else: ?>
