@@ -136,7 +136,9 @@
         endif;
         
         set_query_var('query_compair', $query_compair);
+        if ($type !== 'landline') :   
         set_query_var('providers_query', $query); get_template_part( 'template-parts/section/compair', 'providers' );
+    endif;
         get_template_part( 'template-parts/section/text', 'providers' );
         set_query_var('providers_query', $query);get_template_part( 'template-parts/section/summary', 'providers' ); 
         if ($type !== 'home-security') :      
