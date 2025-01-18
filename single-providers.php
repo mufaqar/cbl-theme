@@ -726,7 +726,7 @@ if (is_singular('providers')) {
         <div class="mb-10">
             <h2 class="text-2xl font-bold">
                 <?php echo the_title(); ?>
-                Home Security Bundles
+                Home Security Plans
             </h2>
             <div class="w-fit hint mx-auto block md:hidden mt-5">Swipe Left to See All →</div>
         </div>
