@@ -19,7 +19,7 @@
     $city = FormatData($city);
     $state = strtoupper($state);
     $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
-    $fast_provider_details = Fast_Provider_Details($provider_ids);
+    $fast_provider_details = Fast_Provider_Details($provider_ids, $type);
     $cheap_provider_details = Cheap_provider_details($provider_ids,$type);
     $Best_Provider_Details = Best_Provider_Details($provider_ids);
     set_query_var('fast_provider_details', $fast_provider_details);

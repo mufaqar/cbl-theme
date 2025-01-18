@@ -438,15 +438,18 @@ function count_service_types($provider_ids) {
     }
 }
 
-function Fast_Provider_Details($provider_ids) {
-    $provider_details = array(); // Initialize an empty array to hold each provider's details
-
+function Fast_Provider_Details($provider_ids, $type) {
+    $provider_details = array(); 
+    
     if (!empty($provider_ids)) {      
         $query_args = array(
             'post_type'      => 'providers',
             'posts_per_page' => 3, 
             'post__in'       => $provider_ids, 
-            'orderby'        => 'post__in',             
+            'orderby'        => 'post__in',  
+            'orderby'        => 'meta_value_num', 
+            'meta_key'       => 'services_info_'.$type.'_services_price',
+            'order'          => 'ASC',               
         );
         
         $query = new WP_Query($query_args);
@@ -455,7 +458,7 @@ function Fast_Provider_Details($provider_ids) {
             while ($query->have_posts()) {
                 $query->the_post();
                 $title = get_the_title(); 
-                $speed = get_post_meta(get_the_ID(), 'services_info_internet_services_speed', true); // Replace with actual meta key for speed
+                $speed = get_post_meta(get_the_ID(), 'services_info_'.$type.'_services_speed', true); // Replace with actual meta key for speed
                 $price = get_post_meta(get_the_ID(), 'pro_price', true); // Replace with actual meta key for price
                 
                 // Append each provider's details as an associative array to the $provider_details array
