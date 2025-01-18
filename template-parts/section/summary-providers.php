@@ -165,9 +165,11 @@
                                 <p class="tb_heading">$<?php echo $price ?>/mo</p>
                             </div>
                         </div>
+                        <div class="tborder">
                         <?php if (in_array($type, ['landline', 'home-security'])) : ?>
                         <?php echo render_provider_phone( $view_link); ?>
                         <?php endif ?>
+                        </div>
 
                     </div>
                     <?php
