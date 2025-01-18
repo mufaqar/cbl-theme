@@ -45,7 +45,7 @@ If you want to save a few extra bucks on your cable TV service choose from the f
 
             <?php elseif ($type === 'landline'): ?>
 
-            <p class="PClass"> Our recommendation for the cheap landline provider in Glendale, CA is
+            <p class="PClass"> Our recommendation for the cheap landline provider in <?php echo $city; ?>, <?php echo $state; ?> is
                 <?php echo $cheap_providers[0]['title']; ?>. Starting at just
                 <?php echo $cheap_providers[0]['price']; ?> per month would give you unlimited nationwide
                 calling, readable voicemail using transcription services as well as three-way calling when you need to
@@ -58,10 +58,10 @@ If you want to save a few extra bucks on your cable TV service choose from the f
                 service and doesn’t lock
                 its customer in contracts and in most cases; landline phone has to be bundled with high speed internet.
                 International calling packages are available as an ad-on.</p>
-            <p class="PClass">While we rank the different landline providers in Glendale, CA, by their amenities and
+            <p class="PClass">While we rank the different landline providers in <?php echo $city; ?>, <?php echo $state; ?> by their amenities and
                 support, we also provide a detailed list of top services based on price. This way, you always have an
                 affordable solution for a new home landline. Below is our list of the cheap home phone providers in
-                Glendale, CA we know you can trust. Each meets our unique quality, support, price, and dependability
+                <?php echo $city; ?>, <?php echo $state; ?> we know you can trust. Each meets our unique quality, support, price, and dependability
                 criteria, so you won’t suffer dropped calls or spotty local service. </p>
 
             <?php elseif ($type === 'home-security'): ?>
