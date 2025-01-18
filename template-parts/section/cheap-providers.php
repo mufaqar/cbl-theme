@@ -26,7 +26,7 @@
             <p class="PClass">
                 <?php echo $cheap_providers[1]['title']; ?> is another cheap internet service option offering high speed
                 internet
-                plans as low as <?php echo $cheap_providers[0]['price']; ?> per month to fit into any budget. To help
+                plans as low as <?php echo $cheap_providers[1]['price']; ?> per month to fit into any budget. To help
                 you choose the right internet
                 provider for your home we have listed all providers available in <?php echo $city ?> and sorted them by
                 price (low to high).
