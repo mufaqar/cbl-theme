@@ -448,8 +448,8 @@ function Fast_Provider_Details($provider_ids, $type) {
             'post__in'       => $provider_ids, 
             'orderby'        => 'post__in',  
             'orderby'        => 'meta_value_num', 
-            'meta_key'       => 'services_info_'.$type.'_services_price',
-            'order'          => 'ASC',               
+            'meta_key'       => 'services_info_'.$type.'_services_summary_speed',
+            'order'          => 'DESC',               
         );
         
         $query = new WP_Query($query_args);

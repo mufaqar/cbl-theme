@@ -1,5 +1,8 @@
 <?php 
     $fast_providers = get_query_var('fast_provider_details'); 
+
+
+   // var_dump($fast_providers);
     $city = FormatData($city);
     $state = strtoupper($state);
 
