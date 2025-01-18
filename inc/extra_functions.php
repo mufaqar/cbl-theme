@@ -458,8 +458,8 @@ function Fast_Provider_Details($provider_ids, $type) {
             while ($query->have_posts()) {
                 $query->the_post();
                 $title = get_the_title(); 
-                $speed = get_post_meta(get_the_ID(), 'services_info_'.$type.'_summary_speed', true); // Replace with actual meta key for speed
-                $price = get_post_meta(get_the_ID(), 'fast_price', true); // Replace with actual meta key for price
+                $speed = get_post_meta(get_the_ID(), 'services_info_'.$type.'_services_summary_speed', true); //services_info_internet_services_summary_speed
+                $price = get_post_meta(get_the_ID(), 'services_info_'.$type.'_services_fast_price', true); // Replace with actual meta key for price
                 
                 // Append each provider's details as an associative array to the $provider_details array
                 $provider_details[] = array(
