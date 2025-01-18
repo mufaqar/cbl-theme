@@ -559,13 +559,15 @@ function Cheap_provider_details($provider_ids, $type) {
                 $query->the_post();
                 $title = get_the_title(); 
                 $speed = get_post_meta(get_the_ID(), 'services_info_'.$type.'_services_speed', true); // Replace with actual meta key for speed
-                $price = get_post_meta(get_the_ID(), 'services_info_'.$type.'_services_price', true); // Replace with actual meta key for price
+                $price = get_post_meta(get_the_ID(), 'services_info_'.$type.'_services_price', true); 
+                $channels = get_post_meta(get_the_ID(), 'services_info_internet_tv_bundles_channels', true);//services_info_internet_tv_bundles_channels
                 
                 // Append each provider's details as an associative array to the $provider_details array
                 $provider_details[] = array(
                     'title' => $title,
                     'speed' => $speed ? $speed . ' Mbps' : 'N/A',
-                    'price' => $price ? '$' . $price : 'N/A'
+                    'price' => $price ? '$' . $price : 'N/A',
+                    'channel' => $channel ?  $channel.'+' : 'N/A'
                 );
             }
             wp_reset_postdata(); 
