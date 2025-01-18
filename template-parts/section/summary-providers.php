@@ -166,7 +166,7 @@
                             </div>
                         </div>
                         <?php if (in_array($type, ['landline', 'home-security'])) : ?>
-                        <?php echo render_provider_buttons($phone, $view_link); ?>
+                        <?php echo render_provider_phone( $view_link); ?>
                         <?php endif ?>
 
                     </div>

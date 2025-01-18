@@ -66,7 +66,7 @@
                 best landline phone service. That may include any combination of:
             </p>
             <ul class="PClass">
-                <li>Internet Requirements: Do the landline home phone service providers in Glendale, CA, require you
+                <li><strong>Internet Requirements:</strong> Do the landline home phone service providers in Glendale, CA, require you
                     to have internet access to install or use the lines being offered? </li>
                 <li>Hidden Fees & Taxes: Does signing up for the landline home service providers mean paying hidden
                     fees that increase over time or are there any local taxes not worked into the monthly price
