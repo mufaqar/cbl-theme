@@ -84,8 +84,8 @@
                 cater to the needs of heavy internet users, streamers and online gamers.</p>
             <p class="PClass"><?php echo $fast_providers[1]['title']; ?> internet is renowned for its
                 high speed capabilities making it an excellent choice for gamers and streamers. With download speeds of
-                up to <?php echo $fast_providers[0]['speed']; ?> making it one of the fastest internet service provider
-                in <?php echo $city ?>. Price begins at <?php echo $fast_providers[0]['price']; ?> per month.</p>
+                up to <?php echo $fast_providers[1]['speed']; ?> making it one of the fastest internet service provider
+                in <?php echo $city ?>. Price begins at <?php echo $fast_providers[1]['price']; ?> per month.</p>
             <p class="PClass">Take a look at the fastest internet providers in your area sorted by
                 speed (high to low). </p>
             <?php elseif ($type === 'tv'): ?>
