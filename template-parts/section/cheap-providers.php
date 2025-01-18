@@ -33,7 +33,7 @@
             </p>
             <?php elseif ($type === 'tv'): ?>
             <p class="PClass">
-                CableMovers has compiled a list of cheap TV service providers in  <?php echo $city; ?>,  <?php echo $state; ?> and choose <?php echo $cheap_providers[0]['title']; ?>  as the best cheap cable TV provider. <?php echo $cheap_providers[0]['title']; ?> TV package cost  <?php echo $cheap_providers[0]['price']; ?> per month and provides over  <?php echo $cheap_providers[0]['channel']; ?> channels. Most of these channels are HD (High Definition) and include channels like CNN, USA, Hallmark, HGTV, Food Network, TNT, Bravo, ESPN, 
+                CableMovers has compiled a list of cheap TV service providers in  <?php echo $city; ?>,  <?php echo $state; ?> and choose <?php echo $cheap_providers[0]['title']; ?>  as the best cheap cable TV provider. <?php echo $cheap_providers[0]['title']; ?> TV package cost  <?php echo $cheap_providers[0]['price']; ?> per month and provides over  <?php echo $cheap_providers[0]['channels']; ?> channels. Most of these channels are HD (High Definition) and include channels like CNN, USA, Hallmark, HGTV, Food Network, TNT, Bravo, ESPN, 
             <p>
            
 

@@ -567,7 +567,7 @@ function Cheap_provider_details($provider_ids, $type) {
                     'title' => $title,
                     'speed' => $speed ? $speed . ' Mbps' : 'N/A',
                     'price' => $price ? '$' . $price : 'N/A',
-                    'channel' => $channel ?  $channel.'+' : 'N/A'
+                    'channels' => $channels ?  $channels.'+' : 'N/A'
                 );
             }
             wp_reset_postdata(); 
