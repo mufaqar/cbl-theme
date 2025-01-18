@@ -871,13 +871,13 @@ if (is_singular('providers')) {
             <?php if (!empty($pros)) { ?>
             <div class="bg-gray-200 p-8 pros">
                 <h2 class="text-2xl font-bold mb-4">Pros</h2>
-                <?php echo esc_html($pros); ?>
+                <?php echo ($pros); ?>
             </div>
             <?php } ?>
             <?php if (!empty($cons)) { ?>
             <div class="bg-gray-100 p-8 cons">
                 <h2 class="text-2xl font-bold mb-4">Cons</h2>
-                <?php echo esc_html($cons); ?>
+                <?php echo ($cons); ?>
             </div>
             <?php } ?>
         </div>
