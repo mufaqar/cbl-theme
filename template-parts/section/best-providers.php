@@ -137,7 +137,7 @@
             </p>
             <p class="PClass">
                 Another pick for the area is <?php echo $Best_Provider_Details_Second['title']; ?>, featuring a max download speed of up
-                to  <?php echo $Best_Provider_Details['speed']; ?>Mbps. Starting at just <?php echo $Best_Provider_Details['price']; ?>/mo and is a remarkable choice for
+                to  <?php echo $Best_Provider_Details_Second['speed']; ?>Mbps. Starting at just <?php echo $Best_Provider_Details_Second['price']; ?>/mo and is a remarkable choice for
                 streaming, gaming and working from home as well.
             </p>
         </div>
