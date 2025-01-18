@@ -29,7 +29,7 @@
                 uncover new channels you may have never seen before. Instead of needing 5-8 different streaming services
                 to watch your favorite shows, you can use the provided remote to hop from CNN to Nickelodeon to ESPN to
                 a local news station. 
-                Glendale offers many top-ranked TV providers, with Spectrum, Dish, and DirecTV leading the charge. Each
+                Glendale offers many top-ranked TV providers with Dish and DirecTV leading the charge. Each
                 one provides competitive pricing and an expansive content library of channels to surf when relaxing.
             </p>
             
