@@ -19,26 +19,7 @@
             </p>
         </div>
 
-        <div class="mb-10">
-            <h2 class="text-2xl font-bold mb-2">
-                Why Use Cable Companies in <span class="text-[#ef9831]"><?php echo $city?>, <span
-                        class="uppercase"><?php echo $state?></span></span>
-            </h2>
-            <p class="PClass">
-                Using all the streaming services like Netflix and Hulu sounds like a great deal, but it starts to add up
-                over time. Instead of saving money, you’re paying more for endless streams, with prices only getting
-                higher.
-            </p>
-            <p class="PClass">
-                A quality cable TV provider offers the ability to DVR different shows, watch local events and news, and
-                uncover new channels you may have never seen before. Instead of needing 5-8 different streaming services
-                to watch your favorite shows, you can use the provided remote to hop from CNN to Nickelodeon to ESPN to
-                a local news station. </p>
-            <p class="PClass">
-                Glendale offers many top-ranked TV providers, with Spectrum, Dish, and DirecTV leading the charge. Each
-                one provides competitive pricing and an expansive content library of channels to surf when relaxing.
-            </p>
-        </div>
+        
 
         <div class="mb-10">
             <h2 class="text-2xl font-bold mb-2">
