@@ -34,7 +34,13 @@
             <?php elseif ($type === 'tv'): ?>
             <p class="PClass">
                 CableMovers has compiled a list of cheap TV service providers in  <?php echo $city; ?>,  <?php echo $state; ?> and choose <?php echo $cheap_providers[0]['title']; ?>  as the best cheap cable TV provider. <?php echo $cheap_providers[0]['title']; ?> TV package cost  <?php echo $cheap_providers[0]['price']; ?> per month and provides over  <?php echo $cheap_providers[0]['channels']; ?> channels. Most of these channels are HD (High Definition) and include channels like CNN, USA, Hallmark, HGTV, Food Network, TNT, Bravo, ESPN, 
-            <p>
+            
+            Discovery and Cartoon Network etc. A DVR service is available to record anything you want and a TV App access to watch your favorite shows and movies on the go.
+            </p><p class="PClass">
+Another Cheap TV service option is <?php echo $cheap_providers[1]['title']; ?> which is a <?php echo $cheap_providers[1]['connection']; ?> based Cable TV provider. <?php echo $cheap_providers[1]['price']; ?> is advertised at {insert price} per month with over <?php echo $cheap_providers[1]['channels']; ?> plus channels including your locals and top movies, sports, news, music and lifestyle channels. A DVR (Digital Video Recorder) is included in the service free of charge and can record multiple shows at any given time. 
+</p><p class="PClass">
+If you want to save a few extra bucks on your cable TV service choose from the following providers sorted by price low to high.
+
            
 
             <?php elseif ($type === 'landline'): ?>
