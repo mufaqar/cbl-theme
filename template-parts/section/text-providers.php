@@ -68,15 +68,15 @@
             <ul class="PClass">
                 <li><strong>Internet Requirements:</strong> Do the landline home phone service providers in Glendale, CA, require you
                     to have internet access to install or use the lines being offered? </li>
-                <li>Hidden Fees & Taxes: Does signing up for the landline home service providers mean paying hidden
+                    <li><strong>Hidden Fees & Taxes: Does signing up for the landline home service providers mean paying hidden
                     fees that increase over time or are there any local taxes not worked into the monthly price
                     advertised? </li>
-                <li>Audio Quality: Are you getting pristine audio for your landline service so you can easily hear
+                    <li><strong>Audio Quality:</strong>  Are you getting pristine audio for your landline service so you can easily hear
                     people on the other end of the line, regardless of where they are in the world? </li>
-                <li>Transparent Pricing & Contracts: Do the telephone service providers require extended contracts?
+                    <li><strong>Transparent Pricing & Contracts:</strong>  Do the telephone service providers require extended contracts?
                     What about pricing? Is the total price you pay broken down into what you’re receiving in a clear and
                     transparent way? </li>
-                <li>Real Customer Support: If you have an issue with your home phone line, will you speak with a human
+                    <li><strong>Real Customer Support:</strong>  If you have an issue with your home phone line, will you speak with a human
                     representative for the service provider instead of a robot or audio prompts? </li>
             </ul>
         </div>
