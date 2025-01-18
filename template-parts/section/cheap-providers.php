@@ -47,13 +47,13 @@ If you want to save a few extra bucks on your cable TV service choose from the f
 
             <p class="PClass"> Our recommendation for the cheap landline provider in Glendale, CA is
                 <?php echo $cheap_providers[0]['title']; ?>. Starting at just
-                <?php echo $cheap_providers[1]['price']; ?> per month would give you unlimited nationwide
+                <?php echo $cheap_providers[0]['price']; ?> per month would give you unlimited nationwide
                 calling, readable voicemail using transcription services as well as three-way calling when you need to
                 catch up with friends and family members.
             <p>
             <p class="PClass"> <?php echo $cheap_providers[1]['title']; ?> is another pick for cheap landline provider
                 in <?php echo $city; ?>. Its landline service revolves around unlimited local calls for just
-                <?php echo $cheap_providers[0]['price']; ?> per month
+                <?php echo $cheap_providers[1]['price']; ?> per month
                 without any hidden fees or surcharges. <?php echo $cheap_providers[1]['title']; ?> offers month to month
                 service and doesn’t lock
                 its customer in contracts and in most cases; landline phone has to be bundled with high speed internet.
