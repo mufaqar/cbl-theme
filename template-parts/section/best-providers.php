@@ -157,7 +157,7 @@
                 speed internet.
             </p>
             <p class="PClass">
-            <?php echo $Best_Provider_Details['title']; ?> is another best landline phone option in <?php echo $city ?> <?php echo $state ?>.
+            <?php echo $Best_Provider_Details_Second['title']; ?> is another best landline phone option in <?php echo $city ?> <?php echo $state ?>.
                 It offers crystal clear voice quality for just <?php echo $Best_Provider_Details_Second['price']; ?> per month with features like unlimited
                 nationwide calling, Caller ID on TV, Readable Voicemail. Upon signing up, you’ll have an option to get a
                 new local telephone number or request to keep your existing number. Additionally, it allows you to block
