@@ -499,6 +499,7 @@ function Best_Provider_Details($provider_ids) {
             'post__in'       => $provider_ids, 
             'orderby'        => 'post__in',             
         );
+      
         
         $query = new WP_Query($query_args);
         
@@ -507,7 +508,7 @@ function Best_Provider_Details($provider_ids) {
                 $query->the_post();
                 $title = get_the_title(); 
                 $speed = get_post_meta(get_the_ID(), 'services_info_internet_services_summary_speed', true); // Replace with actual meta key for speed
-                $price = get_post_meta(get_the_ID(), 'pro_price', true); // Replace with actual meta key for price
+                $price = get_post_meta(get_the_ID(), 'services_info_landline_services_price', true); // Replace with actual meta key for price
                 
                 // Append each provider's details as an associative array to the $provider_details array
                 $provider_details[] = array(
