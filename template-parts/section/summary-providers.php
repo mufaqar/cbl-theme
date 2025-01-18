@@ -122,7 +122,7 @@
                         class="min-w-[120px] md:w-full grid <?php echo $type == 'home-security' || $type == 'landline' ? 'md:grid-cols-6' : 'md:grid-cols-7'; ?> grid-cols-1  dtable">
                         <div class="tborder">
                             <div>
-                                <p class="tb_heading"><a target="_blank" href="<?php the_permalink()?>">
+                                <p class="tb_title"><a target="_blank" href="<?php the_permalink()?>">
                                         <?php the_title()?> </a></p>
                             </div>
                         </div>
