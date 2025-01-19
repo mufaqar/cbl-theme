@@ -1,5 +1,7 @@
 <!-- Text Sections for TV -->
 <?php 
+   $city = FormatData($city);
+   $state = strtoupper($state); 
     if ($type === 'tv'): ?>
 <section class="my-16">
     <div class="container mx-auto px-4">
