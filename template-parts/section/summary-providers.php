@@ -6,7 +6,7 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold">Summary of <?php echo FormatData($type) ?> Providers in <span
+            <h2 class="text-2xl font-bold">Summary of <?php echo FormatData($type) ?> <?php echo get_display_text_by_type($type); ?> in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
 
             <?php if ( $type === 'internet'): ?>

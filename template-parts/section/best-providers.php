@@ -172,8 +172,8 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="">
-            <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> Service <?php echo get_display_text_by_type($type); ?> in <span
-                    class="text-[#ef9831]"><?php echo $city ?> <?php echo $state ?></span></h2>
+            <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> <?php echo get_display_text_by_type($type); ?> in <span
+                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
             <p class="PClass">
                 Home is where your comfort resides, and you shouldn’t let your peace of mind be compromised by
                 unexpected burglaries and intrusions. But how can you protect your belongings and loved ones from those
