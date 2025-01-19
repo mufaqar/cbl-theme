@@ -77,28 +77,24 @@
 
     ?>
 
-
-
-
 <section class="min-h-[40vh] flex items-center bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
-                <?php echo FormatData($type) ?> Providers in<br />
+                <?php echo FormatData($type) ?> <?php echo get_display_text_by_type($type); ?>  in<br />
                 <span class="text-[#ef9831]"><?php echo $city?>, <?php echo $state?> </span>
             </h1>
             <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best <?php echo FormatData($type) ?>
-                Providers in your area:</p>
+            <?php echo get_display_text_by_type($type); ?>  in your area:</p>
             <?php get_template_part('template-parts/filter', 'form'); ?>
         </div>
     </div>
 </section>
 <?php get_template_part( 'template-parts/types', 'routing' ); ?>
-
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo FormatData($type) ?> Providers in 
+            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo FormatData($type) ?> <?php echo get_display_text_by_type($type); ?> in 
             <span class="text-[#ef9831]"><?php echo $city?>, <?php echo $state?> </span>
             </h2>
         </div>

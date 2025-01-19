@@ -147,7 +147,7 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="">
-            <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> Service Providers in <span
+            <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> Service <?php echo get_display_text_by_type($type); ?> in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
             <p class="PClass">
                 CableMovers choose <?php echo $Best_Provider_Details['title']; ?> as the best home phone provider in <?php echo $city ?>.  <?php echo $Best_Provider_Details['title']; ?> offers home phone service with variety of features such as Caller ID, Call
@@ -172,7 +172,7 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="">
-            <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> Service Providers in <span
+            <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> Service <?php echo get_display_text_by_type($type); ?> in <span
                     class="text-[#ef9831]"><?php echo $city ?> <?php echo $state ?></span></h2>
             <p class="PClass">
                 Home is where your comfort resides, and you shouldn’t let your peace of mind be compromised by
@@ -283,7 +283,7 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="">
-            <h2 class="text-2xl font-bold">Best Cable <?php echo FormatData($type) ?> Providers in <span
+            <h2 class="text-2xl font-bold">Best Cable <?php echo FormatData($type) ?> <?php echo get_display_text_by_type($type); ?> in <span
                     class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
 
             <p class="PClass"> While Dish is present in <?php echo $city ?>, we recommend DIRECTV for you entertainment

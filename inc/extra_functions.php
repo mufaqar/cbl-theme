@@ -702,3 +702,8 @@ add_action('manage_comments_custom_column', function($column, $comment_ID) {
     }
 }, 10, 2);
 
+
+function get_display_text_by_type($type) {
+    return $type === 'home-security' ? 'Systems' : 'Providers';
+}
+

@@ -103,7 +103,7 @@ $state = strtoupper($state);
 
 <section class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-2 mt-5 text-center">
-        Reviews for <?php echo FormatData($type) ?> Providers in <span class="text-[#ef9831]"> <span
+        Reviews for <?php echo FormatData($type) ?> <?php echo get_display_text_by_type($type); ?> in <span class="text-[#ef9831]"> <span
                 class="capitalize"><?php echo $city ?>, <?php echo $state ?></span></span>
     </h2>
     <div class="mt-5">
