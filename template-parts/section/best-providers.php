@@ -284,7 +284,7 @@
     <div class="container mx-auto px-4">
         <div class="">
             <h2 class="text-2xl font-bold">Best Cable <?php echo FormatData($type) ?> Providers in <span
-                    class="text-[#ef9831]"><?php echo $city ?> </span></h2>
+                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?> </span></h2>
 
             <p class="PClass"> While Dish is present in <?php echo $city ?>, we recommend DIRECTV for you entertainment
                 needs. DIRECTV offer a broad catalog of channels perfect for watching the latest local sports with
