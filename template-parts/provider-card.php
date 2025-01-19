@@ -75,7 +75,7 @@ $features_items  = explode(',', $features);
                     <p class="tcd"><span class="font-extrabold text-[#215690] font-[Roboto] text-xl">
                             $<?php echo $price; ?> </span> /mo.</p>
                             <?php if (in_array($type, ['landline'])) : ?>
-                            <p class="tch">
+                            <p class="tch text-sm">
                             <?php echo $pacakge_info; ?></p>
                             <?php endif; ?>
                 </div>
