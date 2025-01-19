@@ -93,6 +93,9 @@
 
 
 
+$city = FormatData($city);
+$state = strtoupper($state);
+
 ?>
 
 
