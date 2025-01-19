@@ -23,12 +23,23 @@
     $cheap_provider_details = Cheap_provider_details($provider_ids,$type);
     $Best_Provider_Details = Best_Provider_Details($provider_ids);
     set_query_var('fast_provider_details', $fast_provider_details);
-    set_query_var('cheap_provider_details', $cheap_provider_details);
+    set_query_var('cheap_provider_details', $Best_Provider_Details);
     set_query_var('Best_Provider_Details', $Best_Provider_Details);
 
 
     $total_provider = count($provider_ids);
     $total_services_type = count_service_types($provider_ids); 
+
+    if ($type == "home-security")
+{
+
+    $meta_type = "home_security";
+}
+else {
+    $meta_type = $type;
+}
+
+
 
     if (!empty($provider_ids)) {    
             $query_args = array(
@@ -53,7 +64,7 @@
                     'post__in'       => $provider_ids, 
                     'orderby'        => 'post__in', 
                     'orderby'        => 'meta_value_num', // Order by meta value as a number
-                 'meta_key'       => 'services_info_'.$type.'_services_price',      // The meta key to sort by
+                    'meta_key'       => 'services_info_'.$meta_type.'_services_price',      // The meta key to sort by
                     'order'          => 'ASC',             
                 );
                 $query_cheep = new WP_Query($query_args_cheep);
@@ -125,7 +136,9 @@
 <?php 
 
         get_template_part( 'template-parts/section/best', 'providers' ); 
-        set_query_var('providers_query', $query_cheep);get_template_part( 'template-parts/section/cheap', 'providers' );
+        set_query_var('cheap_provider_query', $query_cheep);
+        set_query_var('cheap_provider_details', $cheap_provider_details);
+        get_template_part( 'template-parts/section/cheap', 'providers' );
         if ($type === 'internet') :
             set_query_var('providers_query', $query_fast);
             get_template_part('template-parts/section/fast', 'providers');

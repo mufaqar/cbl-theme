@@ -540,8 +540,7 @@ function Best_Provider_Details($provider_ids) {
 
 
 function Cheap_provider_details($provider_ids, $type) {
-    $provider_details = array(); 
- 
+    $provider_details = array();  
     if (!empty($provider_ids)) {      
         $query_args = array(
             'post_type'      => 'providers',

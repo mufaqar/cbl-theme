@@ -18,8 +18,7 @@
                 consider your budget, and choose the one that fits your requirements for a seamless online experience.
             <p>
 
-            <?php elseif ( $type === 'tv'): ?>
-           
+            <?php elseif ( $type === 'tv'): ?>         
             
             <p class="PClass">
                 Using all the streaming services like Netflix and Hulu sounds like a great deal, but it starts to add up

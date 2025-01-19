@@ -1,7 +1,28 @@
 <?php 
     $cheap_providers = get_query_var('cheap_provider_details'); 
-    $city = FormatData($city);
+    
+
+
+  
+
+    if ($type == "home-security")
+    {
+    
+        $meta_type = "home_security";
+    }
+    else {
+        $meta_type = $type;
+    }
+    
+
+
+   
+  
+   $city = FormatData($city);
     $state = strtoupper($state);
+
+
+
 
 
 ?>
@@ -129,7 +150,7 @@ If you want to save a few extra bucks on your cable TV service choose from the f
         </div>
         <div class="grid shadow-xl">
             <?php
-                  $query_cheep = get_query_var('providers_query');
+                  $query_cheep = get_query_var('cheap_provider_query');
                     if ($query_cheep->have_posts()) {
                         while ($query_cheep->have_posts()) {
                             $query_cheep->the_post();
@@ -148,7 +169,7 @@ If you want to save a few extra bucks on your cable TV service choose from the f
                             }
                             
 
-                        //var_dump($services);
+                     // var_dump($services);
                         $price =  $services['price'];
                         $summary_speed =  $services['summary_speed'];
                         $channels =  $services['channels'];
