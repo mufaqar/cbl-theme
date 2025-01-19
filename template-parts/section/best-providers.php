@@ -162,7 +162,7 @@
                 nationwide calling, Caller ID on TV, Readable Voicemail. Upon signing up, you’ll have an option to get a
                 new local telephone number or request to keep your existing number. Additionally, it allows you to block
                 unwanted calls, forward select calls to another number when busy or forward all calls when you are away.
-                With {insert provider name} you can block your outbound caller ID and place a don not disturb sign if
+                With <?php echo $Best_Provider_Details_Second['title']; ?> you can block your outbound caller ID and place a don not disturb sign if
                 you do not wish to receive incoming calls.
             </p>
         </div>
