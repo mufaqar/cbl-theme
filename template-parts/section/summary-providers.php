@@ -37,9 +37,7 @@
                 <?php elseif ( $type === 'landline'): ?>
             <p class="PClass"> The next time you’re moving to the area or need to set up a dedicated landline service
                 for your side hustle, rely on our list of the top landline home service providers in the area. We do the
-                hard work for you so you can quickly get a landline and move on with your day.
-            <p>
-            <p class="PClass"> Whatever landline home service providers you choose, be sure to ask about bundled
+                hard work for you so you can quickly get a landline and move on with your day. Whatever landline home service providers you choose, be sure to ask about bundled
                 services. That is where our trained agents at CableMovers can help. Call us today, and we’ll compare all
                 the available telephone service providers in your area, finding the best deal and assisting with the
                 setup process.</p>

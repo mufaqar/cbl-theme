@@ -68,7 +68,7 @@
             <ul class="PClass">
                 <li><strong>Internet Requirements:</strong> Do the landline home phone service providers in Glendale, CA, require you
                     to have internet access to install or use the lines being offered? </li>
-                    <li><strong>Hidden Fees & Taxes: Does signing up for the landline home service providers mean paying hidden
+                    <li><strong>Hidden Fees & Taxes:</strong>  Does signing up for the landline home service providers mean paying hidden
                     fees that increase over time or are there any local taxes not worked into the monthly price
                     advertised? </li>
                     <li><strong>Audio Quality:</strong>  Are you getting pristine audio for your landline service so you can easily hear
