@@ -127,7 +127,7 @@
     <div class="container mx-auto px-4">
         <div class="">
             <h2 class="text-2xl font-bold">Best <?php echo FormatData($type) ?> Provider in <span
-                    class="text-[#ef9831]"><?php echo $city ?> <?php echo $state ?></span></h2>
+                    class="text-[#ef9831]"><?php echo $city ?>, <?php echo $state ?></span></h2>
             <p class="PClass">
                 Cable Movers hand picks <?php echo $Best_Provider_Details['title']; ?> as the best internet service
                 provider in <?php echo $city ?>. <?php echo $Best_Provider_Details['title']; ?> offers reliable high
