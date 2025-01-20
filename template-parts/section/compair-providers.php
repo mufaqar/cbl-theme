@@ -69,8 +69,6 @@ $state = strtoupper($state);
                                 $fields = [
                                     'Select Provider',
                                     'Installation Type',
-                                    'Home Automation',
-                                    'Mobile App',
                                     'Contract Term',
                                     'Setup Fee',
                                     'Early Termination Fee',
@@ -175,28 +173,15 @@ $state = strtoupper($state);
                                                     'broadcast_tv_fee' => "$".$services['broadcast_tv_fee'] ?? 'N/A',
                                                     'price' => "$".$services['price'] ?? 'N/A',
                                                 ];
-                                            } elseif ($type == 'landline') {
-                                                $services = $servicesInfo["landline_services"];
-                                                $data = [
-                                                    'connection_type' => $services['connection_type'] ?? 'N/A',
-                                                    'channels' => $services['channels']."+" ?? 'N/A',
-                                                    'free_premium_channels' => $services['free_premium_channels'] ?? 'N/A',
-                                                    'contract' => $services['contract'] ?? 'N/A',
-                                                    'setup_fee' => $services['setup_fee'] ?? 'N/A',
-                                                    'early_termination_fee' => $services['early_termination_fee'] ?? 'N/A',
-                                                    'broadcast_tv_fee' => $services['broadcast_tv_fee'] ?? 'N/A',
-                                                    'price' => $services['price'] ?? 'N/A',
-                                                ];
                                             } else {
                                                 $services = $servicesInfo["home_security_services"];
+                                             // var_dump($services);
                                                 $data = [
-                                                    'connection_type' => $services['connection_type'] ?? 'N/A',
-                                                    'channels' => $services['channels']."+" ?? 'N/A',
-                                                    'free_premium_channels' => $services['free_premium_channels']."+" ?? 'N/A',
-                                                    'contract' => $services['contract'] ?? 'N/A',
+                                                    'installation_type' => $services['installation_type'] ?? 'N/A',
+                                                    'contract' => $services['contract_term'] ?? 'N/A',
                                                     'setup_fee' => "$".$services['setup_fee'] ?? 'N/A',
                                                     'early_termination_fee' => "$".$services['early_termination_fee'] ?? 'N/A',
-                                                    'broadcast_tv_fee' => "$".$services['broadcast_tv_fee'] ?? 'N/A',
+                                                    'type_of_monitoring' => $services['type_of_monitoring'] ?? 'N/A',
                                                     'price' => "$".$services['price'] ?? 'N/A',
                                                 ];
                                             }
