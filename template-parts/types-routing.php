@@ -45,9 +45,26 @@ if ($state && $city && $zipcode) {
 
 <section class="bg-[#215690] py-4 shadow-sm border-y border-zinc-400/20 sticky top-0">
     <div class="container mx-auto px-4 flex md:flex-row flex-col gap-5 justify-between items-center">
-        <div class="text-white md:text-base text-xs">Explore Home Services in <?php echo $zipcode?> <?php if (!empty($city)): ?>
-    <?php echo FormatData($city); ?>,
-<?php endif; ?><?php echo strtoupper($state) ?> </div>
+        <div class="text-white md:text-base text-xs">Explore Home Services in 
+<?php if (empty($zipcode)): ?>
+    <?php if (!empty($city)): ?>
+        <?php echo FormatData($city); ?>,
+    <?php endif; ?>
+ 
+<?php endif; ?>
+
+<?php if (!empty($zipcode)): ?>
+    <?php echo $zipcode; ?>,
+    <?php endif; ?>
+
+
+
+<?php echo strtoupper($state) ?> 
+
+
+
+
+</div>
         <div>
             <ul class="flex md:gap-3 gap-1.5 items-center">
                 <?php foreach ($links as $label => $href): ?>
