@@ -279,6 +279,8 @@ function Generate_Description_For_City() {
     $city = get_query_var('zone_city', '');
     $zipcode = get_query_var('post_slug', '');
     $type = get_query_var('service', '');
+    $city = FormatData($city);
+    $state = strtoupper($state);
 
     $top_providers = implode(', ', array_map(function ($provider, $index) {
         return ($index + 1) . ". " . $provider['title']; // Add index number
@@ -297,36 +299,46 @@ function Generate_Description_For_City() {
 
 function Generate_Title_For_State() {
     global $wp_query;
+    global $total_provider; 
     $state = $wp_query->query_vars['zone_state'];
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
+    $state = strtoupper($state);
+
 
     if($type === "internet"){
-        return "High Speed $type Providers in $state | Cable Movers";
+        return "Best $total_provider Internet Providers in $state";
     } elseif ($type === "tv") {
-        return "Cable TV Providers in $state | Cable Movers";
+        return "Best $total_provider Cable TV Providers in $state";
     }elseif ($type === "landline") {
-        return "Landline Home Phone Service Providers in $state | Cable Movers";
+        return "Best $total_provider Landline Home Phone Providers Providers in $state";
     }elseif ($type === "home-security") {
-        return "Home Security Systems in $state | Cable Movers";
+        return "Best $total_provider Home Security System Providers in $state";
     }
 }
 
 function Generate_Description_For_State() {
+    global $Top_Provider_Details;
     $state = get_query_var('zone_state', '');
     $city = get_query_var('zone_city', '');
     $zipcode = get_query_var('post_slug', '');
     $type = get_query_var('service', '');
 
+    
+    $top_providers = implode(', ', array_map(function ($provider, $index) {
+        return ($index + 1) . ". " . $provider['title']; // Add index number
+    }, $Top_Provider_Details, array_keys($Top_Provider_Details)));
+
+
     if($type === "internet"){
-        return  "View all Internet service providers in $state. Compare Internet plans, prices and new promotions and pick the best provider that fits within your budget.";
+        return  "Home Internet Service Providers in $state. $top_providers";
     } elseif ($type === "tv") {
-        return "Compare Cable TV providers in $state. View Cable TV plans and deals and choose the best provider that fits within your budget";
+        return "Cable TV Service Providers in  $state. $top_providers";
     }elseif ($type === "landline") {
-        return "Find the best home phone service providers in $state. Compare providers, plans, prices and amenities to set your landline up.";
+        return "Landline Home Phone Service Providers in $state. $top_providers";
     }elseif ($type === "home-security") {
-        return "Find reliable, trustworthy, and affordable home security systems in $state and protect your property like never before.";
+        return "Home Security System Providers in  $state. $top_providers";
     }
 }
 
@@ -337,6 +349,8 @@ function Generate_Canonical_Tag($canonical) {
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
+
+
 
     if($zipcode){
         return home_url("/$type/$state/$city/$zipcode/");
