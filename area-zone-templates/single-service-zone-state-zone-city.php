@@ -6,8 +6,10 @@
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
-    
-
+    $zip_codes_to_search = get_zipcodes_by_city($city);
+    $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
+    $total_provider = count($provider_ids);    
+    $Top_Provider_Details = Top_Provider_Details($provider_ids, $type);
     add_filter('wpseo_title', 'Generate_Title_For_City');
     add_filter('wpseo_metadesc', 'Generate_Description_For_City');
     add_filter('wpseo_canonical', 'Generate_Canonical_Tag');
@@ -15,10 +17,10 @@
     get_header();
     
      
-    $zip_codes_to_search = get_zipcodes_by_city($city);
+   
     $city = FormatData($city);
     $state = strtoupper($state);
-    $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
+    
     $fast_provider_details = Fast_Provider_Details($provider_ids, $type);
     $cheap_provider_details = Cheap_provider_details($provider_ids,$type);
     $Best_Provider_Details = Best_Provider_Details($provider_ids);
@@ -27,7 +29,7 @@
     set_query_var('Best_Provider_Details', $Best_Provider_Details);
 
 
-    $total_provider = count($provider_ids);
+    
     $total_services_type = count_service_types($provider_ids); 
 
     if ($type == "home-security")

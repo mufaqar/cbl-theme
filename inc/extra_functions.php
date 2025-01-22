@@ -538,6 +538,46 @@ function Best_Provider_Details($provider_ids) {
     return $provider_details; // Return the array of provider details
 }
 
+function Top_Provider_Details($provider_ids) {
+    $provider_details = array(); // Initialize an empty array to hold each provider's details
+
+    if (!empty($provider_ids)) {      
+        $query_args = array(
+            'post_type'      => 'providers',
+            'posts_per_page' => 7, 
+            'post__in'       => $provider_ids, 
+            'orderby'        => 'post__in',             
+        );
+      
+        
+        $query = new WP_Query($query_args);
+        
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $title = get_the_title();
+                $provider_details[] = array(
+                    'title' => $title
+                );
+            }
+            wp_reset_postdata(); 
+        } else {
+            $provider_details[] = array(
+                'title' => 'No providers found.',
+            );
+        }
+    } else {
+        $provider_details[] = array(
+            'title' => 'No providers match the criteria.',
+            'speed' => 'N/A',
+            'price' => 'N/A'
+        );
+    }
+
+    return $provider_details; // Return the array of provider details
+}
+
+
 
 function Cheap_provider_details($provider_ids, $type) {
     $provider_details = array();  
