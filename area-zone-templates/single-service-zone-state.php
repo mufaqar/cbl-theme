@@ -11,9 +11,7 @@ $state = strtoupper($state);
 $zip_codes_to_search = get_zipcodes_by_state($state);
 $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
 $total_provider = count($provider_ids);    
-var_dump($total_provider);
 $Top_Provider_Details = Top_Provider_Details($provider_ids, $type);
-
 
 add_filter('wpseo_title', 'Generate_Title_For_State');
 add_filter('wpseo_metadesc', 'Generate_Description_For_State');
