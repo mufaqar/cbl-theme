@@ -54,6 +54,7 @@ function load_provider_data() {
             'setup_fee' => "$".$services['setup_fee'] ?? 'N/A',
             'early_termination_fee' => "$".$services['early_termination_fee'] ?? 'N/A',
             'type_of_monitoring' => $services['type_of_monitoring'] ?? 'N/A',
+            'equipment_cost' => "$".$services['equipment_cost'] ?? 'N/A',
             'price' => "$".$services['price'] ?? 'N/A',
                        
 
