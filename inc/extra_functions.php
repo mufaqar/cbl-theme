@@ -512,10 +512,6 @@ function Best_Provider_Details($provider_ids) {
                 $high_package_price = get_post_meta(get_the_ID(), 'services_info_tv_services_services_high_package_price', true); 
 
                 
-
-                
-                
-               
                 $provider_details[] = array(
                     'title' => $title,
                     'speed' => $speed ? $speed . ' ' : 'N/A',
