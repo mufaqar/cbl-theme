@@ -222,7 +222,7 @@
                     wirelessly control your devices, Indoor and Outdoor cameras along with Video Doorbell Camera or
                     Google Nest Doorbell to monitor the activity outside of your home.
                 </p>
-                <p class="PClass"> The monthly monitoring fee ranges from $<?php echo get_post_meta(42993, 'services_info_home_security_services_price', true); ?> to (insert high price) per
+                <p class="PClass"> The monthly monitoring fee ranges from $<?php echo get_post_meta(42989, 'services_info_home_security_services_price', true); ?> to $<?php echo get_post_meta(42989, 'services_info_home_security_services_high_package_price', true); ?> per
                     month. However, the
                     exact amount may vary depending on your equipment selection, monitoring plan and added additional
                     services.
