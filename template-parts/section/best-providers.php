@@ -288,7 +288,7 @@
 
                 <p class="PClass"> With DISH, you can choose from multiple tiers of cable TV service packages. This
                     ranges
-                    from <?php echo $Best_Provider_Details_Second['tvprice']; ?> for <?php echo $Best_Provider_Details_Second['low_channels']; ?> total channels and up to <?php echo $Best_Provider_Details_Second['price']; ?> per month for over <?php echo $Best_Provider_Details_Second['high_channels']; ?>  channels. The biggest
+                    from <?php echo $Best_Provider_Details_Second['tvprice']; ?> for <?php echo $Best_Provider_Details_Second['low_channels']; ?> total channels and up to <?php echo $Best_Provider_Details_Second['high_package_price']; ?> per month for over <?php echo $Best_Provider_Details_Second['high_channels']; ?>  channels. The biggest
                     differences are the networks you choose, like ESPN and Disney at the lower end and STARZ and
                     Bloomberg
                     at the higher price. In addition, DISH offers easy-to-use accessories like a free DVR for recording
