@@ -299,15 +299,11 @@
                     offers for certain premium channels like Showtime and introductory prices upon request.</p>
 
                 <p class="PClass">DirecTV offers HD-quality picture you want for stunning visuals and immersive audio.
-                    However, the pricing is a little different than dish. The regular introductory level of 165+
-                    channels
-                    (including the Sports Package free for 3 months) runs <?php echo $Best_Provider_Details['tvprice']; ?> per month. You can find deals that
-                    knock
-                    off $10-$20 monthly for the first few months, but you must sign a two-year contract for this
-                    satellite
-                    cable service. Another aspect of DirecTV that is different is the available tiers. You can select
-                    four
-                    different packages that vary based on sports, premium networks, and top-tier providers like Max,
+                    However, the pricing is a little different than dish. The regular introductory level of <?php echo $Best_Provider_Details_Second['low_channels']; ?>
+                    channels  (including the Sports Package free for 3 months) runs <?php echo $Best_Provider_Details_Second['tvprice']; ?> per month. You can find deals that
+                    knock  off <?php echo $Best_Provider_Details['high_package_price']; ?>monthly for the first few months, but you must sign a two-year contract for this
+                    satellite cable service. Another aspect of DirecTV that is different is the available tiers. You can select
+                    four different packages that vary based on sports, premium networks, and top-tier providers like Max,
                     Paramount+, and Showtime. There is a bit more price flexibility in your monthly home expenses. In
                     addition, DirecTV has the most comprehensive regional sports networks for local channels and
                     unlimited
