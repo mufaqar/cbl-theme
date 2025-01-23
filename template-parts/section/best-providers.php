@@ -288,7 +288,7 @@
 
                 <p class="PClass"> With DISH, you can choose from multiple tiers of cable TV service packages. This
                     ranges
-                    from <?php echo $Best_Provider_Details_Second['tvprice']; ?> for <?php echo $Best_Provider_Details_Second['low_channels']; ?> total channels and up to <?php echo $Best_Provider_Details_Second['tvprice']; ?> per month for over <?php echo $Best_Provider_Details_Second['high_channels']; ?>  channels. The biggest
+                    from <?php echo $Best_Provider_Details_Second['tvprice']; ?> for <?php echo $Best_Provider_Details_Second['low_channels']; ?> total channels and up to <?php echo $Best_Provider_Details_Second['price']; ?> per month for over <?php echo $Best_Provider_Details_Second['high_channels']; ?>  channels. The biggest
                     differences are the networks you choose, like ESPN and Disney at the lower end and STARZ and
                     Bloomberg
                     at the higher price. In addition, DISH offers easy-to-use accessories like a free DVR for recording
@@ -301,7 +301,7 @@
                 <p class="PClass">DirecTV offers HD-quality picture you want for stunning visuals and immersive audio.
                     However, the pricing is a little different than dish. The regular introductory level of 165+
                     channels
-                    (including the Sports Package free for 3 months) runs $69.99 per month. You can find deals that
+                    (including the Sports Package free for 3 months) runs <?php echo $Best_Provider_Details['tvprice']; ?> per month. You can find deals that
                     knock
                     off $10-$20 monthly for the first few months, but you must sign a two-year contract for this
                     satellite
