@@ -509,9 +509,7 @@ function Best_Provider_Details($provider_ids) {
                 $price = get_post_meta(get_the_ID(), 'services_info_landline_services_price', true); 
                 $tvprice = get_post_meta(get_the_ID(), 'services_info_tv_services_price', true); 
                 $high_channels = get_post_meta(get_the_ID(), 'services_info_tv_services_speed', true); 
-                $low_channels = get_post_meta(get_the_ID(), 'services_info_tv_services_low_channels', true); 
-
-                
+                $low_channels = get_post_meta(get_the_ID(), 'services_info_tv_services_low_channels', true);                 
                 $high_package_price = get_post_meta(get_the_ID(), 'services_info_tv_services_high_package_price', true); 
 
                 
