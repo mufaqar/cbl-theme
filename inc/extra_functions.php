@@ -508,8 +508,11 @@ function Best_Provider_Details($provider_ids) {
                 $speed = get_post_meta(get_the_ID(), 'services_info_internet_services_summary_speed', true); 
                 $price = get_post_meta(get_the_ID(), 'services_info_landline_services_price', true); 
                 $tvprice = get_post_meta(get_the_ID(), 'services_info_tv_services_services_price', true); 
-                $channels = get_post_meta(get_the_ID(), 'services_info_tv_services_services_channels', true); 
-                $high_package_price = get_post_meta(get_the_ID(), 'services_info_tv_services_services_high_package_price', true); 
+                $high_channels = get_post_meta(get_the_ID(), 'services_info_internet_tv_bundles_channels', true); 
+                $low_channels = get_post_meta(get_the_ID(), 'services_info_tv_services_low_channels', true); 
+
+                
+                $high_package_price = get_post_meta(get_the_ID(), 'services_info_tv_services_high_package_price', true); 
 
                 
                 $provider_details[] = array(
@@ -517,7 +520,8 @@ function Best_Provider_Details($provider_ids) {
                     'speed' => $speed ? $speed . ' ' : 'N/A',
                     'price' => $price ? '$' . $price : 'N/A',
                     'tvprice' => $tvprice ? '$' . $tvprice : 'N/A',
-                    'channels' => $channels ? '$' . $channels : 'N/A',
+                    'high_channels' => $high_channels ? $high_channels : 'N/A',
+                    'low_channels' => $low_channels ?  $low_channels : 'N/A',
                     'high_package_price' => $high_package_price ? '$' . $high_package_price : 'N/A',
                     
                 );
