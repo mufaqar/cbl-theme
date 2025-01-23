@@ -519,10 +519,10 @@ function Best_Provider_Details($provider_ids) {
                 $provider_details[] = array(
                     'title' => $title,
                     'speed' => $speed ? $speed . ' ' : 'N/A',
-                    'price' => $price ? '$' . $price : 'N/A'
-                    'tvprice' => $tvprice ? '$' . $tvprice : 'N/A'
-                    'channels' => $channels ? '$' . $channels : 'N/A'
-                    'high_package_price' => $high_package_price ? '$' . $high_package_price : 'N/A'
+                    'price' => $price ? '$' . $price : 'N/A',
+                    'tvprice' => $tvprice ? '$' . $tvprice : 'N/A',
+                    'channels' => $channels ? '$' . $channels : 'N/A',
+                    'high_package_price' => $high_package_price ? '$' . $high_package_price : 'N/A',
                     
                 );
             }
