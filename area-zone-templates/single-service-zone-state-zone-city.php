@@ -12,6 +12,9 @@
     add_filter('wpseo_title', 'Generate_Title_For_City');
     add_filter('wpseo_metadesc', 'Generate_Description_For_City');
     add_filter('wpseo_canonical', 'Generate_Canonical_Tag');
+
+    add_filter('wpseo_opengraph_url', 'generate_og_url');
+
     get_header();      
    
     $city = FormatData($city);

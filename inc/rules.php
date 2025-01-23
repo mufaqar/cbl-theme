@@ -367,6 +367,27 @@ function Generate_Canonical_Tag($canonical) {
 
 }
 
+function generate_og_url($canonical) {
+    global $wp_query;
+    $state = $wp_query->query_vars['zone_state'];
+    $city = $wp_query->query_vars['zone_city'];
+    $zipcode = $wp_query->query_vars['post_slug'];
+    $type =$wp_query->query_vars['service'];
+
+    if($zipcode){
+        return home_url("/$type/$state/$city/$zipcode/");
+    }
+    elseif($city){
+        return home_url("/$type/$state/$city/");
+    }
+    elseif($state){
+        return home_url("/$type/$state/");
+    }
+    else {
+        return home_url("/$type/");
+    }
+}
+
 
 
 
