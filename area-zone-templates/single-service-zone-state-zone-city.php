@@ -13,33 +13,25 @@
     add_filter('wpseo_title', 'Generate_Title_For_City');
     add_filter('wpseo_metadesc', 'Generate_Description_For_City');
     add_filter('wpseo_canonical', 'Generate_Canonical_Tag');
-
-    get_header();
-    
-     
+    get_header();      
    
     $city = FormatData($city);
-    $state = strtoupper($state);
-    
+    $state = strtoupper($state);    
     $fast_provider_details = Fast_Provider_Details($provider_ids, $type);
     $cheap_provider_details = Cheap_provider_details($provider_ids,$type);
     $Best_Provider_Details = Best_Provider_Details($provider_ids);
     set_query_var('fast_provider_details', $fast_provider_details);
     set_query_var('cheap_provider_details', $Best_Provider_Details);
-    set_query_var('Best_Provider_Details', $Best_Provider_Details);
-
-
-    
+    set_query_var('Best_Provider_Details', $Best_Provider_Details);    
     $total_services_type = count_service_types($provider_ids); 
-
     if ($type == "home-security")
-{
+        {
 
-    $meta_type = "home_security";
-}
-else {
-    $meta_type = $type;
-}
+            $meta_type = "home_security";
+        }
+        else {
+            $meta_type = $type;
+        }
 
 
 
