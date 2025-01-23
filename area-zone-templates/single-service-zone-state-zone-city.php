@@ -1,7 +1,6 @@
 <?php
 
     global $wp_query;
-
     $state = $wp_query->query_vars['zone_state'];
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
@@ -26,15 +25,11 @@
     $total_services_type = count_service_types($provider_ids); 
     if ($type == "home-security")
         {
-
             $meta_type = "home_security";
         }
         else {
             $meta_type = $type;
         }
-
-
-
     if (!empty($provider_ids)) {    
             $query_args = array(
                     'post_type'      => 'providers',
