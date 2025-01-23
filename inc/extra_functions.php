@@ -499,22 +499,31 @@ function Best_Provider_Details($provider_ids) {
             'post__in'       => $provider_ids, 
             'orderby'        => 'post__in',             
         );
-      
-        
         $query = new WP_Query($query_args);
         
         if ($query->have_posts()) {
             while ($query->have_posts()) {
                 $query->the_post();
                 $title = get_the_title(); 
-                $speed = get_post_meta(get_the_ID(), 'services_info_internet_services_summary_speed', true); // Replace with actual meta key for speed
-                $price = get_post_meta(get_the_ID(), 'services_info_landline_services_price', true); // Replace with actual meta key for price
+                $speed = get_post_meta(get_the_ID(), 'services_info_internet_services_summary_speed', true); 
+                $price = get_post_meta(get_the_ID(), 'services_info_landline_services_price', true); 
+                $tvprice = get_post_meta(get_the_ID(), 'services_info_tv_services_services_price', true); 
+                $channels = get_post_meta(get_the_ID(), 'services_info_tv_services_services_channels', true); 
+                $high_package_price = get_post_meta(get_the_ID(), 'services_info_tv_services_services_high_package_price', true); 
+
                 
-                // Append each provider's details as an associative array to the $provider_details array
+
+                
+                
+               
                 $provider_details[] = array(
                     'title' => $title,
                     'speed' => $speed ? $speed . ' ' : 'N/A',
                     'price' => $price ? '$' . $price : 'N/A'
+                    'tvprice' => $tvprice ? '$' . $tvprice : 'N/A'
+                    'channels' => $channels ? '$' . $channels : 'N/A'
+                    'high_package_price' => $high_package_price ? '$' . $high_package_price : 'N/A'
+                    
                 );
             }
             wp_reset_postdata(); 
