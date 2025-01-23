@@ -222,7 +222,7 @@
                     wirelessly control your devices, Indoor and Outdoor cameras along with Video Doorbell Camera or
                     Google Nest Doorbell to monitor the activity outside of your home.
                 </p>
-                <p class="PClass"> The monthly monitoring fee ranges from (insert low price) to (insert high price) per
+                <p class="PClass"> The monthly monitoring fee ranges from $<?php echo get_post_meta(42993, 'services_info_home_security_services_price', true); ?> to (insert high price) per
                     month. However, the
                     exact amount may vary depending on your equipment selection, monitoring plan and added additional
                     services.
@@ -237,8 +237,8 @@
                     home. Their representatives are also highly responsive and get back to you without delays. Top
                     Vivint features are Smart Hub, Motion sensors, Glass break sensors, Entry sensors, Smoke and CO
                     detectors, Kwikset smart lock and Vivint Outdoor Camera Pro.</p>
-                <p class="PClass">The monthly monitoring fee of Vivint plans ranges from (insert low price) to (insert
-                    high price) per month. The exact monthly price may differ depending on your selection of packages,
+                <p class="PClass">The monthly monitoring fee of Vivint plans ranges from $<?php echo get_post_meta(42991, 'services_info_home_security_services_price', true); ?> to
+                $<?php echo get_post_meta(42991, 'services_info_home_security_services_high_package_price', true); ?> per month. The exact monthly price may differ depending on your selection of packages,
                     services and monitoring costs etc.</p>
 
 
@@ -250,7 +250,7 @@
                     system on. Frontpoints top features are Door/window sensors, Motion sensors, Glass break sensor,
                     Video doorbell, Outdoor and indoor security cameras and Yale smart locks.</p>
 
-                <p class="PClass">The cheapest Frontpoint monitoring package costs (insert low price) per month. It
+                <p class="PClass">The cheapest Frontpoint monitoring package costs $<?php echo get_post_meta(42992, 'services_info_home_security_services_price', true); ?> per month. It
                     includes 1 hub, 1 keypad, 2 door/window sensors, and 1 set of yard signs and window decals.</p>
 
 
@@ -263,8 +263,8 @@
                     2.0 control panel, Motion sensor, Door sensors, Skybell slim line video doorbell, Outdoor camera,
                     Yard signs and stickers.
                 </p>
-                <p class="PClass">Brink’s Home security monitoring packages starts from <?php echo get_post_meta(42993, 'services_info_home_security_services_price', true); ?> and goes up
-                    to <?php echo get_post_meta(42993, 'services_info_home_security_services_high_package_price', true); ?> per month. Your total monthly bill may be slightly different depending on
+                <p class="PClass">Brink’s Home security monitoring packages starts from $<?php echo get_post_meta(42993, 'services_info_home_security_services_price', true); ?> and goes up
+                    to $<?php echo get_post_meta(42993, 'services_info_home_security_services_high_package_price', true); ?> per month. Your total monthly bill may be slightly different depending on
                     your level of service, monitoring package subscription and any additional ad on service. </p>
 
             </div>
