@@ -263,8 +263,8 @@
                     2.0 control panel, Motion sensor, Door sensors, Skybell slim line video doorbell, Outdoor camera,
                     Yard signs and stickers.
                 </p>
-                <p class="PClass">Brink’s Home security monitoring packages starts from (insert low price) and goes up
-                    to (insert high price) per month. Your total monthly bill may be slightly different depending on
+                <p class="PClass">Brink’s Home security monitoring packages starts from <?php echo get_post_meta(42993, 'services_info_home_security_services_price', true); ?> and goes up
+                    to <?php echo get_post_meta(42993, 'services_info_home_security_services_high_package_price', true); ?> per month. Your total monthly bill may be slightly different depending on
                     your level of service, monitoring package subscription and any additional ad on service. </p>
 
             </div>
