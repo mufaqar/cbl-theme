@@ -222,7 +222,10 @@
                     wirelessly control your devices, Indoor and Outdoor cameras along with Video Doorbell Camera or
                     Google Nest Doorbell to monitor the activity outside of your home.
                 </p>
-                <p class="PClass"> The monthly monitoring fee ranges from $<?php echo get_post_meta(42989, 'services_info_home_security_services_price', true); ?> to $<?php echo get_post_meta(42989, 'services_info_home_security_services_high_package_price', true); ?> per
+                <p class="PClass"> The monthly monitoring fee ranges from
+                    $<?php echo get_post_meta(42989, 'services_info_home_security_services_price', true); ?> to
+                    $<?php echo get_post_meta(42989, 'services_info_home_security_services_high_package_price', true); ?>
+                    per
                     month. However, the
                     exact amount may vary depending on your equipment selection, monitoring plan and added additional
                     services.
@@ -237,8 +240,10 @@
                     home. Their representatives are also highly responsive and get back to you without delays. Top
                     Vivint features are Smart Hub, Motion sensors, Glass break sensors, Entry sensors, Smoke and CO
                     detectors, Kwikset smart lock and Vivint Outdoor Camera Pro.</p>
-                <p class="PClass">The monthly monitoring fee of Vivint plans ranges from $<?php echo get_post_meta(42991, 'services_info_home_security_services_price', true); ?> to
-                $<?php echo get_post_meta(42991, 'services_info_home_security_services_high_package_price', true); ?> per month. The exact monthly price may differ depending on your selection of packages,
+                <p class="PClass">The monthly monitoring fee of Vivint plans ranges from
+                    $<?php echo get_post_meta(42991, 'services_info_home_security_services_price', true); ?> to
+                    $<?php echo get_post_meta(42991, 'services_info_home_security_services_high_package_price', true); ?>
+                    per month. The exact monthly price may differ depending on your selection of packages,
                     services and monitoring costs etc.</p>
 
 
@@ -250,7 +255,9 @@
                     system on. Frontpoints top features are Door/window sensors, Motion sensors, Glass break sensor,
                     Video doorbell, Outdoor and indoor security cameras and Yale smart locks.</p>
 
-                <p class="PClass">The cheapest Frontpoint monitoring package costs $<?php echo get_post_meta(42992, 'services_info_home_security_services_price', true); ?> per month. It
+                <p class="PClass">The cheapest Frontpoint monitoring package costs
+                    $<?php echo get_post_meta(42992, 'services_info_home_security_services_price', true); ?> per month.
+                    It
                     includes 1 hub, 1 keypad, 2 door/window sensors, and 1 set of yard signs and window decals.</p>
 
 
@@ -263,8 +270,11 @@
                     2.0 control panel, Motion sensor, Door sensors, Skybell slim line video doorbell, Outdoor camera,
                     Yard signs and stickers.
                 </p>
-                <p class="PClass">Brink’s Home security monitoring packages starts from $<?php echo get_post_meta(42993, 'services_info_home_security_services_price', true); ?> and goes up
-                    to $<?php echo get_post_meta(42993, 'services_info_home_security_services_high_package_price', true); ?> per month. Your total monthly bill may be slightly different depending on
+                <p class="PClass">Brink’s Home security monitoring packages starts from
+                    $<?php echo get_post_meta(42993, 'services_info_home_security_services_price', true); ?> and goes up
+                    to
+                    $<?php echo get_post_meta(42993, 'services_info_home_security_services_high_package_price', true); ?>
+                    per month. Your total monthly bill may be slightly different depending on
                     your level of service, monitoring package subscription and any additional ad on service. </p>
 
             </div>
@@ -288,26 +298,34 @@
 
                 <p class="PClass"> With DISH, you can choose from multiple tiers of cable TV service packages. This
                     ranges
-                    from <?php echo $Best_Provider_Details_Second['tvprice']; ?> for <?php echo $Best_Provider_Details_Second['low_channels']; ?> total channels and up to <?php echo $Best_Provider_Details_Second['high_package_price']; ?> per month for over <?php echo $Best_Provider_Details_Second['high_channels']; ?>  channels. The biggest
+                    from <?php echo $Best_Provider_Details_Second['tvprice']; ?> for
+                    <?php echo $Best_Provider_Details_Second['low_channels']; ?> total channels and up to
+                    <?php echo $Best_Provider_Details_Second['high_package_price']; ?> per month for over
+                    <?php echo $Best_Provider_Details_Second['high_channels']; ?> channels. The biggest
                     differences are the networks you choose, like ESPN and Disney at the lower end and STARZ and
                     Bloomberg
                     at the higher price. In addition, DISH offers easy-to-use accessories like a free DVR for recording
-                    all
-                    the shows you want using a voice-activated remote. Anyone with kids or those who dislike typing in
-                    long
-                    show names will appreciate the voice option. All these services can be bundled, and there are free
+                    all the shows you want using a voice-activated remote. Anyone with kids or those who dislike typing
+                    in
+                    long show names will appreciate the voice option. All these services can be bundled, and there are
+                    free
                     offers for certain premium channels like Showtime and introductory prices upon request.</p>
 
                 <p class="PClass">DirecTV offers HD-quality picture you want for stunning visuals and immersive audio.
-                    However, the pricing is a little different than dish. The regular introductory level of <?php echo $Best_Provider_Details_Second['low_channels']; ?>
-                    channels  (including the Sports Package free for 3 months) runs <?php echo $Best_Provider_Details_Second['tvprice']; ?> per month. You can find deals that
-                    knock  off <?php echo $Best_Provider_Details['high_package_price']; ?>monthly for the first few months, but you must sign a two-year contract for this
-                    satellite cable service. Another aspect of DirecTV that is different is the available tiers. You can select
-                    four different packages that vary based on sports, premium networks, and top-tier providers like Max,
+                    However, the pricing is a little different than dish. The regular introductory level of
+                    <?php echo $Best_Provider_Details_Second['low_channels']; ?>
+                    channels (including the Sports Package free for 3 months) runs
+                    <?php echo $Best_Provider_Details_Second['tvprice']; ?> per month. You can find deals that
+                    knock off <?php echo $Best_Provider_Details['high_package_price']; ?>monthly for the first few
+                    months, but you must sign a two-year contract for this
+                    satellite cable service. Another aspect of DirecTV that is different is the available tiers. You can
+                    select
+                    four different packages that vary based on sports, premium networks, and top-tier providers like
+                    Max,
                     Paramount+, and Showtime. There is a bit more price flexibility in your monthly home expenses. In
                     addition, DirecTV has the most comprehensive regional sports networks for local channels and
-                    unlimited
-                    hours for cloud DVR storage, making it a must-have if you never want to miss a college or league
+                    unlimited hours for cloud DVR storage, making it a must-have if you never want to miss a college or
+                    league
                     game.
                 </p>
 
