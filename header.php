@@ -24,7 +24,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo1.png" alt="<?php bloginfo('name'); ?>" width="120" height="34" class="w-20 md:w-44" />
             </a>
         </div>
-        <div id="menu" class="sm:w-2/3 bg-gray-100 w-full sm:bg-white shadow-xl !h-[50px] sm:shadow-none z-10 sm:justify-end sm:static absolute left-0 sm:py-0 py-7 sm:px-0 px-5 flex items-center">
+        <div id="menu" class="sm:w-2/3 bg-gray-100 w-full sm:bg-white shadow-xl h-[50px] md:!h-auto sm:shadow-none z-10 sm:justify-end sm:static absolute left-0 sm:py-0 py-7 sm:px-0 px-5 flex items-center">
             <?php wp_nav_menu( array( 
                 'theme_location' => 'main', 
                 'container'      => '',
