@@ -13,7 +13,7 @@ $state = strtoupper($state);
 add_filter('wpseo_title', 'Generate_Title_For_Zipcode');
 add_filter('wpseo_metadesc', 'Generate_Description_For_Zipcode');
 add_filter('wpseo_canonical', 'Generate_Canonical_Tag', 10);
-//add_filter('wpseo_opengraph_url', 'generate_og_url');
+add_filter('wpseo_opengraph_url', 'generate_og_url');
 get_header(); ?>
 
 <?php
