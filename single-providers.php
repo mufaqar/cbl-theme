@@ -97,7 +97,7 @@ if (is_singular('providers')) {
 </section>
 
 <section class="bgmain px-4 py-5 shadow-sm border-y border-zinc-400/20 z-50">
-    <div class="container mx-auto flex justify-center items-center md:text-4xl text-xl font-bold uppercase text-white">
+    <div class="container mx-auto flex justify-center items-center md:text-4xl text-xl font-bold uppercase text-white nav_urls">
         <div class="grid items-center md:justify-end justify-center">
             <?php if($order_online){ echo "Simply Click And"; }else{ echo "Call Now to Order"; } ?> </div>
         <div class="items-center justify-start flex gap-3">

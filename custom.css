@@ -415,5 +415,10 @@
   .sub-menu {
     position: relative;
     border: none;
+    top: 0;
   }
+}
+
+@media (max-width: 410px) {
+  .nav_urls { flex-direction: column !important;}
 }
