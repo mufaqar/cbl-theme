@@ -179,13 +179,13 @@ function cbl_breadcrumb() {
     if ($post_type === 'area_zone') {
         // Breadcrumb for 'area_zone' post type
         if ($service) {
-            echo ' <a href="' . home_url('/' . $service) . '"> ' . ucfirst($service) . '</a>';
+            echo ' <a href="' . home_url('/' . $service) . '">  ' . ucwords(str_replace('-', ' ', $service)) . '</a>';
         }
         if ($zone_state) {
-            echo ' <a href="' . home_url('/' . $service . '/' . $zone_state) . '"> ' . ucfirst(str_replace('-', ' ', $zone_state)) . '</a>';
+            echo ' <a href="' . home_url('/' . $service . '/' . $zone_state) . '"> ' . strtoupper(str_replace('-', ' ', $zone_state)) . '</a>';
         }
         if ($zone_city) {
-            echo ' <a href="' . home_url('/' . $service . '/' . $zone_state . '/' . $zone_city) . '"> ' . ucfirst(str_replace('-', ' ', $zone_city)) . '</a>';
+            echo ' <a href="' . home_url('/' . $service . '/' . $zone_state . '/' . $zone_city) . '"> ' . ucwords(str_replace('-', ' ', $zone_city)) . '</a>';
         }
         if ($post_slug) {
             echo ' <span> ' . get_the_title() . '</span>';
