@@ -34,6 +34,7 @@
   list-style-type: none;
   margin-bottom: 6px;
 }
+
 .pros ul li:before {
   content: '✓';
   border: 1px solid green;
@@ -45,6 +46,7 @@
   line-height: 20px;
   display: inline-block;
 }
+
 .cons ul li:before {
   content: '☓';
   border: 1px solid red;
@@ -56,6 +58,7 @@
   line-height: 20px;
   display: inline-block;
 }
+
 /* Initially hide all submenus */
 .submenu {
   display: none;
@@ -77,57 +80,71 @@
   opacity: 0;
   pointer-events: none;
 }
+
 .menu-item {
   padding: 12px 0;
 }
+
 .menu-item:hover .submenu {
   opacity: 1;
   pointer-events: auto;
 }
+
 /* Mobile menu hidden by default */
 #menu {
   display: none;
 }
+
 /* Show menu when 'hidden' class is removed */
 #menu.hidden {
   display: block;
 }
+
 /* Mobile styles */
 @media (max-width: 640px) {
+
   /* Show hamburger button */
   #menu-toggle {
     display: block;
   }
+
   /* Hide menu initially */
   #menu {
     display: none;
   }
+
   /* Menu styling for mobile */
   #menu.hidden {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 56px; /* Position below the header */
+    top: 56px;
+    /* Position below the header */
     left: 0;
     align-items: flex-start;
     width: 100%;
-    background-color: #ffffff; /* Or any color you want */
+    background-color: #ffffff;
+    /* Or any color you want */
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+
   .menu-item {
     padding: 0 !important;
   }
 }
+
 /* For larger screens, always display the menu */
 @media (min-width: 641px) {
   #menu {
     display: flex;
   }
 }
+
 .menu-item ul li {
   padding: 5px 16px !important;
 }
+
 #dropdownMenu {
   overflow: hidden;
 }
@@ -179,6 +196,7 @@
 .single_content p {
   margin: 7px 0;
 }
+
 .single_content ul {
   list-style-type: disc;
   padding-left: 18px;
@@ -228,6 +246,7 @@
   color: #ef9831;
   text-decoration: underline;
 }
+
 /*End */
 
 .providers_slides {
@@ -259,7 +278,9 @@
   border-right: 0px;
 }
 
-.dtable_2 { border-top: 1px solid transparent;}
+.dtable_2 {
+  border-top: 1px solid transparent;
+}
 
 .dtable_1 .provider-item:last-child {
   border-bottom: 0;
@@ -280,17 +301,17 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 .pbanner .overlay_wrapper {
-  background: linear-gradient(
-    90deg,
-    rgba(1, 29, 51, 1) 66%,
-    rgba(1, 29, 51, 0.9809173669467787) 68%,
-    rgba(1, 29, 51, 0.9417016806722689) 70%,
-    rgba(1, 29, 51, 0.8576680672268908) 73%,
-    rgba(1, 29, 51, 0.8576680672268908) 64%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(1, 29, 51, 1) 66%,
+      rgba(1, 29, 51, 0.9809173669467787) 68%,
+      rgba(1, 29, 51, 0.9417016806722689) 70%,
+      rgba(1, 29, 51, 0.8576680672268908) 73%,
+      rgba(1, 29, 51, 0.8576680672268908) 64%,
+      rgba(255, 255, 255, 0) 100%);
 }
+
 .pbanner .overlay_wrapper h1 {
   margin-top: 1rem;
 }
@@ -313,17 +334,20 @@
   font-size: 20px;
   margin: 10px 0;
 }
+
 .the_content h5,
 .the_content h6 {
   font-weight: 600;
   font-size: 18px;
   margin: 10px 0;
 }
+
 .the_content ul {
   padding-left: 1.4rem;
   margin-top: 10px;
   list-style-type: circle;
 }
+
 .the_content ul li {
   margin-top: 5px;
 }
@@ -336,12 +360,15 @@
   position: absolute !important;
   top: auto !important;
 }
+
 .menu-item {
   position: relative;
 }
+
 .sub-menu {
   display: none;
 }
+
 .sub-menu {
   position: absolute;
   background: #fff !important;
@@ -350,13 +377,16 @@
   padding: 8px 0;
   min-width: 220px;
 }
+
 .sub-menu a {
   text-wrap: nowrap;
   text-transform: capitalize;
 }
+
 .sub-menu a:hover {
   color: #1d569f;
 }
+
 .menu-item:hover .sub-menu {
   display: block;
 }
@@ -364,15 +394,26 @@
 #menu-footer .menu-item {
   padding: 6px 0 !important;
 }
+
 #menu-footer .menu-item a:hover {
   color: #1d569f;
 }
+
 #menu-footer-company,
 #menu-footer-company li,
 #menu-footer-company li a {
   color: rgba(255, 255, 255, 0.75) !important;
 }
+
 #menu-footer-company li a:hover,
 #menu-footer-providers li a:hover {
   color: #fff !important;
+}
+
+
+@media (max-width: 768px) {
+  .sub-menu {
+    position: relative;
+    border: none;
+  }
 }
