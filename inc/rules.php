@@ -217,6 +217,56 @@ function cbl_breadcrumb() {
 
 
 
+function Generate_Title_Cat() {
+    global $wp_query;
+    $state = $wp_query->query_vars['zone_state'];
+    $city = $wp_query->query_vars['zone_city'];
+    $zipcode = $wp_query->query_vars['post_slug'];
+    $type =$wp_query->query_vars['service'];
+
+    return "Local $type Service Providers| Cable Movers";
+}
+
+function Generate_Description_For_Cat() {
+    global $Top_Provider_Details;
+    $state = get_query_var('zone_state', '');
+    $city = get_query_var('zone_city', '');
+    $zipcode = get_query_var('post_slug', '');
+    $type = get_query_var('service', '');
+    $city = FormatData($city);
+    $state = strtoupper($state);
+
+    return "Local $type Service Providers| Cable Movers";
+}
+
+
+function Generate_Canonical_Cat($canonical) {
+    global $wp_query;
+    $state = $wp_query->query_vars['zone_state'];
+    $city = $wp_query->query_vars['zone_city'];
+    $zipcode = $wp_query->query_vars['post_slug'];
+    $type =$wp_query->query_vars['service'];
+
+
+
+    if($zipcode){
+        return home_url("/$type/$state/$city/$zipcode/");
+    }
+    elseif($city){
+        return home_url("/$type/$state/$city/");
+    }
+    elseif($state){
+        return home_url("/$type/$state/");
+    }
+    else {
+        return home_url("/$type/");
+    }
+
+}
+
+
+
+
 function Generate_Title_For_Zipcode() {
     global $wp_query;
     $state = $wp_query->query_vars['zone_state'];
