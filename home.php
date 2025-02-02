@@ -103,10 +103,6 @@
     </div>
   </div>
 
-  <!-- Divider -->
-  <div class="max-w-[1110px] w-full mx-auto h-[1px] bg-black/20 my-16"></div>
-
-
 </section>
 
 
