@@ -15,6 +15,7 @@
 
     add_filter('wpseo_opengraph_url', 'generate_og_url');
     add_filter('wpseo_opengraph_title', 'Generate_Title_For_City');
+    add_filter('wpseo_opengraph_description', 'Generate_Description_For_City');
 
     get_header();      
    

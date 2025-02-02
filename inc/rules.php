@@ -273,9 +273,11 @@ function Generate_Title_For_Zipcode() {
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
+    $city = FormatData($city);
+    $state = strtoupper($state);
 
     if($type === "internet"){
-        return "High Speed $type Providers in $zipcode, $state | Cable Movers";
+        return "High Speed Internet Providers in $zipcode, $state | Cable Movers";
     } elseif ($type === "tv") {
         return "Cable TV Providers in $zipcode, $state | Cable Movers";
     }elseif ($type === "landline") {
@@ -290,9 +292,11 @@ function Generate_Description_For_Zipcode() {
     $city = get_query_var('zone_city', '');
     $zipcode = get_query_var('post_slug', '');
     $type = get_query_var('service', '');
+    $city = FormatData($city);
+    $state = strtoupper($state);
 
     if($type === "internet"){
-        return  "View all $type service providers in $zipcode, $state. Compare $type plans, prices and new promotions and pick the best provider that fits within your budget.";
+        return  "View all Internet service providers in $zipcode, $state. Compare Internet plans, prices and new promotions and pick the best provider that fits within your budget.";
     } elseif ($type === "tv") {
         return "Compare Cable TV providers in $zipcode, $state. View Cable TV plans and deals and choose the best provider that fits within your budget";
     }elseif ($type === "landline") {
