@@ -129,7 +129,7 @@ $providersData = [
         <!-- Footer Logo and Description -->
         <div class="col-span-2">
             <a href="<?php echo esc_url(home_url('/')); ?>">
-                <img src="https://www.cablemovers.net/_next/image?url=%2Flogo.png&w=256&q=75"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo1.png"
                     alt="Cable Movers footer logo" height="56" width="254" />
             </a>
             <p class="text-sm font-normal text-white/75 mt-5">
