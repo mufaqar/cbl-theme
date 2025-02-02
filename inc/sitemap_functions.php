@@ -5,7 +5,7 @@
 
 
 add_filter('wpseo_sitemap_index', function ($sitemap_index) {
-    $base_url = 'https://dev.cblproject.cablemovers.net/sitemaps/';
+    $base_url = 'https://www.cablemovers.net/sitemaps/';
     $types =  ['internet', 'tv', 'home-security', 'landline'];
     $number_of_sitemaps = 2; // Generate 6 sitemaps for each type
     $prefixes = ['zipcode', 'cities']; // Define prefixes to loop through
