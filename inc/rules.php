@@ -224,7 +224,7 @@ function Generate_Title_Cat() {
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
 
-    return "Local $type Service Providers| Cable Movers";
+    return "Local $type Service Providers| CableMovers.net";
 }
 
 function Generate_Description_For_Cat() {
@@ -236,7 +236,7 @@ function Generate_Description_For_Cat() {
     $city = FormatData($city);
     $state = strtoupper($state);
 
-    return "Local $type Service Providers| Cable Movers";
+    return "Local $type Service Providers| CableMovers.net";
 }
 
 
@@ -277,13 +277,13 @@ function Generate_Title_For_Zipcode() {
     $state = strtoupper($state);
 
     if($type === "internet"){
-        return "High Speed Internet Providers in $zipcode, $state | Cable Movers";
+        return "High Speed Internet Providers in $zipcode, $state | CableMovers.net";
     } elseif ($type === "tv") {
-        return "Cable TV Providers in $zipcode, $state | Cable Movers";
+        return "Cable TV Providers in $zipcode, $state | CableMovers.net";
     }elseif ($type === "landline") {
-        return "Landline Home Phone Service Providers in $zipcode, $state | Cable Movers";
+        return "Landline Home Phone Service Providers in $zipcode, $state | CableMovers.net";
     }elseif ($type === "home-security") {
-        return "Home Security Systems in $zipcode, $state | Cable Movers";
+        return "Home Security Systems in $zipcode, $state | CableMovers.net";
     }
 }
 
