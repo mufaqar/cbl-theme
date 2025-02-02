@@ -486,7 +486,6 @@ add_action('template_redirect', function () {
 
 
 add_filter('wpseo_robots', 'yoast_no_home_noindex', 999);
-
 function yoast_no_home_noindex($string) {
     $string = "index,follow";
     if (is_singular('area_zone')) {
