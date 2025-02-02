@@ -106,37 +106,13 @@
   <!-- Divider -->
   <div class="max-w-[1110px] w-full mx-auto h-[1px] bg-black/20 my-16"></div>
 
-  <!-- Second Section -->
-  <div class="max-w-[1110px] w-full mx-auto px-4">
-        <div class="mx-auto max-w-3xl">
-          <h2 class="text-center md:text-4xl text-2xl font-semibold">What We Offer</h2>
-          <p class="text-xl font-normal text-center mt-4">Cable Movers is committed to be a one-stop shop for all your connectivity needs by making Internet, TV, Landline and Home security ordering simple and hassle free. Our experts team research and reviews leading providers and bring you the best deals. </p>
-        </div>  
-        <div class="max-w-[1110px] w-full mx-auto  bg-black/20 my-16"></div>  
-      <?php get_template_part('template-parts/internet','offer'); ?>
-      <?php get_template_part('template-parts/tv','offer'); ?>
-      <?php get_template_part('template-parts/landline','offer'); ?>
-      <?php get_template_part('template-parts/home-security','offer'); ?>
-            
-    </div>
-</section>
-
-
-
-<!-- Enter your zip code to find providers and plans in your area: -->
-<section class="py-16 bg-[#F3FAFF]">
-    <div class="max-w-[1110px] w-full mx-auto px-4 my-10 flex lg:flex-row flex-col justify-center gap-5 items-center">
-        <div class=""><h3 class="md:text-3xl text-2xl text-center lg:text-left font-extrabold leading-normal">Enter your zip code to find providers and plans in your area:</h3></div>
-        <div class="flex md:justify-end justify-center [&amp;>div:nth-child(1)]:mr-0 [&amp;>div:nth-child(1)]:w-fit w-full">
-            <?php get_template_part('template-parts/search', 'form'); ?>
-        </div>
-    </div>
-
 
 </section>
+
+
 
 <!-- Why Choose Cable Movers? -->
-<section class="py-16">
+<section class="py-16  bg-[#F3FAFF]">
     <div class="container mx-auto px-4">
         <div class="mx-auto max-w-3xl text-center">
             <h2 class="text-center md:text-4xl text-2xl font-bold">Why Choose Cable Movers?</h2>
@@ -187,27 +163,6 @@
     </div>
 </section>
 
-<!-- Need Help Finding The Best Provider For You? -->
-<section class="py-24 bg-blue-500">
-    <div class="container mx-auto px-4 items-center">        
-        <div class="text-center">
-            <h2 class="md:text-5xl text-3xl leading- font-semibold text-white">Need Help Finding The Best Provider For You?</h2>
-            <p class="md:text-lg text-lg font-medium text-white my-5">
-            Whether you have some questions about a provider or need a little advice, give us a call and we’ll take care of you.
-                      </p>
-            <a class="text-white hover:text-white md:text-3xl text-xl font-extrabold hover:underline flex items-center gap-4 w-fit mx-auto" href="tel:833-592-0098">
-                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                    ></path>
-                    <path d="M14.05 2a9 9 0 0 1 8 7.94"></path>
-                    <path d="M14.05 6A5 5 0 0 1 18 10"></path>
-                </svg>
-                833-592-0098
-            </a>
-        </div>
-    </div>
-</section>
 
 
 <?php get_footer() ?>
