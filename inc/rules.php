@@ -250,16 +250,16 @@ function Generate_Canonical_Cat($canonical) {
 
 
     if($zipcode){
-        return home_url("/$type/$state/$city/$zipcode/");
+        return home_url("/$type/$state/$city/$zipcode");
     }
     elseif($city){
-        return home_url("/$type/$state/$city/");
+        return home_url("/$type/$state/$city");
     }
     elseif($state){
-        return home_url("/$type/$state/");
+        return home_url("/$type/$state");
     }
     else {
-        return home_url("/$type/");
+        return home_url("/$type");
     }
 
 }
