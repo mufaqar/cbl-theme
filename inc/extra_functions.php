@@ -642,10 +642,7 @@ function Cheap_provider_details($provider_ids, $type) {
 }
 
 
-function FormatData($string) {
-    if (strtolower($string) === 'tv') {
-        return 'TV';
-    }
+function FormatData($string) {    
     $string = str_replace('-', ' ', $string);
     $formatted_string = ucwords($string);
     return $formatted_string;
@@ -653,7 +650,7 @@ function FormatData($string) {
 
 function render_provider_buttons($phone, $permalink) {
     if (empty($phone) && empty($permalink)) {
-        return; // Exit early if both parameters are empty
+       
     }
     ?>
     <div class="grid gap-3 items-center justify-center p-5">

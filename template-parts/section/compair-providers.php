@@ -5,9 +5,6 @@ $compairs = get_query_var('query_compair');
 
 
 
-
-
-
 //var_dump ($query_compair);
 
 
